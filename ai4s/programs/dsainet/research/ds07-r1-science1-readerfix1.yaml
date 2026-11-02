@@ -1,0 +1,2108 @@
+{
+  "arms": {
+    "C": {
+      "enabled": true,
+      "implementation_revision": "DS07-R1-C",
+      "role": "frozen_four_arm_comparison"
+    },
+    "N": {
+      "enabled": true,
+      "implementation_revision": "DS07-R1-N",
+      "role": "frozen_four_arm_comparison"
+    },
+    "R": {
+      "enabled": true,
+      "implementation_revision": "DS07-R1-R",
+      "role": "frozen_four_arm_comparison"
+    },
+    "S": {
+      "enabled": true,
+      "implementation_revision": "DS07-R1-S",
+      "role": "frozen_four_arm_comparison"
+    }
+  },
+  "authorization_transition": {
+    "decision": "ENGINEERING_REPAIR",
+    "evidence_basis": [
+      "frozen C/S/R parent qualification and complete process traces; N trace requires bounded replacement"
+    ],
+    "expected_information": "完成冻结四臂CE100拟合与审计后，判读结构臂差异、逐context收益和伤害风险。",
+    "next_stage": "screen",
+    "remaining_uncertainty": "Original science scope unchanged; exact successor directory binding, real N TECH and live cost/budget gates pending",
+    "run_action": "PENDING_EXPLICIT_SUCCESSOR_TRANSPORT_BINDING",
+    "source_decision_record": "ai4s/programs/dsainet/research/ds07-r1/science_preparation/readerfix1/AUTHORIZATION_READERFIX1.json",
+    "source_evidence_ids": [
+      "DS07-R1-PACKFIX1-TECH-C-S-R"
+    ],
+    "stop_rule": "仅在明确批准累计预算且TECH复用/N资格门、成本门均通过后启动；任一硬门失败即停止并保留旧Run。"
+  },
+  "bundle_id": "2026-11-02_dsainet_ds07_r1_science1-readerfix1",
+  "campaign_id": "dsainet-ds07-r1",
+  "comparison_key": {
+    "baseline_implementation_revision": "native-e59dd6fa30f137bfadf78a895ec52c5be67054b89b640edf89d196d80b5a0eb5",
+    "checkpoint_rule": "validation_best",
+    "dataset": "BNCI2014001",
+    "epochs": 100,
+    "metric": "accuracy_pp",
+    "preprocessing": "official_mat_0p5_40hz_0_4s_250hz_22eeg",
+    "protocol": "ds07-r1-cue4-source6-select1-audit1",
+    "seeds": [
+      0,
+      1
+    ],
+    "split": "frozen-context-source-only",
+    "subjects": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  "continuation_id": "ds07-r1-science1-readerfix1",
+  "contrasts": {
+    "primary": {
+      "left": "R",
+      "right": "N"
+    },
+    "secondary": [
+      {
+        "left": "R",
+        "right": "C"
+      },
+      {
+        "left": "R",
+        "right": "S"
+      }
+    ]
+  },
+  "data_asset_path": "[REDACTED_MACHINE]",
+  "decision_rule": {
+    "all_seed_mean_delta_pp_strict_min": 0,
+    "any_hard_gate_failure": "STOP_FIXED_DS07_R1_NO_AUTOMATIC_EXPANSION",
+    "comparison_direction": "candidate_minus_control",
+    "harm_floor_delta_pp": -3,
+    "maximum_mean_raw_nll_delta": 0,
+    "minimum_mean_delta_pp": 0.5,
+    "minimum_positive_subjects": null,
+    "primary_candidate": "R",
+    "require_positive_all_seed_deltas": true,
+    "required_controls": [
+      "N",
+      "C",
+      "S"
+    ],
+    "schema": "ds07_four_arm_net_utility_v1",
+    "scientific_interpretation": "system net utility screen; not compression-specific or capacity-matched attribution",
+    "single_seed_subject_harm_floor_delta_pp": -5,
+    "source_ref": "ai4s/programs/dsainet/research/ds07-r1/research_brief.md",
+    "source_sha256": "bc0985bebbd852da4b3d4f08d65040d878ead59a5d98a86541170ed166d77c79",
+    "statistical_unit": "subject; average two paired seeds within each subject",
+    "unrounded_thresholds": true
+  },
+  "ds07_science": {
+    "budget_authority_ref": "ai4s/programs/dsainet/research/ds07-r1/science_preparation/readerfix1/BUDGET_AUTHORITY.json",
+    "budget_authority_sha256": "1dd52c1541888da5d84803bff21788046ead7216d8ff09c3ae47d608b0a787db",
+    "config_ref": {
+      "path": "ai4s/programs/dsainet/research/ds07-r1/science_preparation/CONFIG.json",
+      "sha256": "4fed1ac908365d1fd1f9c7d20d6ea7fd3aa78fc7d09ea21bdf3621d61d965b4e"
+    },
+    "cost_gate": {
+      "formula": "1.5 * serial(72fits+72audits) + 2h nofit analysis",
+      "fresh_N_profile_required": true,
+      "parallel_credit": false,
+      "required_hours_max": 33,
+      "reuse_C_S_R_only": true
+    },
+    "matrix": {
+      "arms": [
+        "N",
+        "C",
+        "S",
+        "R"
+      ],
+      "audit_task_count": 72,
+      "audit_tasks": [
+        {
+          "arm": "N",
+          "context": 0,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-N-c00-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t0.npz",
+          "task_id": "ds07-audit-N-c00-s0"
+        },
+        {
+          "arm": "N",
+          "context": 0,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-N-c00-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t0.npz",
+          "task_id": "ds07-audit-N-c00-s1"
+        },
+        {
+          "arm": "N",
+          "context": 1,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-N-c01-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t1.npz",
+          "task_id": "ds07-audit-N-c01-s0"
+        },
+        {
+          "arm": "N",
+          "context": 1,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-N-c01-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t1.npz",
+          "task_id": "ds07-audit-N-c01-s1"
+        },
+        {
+          "arm": "N",
+          "context": 2,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-N-c02-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t2.npz",
+          "task_id": "ds07-audit-N-c02-s0"
+        },
+        {
+          "arm": "N",
+          "context": 2,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-N-c02-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t2.npz",
+          "task_id": "ds07-audit-N-c02-s1"
+        },
+        {
+          "arm": "N",
+          "context": 3,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-N-c03-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t3.npz",
+          "task_id": "ds07-audit-N-c03-s0"
+        },
+        {
+          "arm": "N",
+          "context": 3,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-N-c03-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t3.npz",
+          "task_id": "ds07-audit-N-c03-s1"
+        },
+        {
+          "arm": "N",
+          "context": 4,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-N-c04-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t4.npz",
+          "task_id": "ds07-audit-N-c04-s0"
+        },
+        {
+          "arm": "N",
+          "context": 4,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-N-c04-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t4.npz",
+          "task_id": "ds07-audit-N-c04-s1"
+        },
+        {
+          "arm": "N",
+          "context": 5,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-N-c05-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t5.npz",
+          "task_id": "ds07-audit-N-c05-s0"
+        },
+        {
+          "arm": "N",
+          "context": 5,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-N-c05-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t5.npz",
+          "task_id": "ds07-audit-N-c05-s1"
+        },
+        {
+          "arm": "N",
+          "context": 6,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-N-c06-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t6.npz",
+          "task_id": "ds07-audit-N-c06-s0"
+        },
+        {
+          "arm": "N",
+          "context": 6,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-N-c06-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t6.npz",
+          "task_id": "ds07-audit-N-c06-s1"
+        },
+        {
+          "arm": "N",
+          "context": 7,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-N-c07-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t7.npz",
+          "task_id": "ds07-audit-N-c07-s0"
+        },
+        {
+          "arm": "N",
+          "context": 7,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-N-c07-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t7.npz",
+          "task_id": "ds07-audit-N-c07-s1"
+        },
+        {
+          "arm": "N",
+          "context": 8,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-N-c08-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t8.npz",
+          "task_id": "ds07-audit-N-c08-s0"
+        },
+        {
+          "arm": "N",
+          "context": 8,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-N-c08-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t8.npz",
+          "task_id": "ds07-audit-N-c08-s1"
+        },
+        {
+          "arm": "C",
+          "context": 0,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-C-c00-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t0.npz",
+          "task_id": "ds07-audit-C-c00-s0"
+        },
+        {
+          "arm": "C",
+          "context": 0,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-C-c00-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t0.npz",
+          "task_id": "ds07-audit-C-c00-s1"
+        },
+        {
+          "arm": "C",
+          "context": 1,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-C-c01-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t1.npz",
+          "task_id": "ds07-audit-C-c01-s0"
+        },
+        {
+          "arm": "C",
+          "context": 1,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-C-c01-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t1.npz",
+          "task_id": "ds07-audit-C-c01-s1"
+        },
+        {
+          "arm": "C",
+          "context": 2,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-C-c02-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t2.npz",
+          "task_id": "ds07-audit-C-c02-s0"
+        },
+        {
+          "arm": "C",
+          "context": 2,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-C-c02-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t2.npz",
+          "task_id": "ds07-audit-C-c02-s1"
+        },
+        {
+          "arm": "C",
+          "context": 3,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-C-c03-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t3.npz",
+          "task_id": "ds07-audit-C-c03-s0"
+        },
+        {
+          "arm": "C",
+          "context": 3,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-C-c03-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t3.npz",
+          "task_id": "ds07-audit-C-c03-s1"
+        },
+        {
+          "arm": "C",
+          "context": 4,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-C-c04-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t4.npz",
+          "task_id": "ds07-audit-C-c04-s0"
+        },
+        {
+          "arm": "C",
+          "context": 4,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-C-c04-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t4.npz",
+          "task_id": "ds07-audit-C-c04-s1"
+        },
+        {
+          "arm": "C",
+          "context": 5,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-C-c05-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t5.npz",
+          "task_id": "ds07-audit-C-c05-s0"
+        },
+        {
+          "arm": "C",
+          "context": 5,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-C-c05-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t5.npz",
+          "task_id": "ds07-audit-C-c05-s1"
+        },
+        {
+          "arm": "C",
+          "context": 6,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-C-c06-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t6.npz",
+          "task_id": "ds07-audit-C-c06-s0"
+        },
+        {
+          "arm": "C",
+          "context": 6,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-C-c06-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t6.npz",
+          "task_id": "ds07-audit-C-c06-s1"
+        },
+        {
+          "arm": "C",
+          "context": 7,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-C-c07-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t7.npz",
+          "task_id": "ds07-audit-C-c07-s0"
+        },
+        {
+          "arm": "C",
+          "context": 7,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-C-c07-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t7.npz",
+          "task_id": "ds07-audit-C-c07-s1"
+        },
+        {
+          "arm": "C",
+          "context": 8,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-C-c08-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t8.npz",
+          "task_id": "ds07-audit-C-c08-s0"
+        },
+        {
+          "arm": "C",
+          "context": 8,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-C-c08-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t8.npz",
+          "task_id": "ds07-audit-C-c08-s1"
+        },
+        {
+          "arm": "S",
+          "context": 0,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-S-c00-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t0.npz",
+          "task_id": "ds07-audit-S-c00-s0"
+        },
+        {
+          "arm": "S",
+          "context": 0,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-S-c00-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t0.npz",
+          "task_id": "ds07-audit-S-c00-s1"
+        },
+        {
+          "arm": "S",
+          "context": 1,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-S-c01-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t1.npz",
+          "task_id": "ds07-audit-S-c01-s0"
+        },
+        {
+          "arm": "S",
+          "context": 1,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-S-c01-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t1.npz",
+          "task_id": "ds07-audit-S-c01-s1"
+        },
+        {
+          "arm": "S",
+          "context": 2,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-S-c02-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t2.npz",
+          "task_id": "ds07-audit-S-c02-s0"
+        },
+        {
+          "arm": "S",
+          "context": 2,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-S-c02-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t2.npz",
+          "task_id": "ds07-audit-S-c02-s1"
+        },
+        {
+          "arm": "S",
+          "context": 3,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-S-c03-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t3.npz",
+          "task_id": "ds07-audit-S-c03-s0"
+        },
+        {
+          "arm": "S",
+          "context": 3,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-S-c03-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t3.npz",
+          "task_id": "ds07-audit-S-c03-s1"
+        },
+        {
+          "arm": "S",
+          "context": 4,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-S-c04-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t4.npz",
+          "task_id": "ds07-audit-S-c04-s0"
+        },
+        {
+          "arm": "S",
+          "context": 4,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-S-c04-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t4.npz",
+          "task_id": "ds07-audit-S-c04-s1"
+        },
+        {
+          "arm": "S",
+          "context": 5,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-S-c05-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t5.npz",
+          "task_id": "ds07-audit-S-c05-s0"
+        },
+        {
+          "arm": "S",
+          "context": 5,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-S-c05-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t5.npz",
+          "task_id": "ds07-audit-S-c05-s1"
+        },
+        {
+          "arm": "S",
+          "context": 6,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-S-c06-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t6.npz",
+          "task_id": "ds07-audit-S-c06-s0"
+        },
+        {
+          "arm": "S",
+          "context": 6,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-S-c06-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t6.npz",
+          "task_id": "ds07-audit-S-c06-s1"
+        },
+        {
+          "arm": "S",
+          "context": 7,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-S-c07-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t7.npz",
+          "task_id": "ds07-audit-S-c07-s0"
+        },
+        {
+          "arm": "S",
+          "context": 7,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-S-c07-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t7.npz",
+          "task_id": "ds07-audit-S-c07-s1"
+        },
+        {
+          "arm": "S",
+          "context": 8,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-S-c08-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t8.npz",
+          "task_id": "ds07-audit-S-c08-s0"
+        },
+        {
+          "arm": "S",
+          "context": 8,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-S-c08-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t8.npz",
+          "task_id": "ds07-audit-S-c08-s1"
+        },
+        {
+          "arm": "R",
+          "context": 0,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-R-c00-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t0.npz",
+          "task_id": "ds07-audit-R-c00-s0"
+        },
+        {
+          "arm": "R",
+          "context": 0,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-R-c00-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t0.npz",
+          "task_id": "ds07-audit-R-c00-s1"
+        },
+        {
+          "arm": "R",
+          "context": 1,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-R-c01-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t1.npz",
+          "task_id": "ds07-audit-R-c01-s0"
+        },
+        {
+          "arm": "R",
+          "context": 1,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-R-c01-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t1.npz",
+          "task_id": "ds07-audit-R-c01-s1"
+        },
+        {
+          "arm": "R",
+          "context": 2,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-R-c02-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t2.npz",
+          "task_id": "ds07-audit-R-c02-s0"
+        },
+        {
+          "arm": "R",
+          "context": 2,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-R-c02-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t2.npz",
+          "task_id": "ds07-audit-R-c02-s1"
+        },
+        {
+          "arm": "R",
+          "context": 3,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-R-c03-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t3.npz",
+          "task_id": "ds07-audit-R-c03-s0"
+        },
+        {
+          "arm": "R",
+          "context": 3,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-R-c03-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t3.npz",
+          "task_id": "ds07-audit-R-c03-s1"
+        },
+        {
+          "arm": "R",
+          "context": 4,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-R-c04-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t4.npz",
+          "task_id": "ds07-audit-R-c04-s0"
+        },
+        {
+          "arm": "R",
+          "context": 4,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-R-c04-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t4.npz",
+          "task_id": "ds07-audit-R-c04-s1"
+        },
+        {
+          "arm": "R",
+          "context": 5,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-R-c05-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t5.npz",
+          "task_id": "ds07-audit-R-c05-s0"
+        },
+        {
+          "arm": "R",
+          "context": 5,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-R-c05-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t5.npz",
+          "task_id": "ds07-audit-R-c05-s1"
+        },
+        {
+          "arm": "R",
+          "context": 6,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-R-c06-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t6.npz",
+          "task_id": "ds07-audit-R-c06-s0"
+        },
+        {
+          "arm": "R",
+          "context": 6,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-R-c06-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t6.npz",
+          "task_id": "ds07-audit-R-c06-s1"
+        },
+        {
+          "arm": "R",
+          "context": 7,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-R-c07-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t7.npz",
+          "task_id": "ds07-audit-R-c07-s0"
+        },
+        {
+          "arm": "R",
+          "context": 7,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-R-c07-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t7.npz",
+          "task_id": "ds07-audit-R-c07-s1"
+        },
+        {
+          "arm": "R",
+          "context": 8,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-R-c08-s0",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t8.npz",
+          "task_id": "ds07-audit-R-c08-s0"
+        },
+        {
+          "arm": "R",
+          "context": 8,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "audit",
+          "requires_fit_receipt": "ds07-fit-R-c08-s1",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t8.npz",
+          "task_id": "ds07-audit-R-c08-s1"
+        }
+      ],
+      "authorized_scientific_audit_task_units": 0,
+      "authorized_scientific_fit_task_units": 0,
+      "contexts": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "fit_task_count": 72,
+      "fit_tasks": [
+        {
+          "arm": "N",
+          "context": 0,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t0.npz",
+          "task_id": "ds07-fit-N-c00-s0"
+        },
+        {
+          "arm": "N",
+          "context": 0,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t0.npz",
+          "task_id": "ds07-fit-N-c00-s1"
+        },
+        {
+          "arm": "N",
+          "context": 1,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t1.npz",
+          "task_id": "ds07-fit-N-c01-s0"
+        },
+        {
+          "arm": "N",
+          "context": 1,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t1.npz",
+          "task_id": "ds07-fit-N-c01-s1"
+        },
+        {
+          "arm": "N",
+          "context": 2,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t2.npz",
+          "task_id": "ds07-fit-N-c02-s0"
+        },
+        {
+          "arm": "N",
+          "context": 2,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t2.npz",
+          "task_id": "ds07-fit-N-c02-s1"
+        },
+        {
+          "arm": "N",
+          "context": 3,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t3.npz",
+          "task_id": "ds07-fit-N-c03-s0"
+        },
+        {
+          "arm": "N",
+          "context": 3,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t3.npz",
+          "task_id": "ds07-fit-N-c03-s1"
+        },
+        {
+          "arm": "N",
+          "context": 4,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t4.npz",
+          "task_id": "ds07-fit-N-c04-s0"
+        },
+        {
+          "arm": "N",
+          "context": 4,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t4.npz",
+          "task_id": "ds07-fit-N-c04-s1"
+        },
+        {
+          "arm": "N",
+          "context": 5,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t5.npz",
+          "task_id": "ds07-fit-N-c05-s0"
+        },
+        {
+          "arm": "N",
+          "context": 5,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t5.npz",
+          "task_id": "ds07-fit-N-c05-s1"
+        },
+        {
+          "arm": "N",
+          "context": 6,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t6.npz",
+          "task_id": "ds07-fit-N-c06-s0"
+        },
+        {
+          "arm": "N",
+          "context": 6,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t6.npz",
+          "task_id": "ds07-fit-N-c06-s1"
+        },
+        {
+          "arm": "N",
+          "context": 7,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t7.npz",
+          "task_id": "ds07-fit-N-c07-s0"
+        },
+        {
+          "arm": "N",
+          "context": 7,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t7.npz",
+          "task_id": "ds07-fit-N-c07-s1"
+        },
+        {
+          "arm": "N",
+          "context": 8,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t8.npz",
+          "task_id": "ds07-fit-N-c08-s0"
+        },
+        {
+          "arm": "N",
+          "context": 8,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t8.npz",
+          "task_id": "ds07-fit-N-c08-s1"
+        },
+        {
+          "arm": "C",
+          "context": 0,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t0.npz",
+          "task_id": "ds07-fit-C-c00-s0"
+        },
+        {
+          "arm": "C",
+          "context": 0,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t0.npz",
+          "task_id": "ds07-fit-C-c00-s1"
+        },
+        {
+          "arm": "C",
+          "context": 1,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t1.npz",
+          "task_id": "ds07-fit-C-c01-s0"
+        },
+        {
+          "arm": "C",
+          "context": 1,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t1.npz",
+          "task_id": "ds07-fit-C-c01-s1"
+        },
+        {
+          "arm": "C",
+          "context": 2,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t2.npz",
+          "task_id": "ds07-fit-C-c02-s0"
+        },
+        {
+          "arm": "C",
+          "context": 2,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t2.npz",
+          "task_id": "ds07-fit-C-c02-s1"
+        },
+        {
+          "arm": "C",
+          "context": 3,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t3.npz",
+          "task_id": "ds07-fit-C-c03-s0"
+        },
+        {
+          "arm": "C",
+          "context": 3,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t3.npz",
+          "task_id": "ds07-fit-C-c03-s1"
+        },
+        {
+          "arm": "C",
+          "context": 4,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t4.npz",
+          "task_id": "ds07-fit-C-c04-s0"
+        },
+        {
+          "arm": "C",
+          "context": 4,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t4.npz",
+          "task_id": "ds07-fit-C-c04-s1"
+        },
+        {
+          "arm": "C",
+          "context": 5,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t5.npz",
+          "task_id": "ds07-fit-C-c05-s0"
+        },
+        {
+          "arm": "C",
+          "context": 5,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t5.npz",
+          "task_id": "ds07-fit-C-c05-s1"
+        },
+        {
+          "arm": "C",
+          "context": 6,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t6.npz",
+          "task_id": "ds07-fit-C-c06-s0"
+        },
+        {
+          "arm": "C",
+          "context": 6,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t6.npz",
+          "task_id": "ds07-fit-C-c06-s1"
+        },
+        {
+          "arm": "C",
+          "context": 7,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t7.npz",
+          "task_id": "ds07-fit-C-c07-s0"
+        },
+        {
+          "arm": "C",
+          "context": 7,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t7.npz",
+          "task_id": "ds07-fit-C-c07-s1"
+        },
+        {
+          "arm": "C",
+          "context": 8,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t8.npz",
+          "task_id": "ds07-fit-C-c08-s0"
+        },
+        {
+          "arm": "C",
+          "context": 8,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t8.npz",
+          "task_id": "ds07-fit-C-c08-s1"
+        },
+        {
+          "arm": "S",
+          "context": 0,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t0.npz",
+          "task_id": "ds07-fit-S-c00-s0"
+        },
+        {
+          "arm": "S",
+          "context": 0,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t0.npz",
+          "task_id": "ds07-fit-S-c00-s1"
+        },
+        {
+          "arm": "S",
+          "context": 1,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t1.npz",
+          "task_id": "ds07-fit-S-c01-s0"
+        },
+        {
+          "arm": "S",
+          "context": 1,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t1.npz",
+          "task_id": "ds07-fit-S-c01-s1"
+        },
+        {
+          "arm": "S",
+          "context": 2,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t2.npz",
+          "task_id": "ds07-fit-S-c02-s0"
+        },
+        {
+          "arm": "S",
+          "context": 2,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t2.npz",
+          "task_id": "ds07-fit-S-c02-s1"
+        },
+        {
+          "arm": "S",
+          "context": 3,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t3.npz",
+          "task_id": "ds07-fit-S-c03-s0"
+        },
+        {
+          "arm": "S",
+          "context": 3,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t3.npz",
+          "task_id": "ds07-fit-S-c03-s1"
+        },
+        {
+          "arm": "S",
+          "context": 4,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t4.npz",
+          "task_id": "ds07-fit-S-c04-s0"
+        },
+        {
+          "arm": "S",
+          "context": 4,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t4.npz",
+          "task_id": "ds07-fit-S-c04-s1"
+        },
+        {
+          "arm": "S",
+          "context": 5,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t5.npz",
+          "task_id": "ds07-fit-S-c05-s0"
+        },
+        {
+          "arm": "S",
+          "context": 5,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t5.npz",
+          "task_id": "ds07-fit-S-c05-s1"
+        },
+        {
+          "arm": "S",
+          "context": 6,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t6.npz",
+          "task_id": "ds07-fit-S-c06-s0"
+        },
+        {
+          "arm": "S",
+          "context": 6,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t6.npz",
+          "task_id": "ds07-fit-S-c06-s1"
+        },
+        {
+          "arm": "S",
+          "context": 7,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t7.npz",
+          "task_id": "ds07-fit-S-c07-s0"
+        },
+        {
+          "arm": "S",
+          "context": 7,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t7.npz",
+          "task_id": "ds07-fit-S-c07-s1"
+        },
+        {
+          "arm": "S",
+          "context": 8,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t8.npz",
+          "task_id": "ds07-fit-S-c08-s0"
+        },
+        {
+          "arm": "S",
+          "context": 8,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t8.npz",
+          "task_id": "ds07-fit-S-c08-s1"
+        },
+        {
+          "arm": "R",
+          "context": 0,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t0.npz",
+          "task_id": "ds07-fit-R-c00-s0"
+        },
+        {
+          "arm": "R",
+          "context": 0,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t0.npz",
+          "task_id": "ds07-fit-R-c00-s1"
+        },
+        {
+          "arm": "R",
+          "context": 1,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t1.npz",
+          "task_id": "ds07-fit-R-c01-s0"
+        },
+        {
+          "arm": "R",
+          "context": 1,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t1.npz",
+          "task_id": "ds07-fit-R-c01-s1"
+        },
+        {
+          "arm": "R",
+          "context": 2,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t2.npz",
+          "task_id": "ds07-fit-R-c02-s0"
+        },
+        {
+          "arm": "R",
+          "context": 2,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t2.npz",
+          "task_id": "ds07-fit-R-c02-s1"
+        },
+        {
+          "arm": "R",
+          "context": 3,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t3.npz",
+          "task_id": "ds07-fit-R-c03-s0"
+        },
+        {
+          "arm": "R",
+          "context": 3,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t3.npz",
+          "task_id": "ds07-fit-R-c03-s1"
+        },
+        {
+          "arm": "R",
+          "context": 4,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t4.npz",
+          "task_id": "ds07-fit-R-c04-s0"
+        },
+        {
+          "arm": "R",
+          "context": 4,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t4.npz",
+          "task_id": "ds07-fit-R-c04-s1"
+        },
+        {
+          "arm": "R",
+          "context": 5,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t5.npz",
+          "task_id": "ds07-fit-R-c05-s0"
+        },
+        {
+          "arm": "R",
+          "context": 5,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t5.npz",
+          "task_id": "ds07-fit-R-c05-s1"
+        },
+        {
+          "arm": "R",
+          "context": 6,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t6.npz",
+          "task_id": "ds07-fit-R-c06-s0"
+        },
+        {
+          "arm": "R",
+          "context": 6,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t6.npz",
+          "task_id": "ds07-fit-R-c06-s1"
+        },
+        {
+          "arm": "R",
+          "context": 7,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t7.npz",
+          "task_id": "ds07-fit-R-c07-s0"
+        },
+        {
+          "arm": "R",
+          "context": 7,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t7.npz",
+          "task_id": "ds07-fit-R-c07-s1"
+        },
+        {
+          "arm": "R",
+          "context": 8,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 0,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t8.npz",
+          "task_id": "ds07-fit-R-c08-s0"
+        },
+        {
+          "arm": "R",
+          "context": 8,
+          "epochs": 100,
+          "model_class_path": "src.models.ai4s.dsainet.ds07:DS07R1",
+          "phase": "fit",
+          "seed": 1,
+          "split_path": "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t8.npz",
+          "task_id": "ds07-fit-R-c08-s1"
+        }
+      ],
+      "seeds": [
+        0,
+        1
+      ],
+      "total_fit_and_audit_task_units": 144
+    },
+    "matrix_id": "ds07-r1-cue4-source6-select1-audit1-ce100-v1",
+    "matrix_ref": {
+      "path": "ai4s/programs/dsainet/research/ds07-r1/science_preparation/SCIENCE_MATRIX_DRAFT.json",
+      "sha256": "eeb02875f13b8db1c2e536df3de23784fa261f162cf9987aa823b3ffca05bf96"
+    },
+    "science_authorization_ref": "ai4s/programs/dsainet/research/ds07-r1/science_preparation/readerfix1/SCIENCE_AUTHORIZATION.json",
+    "science_authorization_sha256": "21c7e7b6086d7425d1fc3031e7dafe5d8f5f4a58c176874acab8c71d728c252f",
+    "science_ceiling_hours": 33,
+    "transaction_ceiling_hours": 39
+  },
+  "ds07_technical_reuse": {
+    "engineering_descriptor_ref": {
+      "path": "ai4s/programs/dsainet/research/ds07-r1/science_preparation/readerfix1/ENGINEERING_PROFILE_DESCRIPTOR.json",
+      "sha256": "f93e25b55ad43850909745d6183f42c2b5e6114b63f1409b9ecb6ea2da6a0cae"
+    },
+    "parent_artifacts": {
+      "arms": {
+        "C": {
+          "external_process_receipt": {
+            "local_path": "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/parent_arms/C/C.external_process_receipt.json",
+            "relative_path": "output/logs/C.external_process_receipt.json",
+            "remote_path": "[REDACTED_MACHINE]",
+            "sha256": "a3a44bc78862432d7cbbcbfb069bfb6ff7799f64f105b70384bb0041bcfd7032"
+          },
+          "process_memory_trace": {
+            "local_path": "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/parent_arms/C/C.process_memory_trace.json",
+            "relative_path": "output/logs/C.process_memory_trace.json",
+            "remote_path": "[REDACTED_MACHINE]",
+            "sha256": "994f19735d98ee720738d016e88bd5068fc72a9d9c2faf332cbfafe96bde8531"
+          },
+          "selected_checkpoint": {
+            "local_path": null,
+            "relative_path": "output/C/selected_checkpoint.pt",
+            "remote_path": "[REDACTED_MACHINE]",
+            "sha256": "f47fe6a4a160ab6431a9fabde0ef5b1e4b63a3f39d0feae1d82de9d1acdd523c"
+          },
+          "technical_receipt": {
+            "local_path": "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/parent_arms/C/tech_receipt.json",
+            "relative_path": "output/C/tech_receipt.json",
+            "remote_path": "[REDACTED_MACHINE]",
+            "sha256": "a53d30f25f3e5be0a3dc3d9f8f913fedf61680be4baa8fb25d576290b02154c1"
+          }
+        },
+        "R": {
+          "external_process_receipt": {
+            "local_path": "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/parent_arms/R/R.external_process_receipt.json",
+            "relative_path": "output/logs/R.external_process_receipt.json",
+            "remote_path": "[REDACTED_MACHINE]",
+            "sha256": "227a5d0b71b280df3ef117e46be1db510764173285c87786092eed761c901d30"
+          },
+          "process_memory_trace": {
+            "local_path": "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/parent_arms/R/R.process_memory_trace.json",
+            "relative_path": "output/logs/R.process_memory_trace.json",
+            "remote_path": "[REDACTED_MACHINE]",
+            "sha256": "c1008af34297c3fd2916c4c7a4345019e9f6837b9dc79794f465a305d362f01c"
+          },
+          "selected_checkpoint": {
+            "local_path": null,
+            "relative_path": "output/R/selected_checkpoint.pt",
+            "remote_path": "[REDACTED_MACHINE]",
+            "sha256": "6387f887343e9a23fdd9255db225b626429c1b272aff6c3d16a01e274c87efa8"
+          },
+          "technical_receipt": {
+            "local_path": "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/parent_arms/R/tech_receipt.json",
+            "relative_path": "output/R/tech_receipt.json",
+            "remote_path": "[REDACTED_MACHINE]",
+            "sha256": "9e4b571eb37dfc26acf24e65f9ba8db21ff85adbb02a0e25b73648d8edb6a75b"
+          }
+        },
+        "S": {
+          "external_process_receipt": {
+            "local_path": "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/parent_arms/S/S.external_process_receipt.json",
+            "relative_path": "output/logs/S.external_process_receipt.json",
+            "remote_path": "[REDACTED_MACHINE]",
+            "sha256": "97dc3474ce1f6d2675a73dd426e70f01b1d66a8bbd6abad34a8e8ace3307353f"
+          },
+          "process_memory_trace": {
+            "local_path": "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/parent_arms/S/S.process_memory_trace.json",
+            "relative_path": "output/logs/S.process_memory_trace.json",
+            "remote_path": "[REDACTED_MACHINE]",
+            "sha256": "0ae9f9528ed432e5658dad25dc0203cbb035bb7a1b5134cb234711bb615f1df1"
+          },
+          "selected_checkpoint": {
+            "local_path": null,
+            "relative_path": "output/S/selected_checkpoint.pt",
+            "remote_path": "[REDACTED_MACHINE]",
+            "sha256": "6c575678283893e3237ae6d3b972f88a89d269d998d392aeafeed9e521e565c4"
+          },
+          "technical_receipt": {
+            "local_path": "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/parent_arms/S/tech_receipt.json",
+            "relative_path": "output/S/tech_receipt.json",
+            "remote_path": "[REDACTED_MACHINE]",
+            "sha256": "f7a712c6515ccd1ec37280c37cb0ee83d0fe6d94f4e7d84afefb2cd9515f4787"
+          }
+        }
+      },
+      "parent_root": "[REDACTED_MACHINE]",
+      "parent_run_id": "2026-11-01_dsainet_ds07_r1_tech1-repair1-packfix1-full-w1",
+      "schema": "ds07_parent_artifacts_v1"
+    },
+    "profile_runner_sha256": "e205a43a82cd5b3a1fe2da3058eea8b5cb276823ebbbf5ba5506c957a240ae5a",
+    "scope": {
+      "arm": "N",
+      "context": 0,
+      "epochs": 5,
+      "phase": "tech_profile",
+      "qualification_batches": 8,
+      "seed": 0,
+      "task_id": "DS07_N_TECH_PROFILE"
+    }
+  },
+  "engineering_repair": {
+    "changes": [
+      "typed JSON consumers",
+      "absolute original mieeg interpreter",
+      "remove redundant config mirror to preserve canonical roundtrip"
+    ],
+    "failure_proof_ref": "ai4s/programs/dsainet/research/ds07-r1/science_preparation/readerfix1/FAILURE_PROOF.json",
+    "failure_proof_sha256": "603b251d599280190614e3de9bff7abca1a292d3e7f7308c94e7f3a1edece5dc",
+    "model_recipe_matrix_thresholds_changed": false,
+    "parent_contract_sha256": "2bb53a03bdaadd9040b7159254b2ddba1a707b98f8222f7a5e715dbf3897cdd8",
+    "parent_run_id": "2026-11-02_dsainet_ds07_r1_science1-full-w1",
+    "repair_id": "readerfix1",
+    "scope_audit_count": 72,
+    "scope_training_count": 72
+  },
+  "execution": {
+    "artifact_manifest_policy": "root_reserved_v1",
+    "automatic_retries": 0,
+    "capacity": {
+      "admission_mode": "capacity",
+      "allow_external_compute": true,
+      "allow_same_owner": true,
+      "concurrency_policy": "memory_only",
+      "coordination": "short_admission_lock_and_per_task_gpu_reservations_v1",
+      "enabled": true,
+      "gpu_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "max_attempts_per_task": 1,
+      "max_jobs_per_gpu": null,
+      "max_temperature_c": 90,
+      "measurement_mode": "ordinary_accuracy",
+      "memory_estimate_policy": "increase_only",
+      "memory_headroom_policy": "lab_permissive_v1",
+      "memory_reserve_mib": 0
+    },
+    "executor_id": "lab10",
+    "preflight_binding": {
+      "mode": "in_transaction",
+      "node_id": "technical_reuse"
+    },
+    "queue_time_policy": "exclude_resource_wait",
+    "result_transfer": {
+      "include": [
+        "technical/TECH_REUSE_RECEIPT.json",
+        "technical/TECH_REUSE_EVIDENCE.json",
+        "technical/parent_reuse_receipt.json",
+        "technical/N/tech_receipt.json",
+        "technical/N_external_process_receipt.json",
+        "technical/N_process_memory_trace.json",
+        "technical/N_profile.log",
+        "science/SCIENCE_EXECUTION_RECEIPT.json",
+        "science/SCIENCE_PROGRESS.json",
+        "science/FIT_BARRIER.json",
+        "science/fits/*/fit_receipt.json",
+        "science/audits/*/audit_receipt.json",
+        "science/audits/*/audit_predictions.npz",
+        "technical/COST_GATE.json",
+        "science/audits/*/R_no_fit_diagnostic_receipt.json",
+        "science/audits/*/R_no_fit_diagnostics.npz"
+      ],
+      "max_bytes": 536870912,
+      "mode": "analysis_v1",
+      "remote_verify_timeout_seconds": 3600
+    },
+    "scientific_training_authorized": true,
+    "transaction_timeout_seconds": 140400
+  },
+  "intended_remote_root": "[REDACTED_MACHINE]",
+  "metric_unit": "accuracy_pp",
+  "program_id": "dsainet",
+  "repo_root": "[REDACTED_MACHINE]",
+  "research_id": "ds07-r1",
+  "research_identity": {
+    "hypothesis": "在冻结的DS07-R1配置下完成N/C/S/R四臂配对CE100比较，以既定逐context和风险分析判读各臂差异。",
+    "hypothesis_id": "dsainet.ds07-r1.ce100-four-arm-comparison",
+    "module_id": "dsainet.ds07-r1.paired-four-arm-model"
+  },
+  "research_saturation_key": {
+    "baseline_implementation_revision": "native-e59dd6fa30f137bfadf78a895ec52c5be67054b89b640edf89d196d80b5a0eb5",
+    "checkpoint_rule": "validation_best",
+    "dataset": "BNCI2014001",
+    "epochs": 100,
+    "hypothesis_family_id": "dsainet.ds07-r1.ce100-four-arm-comparison",
+    "metric": "accuracy_pp",
+    "module_family_id": "dsainet.ds07-r1.paired-four-arm-model",
+    "preprocessing": "official_mat_0p5_40hz_0_4s_250hz_22eeg",
+    "protocol": "ds07-r1-cue4-source6-select1-audit1",
+    "split": "frozen-context-source-only"
+  },
+  "research_stage": "screen",
+  "round_id": "ds07-r1-science1-readerfix1",
+  "run_prefix": "2026-11-02_dsainet_ds07_r1_science1-readerfix1",
+  "schema_version": "mieeg-ai4s-round-contract-v2",
+  "status": "frozen",
+  "task_scopes": {
+    "science": {
+      "command": [
+        "[REDACTED_MACHINE]",
+        "-B",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/science_driver.py"
+      ],
+      "memory_commitment_mib": 4096,
+      "requirements": [
+        "ai4s/programs/dsainet/research/ds07-r1/preparation/EXPECTED_DATA.json",
+        "ai4s/programs/dsainet/research/ds07-r1/preparation/engineering_contract.json",
+        "ai4s/programs/dsainet/research/ds07-r1/preparation/staged/ds07.py",
+        "ai4s/programs/dsainet/research/ds07-r1/preparation/verify_data.py",
+        "ai4s/programs/dsainet/research/ds07-r1/research_brief.md",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/AUTHORIZATION266.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/BUDGET_REQUEST_20261102.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/CONFIG.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/OPERATOR_STOP_RECEIPT.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/SCIENCE_MATRIX_DRAFT.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/SERIALIZED_CONSUMER_REGRESSION.log",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/STOPPED_SCIENCE1_QUEUE_RAW.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/STOPPED_SCIENCE1_SCHEDULER.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/budget_authority.py",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/cost_gate.py",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/profile_n_runner.py",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/profile_n_task.py",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/AUTHORIZATION212.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/USER_APPROVAL266.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/manual_wait1_request.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/manual_wait2_request.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/packfix1_queue_clock.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/parent_arms/C/C.external_process_receipt.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/parent_arms/C/C.process_memory_trace.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/parent_arms/C/tech_receipt.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/parent_arms/R/R.external_process_receipt.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/parent_arms/R/R.process_memory_trace.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/parent_arms/R/tech_receipt.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/parent_arms/S/S.external_process_receipt.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/parent_arms/S/S.process_memory_trace.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/parent_arms/S/tech_receipt.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/readerfix1/AUTHORIZATION_READERFIX1.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/readerfix1/BUDGET_AUTHORITY.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/readerfix1/ENGINEERING_PROFILE_DESCRIPTOR.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/readerfix1/EXPLICIT_TARGET_REPLY.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/readerfix1/FAILURE_PROOF.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/readerfix1/FRESH_NO_TASKS_PROOF.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/readerfix1/SCIENCE_AUTHORIZATION.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/readerfix1/TRANSPORT_REQUEST.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/reliable_monitor.py",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/science_driver.py",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/science_runner.py",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/science_task.py",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/tech_reuse_node.py",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/test_reliable_monitor.py",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/test_tech_reuse.py",
+        "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t0.npz",
+        "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t1.npz",
+        "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t2.npz",
+        "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t3.npz",
+        "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t4.npz",
+        "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t5.npz",
+        "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t6.npz",
+        "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t7.npz",
+        "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t8.npz",
+        "refs/models/DSAINet-main/DSAINet-main/model/DSAINet.py",
+        "scripts/ai4s/transaction.py",
+        "scripts/remote/lab10_reservations.py",
+        "scripts/remote/lab10_shared_executor.py"
+      ],
+      "resource_profile": "gpu_training",
+      "result_file": "science/science_node_result.json",
+      "stage": "full",
+      "task_evidence_files": {
+        "DS07_SCIENCE_72FIT_72AUDIT": "science/SCIENCE_TASK_EVIDENCE.json"
+      },
+      "task_ids": [
+        "DS07_SCIENCE_72FIT_72AUDIT"
+      ],
+      "timeout_seconds": 118800
+    },
+    "technical_reuse": {
+      "command": [
+        "[REDACTED_MACHINE]",
+        "-B",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/tech_reuse_node.py"
+      ],
+      "memory_commitment_mib": 4096,
+      "requirements": [
+        "ai4s/programs/dsainet/research/ds07-r1/preparation/EXPECTED_DATA.json",
+        "ai4s/programs/dsainet/research/ds07-r1/preparation/engineering_contract.json",
+        "ai4s/programs/dsainet/research/ds07-r1/preparation/staged/ds07.py",
+        "ai4s/programs/dsainet/research/ds07-r1/preparation/verify_data.py",
+        "ai4s/programs/dsainet/research/ds07-r1/research_brief.md",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/AUTHORIZATION266.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/BUDGET_REQUEST_20261102.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/CONFIG.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/OPERATOR_STOP_RECEIPT.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/SCIENCE_MATRIX_DRAFT.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/SERIALIZED_CONSUMER_REGRESSION.log",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/STOPPED_SCIENCE1_QUEUE_RAW.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/STOPPED_SCIENCE1_SCHEDULER.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/budget_authority.py",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/cost_gate.py",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/profile_n_runner.py",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/profile_n_task.py",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/AUTHORIZATION212.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/USER_APPROVAL266.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/manual_wait1_request.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/manual_wait2_request.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/packfix1_queue_clock.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/parent_arms/C/C.external_process_receipt.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/parent_arms/C/C.process_memory_trace.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/parent_arms/C/tech_receipt.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/parent_arms/R/R.external_process_receipt.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/parent_arms/R/R.process_memory_trace.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/parent_arms/R/tech_receipt.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/parent_arms/S/S.external_process_receipt.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/parent_arms/S/S.process_memory_trace.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/proofs/parent_arms/S/tech_receipt.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/readerfix1/AUTHORIZATION_READERFIX1.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/readerfix1/BUDGET_AUTHORITY.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/readerfix1/ENGINEERING_PROFILE_DESCRIPTOR.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/readerfix1/EXPLICIT_TARGET_REPLY.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/readerfix1/FAILURE_PROOF.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/readerfix1/FRESH_NO_TASKS_PROOF.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/readerfix1/SCIENCE_AUTHORIZATION.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/readerfix1/TRANSPORT_REQUEST.json",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/reliable_monitor.py",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/science_driver.py",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/science_runner.py",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/science_task.py",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/tech_reuse_node.py",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/test_reliable_monitor.py",
+        "ai4s/programs/dsainet/research/ds07-r1/science_preparation/test_tech_reuse.py",
+        "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t0.npz",
+        "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t1.npz",
+        "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t2.npz",
+        "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t3.npz",
+        "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t4.npz",
+        "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t5.npz",
+        "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t6.npz",
+        "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t7.npz",
+        "ai4s/programs/dsainet/research/dsa-rcd-v0.1/splits/split_t8.npz",
+        "refs/models/DSAINet-main/DSAINet-main/model/DSAINet.py",
+        "scripts/ai4s/transaction.py",
+        "scripts/remote/lab10_reservations.py",
+        "scripts/remote/lab10_shared_executor.py"
+      ],
+      "resource_profile": "gpu_training",
+      "result_file": "technical/technical_reuse_result.json",
+      "stage": "technical_pilot",
+      "task_evidence_files": {
+        "DS07_N_TECH_PROFILE": "technical/TECH_REUSE_EVIDENCE.json"
+      },
+      "task_ids": [
+        "DS07_N_TECH_PROFILE"
+      ],
+      "timeout_seconds": 7200
+    }
+  },
+  "technical_pass_rules": {
+    "ds07_technical_reuse": {
+      "finite": {
+        "eq": true
+      },
+      "full_process_memory": {
+        "eq": true
+      },
+      "identity_pass": {
+        "eq": true
+      },
+      "operative": {
+        "eq": true
+      },
+      "peak_memory_mib": {
+        "min": 1
+      },
+      "shape_pass": {
+        "eq": true
+      }
+    }
+  },
+  "transaction": {
+    "authorized_nodes": [
+      {
+        "depends_on": [],
+        "kind": "TECHNICAL",
+        "node_id": "technical_reuse",
+        "task_scope_ref": "technical_reuse"
+      },
+      {
+        "depends_on": [
+          "technical_reuse"
+        ],
+        "kind": "SCIENTIFIC",
+        "node_id": "science",
+        "task_scope_ref": "science"
+      }
+    ],
+    "intermediate_effect_reading": false,
+    "post_intake": {
+      "analyze": true,
+      "register_decision": true,
+      "verify": true
+    },
+    "scientific_stop_boundary": "NEXT_SCIENTIFIC_DECISION",
+    "technical_checks": {
+      "technical_reuse": {
+        "failure_action": "BLOCK_DEPENDENTS",
+        "mode": "in_transaction",
+        "pass_rule_ref": "ds07_technical_reuse",
+        "purpose": null
+      }
+    },
+    "transaction_id": "dsainet-ds07-r1-science1-readerfix1"
+  },
+  "work_accounting": {
+    "internal_audits": 72,
+    "internal_scientific_fits": 72,
+    "internal_total_units": 145,
+    "new_technical_profile_units": 1,
+    "reused_technical_arms": [
+      "C",
+      "S",
+      "R"
+    ],
+    "shared_task_units": 2
+  }
+}

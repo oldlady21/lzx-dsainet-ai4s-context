@@ -1,0 +1,188 @@
+{
+  "analysis_metric_unit": "accuracy_pp",
+  "baseline_profile": {
+    "dataset": "BNCI2014001",
+    "epochs": 100,
+    "preprocessing": "official_mat_0p5_40hz_0_4s_250hz_22eeg",
+    "primary_metric": "accuracy",
+    "protocol": "loso",
+    "seeds": [
+      0,
+      1
+    ],
+    "subjects": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "training_profile": "tp-dsainet100-v1"
+  },
+  "candidate_source_root": "src/models/ai4s/dsainet",
+  "controller": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+  "default_executor_id": "ccmu_lab",
+  "defaults": {
+    "harm_floor_delta_pp": -10.0,
+    "max_rounds": 3,
+    "minimum_positive_subjects": 5,
+    "monitor": "blocking",
+    "night_budget_hours": 10,
+    "queue_time_policy": "exclude_resource_wait"
+  },
+  "executors": {
+    "ccmu_lab": {
+      "candidate_gpu_ids": [
+        0
+      ],
+      "conda_activation": "[REDACTED_MACHINE]",
+      "conda_env": "mieeg",
+      "execution_mode": "ai4s_autopilot",
+      "host": "[REDACTED_MACHINE]",
+      "memory_reserve_mib": 1024,
+      "python": "[REDACTED_MACHINE]",
+      "remote_root": "[REDACTED_MACHINE]",
+      "resource_policy_authority": "user 2026-09-06: dedicated personal GPU0; allow transient background usage",
+      "resource_policy_defaults": {
+        "allow_background_processes": true,
+        "gpu_id": 0,
+        "max_wait_seconds": 900,
+        "maximum_temperature_c": 90,
+        "minimum_free_mib": 12288,
+        "poll_seconds": 15
+      },
+      "scheduler": "scripts/remote/ccmu_lane_executor.py",
+      "transaction_runtime": "scripts/ai4s/transaction.py",
+      "workers_per_gpu": 1
+    },
+    "lab10": {
+      "candidate_gpu_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "capacity_authority": "user 2026-09-07: same-account capacity sharing; user 2026-09-13: future ordinary DSAINet training uses memory_only, no fixed family/per-GPU job-count cap; preserve memory/ownership/temperature/OOM gates and frozen historical contracts",
+      "capacity_defaults": {
+        "admission_mode": "capacity",
+        "allow_external_compute": true,
+        "allow_same_owner": true,
+        "concurrency_policy": "memory_only",
+        "coordination": "short_admission_lock_and_per_task_gpu_reservations_v1",
+        "enabled": true,
+        "max_attempts_per_task": 1,
+        "max_jobs_per_gpu": null,
+        "max_temperature_c": 90,
+        "measurement_mode": "ordinary_accuracy",
+        "memory_estimate_policy": "verified_profile",
+        "memory_headroom_policy": "lab_permissive_v1",
+        "memory_reserve_mib": 0,
+        "verified_profiles": {}
+      },
+      "conda_activation": "[REDACTED_MACHINE]",
+      "conda_env": "mieeg",
+      "execution_mode": "user_managed",
+      "host": "[REDACTED_MACHINE]",
+      "max_idle_utilization_pct": 20,
+      "max_temperature_c": 90,
+      "memory_reserve_mib": 0,
+      "python": "[REDACTED_MACHINE]",
+      "remote_root": "[REDACTED_MACHINE]",
+      "runtime_anchor": null,
+      "runtime_anchor_status": "uncalibrated_do_not_reuse_ccmu_timing",
+      "scheduler": "scripts/remote/lab10_shared_executor.py",
+      "ssh_options": [],
+      "transaction_runtime": "scripts/ai4s/transaction.py",
+      "transport_authority": "2026-10-17 user authorized D implementation/launch; host-context SSH via ccmu verified hostname [REDACTED_MACHINE] and all GPUs 0..9; direct alias unavailable. Historical frozen contracts/Bundles unchanged.",
+      "workers_per_gpu": 1
+    }
+  },
+  "external_repositories": "read_only",
+  "handoff_prerequisites": [
+    "RACR 状态对账完成",
+    "RAIA 当前路线收口并由用户确认移交"
+  ],
+  "managed_write_paths": [
+    "ai4s/programs/dsainet",
+    "ai4s/references"
+  ],
+  "program_id": "dsainet",
+  "prompt_governance": {
+    "expected_active_chain_id": "dsainet-transaction-v3.3",
+    "index": "ai4s/PROMPT_INDEX.yaml",
+    "mismatch_policy": "BLOCK"
+  },
+  "remote": {
+    "conda_env": "mieeg",
+    "controller": "scripts/ai4s/program_controller.py --program dsainet advance",
+    "gpu_ids": [
+      0
+    ],
+    "host": "[REDACTED_MACHINE]",
+    "workers_per_gpu": 1
+  },
+  "repository": {
+    "root": "./",
+    "sentinel": "AGENTS.md"
+  },
+  "research_governance": {
+    "allowed_transitions": [
+      "REFINE_ONCE",
+      "DIAGNOSE_ONCE",
+      "CONFIRM_TO_CAP",
+      "MATURE_AND_FREEZE",
+      "RETIRE",
+      "DISCOVER_NEXT",
+      "SCREEN_NEW",
+      "EVALUATE_FROZEN"
+    ],
+    "authorization_transition_required_for_continuation": true,
+    "paired_seed_cap": 5,
+    "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+    "required_transition_fields": [
+      "decision",
+      "run_action",
+      "source_decision_record",
+      "source_evidence_ids",
+      "evidence_basis",
+      "remaining_uncertainty",
+      "expected_information",
+      "stop_rule",
+      "next_stage"
+    ],
+    "run_action_by_transition": {
+      "CONFIRM_TO_CAP": "RUN_ALLOWED",
+      "DIAGNOSE_ONCE": "RUN_ALLOWED",
+      "DISCOVER_NEXT": "DESIGN_ONLY",
+      "EVALUATE_FROZEN": "RUN_ALLOWED",
+      "MATURE_AND_FREEZE": "NO_RUN",
+      "REFINE_ONCE": "RUN_ALLOWED",
+      "RETIRE": "NO_RUN",
+      "SCREEN_NEW": "RUN_ALLOWED"
+    }
+  },
+  "runtime_anchor": {
+    "executor_id": "ccmu_lab",
+    "gpu_id": 0,
+    "note": "R03 observed 21.44 tasks/hour; reserve overhead by using18. Does not authorize batching or change training.",
+    "observed_tasks_per_hour": 21.440014134408543,
+    "role": "conservative_scheduling_estimate_from_verified_R03_not_v2_capacity_acceptance",
+    "source": "results/logs/remote/2026-09-05_dsainet_ai4s_role_specific_token_pooling_r3r4-full-w1/scheduler_metrics.json",
+    "source_sha256": "c3c1e8dbc5b05c0ffaadb6fd8c516131b524cd182c1dd2ea27ec9d3d05f615b6",
+    "tasks_per_hour": 18.0,
+    "workers_per_gpu": 1
+  },
+  "schema_version": "mieeg-ai4s-program-v1",
+  "status_authority": "ai4s/programs/dsainet/research/STATE.yaml",
+  "title": "DSAINet 单模型 AI4S 循环"
+}

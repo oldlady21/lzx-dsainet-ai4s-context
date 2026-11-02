@@ -1,0 +1,150 @@
+{
+  "claims": {
+    "DSA-PFC-001-FROZEN-REPLICATION": [
+      {
+        "audit_ref": {
+          "path": "ai4s/programs/dsainet/research/dsa-pfc-v0.1/review/EXPERIMENT_AUDIT.json",
+          "sha256": "996dbf4256423dd4bce3318226764b1727c738e679141099f96270ce68b7aa58"
+        },
+        "claim_definition": {
+          "claim_id": "DSA-PFC-001-FROZEN-REPLICATION",
+          "decision_rule": "new3 mean accuracy gain>=0.5pp and NLL gain>=0.010; all3 seeds joint>0; >=6/9 subjects joint>0; all9 LOO joint>0; every subject ACC>-5pp; integer-correct rational strict zero; old2/all5 descriptive only.",
+          "negative_consequence": "Stop this fixed replication if any necessary gate fails; no extra seeds/variants/hyperparameter rescue. No mechanism or untouched confirmation claim.",
+          "scope_ids": [
+            "bnci001-p0-b0-five-seed-frozen-replication"
+          ],
+          "statement": "On already exposed BNCI2014001 under the frozen AEL training/selection recipe, unchanged P0 exhibits predefined paired performance advantage over native B0 across new seeds2,3,4; not independent generalization or mechanism evidence."
+        },
+        "claim_id": "DSA-PFC-001-FROZEN-REPLICATION",
+        "evaluation_plan": {
+          "path": "ai4s/programs/dsainet/research/dsa-pfc-v0.1/EVALUATION_PLAN.yaml",
+          "sha256": "1e3d821c970a1f836c3f0d6eeeb63e8e28fe876e5ac593ba73e4a3f9dfed6e22"
+        },
+        "evidence_refs": [
+          {
+            "evidence_id": "AI4S-DSAINET-dsa-pfc-v0.1-r1",
+            "roles": [
+              "benchmark",
+              "frozen_replication"
+            ],
+            "scope_id": "bnci001-p0-b0-five-seed-frozen-replication"
+          }
+        ],
+        "gaps": [
+          "External integrity audit is WARN because raw trial labels/predictions were not independently inspected; formal non-pending review requires audit outcome pass."
+        ],
+        "judgement": "pending",
+        "limitations": [
+          "BNCI2014001 was used in development; no untouched confirmation.",
+          "New seeds do not add independent subjects; source folds overlap.",
+          "No mechanism, capacity-matched causality or cross-dataset generalization claim."
+        ],
+        "program_id": "dsainet",
+        "result_to_claim_ref": {
+          "path": "ai4s/programs/dsainet/research/dsa-pfc-v0.1/review/RESULT_TO_CLAIM.json",
+          "sha256": "403375db76c29b5e53d0bce827b5052d2947afba4ab6476495c7aa71ef0ec89a"
+        },
+        "review_sha256": "6bedfea4b973328d1684e4dfaa23af27bb9823f944284f5fb08fb7dc87a06cd3",
+        "revision": "20260929-r1",
+        "unique_artifacts": 1,
+        "unique_evidence_ids": [
+          "AI4S-DSAINET-dsa-pfc-v0.1-r1"
+        ],
+        "verified_evidence": [
+          {
+            "artifact_manifest_sha256": "c8cb637502c03e8b79666e8e0f165de640b122eecb82638afeeec19ef62f2e5e",
+            "evidence_id": "AI4S-DSAINET-dsa-pfc-v0.1-r1",
+            "outcome_exposure": "selection_used",
+            "run_id": "2026-09-28_dsainet_pfc_v0_1_r1-full-w1",
+            "scope_id": "bnci001-p0-b0-five-seed-frozen-replication",
+            "source_evidence_ids": [
+              "AI4S-DSAINET-dsa-pfc-v0.1-r1"
+            ]
+          }
+        ]
+      }
+    ],
+    "DSA-PFC-XDS-FROZEN-LOSO": [
+      {
+        "claim_definition": {
+          "claim_id": "DSA-PFC-XDS-FROZEN-LOSO",
+          "decision_rule": "Each dataset:meanACC>=.5pp,NLLgain>=.010,all5seedsjointpositive,>=ceil(2N/3)subjectsjointpositive,allLOOjointpositive,worstsubjectACC>-5pp; both datasets independently pass. No pooled rescue.",
+          "negative_consequence": "Either dataset gate failing prevents the joint claim; complete per-dataset reporting is allowed by user amendment. No added seed/profile or cross-dataset tuning.",
+          "scope_ids": [
+            "004-all-subjects-five-seed-loso",
+            "physionet-all-subjects-five-seed-loso"
+          ],
+          "statement": "Under the fixed recipe, unchanged P0 has predefined paired performance advantage over native B0 separately on both added datasets in full five-seed LOSO; not untouched confirmation or a mechanism claim."
+        },
+        "claim_id": "DSA-PFC-XDS-FROZEN-LOSO",
+        "evaluation_plan": {
+          "path": "ai4s/programs/dsainet/research/dsa-pfc-xds-v0.1-repair3/EVALUATION_PLAN_SPLIT.yaml",
+          "sha256": "f28af045ea76b1059713ecca3416386652d6ee1af2548d4b00d8c86de35634d1"
+        },
+        "evidence_refs": [
+          {
+            "evidence_id": "AI4S-DSAINET-dsa-pfc-xds-v0.1-repair4-004",
+            "roles": [
+              "benchmark",
+              "frozen_replication"
+            ],
+            "scope_id": "004-all-subjects-five-seed-loso"
+          },
+          {
+            "evidence_id": "AI4S-DSAINET-dsa-pfc-xds-v0.1-physionet-target-resume16",
+            "roles": [
+              "benchmark",
+              "frozen_replication"
+            ],
+            "scope_id": "physionet-all-subjects-five-seed-loso"
+          }
+        ],
+        "external_review_status_ref": {
+          "path": "ai4s/programs/dsainet/research/dsa-pfc-xds-v0.1-physionet-target-resume16/review/REVIEW_STATUS.json",
+          "sha256": "c3b621cc8df16d5ece4412b4c6c6f7cc020fbf9bab4b2d36608c543d34a436a7"
+        },
+        "gaps": [
+          "Independent joint review reached its bounded turn limit twice without producing either required final report; no integrity pass or completed Claim judgement can be extracted."
+        ],
+        "judgement": "pending",
+        "limitations": [
+          "Outcome exposure unknown; frozen replication and secondary benchmark, not untouched confirmation.",
+          "Encoding, inter removal and parameter counts differ jointly; no mechanism, complementarity, Coarse-specific or SOTA claim.",
+          "Both new datasets fail their frozen joint performance gates; no dataset pooling or rescue. Verified negative local decision does not substitute for required external reports."
+        ],
+        "program_id": "dsainet",
+        "review_sha256": "c3f1804655551346b11bf9fe4c18f8e2672c6626b0312abab79f27141f2f07dc",
+        "revision": "20261008-r1-pending",
+        "unique_artifacts": 2,
+        "unique_evidence_ids": [
+          "AI4S-DSAINET-dsa-pfc-xds-v0.1-physionet-target-resume16",
+          "AI4S-DSAINET-dsa-pfc-xds-v0.1-repair4-004"
+        ],
+        "verified_evidence": [
+          {
+            "artifact_manifest_sha256": "980380a769bee64ba871c5e42c4311c3356676c35e68e5a2c1389d395f4e5a7a",
+            "evidence_id": "AI4S-DSAINET-dsa-pfc-xds-v0.1-repair4-004",
+            "outcome_exposure": "unknown",
+            "run_id": "2026-09-29_dsainet_pfc_xds_v0_1_repair4_004-full-w1",
+            "scope_id": "004-all-subjects-five-seed-loso",
+            "source_evidence_ids": [
+              "AI4S-DSAINET-dsa-pfc-xds-v0.1-repair4-004"
+            ]
+          },
+          {
+            "artifact_manifest_sha256": "789da51665f075182966f5fa302ad5ed1ebd2165e2d9b50a933a30ce589ee358",
+            "evidence_id": "AI4S-DSAINET-dsa-pfc-xds-v0.1-physionet-target-resume16",
+            "outcome_exposure": "unknown",
+            "run_id": "2026-10-08_dsainet_pfc_xds_v0_1_physionet_target_resume16-full-w1",
+            "scope_id": "physionet-all-subjects-five-seed-loso",
+            "source_evidence_ids": [
+              "AI4S-DSAINET-dsa-pfc-xds-v0.1-physionet-target-resume16"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "program_id": "dsainet",
+  "schema_version": "ai4s-claim-ledger-v1"
+}

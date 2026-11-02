@@ -1,0 +1,2852 @@
+{
+  "index_role": "unique_active_prompt_chain_registry",
+  "programs": {
+    "dbconformer": {
+      "active_chain": {
+        "activated_at": "2026-10-29T14:06:36.104253+00:00",
+        "activation_authority": "User authorized v3.3 implementation and idle Program prompt activation in this chat on 2026-10-29; no experiment activation, launch or rerun.",
+        "activation_review": "LOCAL_DOCUMENT_AND_IDLE_BOUNDARY_REGRESSION",
+        "admission_report": "ai4s/_work/baseline_program_admission_20260919/REPORT.md",
+        "based_on_chain_id": "dbconformer-transaction-v3.2",
+        "chain_id": "dbconformer-transaction-v3.3",
+        "compatibility": "PASS",
+        "continuation_policy_version": "evidence_to_design_v1",
+        "evaluation_evidence_version": "1",
+        "implementation_readiness": {
+          "authorization_transition_guard": {
+            "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+            "status": "PASS"
+          },
+          "frozen_contract_guard": {
+            "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+            "status": "PASS"
+          },
+          "gpu_capacity_acceptance": "NOT_RUN",
+          "prompt_index_guard": {
+            "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+            "status": "PASS"
+          },
+          "seed_cap_guard": {
+            "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+            "status": "PASS"
+          },
+          "v33_regression": "PASS",
+          "v33_regression_evidence": "ai4s/_work/prompt_v33_implementation_20261029/LAUNCH_TESTS.log"
+        },
+        "level_1": {
+          "path": "ai4s/prompts/LEVEL1_RESEARCH_v3.3.md",
+          "prompt_id": "MIEEG_AI4S_RESEARCH",
+          "version": "3.3"
+        },
+        "level_2": {
+          "path": "ai4s/prompts/LEVEL2_EXECUTION_v3.3.md",
+          "prompt_id": "MIEEG_AI4S_EXECUTION",
+          "version": "3.3"
+        },
+        "level_3": {
+          "path": "ai4s/programs/dbconformer/PROJECT_PROMPT_v3.3.md",
+          "prompt_id": "DBCONFORMER_MI_EEG_PROJECT",
+          "version": "3.3"
+        },
+        "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+        "required_paths": [
+          "ai4s/programs/dbconformer/PROGRAM.yaml",
+          "ai4s/programs/dbconformer/research/STATE.yaml",
+          "ai4s/programs/dbconformer/research/EVIDENCE_INDEX.yaml",
+          "ai4s/programs/dbconformer/research/ADMISSION.md",
+          "ai4s/programs/dbconformer/research/HISTORY_BOUNDARIES.md",
+          "ai4s/prompts/EVALUATION_EVIDENCE.md",
+          "scripts/ai4s/evaluation.py",
+          "ai4s/programs/dbconformer/research/CURRENT_UNDERSTANDING.md",
+          "ai4s/prompts/MIEEG_AI4S_SKILL_ROUTER.md"
+        ],
+        "runtime_controller": {
+          "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+          "version": "3.0"
+        },
+        "status": "ACTIVE"
+      },
+      "history_boundary": {
+        "historical_runtime_inherited": false,
+        "note": "历史只作来源和科学边界；不重置选择暴露或精确关闭限制。",
+        "prior_results_reclassified": false,
+        "prior_runs_reinterpreted": false
+      },
+      "legacy_work_binding": {
+        "campaign_id": "dbconformer-next-20260925a",
+        "chain_id": "dbconformer-transaction-v2.1",
+        "continuation_id": null,
+        "operation_id": null,
+        "queue_time_policy": "exclude_resource_wait",
+        "research_governance": {
+          "allowed_transitions": [
+            "REFINE_ONCE",
+            "DIAGNOSE_ONCE",
+            "CONFIRM_TO_CAP",
+            "MATURE_AND_FREEZE",
+            "RETIRE",
+            "DISCOVER_NEXT",
+            "SCREEN_NEW",
+            "EVALUATE_FROZEN"
+          ],
+          "authorization_transition_required_for_continuation": true,
+          "capability_not_execution_authorization": true,
+          "paired_seed_cap": 5,
+          "paired_seed_cap_basis": "shared_existing_program_default_not_a_training_budget; prior exposure/usage remains cumulative",
+          "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+          "required_transition_fields": [
+            "decision",
+            "run_action",
+            "source_decision_record",
+            "source_evidence_ids",
+            "evidence_basis",
+            "remaining_uncertainty",
+            "expected_information",
+            "stop_rule",
+            "next_stage"
+          ],
+          "run_action_by_transition": {
+            "CONFIRM_TO_CAP": "RUN_ALLOWED",
+            "DIAGNOSE_ONCE": "RUN_ALLOWED",
+            "DISCOVER_NEXT": "DESIGN_ONLY",
+            "EVALUATE_FROZEN": "RUN_ALLOWED",
+            "MATURE_AND_FREEZE": "NO_RUN",
+            "REFINE_ONCE": "RUN_ALLOWED",
+            "RETIRE": "NO_RUN",
+            "SCREEN_NEW": "RUN_ALLOWED"
+          }
+        },
+        "research_governance_sha256": "54e1a394b8c622d5e9769a11aa756a75b9f88e188aa4772c4a9320e4776466cc",
+        "run_round_id": null
+      },
+      "legacy_work_bindings": [
+        {
+          "campaign_id": "dbconformer-v3-20261008-lrc-r1",
+          "chain_id": "dbconformer-transaction-v3.0",
+          "continuation_id": null,
+          "operation_id": null,
+          "queue_time_policy": "exclude_resource_wait",
+          "research_governance": {
+            "allowed_transitions": [
+              "REFINE_ONCE",
+              "DIAGNOSE_ONCE",
+              "CONFIRM_TO_CAP",
+              "MATURE_AND_FREEZE",
+              "RETIRE",
+              "DISCOVER_NEXT",
+              "SCREEN_NEW",
+              "EVALUATE_FROZEN"
+            ],
+            "authorization_transition_required_for_continuation": true,
+            "capability_not_execution_authorization": true,
+            "paired_seed_cap": 5,
+            "paired_seed_cap_basis": "shared_existing_program_default_not_a_training_budget; prior exposure/usage remains cumulative",
+            "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+            "required_transition_fields": [
+              "decision",
+              "run_action",
+              "source_decision_record",
+              "source_evidence_ids",
+              "evidence_basis",
+              "remaining_uncertainty",
+              "expected_information",
+              "stop_rule",
+              "next_stage"
+            ],
+            "run_action_by_transition": {
+              "CONFIRM_TO_CAP": "RUN_ALLOWED",
+              "DIAGNOSE_ONCE": "RUN_ALLOWED",
+              "DISCOVER_NEXT": "DESIGN_ONLY",
+              "EVALUATE_FROZEN": "RUN_ALLOWED",
+              "MATURE_AND_FREEZE": "NO_RUN",
+              "REFINE_ONCE": "RUN_ALLOWED",
+              "RETIRE": "NO_RUN",
+              "SCREEN_NEW": "RUN_ALLOWED"
+            }
+          },
+          "research_governance_sha256": "54e1a394b8c622d5e9769a11aa756a75b9f88e188aa4772c4a9320e4776466cc",
+          "run_round_id": null,
+          "scope": "campaign"
+        },
+        {
+          "campaign_id": "dbconformer-srt-r1-campaign",
+          "chain_id": "dbconformer-transaction-v3.1",
+          "continuation_id": null,
+          "operation_id": null,
+          "queue_time_policy": "exclude_resource_wait",
+          "research_governance": {
+            "allowed_transitions": [
+              "REFINE_ONCE",
+              "DIAGNOSE_ONCE",
+              "CONFIRM_TO_CAP",
+              "MATURE_AND_FREEZE",
+              "RETIRE",
+              "DISCOVER_NEXT",
+              "SCREEN_NEW",
+              "EVALUATE_FROZEN"
+            ],
+            "authorization_transition_required_for_continuation": true,
+            "capability_not_execution_authorization": true,
+            "paired_seed_cap": 5,
+            "paired_seed_cap_basis": "shared_existing_program_default_not_a_training_budget; prior exposure/usage remains cumulative",
+            "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+            "required_transition_fields": [
+              "decision",
+              "run_action",
+              "source_decision_record",
+              "source_evidence_ids",
+              "evidence_basis",
+              "remaining_uncertainty",
+              "expected_information",
+              "stop_rule",
+              "next_stage"
+            ],
+            "run_action_by_transition": {
+              "CONFIRM_TO_CAP": "RUN_ALLOWED",
+              "DIAGNOSE_ONCE": "RUN_ALLOWED",
+              "DISCOVER_NEXT": "DESIGN_ONLY",
+              "EVALUATE_FROZEN": "RUN_ALLOWED",
+              "MATURE_AND_FREEZE": "NO_RUN",
+              "REFINE_ONCE": "RUN_ALLOWED",
+              "RETIRE": "NO_RUN",
+              "SCREEN_NEW": "RUN_ALLOWED"
+            }
+          },
+          "research_governance_sha256": "54e1a394b8c622d5e9769a11aa756a75b9f88e188aa4772c4a9320e4776466cc",
+          "run_round_id": null,
+          "scope": "campaign"
+        },
+        {
+          "campaign_id": "dbconformer-sbn-r1-campaign",
+          "chain_id": "dbconformer-transaction-v3.2",
+          "continuation_id": null,
+          "operation_id": null,
+          "queue_time_policy": "exclude_resource_wait",
+          "research_governance": {
+            "allowed_transitions": [
+              "REFINE_ONCE",
+              "DIAGNOSE_ONCE",
+              "CONFIRM_TO_CAP",
+              "MATURE_AND_FREEZE",
+              "RETIRE",
+              "DISCOVER_NEXT",
+              "SCREEN_NEW",
+              "EVALUATE_FROZEN"
+            ],
+            "authorization_transition_required_for_continuation": true,
+            "capability_not_execution_authorization": true,
+            "paired_seed_cap": 5,
+            "paired_seed_cap_basis": "shared_existing_program_default_not_a_training_budget; prior exposure/usage remains cumulative",
+            "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+            "required_transition_fields": [
+              "decision",
+              "run_action",
+              "source_decision_record",
+              "source_evidence_ids",
+              "evidence_basis",
+              "remaining_uncertainty",
+              "expected_information",
+              "stop_rule",
+              "next_stage"
+            ],
+            "run_action_by_transition": {
+              "CONFIRM_TO_CAP": "RUN_ALLOWED",
+              "DIAGNOSE_ONCE": "RUN_ALLOWED",
+              "DISCOVER_NEXT": "DESIGN_ONLY",
+              "EVALUATE_FROZEN": "RUN_ALLOWED",
+              "MATURE_AND_FREEZE": "NO_RUN",
+              "REFINE_ONCE": "RUN_ALLOWED",
+              "RETIRE": "NO_RUN",
+              "SCREEN_NEW": "RUN_ALLOWED"
+            }
+          },
+          "research_governance_sha256": "54e1a394b8c622d5e9769a11aa756a75b9f88e188aa4772c4a9320e4776466cc",
+          "run_round_id": null,
+          "scope": "campaign"
+        }
+      ],
+      "retired_chains": [
+        {
+          "activated_at": "2026-09-19T08:11:57.103973+00:00",
+          "activation_authority": "user: 为DBConformer＋SST-DPN  建立program",
+          "admission_report": "ai4s/_work/baseline_program_admission_20260919/REPORT.md",
+          "chain_id": "dbconformer-transaction-v2.1",
+          "compatibility": "PASS",
+          "evaluation_evidence_version": "1",
+          "implementation_readiness": {
+            "authorization_transition_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "evaluation_regression": "PASS",
+            "frozen_contract_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "gpu_capacity_acceptance": "NOT_RUN",
+            "program_transport_acceptance": "NOT_RUN",
+            "prompt_index_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "seed_cap_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "transaction_unit_regression": "163_PASS_1_PREEXISTING_MVCNET_HOST_ASSERTION_FAILURE"
+          },
+          "level_1": {
+            "path": "ai4s/prompts/LEVEL1_RESEARCH_v2.1.md",
+            "prompt_id": "MIEEG_AI4S_RESEARCH",
+            "version": "2.1"
+          },
+          "level_2": {
+            "path": "ai4s/prompts/LEVEL2_EXECUTION_v2.1.md",
+            "prompt_id": "MIEEG_AI4S_EXECUTION",
+            "version": "2.1"
+          },
+          "level_3": {
+            "path": "ai4s/programs/dbconformer/PROJECT_PROMPT_v0.1.md",
+            "prompt_id": "DBCONFORMER_MI_EEG_PROJECT",
+            "version": "0.1"
+          },
+          "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+          "required_paths": [
+            "ai4s/programs/dbconformer/PROGRAM.yaml",
+            "ai4s/programs/dbconformer/research/STATE.yaml",
+            "ai4s/programs/dbconformer/research/EVIDENCE_INDEX.yaml",
+            "ai4s/programs/dbconformer/research/ADMISSION.md",
+            "ai4s/programs/dbconformer/research/HISTORY_BOUNDARIES.md",
+            "ai4s/prompts/EVALUATION_EVIDENCE.md",
+            "scripts/ai4s/evaluation.py"
+          ],
+          "runtime_controller": {
+            "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+            "version": "2.0"
+          },
+          "status": "ACTIVE"
+        },
+        {
+          "activated_at": "2026-09-19T08:11:57.103973+00:00",
+          "activation_authority": "user requested AI4S v3.0 implementation and all-Program activation on 2026-09-25",
+          "admission_report": "ai4s/_work/baseline_program_admission_20260919/REPORT.md",
+          "chain_id": "dbconformer-transaction-v3.0",
+          "compatibility": "PASS",
+          "continuation_policy_version": "evidence_to_design_v1",
+          "evaluation_evidence_version": "1",
+          "implementation_readiness": {
+            "authorization_transition_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "evaluation_regression": "PASS",
+            "frozen_contract_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "gpu_capacity_acceptance": "NOT_RUN",
+            "program_transport_acceptance": "NOT_RUN",
+            "prompt_index_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "seed_cap_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "transaction_unit_regression": "163_PASS_1_PREEXISTING_MVCNET_HOST_ASSERTION_FAILURE",
+            "v3_regression": "PASS"
+          },
+          "level_1": {
+            "path": "ai4s/prompts/LEVEL1_RESEARCH_v3.0.md",
+            "prompt_id": "MIEEG_AI4S_RESEARCH",
+            "version": "3.0"
+          },
+          "level_2": {
+            "path": "ai4s/prompts/LEVEL2_EXECUTION_v3.0.md",
+            "prompt_id": "MIEEG_AI4S_EXECUTION",
+            "version": "3.0"
+          },
+          "level_3": {
+            "path": "ai4s/programs/dbconformer/PROJECT_PROMPT_v3.0.md",
+            "prompt_id": "DBCONFORMER_MI_EEG_PROJECT",
+            "version": "3.0"
+          },
+          "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+          "required_paths": [
+            "ai4s/programs/dbconformer/PROGRAM.yaml",
+            "ai4s/programs/dbconformer/research/STATE.yaml",
+            "ai4s/programs/dbconformer/research/EVIDENCE_INDEX.yaml",
+            "ai4s/programs/dbconformer/research/ADMISSION.md",
+            "ai4s/programs/dbconformer/research/HISTORY_BOUNDARIES.md",
+            "ai4s/prompts/EVALUATION_EVIDENCE.md",
+            "scripts/ai4s/evaluation.py"
+          ],
+          "runtime_controller": {
+            "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+            "version": "3.0"
+          },
+          "status": "ACTIVE"
+        },
+        {
+          "activated_at": "2026-10-08T13:25:29.727269+00:00",
+          "activation_authority": "User explicitly requested v3.1 activation and every Program admission update in current conversation on 2026-10-08; does not authorize experiments.",
+          "activation_review": "CLOSED_SEE_REVIEW_DISPOSITION",
+          "admission_report": "ai4s/_work/baseline_program_admission_20260919/REPORT.md",
+          "based_on_chain_id": "dbconformer-transaction-v3.0",
+          "chain_id": "dbconformer-transaction-v3.1",
+          "compatibility": "PASS",
+          "continuation_policy_version": "evidence_to_design_v1",
+          "evaluation_evidence_version": "1",
+          "implementation_readiness": {
+            "authorization_transition_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "evaluation_regression": "PASS",
+            "frozen_contract_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "gpu_capacity_acceptance": "NOT_RUN",
+            "program_transport_acceptance": "NOT_RUN",
+            "prompt_index_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "seed_cap_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "transaction_unit_regression": "PASS",
+            "transaction_unit_regression_evidence": "ai4s/_work/prompt_v31_activation_20261008/REGRESSION_VERIFIED.log",
+            "v31_activation_regression": "PASS",
+            "v31_activation_regression_evidence": "ai4s/_work/prompt_v31_activation_20261008/CODE_TESTS_R2.log",
+            "v31_regression": "PASS",
+            "v31_regression_evidence": "ai4s/_work/prompt_v31_activation_20261008/REGRESSION_VERIFIED.log",
+            "v3_regression": "PASS"
+          },
+          "level_1": {
+            "path": "ai4s/prompts/LEVEL1_RESEARCH_v3.1.md",
+            "prompt_id": "MIEEG_AI4S_RESEARCH",
+            "version": "3.1"
+          },
+          "level_2": {
+            "path": "ai4s/prompts/LEVEL2_EXECUTION_v3.1.md",
+            "prompt_id": "MIEEG_AI4S_EXECUTION",
+            "version": "3.1"
+          },
+          "level_3": {
+            "path": "ai4s/programs/dbconformer/PROJECT_PROMPT_v3.1.md",
+            "prompt_id": "DBCONFORMER_MI_EEG_PROJECT",
+            "version": "3.1"
+          },
+          "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+          "required_paths": [
+            "ai4s/programs/dbconformer/PROGRAM.yaml",
+            "ai4s/programs/dbconformer/research/STATE.yaml",
+            "ai4s/programs/dbconformer/research/EVIDENCE_INDEX.yaml",
+            "ai4s/programs/dbconformer/research/ADMISSION.md",
+            "ai4s/programs/dbconformer/research/HISTORY_BOUNDARIES.md",
+            "ai4s/prompts/EVALUATION_EVIDENCE.md",
+            "scripts/ai4s/evaluation.py"
+          ],
+          "runtime_controller": {
+            "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+            "version": "3.0"
+          },
+          "status": "ACTIVE"
+        },
+        {
+          "activated_at": "2026-10-20T15:45:14.198449+00:00",
+          "activation_authority": "User explicitly requested DBConformer and SST-DPN v3.2 adaptation and activation in this conversation on 2026-10-20; no experiment execution authorized.",
+          "activation_review": "LOCAL_TEXT_REVIEW_AND_FOCUSED_ACTIVATION_REGRESSION",
+          "admission_report": "ai4s/_work/baseline_program_admission_20260919/REPORT.md",
+          "based_on_chain_id": "dbconformer-transaction-v3.1",
+          "chain_id": "dbconformer-transaction-v3.2",
+          "compatibility": "PASS",
+          "continuation_policy_version": "evidence_to_design_v1",
+          "evaluation_evidence_version": "1",
+          "implementation_readiness": {
+            "authorization_transition_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "evaluation_regression": "PASS",
+            "frozen_contract_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "gpu_capacity_acceptance": "NOT_RUN",
+            "program_transport_acceptance": "NOT_RUN",
+            "prompt_index_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "seed_cap_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "transaction_unit_regression": "PASS",
+            "transaction_unit_regression_evidence": "ai4s/_work/prompt_v31_activation_20261008/REGRESSION_VERIFIED.log",
+            "v31_activation_regression": "PASS",
+            "v31_activation_regression_evidence": "ai4s/_work/prompt_v31_activation_20261008/CODE_TESTS_R2.log",
+            "v31_regression": "PASS",
+            "v31_regression_evidence": "ai4s/_work/prompt_v31_activation_20261008/REGRESSION_VERIFIED.log",
+            "v32_regression": "PASS",
+            "v32_regression_evidence": "ai4s/_work/prompt_v32_activation_20261020/ACTIVATION_TESTS.log",
+            "v3_regression": "PASS"
+          },
+          "level_1": {
+            "path": "ai4s/prompts/LEVEL1_RESEARCH_v3.2.md",
+            "prompt_id": "MIEEG_AI4S_RESEARCH",
+            "version": "3.2"
+          },
+          "level_2": {
+            "path": "ai4s/prompts/LEVEL2_EXECUTION_v3.2.md",
+            "prompt_id": "MIEEG_AI4S_EXECUTION",
+            "version": "3.2"
+          },
+          "level_3": {
+            "path": "ai4s/programs/dbconformer/PROJECT_PROMPT_v3.2.md",
+            "prompt_id": "DBCONFORMER_MI_EEG_PROJECT",
+            "version": "3.2"
+          },
+          "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+          "required_paths": [
+            "ai4s/programs/dbconformer/PROGRAM.yaml",
+            "ai4s/programs/dbconformer/research/STATE.yaml",
+            "ai4s/programs/dbconformer/research/EVIDENCE_INDEX.yaml",
+            "ai4s/programs/dbconformer/research/ADMISSION.md",
+            "ai4s/programs/dbconformer/research/HISTORY_BOUNDARIES.md",
+            "ai4s/prompts/EVALUATION_EVIDENCE.md",
+            "scripts/ai4s/evaluation.py"
+          ],
+          "runtime_controller": {
+            "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+            "version": "3.0"
+          },
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    "dsainet": {
+      "active_chain": {
+        "activated_at": "2026-10-29T12:10:08.117074+00:00",
+        "activation_authority": "User authorized v3.3 implementation and idle Program prompt activation in this chat on 2026-10-29; no experiment activation, launch or rerun.",
+        "activation_review": "LOCAL_DOCUMENT_AND_IDLE_BOUNDARY_REGRESSION",
+        "based_on_chain_id": "dsainet-transaction-v3.2",
+        "chain_id": "dsainet-transaction-v3.3",
+        "compatibility": "PASS",
+        "continuation_policy_version": "evidence_to_design_v1",
+        "evaluation_evidence_version": "1",
+        "implementation_readiness": {
+          "authorization_transition_guard": {
+            "evidence": "tests/run_ai4s_transaction_regression.py",
+            "status": "PASS"
+          },
+          "frozen_contract_guard": {
+            "evidence": "tests/run_ai4s_transaction_regression.py",
+            "status": "PASS"
+          },
+          "gpu_capacity_acceptance": "NOT_RUN",
+          "prompt_index_guard": {
+            "evidence": "tests/run_ai4s_transaction_regression.py",
+            "status": "PASS"
+          },
+          "seed_cap_guard": {
+            "evidence": "tests/run_ai4s_transaction_regression.py",
+            "status": "PASS"
+          },
+          "v33_regression": "PASS",
+          "v33_regression_evidence": "ai4s/_work/prompt_v33_implementation_20261029/LAUNCH_TESTS.log"
+        },
+        "level_1": {
+          "path": "ai4s/prompts/LEVEL1_RESEARCH_v3.3.md",
+          "prompt_id": "MIEEG_AI4S_RESEARCH",
+          "version": "3.3"
+        },
+        "level_2": {
+          "path": "ai4s/prompts/LEVEL2_EXECUTION_v3.3.md",
+          "prompt_id": "MIEEG_AI4S_EXECUTION",
+          "version": "3.3"
+        },
+        "level_3": {
+          "path": "ai4s/programs/dsainet/PROJECT_PROMPT_v3.3.md",
+          "prompt_id": "DSAINET_MI_EEG_PROJECT",
+          "version": "3.3"
+        },
+        "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+        "required_paths": [
+          "ai4s/programs/dsainet/PROGRAM.yaml",
+          "ai4s/programs/dsainet/research/STATE.yaml",
+          "ai4s/programs/dsainet/research/EVIDENCE_INDEX.yaml",
+          "docs/notes/DSAINET_BASELINE_EVIDENCE_MAP_2026-08-26.md",
+          "docs/notes/SAFSS_CYCLE_HANDOFF_2026-08-26.md",
+          "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+          "ai4s/prompts/MIEEG_AI4S_SKILL_ROUTER.md"
+        ],
+        "runtime_controller": {
+          "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+          "version": "3.0"
+        },
+        "status": "ACTIVE"
+      },
+      "history": [
+        {
+          "controller": "ai4s/archive/pre_transaction_v2/ai4s/AI4S_MI_EEG_CONTROLLER_v1.1.md",
+          "last_run_id": "2026-09-05_dsainet_ai4s_role_specific_token_pooling_r3r4-full-w1",
+          "program_snapshot": "ai4s/_work/migration_20260905/dsainet-admission-before/PROGRAM.yaml",
+          "scope": "completed legacy Runs only"
+        }
+      ],
+      "legacy_work_binding": {
+        "campaign_id": "dsainet-fut-v0.1-20260924",
+        "chain_id": "dsainet-transaction-v2",
+        "continuation_id": null,
+        "operation_id": null,
+        "queue_time_policy": "exclude_resource_wait",
+        "research_governance": {
+          "allowed_transitions": [
+            "REFINE_ONCE",
+            "DIAGNOSE_ONCE",
+            "CONFIRM_TO_CAP",
+            "MATURE_AND_FREEZE",
+            "RETIRE",
+            "DISCOVER_NEXT",
+            "SCREEN_NEW"
+          ],
+          "authorization_transition_required_for_continuation": true,
+          "paired_seed_cap": 5,
+          "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+          "required_transition_fields": [
+            "decision",
+            "run_action",
+            "source_decision_record",
+            "source_evidence_ids",
+            "evidence_basis",
+            "remaining_uncertainty",
+            "expected_information",
+            "stop_rule",
+            "next_stage"
+          ],
+          "run_action_by_transition": {
+            "CONFIRM_TO_CAP": "RUN_ALLOWED",
+            "DIAGNOSE_ONCE": "RUN_ALLOWED",
+            "DISCOVER_NEXT": "DESIGN_ONLY",
+            "MATURE_AND_FREEZE": "NO_RUN",
+            "REFINE_ONCE": "RUN_ALLOWED",
+            "RETIRE": "NO_RUN",
+            "SCREEN_NEW": "RUN_ALLOWED"
+          }
+        },
+        "research_governance_sha256": "435a729706630f1cc4b00fd99b23c25798eaa19d4380495d22afc766c5dc3396",
+        "run_round_id": "dsa-fut-v0.1-repair3"
+      },
+      "legacy_work_bindings": [
+        {
+          "campaign_id": "dsainet-pfc-xds-v0.1-20260929",
+          "chain_id": "dsainet-transaction-v3.0",
+          "continuation_id": null,
+          "contract_metadata": "ai4s/programs/dsainet/research/dsa-pfc-xds-v0.1-physionet-target-resume16/REMOTE_CONTRACT.json",
+          "contract_sha256": "11552934fda76a12fb4c4aa281733914f6dd84de4b478ff4c19105f1461024ca",
+          "operation_id": null,
+          "queue_time_policy": "exclude_resource_wait",
+          "research_governance": {
+            "allowed_transitions": [
+              "REFINE_ONCE",
+              "DIAGNOSE_ONCE",
+              "CONFIRM_TO_CAP",
+              "MATURE_AND_FREEZE",
+              "RETIRE",
+              "DISCOVER_NEXT",
+              "SCREEN_NEW",
+              "EVALUATE_FROZEN"
+            ],
+            "authorization_transition_required_for_continuation": true,
+            "paired_seed_cap": 5,
+            "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+            "required_transition_fields": [
+              "decision",
+              "run_action",
+              "source_decision_record",
+              "source_evidence_ids",
+              "evidence_basis",
+              "remaining_uncertainty",
+              "expected_information",
+              "stop_rule",
+              "next_stage"
+            ],
+            "run_action_by_transition": {
+              "CONFIRM_TO_CAP": "RUN_ALLOWED",
+              "DIAGNOSE_ONCE": "RUN_ALLOWED",
+              "DISCOVER_NEXT": "DESIGN_ONLY",
+              "EVALUATE_FROZEN": "RUN_ALLOWED",
+              "MATURE_AND_FREEZE": "NO_RUN",
+              "REFINE_ONCE": "RUN_ALLOWED",
+              "RETIRE": "NO_RUN",
+              "SCREEN_NEW": "RUN_ALLOWED"
+            }
+          },
+          "research_governance_sha256": "6368316863990465d5d7925c604702a339d0fbfda269bbd8f08ebf46d7a9f5fa",
+          "run_round_id": null,
+          "scope": "campaign"
+        },
+        {
+          "campaign_id": "dsainet-pfc-xds-v0.1-20260929",
+          "chain_id": "dsainet-transaction-v3.0",
+          "continuation_id": null,
+          "contract_metadata": "ai4s/programs/dsainet/research/dsa-pfc-xds-v0.1-physionet-target-resume16/REMOTE_CONTRACT.json",
+          "contract_sha256": "11552934fda76a12fb4c4aa281733914f6dd84de4b478ff4c19105f1461024ca",
+          "operation_id": null,
+          "queue_time_policy": "exclude_resource_wait",
+          "research_governance": {
+            "allowed_transitions": [
+              "REFINE_ONCE",
+              "DIAGNOSE_ONCE",
+              "CONFIRM_TO_CAP",
+              "MATURE_AND_FREEZE",
+              "RETIRE",
+              "DISCOVER_NEXT",
+              "SCREEN_NEW",
+              "EVALUATE_FROZEN"
+            ],
+            "authorization_transition_required_for_continuation": true,
+            "paired_seed_cap": 5,
+            "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+            "required_transition_fields": [
+              "decision",
+              "run_action",
+              "source_decision_record",
+              "source_evidence_ids",
+              "evidence_basis",
+              "remaining_uncertainty",
+              "expected_information",
+              "stop_rule",
+              "next_stage"
+            ],
+            "run_action_by_transition": {
+              "CONFIRM_TO_CAP": "RUN_ALLOWED",
+              "DIAGNOSE_ONCE": "RUN_ALLOWED",
+              "DISCOVER_NEXT": "DESIGN_ONLY",
+              "EVALUATE_FROZEN": "RUN_ALLOWED",
+              "MATURE_AND_FREEZE": "NO_RUN",
+              "REFINE_ONCE": "RUN_ALLOWED",
+              "RETIRE": "NO_RUN",
+              "SCREEN_NEW": "RUN_ALLOWED"
+            }
+          },
+          "research_governance_sha256": "6368316863990465d5d7925c604702a339d0fbfda269bbd8f08ebf46d7a9f5fa",
+          "run_round_id": "dsa-pfc-xds-v0.1-physionet-target-resume16",
+          "scope": "work"
+        },
+        {
+          "campaign_id": "dsainet-dsa-nrc-v0.1-NRC1-20261019",
+          "chain_id": "dsainet-transaction-v3.1",
+          "continuation_id": null,
+          "operation_id": null,
+          "queue_time_policy": "exclude_resource_wait",
+          "research_governance": {
+            "allowed_transitions": [
+              "REFINE_ONCE",
+              "DIAGNOSE_ONCE",
+              "CONFIRM_TO_CAP",
+              "MATURE_AND_FREEZE",
+              "RETIRE",
+              "DISCOVER_NEXT",
+              "SCREEN_NEW",
+              "EVALUATE_FROZEN"
+            ],
+            "authorization_transition_required_for_continuation": true,
+            "paired_seed_cap": 5,
+            "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+            "required_transition_fields": [
+              "decision",
+              "run_action",
+              "source_decision_record",
+              "source_evidence_ids",
+              "evidence_basis",
+              "remaining_uncertainty",
+              "expected_information",
+              "stop_rule",
+              "next_stage"
+            ],
+            "run_action_by_transition": {
+              "CONFIRM_TO_CAP": "RUN_ALLOWED",
+              "DIAGNOSE_ONCE": "RUN_ALLOWED",
+              "DISCOVER_NEXT": "DESIGN_ONLY",
+              "EVALUATE_FROZEN": "RUN_ALLOWED",
+              "MATURE_AND_FREEZE": "NO_RUN",
+              "REFINE_ONCE": "RUN_ALLOWED",
+              "RETIRE": "NO_RUN",
+              "SCREEN_NEW": "RUN_ALLOWED"
+            }
+          },
+          "research_governance_sha256": "6368316863990465d5d7925c604702a339d0fbfda269bbd8f08ebf46d7a9f5fa",
+          "run_round_id": null,
+          "scope": "campaign"
+        },
+        {
+          "campaign_id": "dsainet-p0-cue-r1-20261023",
+          "chain_id": "dsainet-transaction-v3.2",
+          "continuation_id": null,
+          "operation_id": null,
+          "queue_time_policy": "exclude_resource_wait",
+          "research_governance": {
+            "allowed_transitions": [
+              "REFINE_ONCE",
+              "DIAGNOSE_ONCE",
+              "CONFIRM_TO_CAP",
+              "MATURE_AND_FREEZE",
+              "RETIRE",
+              "DISCOVER_NEXT",
+              "SCREEN_NEW",
+              "EVALUATE_FROZEN"
+            ],
+            "authorization_transition_required_for_continuation": true,
+            "paired_seed_cap": 5,
+            "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+            "required_transition_fields": [
+              "decision",
+              "run_action",
+              "source_decision_record",
+              "source_evidence_ids",
+              "evidence_basis",
+              "remaining_uncertainty",
+              "expected_information",
+              "stop_rule",
+              "next_stage"
+            ],
+            "run_action_by_transition": {
+              "CONFIRM_TO_CAP": "RUN_ALLOWED",
+              "DIAGNOSE_ONCE": "RUN_ALLOWED",
+              "DISCOVER_NEXT": "DESIGN_ONLY",
+              "EVALUATE_FROZEN": "RUN_ALLOWED",
+              "MATURE_AND_FREEZE": "NO_RUN",
+              "REFINE_ONCE": "RUN_ALLOWED",
+              "RETIRE": "NO_RUN",
+              "SCREEN_NEW": "RUN_ALLOWED"
+            }
+          },
+          "research_governance_sha256": "6368316863990465d5d7925c604702a339d0fbfda269bbd8f08ebf46d7a9f5fa",
+          "run_round_id": null,
+          "scope": "campaign"
+        }
+      ],
+      "retired_chains": [
+        {
+          "activated_at": "2026-09-05T10:31:16.186854+00:00",
+          "activation_authority": "user: 继续对DSAINet也进行接入",
+          "chain_id": "dsainet-transaction-v2",
+          "compatibility": "PASS",
+          "implementation_readiness": {
+            "authorization_transition_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "executor_integration": "OFFLINE_PASS",
+            "frozen_contract_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "gpu_capacity_acceptance": "NOT_RUN",
+            "prompt_index_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "seed_cap_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            }
+          },
+          "level_1": {
+            "path": "ai4s/prompts/LEVEL1_RESEARCH_v2.0.md",
+            "prompt_id": "MIEEG_AI4S_RESEARCH",
+            "version": "2.0"
+          },
+          "level_2": {
+            "path": "ai4s/prompts/LEVEL2_EXECUTION_v2.0.md",
+            "prompt_id": "MIEEG_AI4S_EXECUTION",
+            "version": "2.0"
+          },
+          "level_3": {
+            "path": "ai4s/programs/dsainet/PROJECT_PROMPT_v1.0.md",
+            "prompt_id": "DSAINET_MI_EEG_PROJECT",
+            "version": "1.0"
+          },
+          "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+          "required_paths": [
+            "ai4s/programs/dsainet/PROGRAM.yaml",
+            "ai4s/programs/dsainet/research/STATE.yaml",
+            "ai4s/programs/dsainet/research/EVIDENCE_INDEX.yaml",
+            "docs/notes/DSAINET_BASELINE_EVIDENCE_MAP_2026-08-26.md",
+            "docs/notes/SAFSS_CYCLE_HANDOFF_2026-08-26.md"
+          ],
+          "runtime_controller": {
+            "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+            "version": "2.0"
+          },
+          "status": "ACTIVE"
+        },
+        {
+          "activated_at": "2026-09-05T10:31:16.186854+00:00",
+          "activation_authority": "user requested AI4S v3.0 implementation and all-Program activation on 2026-09-25",
+          "chain_id": "dsainet-transaction-v3.0",
+          "compatibility": "PASS",
+          "continuation_policy_version": "evidence_to_design_v1",
+          "evaluation_evidence_version": "1",
+          "implementation_readiness": {
+            "authorization_transition_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "executor_integration": "OFFLINE_PASS",
+            "frozen_contract_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "gpu_capacity_acceptance": "NOT_RUN",
+            "prompt_index_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "seed_cap_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "v3_regression": "PASS"
+          },
+          "level_1": {
+            "path": "ai4s/prompts/LEVEL1_RESEARCH_v3.0.md",
+            "prompt_id": "MIEEG_AI4S_RESEARCH",
+            "version": "3.0"
+          },
+          "level_2": {
+            "path": "ai4s/prompts/LEVEL2_EXECUTION_v3.0.md",
+            "prompt_id": "MIEEG_AI4S_EXECUTION",
+            "version": "3.0"
+          },
+          "level_3": {
+            "path": "ai4s/programs/dsainet/PROJECT_PROMPT_v3.0.md",
+            "prompt_id": "DSAINET_MI_EEG_PROJECT",
+            "version": "3.0"
+          },
+          "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+          "required_paths": [
+            "ai4s/programs/dsainet/PROGRAM.yaml",
+            "ai4s/programs/dsainet/research/STATE.yaml",
+            "ai4s/programs/dsainet/research/EVIDENCE_INDEX.yaml",
+            "docs/notes/DSAINET_BASELINE_EVIDENCE_MAP_2026-08-26.md",
+            "docs/notes/SAFSS_CYCLE_HANDOFF_2026-08-26.md"
+          ],
+          "runtime_controller": {
+            "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+            "version": "3.0"
+          },
+          "status": "ACTIVE"
+        },
+        {
+          "activated_at": "2026-10-08T13:25:27.364080+00:00",
+          "activation_authority": "User explicitly requested v3.1 activation and every Program admission update in current conversation on 2026-10-08; does not authorize experiments.",
+          "activation_review": "CLOSED_SEE_REVIEW_DISPOSITION",
+          "based_on_chain_id": "dsainet-transaction-v3.0",
+          "chain_id": "dsainet-transaction-v3.1",
+          "compatibility": "PASS",
+          "continuation_policy_version": "evidence_to_design_v1",
+          "evaluation_evidence_version": "1",
+          "implementation_readiness": {
+            "authorization_transition_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "executor_integration": "OFFLINE_PASS",
+            "frozen_contract_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "gpu_capacity_acceptance": "NOT_RUN",
+            "prompt_index_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "seed_cap_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "transaction_unit_regression": "PASS",
+            "transaction_unit_regression_evidence": "ai4s/_work/prompt_v31_activation_20261008/REGRESSION_VERIFIED.log",
+            "v31_activation_regression": "PASS",
+            "v31_activation_regression_evidence": "ai4s/_work/prompt_v31_activation_20261008/CODE_TESTS_R2.log",
+            "v31_regression": "PASS",
+            "v31_regression_evidence": "ai4s/_work/prompt_v31_activation_20261008/REGRESSION_VERIFIED.log",
+            "v3_regression": "PASS"
+          },
+          "level_1": {
+            "path": "ai4s/prompts/LEVEL1_RESEARCH_v3.1.md",
+            "prompt_id": "MIEEG_AI4S_RESEARCH",
+            "version": "3.1"
+          },
+          "level_2": {
+            "path": "ai4s/prompts/LEVEL2_EXECUTION_v3.1.md",
+            "prompt_id": "MIEEG_AI4S_EXECUTION",
+            "version": "3.1"
+          },
+          "level_3": {
+            "path": "ai4s/programs/dsainet/PROJECT_PROMPT_v3.1.md",
+            "prompt_id": "DSAINET_MI_EEG_PROJECT",
+            "version": "3.1"
+          },
+          "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+          "required_paths": [
+            "ai4s/programs/dsainet/PROGRAM.yaml",
+            "ai4s/programs/dsainet/research/STATE.yaml",
+            "ai4s/programs/dsainet/research/EVIDENCE_INDEX.yaml",
+            "docs/notes/DSAINET_BASELINE_EVIDENCE_MAP_2026-08-26.md",
+            "docs/notes/SAFSS_CYCLE_HANDOFF_2026-08-26.md"
+          ],
+          "runtime_controller": {
+            "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+            "version": "3.0"
+          },
+          "status": "ACTIVE"
+        },
+        {
+          "activated_at": "2026-10-23T13:10:48.159188+00:00",
+          "activation_authority": "User explicitly requested DSAINet L1/L2/L3 v3.2 activation and research design on 2026-10-23 in this chat; no new experiment execution authorized.",
+          "activation_review": "LOCAL_BINDING_CHECK_AND_EXISTING_ACTIVATION_REGRESSION",
+          "based_on_chain_id": "dsainet-transaction-v3.1",
+          "chain_id": "dsainet-transaction-v3.2",
+          "compatibility": "PASS",
+          "continuation_policy_version": "evidence_to_design_v1",
+          "evaluation_evidence_version": "1",
+          "implementation_readiness": {
+            "authorization_transition_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "executor_integration": "OFFLINE_PASS",
+            "frozen_contract_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "gpu_capacity_acceptance": "NOT_RUN",
+            "prompt_index_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "seed_cap_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "transaction_unit_regression": "PASS",
+            "transaction_unit_regression_evidence": "ai4s/_work/prompt_v31_activation_20261008/REGRESSION_VERIFIED.log",
+            "v31_activation_regression": "PASS",
+            "v31_activation_regression_evidence": "ai4s/_work/prompt_v31_activation_20261008/CODE_TESTS_R2.log",
+            "v31_regression": "PASS",
+            "v31_regression_evidence": "ai4s/_work/prompt_v31_activation_20261008/REGRESSION_VERIFIED.log",
+            "v32_regression": "PASS",
+            "v32_regression_evidence": "ai4s/_work/dsainet_v32_activation_20261023/ACTIVATION_TESTS_HOST.log",
+            "v3_regression": "PASS"
+          },
+          "level_1": {
+            "path": "ai4s/prompts/LEVEL1_RESEARCH_v3.2.md",
+            "prompt_id": "MIEEG_AI4S_RESEARCH",
+            "version": "3.2"
+          },
+          "level_2": {
+            "path": "ai4s/prompts/LEVEL2_EXECUTION_v3.2.md",
+            "prompt_id": "MIEEG_AI4S_EXECUTION",
+            "version": "3.2"
+          },
+          "level_3": {
+            "path": "ai4s/programs/dsainet/PROJECT_PROMPT_v3.2.md",
+            "prompt_id": "DSAINET_MI_EEG_PROJECT",
+            "version": "3.2"
+          },
+          "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+          "required_paths": [
+            "ai4s/programs/dsainet/PROGRAM.yaml",
+            "ai4s/programs/dsainet/research/STATE.yaml",
+            "ai4s/programs/dsainet/research/EVIDENCE_INDEX.yaml",
+            "docs/notes/DSAINET_BASELINE_EVIDENCE_MAP_2026-08-26.md",
+            "docs/notes/SAFSS_CYCLE_HANDOFF_2026-08-26.md"
+          ],
+          "runtime_controller": {
+            "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+            "version": "3.0"
+          },
+          "status": "ACTIVE"
+        }
+      ],
+      "retired_drafts": [
+        {
+          "activation_requirement": "Settle this Program active Run/operation/continuation and campaign; use activate_evaluation_governance.py",
+          "chain_id": "dsainet-transaction-v2.1-evaluation",
+          "compatibility": "PASS",
+          "evaluation_evidence_version": "1",
+          "implementation_readiness": {
+            "evaluation_regression": "PASS",
+            "evidence": "_work/ai4s-proposed-retirement-20260917/regression.log",
+            "gpu_acceptance": "NOT_RUN",
+            "offline_test_count": 163
+          },
+          "level_1": {
+            "path": "ai4s/prompts/LEVEL1_RESEARCH_v2.1.md",
+            "prompt_id": "MIEEG_AI4S_RESEARCH",
+            "version": "2.1"
+          },
+          "level_2": {
+            "path": "ai4s/prompts/LEVEL2_EXECUTION_v2.1.md",
+            "prompt_id": "MIEEG_AI4S_EXECUTION",
+            "version": "2.1"
+          },
+          "level_3": {
+            "path": "ai4s/programs/dsainet/PROJECT_PROMPT_v1.1.md",
+            "prompt_id": "DSAINET_MI_EEG_PROJECT",
+            "version": "1.1"
+          },
+          "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+          "required_paths": [
+            "ai4s/programs/dsainet/PROGRAM.yaml",
+            "ai4s/programs/dsainet/research/STATE.yaml",
+            "ai4s/programs/dsainet/research/EVIDENCE_INDEX.yaml",
+            "docs/notes/DSAINET_BASELINE_EVIDENCE_MAP_2026-08-26.md",
+            "docs/notes/SAFSS_CYCLE_HANDOFF_2026-08-26.md",
+            "ai4s/prompts/EVALUATION_EVIDENCE.md",
+            "scripts/ai4s/evaluation.py"
+          ],
+          "runtime_controller": {
+            "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+            "version": "2.0"
+          },
+          "status": "DRAFT"
+        }
+      ]
+    },
+    "mvcnet": {
+      "active_chain": {
+        "activated_at": "2026-10-29T12:10:04.710874+00:00",
+        "activation_authority": "User authorized v3.3 implementation and idle Program prompt activation in this chat on 2026-10-29; no experiment activation, launch or rerun.",
+        "activation_review": "LOCAL_DOCUMENT_AND_IDLE_BOUNDARY_REGRESSION",
+        "based_on_chain_id": "mvcnet-transaction-v3.2",
+        "chain_id": "mvcnet-transaction-v3.3",
+        "compatibility": "PASS",
+        "continuation_policy_version": "evidence_to_design_v1",
+        "evaluation_evidence_version": "1",
+        "implementation_readiness": {
+          "authorization_transition_guard": {
+            "evidence": "tests/run_ai4s_transaction_regression.py",
+            "status": "PASS"
+          },
+          "frozen_contract_guard": {
+            "evidence": "tests/run_ai4s_transaction_regression.py",
+            "status": "PASS"
+          },
+          "gpu_capacity_acceptance": "NOT_RUN",
+          "prompt_index_guard": {
+            "evidence": "tests/run_ai4s_transaction_regression.py",
+            "status": "PASS"
+          },
+          "seed_cap_guard": {
+            "evidence": "tests/run_ai4s_transaction_regression.py",
+            "status": "PASS"
+          },
+          "v33_regression": "PASS",
+          "v33_regression_evidence": "ai4s/_work/prompt_v33_implementation_20261029/LAUNCH_TESTS.log"
+        },
+        "level_1": {
+          "path": "ai4s/prompts/LEVEL1_RESEARCH_v3.3.md",
+          "prompt_id": "MIEEG_AI4S_RESEARCH",
+          "version": "3.3"
+        },
+        "level_2": {
+          "path": "ai4s/prompts/LEVEL2_EXECUTION_v3.3.md",
+          "prompt_id": "MIEEG_AI4S_EXECUTION",
+          "version": "3.3"
+        },
+        "level_3": {
+          "path": "ai4s/programs/mvcnet/PROJECT_PROMPT_v3.3.md",
+          "prompt_id": "MVCNET_MI_EEG_PROJECT",
+          "version": "3.3"
+        },
+        "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+        "required_paths": [
+          "ai4s/programs/mvcnet/PROGRAM.yaml",
+          "ai4s/programs/mvcnet/research/STATE.yaml",
+          "ai4s/programs/mvcnet/research/EVIDENCE_INDEX.yaml",
+          "ai4s/programs/mvcnet/research/CURRENT_UNDERSTANDING.md",
+          "ai4s/prompts/MIEEG_AI4S_SKILL_ROUTER.md"
+        ],
+        "runtime_controller": {
+          "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+          "version": "3.0"
+        },
+        "status": "ACTIVE"
+      },
+      "history": [
+        {
+          "activated_at": "2026-09-03T00:00:00+08:00",
+          "chain_id": "mvcnet-executor-neutral-controlled-chain-v1.1",
+          "compatibility": "PASS",
+          "governance_applies_to_control_actions_at_or_after": "2026-09-03T00:00:00+08:00",
+          "implementation_readiness": {
+            "authorization_transition_guard": {
+              "evidence": "tests/test_ai4s_mvcnet_program.py",
+              "status": "PASS",
+              "verified_at": "2026-09-03T00:00:00+08:00"
+            },
+            "capacity_packing": {
+              "effective_workers_per_gpu": 1,
+              "note": "尚未实现并验证 packing scheduler；容量测量不改变有效并发。",
+              "status": "DEFERRED"
+            },
+            "failure_taxonomy": {
+              "status": "PARTIAL"
+            },
+            "frozen_contract_guard": {
+              "evidence": "tests/test_ai4s_mvcnet_program.py",
+              "status": "PASS",
+              "verified_at": "2026-09-03T00:00:00+08:00"
+            },
+            "minimal_user_operation_surface": {
+              "status": "PARTIAL"
+            },
+            "prompt_index_guard": {
+              "evidence": "tests/test_ai4s_mvcnet_program.py",
+              "status": "PASS",
+              "verified_at": "2026-09-03T00:00:00+08:00"
+            },
+            "seed_cap_guard": {
+              "evidence": "tests/test_ai4s_mvcnet_program.py",
+              "status": "PASS",
+              "verified_at": "2026-09-03T00:00:00+08:00"
+            }
+          },
+          "level_1": {
+            "path": "docs/lab/AI_for_Science_脑电解码全自动科研母提示词_重构版_v1.3.md",
+            "prompt_id": "AI4S_EEG_FULL_AUTO_MOTHER_PROMPT",
+            "version": "1.3"
+          },
+          "level_2": {
+            "note": "现行受控混合执行规则仍由控制器、Program 和 executor 配置共同实例化。",
+            "status": "LEGACY_INLINE_EXECUTION_RULES"
+          },
+          "level_3": {
+            "path": "ai4s/archive/pre_transaction_v2/ai4s/programs/mvcnet/PROJECT_PROMPT_v0.5.md",
+            "prompt_id": "MVCNET_MI_EEG_PROJECT",
+            "version": "0.5"
+          },
+          "runtime_controller": {
+            "path": "ai4s/archive/pre_transaction_v2/ai4s/AI4S_MI_EEG_CONTROLLER_v1.1.md",
+            "version": "1.1"
+          },
+          "status": "ACTIVE"
+        }
+      ],
+      "history_boundary": {
+        "note": "本索引只约束生效后的新控制动作，不追溯改变既有合同、结果或结论语义。",
+        "prior_results_reclassified": false,
+        "prior_runs_reinterpreted": false
+      },
+      "legacy_work_binding": {
+        "campaign_id": "mvcnet-source-risk-20260924",
+        "chain_id": "mvcnet-transaction-v2",
+        "continuation_id": null,
+        "operation_id": null,
+        "queue_time_policy": "exclude_resource_wait",
+        "research_governance": {
+          "allowed_transitions": [
+            "REFINE_ONCE",
+            "DIAGNOSE_ONCE",
+            "CONFIRM_TO_CAP",
+            "MATURE_AND_FREEZE",
+            "RETIRE",
+            "DISCOVER_NEXT",
+            "SCREEN_NEW"
+          ],
+          "authorization_transition_required_for_continuation": true,
+          "paired_seed_cap": 5,
+          "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+          "required_transition_fields": [
+            "decision",
+            "run_action",
+            "source_decision_record",
+            "source_evidence_ids",
+            "evidence_basis",
+            "remaining_uncertainty",
+            "expected_information",
+            "stop_rule",
+            "next_stage"
+          ],
+          "run_action_by_transition": {
+            "CONFIRM_TO_CAP": "RUN_ALLOWED",
+            "DIAGNOSE_ONCE": "RUN_ALLOWED",
+            "DISCOVER_NEXT": "DESIGN_ONLY",
+            "MATURE_AND_FREEZE": "NO_RUN",
+            "REFINE_ONCE": "RUN_ALLOWED",
+            "RETIRE": "NO_RUN",
+            "SCREEN_NEW": "RUN_ALLOWED"
+          },
+          "saturated_seed_identities": [
+            {
+              "hypothesis_family_id": "vcn-p1-fresh-seed-stability",
+              "interpretation_boundary": "仅登记稳定性证据已超过默认上限；不新增论文主张，也不追溯改写历史结果。",
+              "module_family_id": "VCN-P1",
+              "paired_seeds": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20
+              ],
+              "source_rounds": [
+                "mvcnet-lab10-l1-seed78-fixed1024-v1.0",
+                "mvcnet-lab10-l2-seed910-fixed1024-v1.0",
+                "mvcnet-lab10-l3-seed1112-fixed1024-v1.0",
+                "mvcnet-lab10-l4-seed1314-fixed1024-v1.0",
+                "mvcnet-lab10-l5-seed1516-fixed1024-v1.0",
+                "mvcnet-lab10-l6-seed1718-fixed1024-v1.0",
+                "mvcnet-lab10-l7-seed1920-fixed1024-v1.0"
+              ],
+              "status": "SATURATED"
+            }
+          ]
+        },
+        "research_governance_sha256": "708930df43695cbe2cfcccb4581fce0919d13cfde2e73557b01b56fda438b955",
+        "run_round_id": "mvcnet-source-risk-screen-lab10-r1"
+      },
+      "legacy_work_bindings": [
+        {
+          "campaign_id": "mvcnet-source-head-meta-20261008",
+          "chain_id": "mvcnet-transaction-v3.0",
+          "continuation_id": null,
+          "operation_id": null,
+          "queue_time_policy": "exclude_resource_wait",
+          "research_governance": {
+            "allowed_transitions": [
+              "REFINE_ONCE",
+              "DIAGNOSE_ONCE",
+              "CONFIRM_TO_CAP",
+              "MATURE_AND_FREEZE",
+              "RETIRE",
+              "DISCOVER_NEXT",
+              "SCREEN_NEW",
+              "EVALUATE_FROZEN"
+            ],
+            "authorization_transition_required_for_continuation": true,
+            "paired_seed_cap": 5,
+            "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+            "required_transition_fields": [
+              "decision",
+              "run_action",
+              "source_decision_record",
+              "source_evidence_ids",
+              "evidence_basis",
+              "remaining_uncertainty",
+              "expected_information",
+              "stop_rule",
+              "next_stage"
+            ],
+            "run_action_by_transition": {
+              "CONFIRM_TO_CAP": "RUN_ALLOWED",
+              "DIAGNOSE_ONCE": "RUN_ALLOWED",
+              "DISCOVER_NEXT": "DESIGN_ONLY",
+              "EVALUATE_FROZEN": "RUN_ALLOWED",
+              "MATURE_AND_FREEZE": "NO_RUN",
+              "REFINE_ONCE": "RUN_ALLOWED",
+              "RETIRE": "NO_RUN",
+              "SCREEN_NEW": "RUN_ALLOWED"
+            },
+            "saturated_seed_identities": [
+              {
+                "hypothesis_family_id": "vcn-p1-fresh-seed-stability",
+                "interpretation_boundary": "仅登记稳定性证据已超过默认上限；不新增论文主张，也不追溯改写历史结果。",
+                "module_family_id": "VCN-P1",
+                "paired_seeds": [
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20
+                ],
+                "source_rounds": [
+                  "mvcnet-lab10-l1-seed78-fixed1024-v1.0",
+                  "mvcnet-lab10-l2-seed910-fixed1024-v1.0",
+                  "mvcnet-lab10-l3-seed1112-fixed1024-v1.0",
+                  "mvcnet-lab10-l4-seed1314-fixed1024-v1.0",
+                  "mvcnet-lab10-l5-seed1516-fixed1024-v1.0",
+                  "mvcnet-lab10-l6-seed1718-fixed1024-v1.0",
+                  "mvcnet-lab10-l7-seed1920-fixed1024-v1.0"
+                ],
+                "status": "SATURATED"
+              }
+            ]
+          },
+          "research_governance_sha256": "7540dd1de8e15c928649e4d786d32a3c6f0918374bfd18189d5f232a789a6408",
+          "run_round_id": null,
+          "scope": "campaign"
+        },
+        {
+          "campaign_id": "mvcnet-augmentation-readout-lab10-20261009-r1",
+          "chain_id": "mvcnet-transaction-v3.1",
+          "continuation_id": null,
+          "operation_id": null,
+          "queue_time_policy": "exclude_resource_wait",
+          "research_governance": {
+            "allowed_transitions": [
+              "REFINE_ONCE",
+              "DIAGNOSE_ONCE",
+              "CONFIRM_TO_CAP",
+              "MATURE_AND_FREEZE",
+              "RETIRE",
+              "DISCOVER_NEXT",
+              "SCREEN_NEW",
+              "EVALUATE_FROZEN"
+            ],
+            "authorization_transition_required_for_continuation": true,
+            "paired_seed_cap": 5,
+            "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+            "required_transition_fields": [
+              "decision",
+              "run_action",
+              "source_decision_record",
+              "source_evidence_ids",
+              "evidence_basis",
+              "remaining_uncertainty",
+              "expected_information",
+              "stop_rule",
+              "next_stage"
+            ],
+            "run_action_by_transition": {
+              "CONFIRM_TO_CAP": "RUN_ALLOWED",
+              "DIAGNOSE_ONCE": "RUN_ALLOWED",
+              "DISCOVER_NEXT": "DESIGN_ONLY",
+              "EVALUATE_FROZEN": "RUN_ALLOWED",
+              "MATURE_AND_FREEZE": "NO_RUN",
+              "REFINE_ONCE": "RUN_ALLOWED",
+              "RETIRE": "NO_RUN",
+              "SCREEN_NEW": "RUN_ALLOWED"
+            },
+            "saturated_seed_identities": [
+              {
+                "hypothesis_family_id": "vcn-p1-fresh-seed-stability",
+                "interpretation_boundary": "仅登记稳定性证据已超过默认上限；不新增论文主张，也不追溯改写历史结果。",
+                "module_family_id": "VCN-P1",
+                "paired_seeds": [
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20
+                ],
+                "source_rounds": [
+                  "mvcnet-lab10-l1-seed78-fixed1024-v1.0",
+                  "mvcnet-lab10-l2-seed910-fixed1024-v1.0",
+                  "mvcnet-lab10-l3-seed1112-fixed1024-v1.0",
+                  "mvcnet-lab10-l4-seed1314-fixed1024-v1.0",
+                  "mvcnet-lab10-l5-seed1516-fixed1024-v1.0",
+                  "mvcnet-lab10-l6-seed1718-fixed1024-v1.0",
+                  "mvcnet-lab10-l7-seed1920-fixed1024-v1.0"
+                ],
+                "status": "SATURATED"
+              }
+            ]
+          },
+          "research_governance_sha256": "7540dd1de8e15c928649e4d786d32a3c6f0918374bfd18189d5f232a789a6408",
+          "run_round_id": null,
+          "scope": "campaign"
+        },
+        {
+          "campaign_id": "mvcnet-augmentation-readout-lab10-20261009-r1",
+          "chain_id": "mvcnet-transaction-v3.1",
+          "continuation_id": null,
+          "operation_id": null,
+          "queue_time_policy": "exclude_resource_wait",
+          "research_governance": {
+            "allowed_transitions": [
+              "REFINE_ONCE",
+              "DIAGNOSE_ONCE",
+              "CONFIRM_TO_CAP",
+              "MATURE_AND_FREEZE",
+              "RETIRE",
+              "DISCOVER_NEXT",
+              "SCREEN_NEW",
+              "EVALUATE_FROZEN"
+            ],
+            "authorization_transition_required_for_continuation": true,
+            "paired_seed_cap": 5,
+            "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+            "required_transition_fields": [
+              "decision",
+              "run_action",
+              "source_decision_record",
+              "source_evidence_ids",
+              "evidence_basis",
+              "remaining_uncertainty",
+              "expected_information",
+              "stop_rule",
+              "next_stage"
+            ],
+            "run_action_by_transition": {
+              "CONFIRM_TO_CAP": "RUN_ALLOWED",
+              "DIAGNOSE_ONCE": "RUN_ALLOWED",
+              "DISCOVER_NEXT": "DESIGN_ONLY",
+              "EVALUATE_FROZEN": "RUN_ALLOWED",
+              "MATURE_AND_FREEZE": "NO_RUN",
+              "REFINE_ONCE": "RUN_ALLOWED",
+              "RETIRE": "NO_RUN",
+              "SCREEN_NEW": "RUN_ALLOWED"
+            },
+            "saturated_seed_identities": [
+              {
+                "hypothesis_family_id": "vcn-p1-fresh-seed-stability",
+                "interpretation_boundary": "仅登记稳定性证据已超过默认上限；不新增论文主张，也不追溯改写历史结果。",
+                "module_family_id": "VCN-P1",
+                "paired_seeds": [
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20
+                ],
+                "source_rounds": [
+                  "mvcnet-lab10-l1-seed78-fixed1024-v1.0",
+                  "mvcnet-lab10-l2-seed910-fixed1024-v1.0",
+                  "mvcnet-lab10-l3-seed1112-fixed1024-v1.0",
+                  "mvcnet-lab10-l4-seed1314-fixed1024-v1.0",
+                  "mvcnet-lab10-l5-seed1516-fixed1024-v1.0",
+                  "mvcnet-lab10-l6-seed1718-fixed1024-v1.0",
+                  "mvcnet-lab10-l7-seed1920-fixed1024-v1.0"
+                ],
+                "status": "SATURATED"
+              }
+            ]
+          },
+          "research_governance_sha256": "7540dd1de8e15c928649e4d786d32a3c6f0918374bfd18189d5f232a789a6408",
+          "run_round_id": "mvcnet-augmentation-readout-screen-lab10-r1-resume69-repair2",
+          "scope": "work"
+        },
+        {
+          "campaign_id": "mvcnet-vbr-r1-lab10-20261024",
+          "chain_id": "mvcnet-transaction-v3.2",
+          "continuation_id": null,
+          "operation_id": null,
+          "queue_time_policy": "exclude_resource_wait",
+          "research_governance": {
+            "allowed_transitions": [
+              "REFINE_ONCE",
+              "DIAGNOSE_ONCE",
+              "CONFIRM_TO_CAP",
+              "MATURE_AND_FREEZE",
+              "RETIRE",
+              "DISCOVER_NEXT",
+              "SCREEN_NEW",
+              "EVALUATE_FROZEN"
+            ],
+            "authorization_transition_required_for_continuation": true,
+            "paired_seed_cap": 5,
+            "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+            "required_transition_fields": [
+              "decision",
+              "run_action",
+              "source_decision_record",
+              "source_evidence_ids",
+              "evidence_basis",
+              "remaining_uncertainty",
+              "expected_information",
+              "stop_rule",
+              "next_stage"
+            ],
+            "run_action_by_transition": {
+              "CONFIRM_TO_CAP": "RUN_ALLOWED",
+              "DIAGNOSE_ONCE": "RUN_ALLOWED",
+              "DISCOVER_NEXT": "DESIGN_ONLY",
+              "EVALUATE_FROZEN": "RUN_ALLOWED",
+              "MATURE_AND_FREEZE": "NO_RUN",
+              "REFINE_ONCE": "RUN_ALLOWED",
+              "RETIRE": "NO_RUN",
+              "SCREEN_NEW": "RUN_ALLOWED"
+            },
+            "saturated_seed_identities": [
+              {
+                "hypothesis_family_id": "vcn-p1-fresh-seed-stability",
+                "interpretation_boundary": "仅登记稳定性证据已超过默认上限；不新增论文主张，也不追溯改写历史结果。",
+                "module_family_id": "VCN-P1",
+                "paired_seeds": [
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20
+                ],
+                "source_rounds": [
+                  "mvcnet-lab10-l1-seed78-fixed1024-v1.0",
+                  "mvcnet-lab10-l2-seed910-fixed1024-v1.0",
+                  "mvcnet-lab10-l3-seed1112-fixed1024-v1.0",
+                  "mvcnet-lab10-l4-seed1314-fixed1024-v1.0",
+                  "mvcnet-lab10-l5-seed1516-fixed1024-v1.0",
+                  "mvcnet-lab10-l6-seed1718-fixed1024-v1.0",
+                  "mvcnet-lab10-l7-seed1920-fixed1024-v1.0"
+                ],
+                "status": "SATURATED"
+              }
+            ]
+          },
+          "research_governance_sha256": "7540dd1de8e15c928649e4d786d32a3c6f0918374bfd18189d5f232a789a6408",
+          "run_round_id": null,
+          "scope": "campaign"
+        }
+      ],
+      "retired_chains": [
+        {
+          "activated_at": "2026-09-05T10:41:17.553166+00:00",
+          "activation_authority": "user authorized VOGD closure and MVCNet admission",
+          "chain_id": "mvcnet-transaction-v2",
+          "compatibility": "PASS",
+          "implementation_readiness": {
+            "authorization_transition_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "executor_integration": "OFFLINE_PASS",
+            "frozen_contract_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "gpu_capacity_acceptance": "NOT_RUN",
+            "prompt_index_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "seed_cap_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "transaction_unit_regression": "PASS"
+          },
+          "level_1": {
+            "path": "ai4s/prompts/LEVEL1_RESEARCH_v2.0.md",
+            "prompt_id": "MIEEG_AI4S_RESEARCH",
+            "version": "2.0"
+          },
+          "level_2": {
+            "path": "ai4s/prompts/LEVEL2_EXECUTION_v2.0.md",
+            "prompt_id": "MIEEG_AI4S_EXECUTION",
+            "version": "2.0"
+          },
+          "level_3": {
+            "path": "ai4s/programs/mvcnet/PROJECT_PROMPT_v0.6.md",
+            "prompt_id": "MVCNET_MI_EEG_PROJECT",
+            "version": "0.6"
+          },
+          "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+          "required_paths": [
+            "ai4s/programs/mvcnet/PROGRAM.yaml",
+            "ai4s/programs/mvcnet/research/STATE.yaml",
+            "ai4s/programs/mvcnet/research/EVIDENCE_INDEX.yaml"
+          ],
+          "runtime_controller": {
+            "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+            "version": "2.0"
+          },
+          "status": "ACTIVE"
+        },
+        {
+          "activated_at": "2026-09-05T10:41:17.553166+00:00",
+          "activation_authority": "user requested AI4S v3.0 implementation and all-Program activation on 2026-09-25",
+          "chain_id": "mvcnet-transaction-v3.0",
+          "compatibility": "PASS",
+          "continuation_policy_version": "evidence_to_design_v1",
+          "evaluation_evidence_version": "1",
+          "implementation_readiness": {
+            "authorization_transition_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "executor_integration": "OFFLINE_PASS",
+            "frozen_contract_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "gpu_capacity_acceptance": "NOT_RUN",
+            "prompt_index_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "seed_cap_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "transaction_unit_regression": "PASS",
+            "v3_regression": "PASS"
+          },
+          "level_1": {
+            "path": "ai4s/prompts/LEVEL1_RESEARCH_v3.0.md",
+            "prompt_id": "MIEEG_AI4S_RESEARCH",
+            "version": "3.0"
+          },
+          "level_2": {
+            "path": "ai4s/prompts/LEVEL2_EXECUTION_v3.0.md",
+            "prompt_id": "MIEEG_AI4S_EXECUTION",
+            "version": "3.0"
+          },
+          "level_3": {
+            "path": "ai4s/programs/mvcnet/PROJECT_PROMPT_v3.0.md",
+            "prompt_id": "MVCNET_MI_EEG_PROJECT",
+            "version": "3.0"
+          },
+          "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+          "required_paths": [
+            "ai4s/programs/mvcnet/PROGRAM.yaml",
+            "ai4s/programs/mvcnet/research/STATE.yaml",
+            "ai4s/programs/mvcnet/research/EVIDENCE_INDEX.yaml"
+          ],
+          "runtime_controller": {
+            "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+            "version": "3.0"
+          },
+          "status": "ACTIVE"
+        },
+        {
+          "activated_at": "2026-10-08T13:25:25.406585+00:00",
+          "activation_authority": "User explicitly requested v3.1 activation and every Program admission update in current conversation on 2026-10-08; does not authorize experiments.",
+          "activation_review": "CLOSED_SEE_REVIEW_DISPOSITION",
+          "based_on_chain_id": "mvcnet-transaction-v3.0",
+          "chain_id": "mvcnet-transaction-v3.1",
+          "compatibility": "PASS",
+          "continuation_policy_version": "evidence_to_design_v1",
+          "evaluation_evidence_version": "1",
+          "implementation_readiness": {
+            "authorization_transition_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "executor_integration": "OFFLINE_PASS",
+            "frozen_contract_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "gpu_capacity_acceptance": "NOT_RUN",
+            "prompt_index_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "seed_cap_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "transaction_unit_regression": "PASS",
+            "transaction_unit_regression_evidence": "ai4s/_work/prompt_v31_activation_20261008/REGRESSION_VERIFIED.log",
+            "v31_activation_regression": "PASS",
+            "v31_activation_regression_evidence": "ai4s/_work/prompt_v31_activation_20261008/CODE_TESTS_R2.log",
+            "v31_regression": "PASS",
+            "v31_regression_evidence": "ai4s/_work/prompt_v31_activation_20261008/REGRESSION_VERIFIED.log",
+            "v3_regression": "PASS"
+          },
+          "level_1": {
+            "path": "ai4s/prompts/LEVEL1_RESEARCH_v3.1.md",
+            "prompt_id": "MIEEG_AI4S_RESEARCH",
+            "version": "3.1"
+          },
+          "level_2": {
+            "path": "ai4s/prompts/LEVEL2_EXECUTION_v3.1.md",
+            "prompt_id": "MIEEG_AI4S_EXECUTION",
+            "version": "3.1"
+          },
+          "level_3": {
+            "path": "ai4s/programs/mvcnet/PROJECT_PROMPT_v3.1.md",
+            "prompt_id": "MVCNET_MI_EEG_PROJECT",
+            "version": "3.1"
+          },
+          "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+          "required_paths": [
+            "ai4s/programs/mvcnet/PROGRAM.yaml",
+            "ai4s/programs/mvcnet/research/STATE.yaml",
+            "ai4s/programs/mvcnet/research/EVIDENCE_INDEX.yaml"
+          ],
+          "runtime_controller": {
+            "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+            "version": "3.0"
+          },
+          "status": "ACTIVE"
+        },
+        {
+          "activated_at": "2026-10-24T04:00:45.572999+00:00",
+          "activation_authority": "User explicitly requested MVCNet L1/L2/L3 v3.2 activation and research design on 2026-10-24 in this chat; no new experiment execution authorized.",
+          "activation_review": "LOCAL_BINDING_CHECK_AND_EXISTING_ACTIVATION_REGRESSION",
+          "based_on_chain_id": "mvcnet-transaction-v3.1",
+          "chain_id": "mvcnet-transaction-v3.2",
+          "compatibility": "PASS",
+          "continuation_policy_version": "evidence_to_design_v1",
+          "evaluation_evidence_version": "1",
+          "implementation_readiness": {
+            "authorization_transition_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "executor_integration": "OFFLINE_PASS",
+            "frozen_contract_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "gpu_capacity_acceptance": "NOT_RUN",
+            "prompt_index_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "seed_cap_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "transaction_unit_regression": "PASS",
+            "transaction_unit_regression_evidence": "ai4s/_work/prompt_v31_activation_20261008/REGRESSION_VERIFIED.log",
+            "v31_activation_regression": "PASS",
+            "v31_activation_regression_evidence": "ai4s/_work/prompt_v31_activation_20261008/CODE_TESTS_R2.log",
+            "v31_regression": "PASS",
+            "v31_regression_evidence": "ai4s/_work/prompt_v31_activation_20261008/REGRESSION_VERIFIED.log",
+            "v32_regression": "PASS",
+            "v32_regression_evidence": "ai4s/_work/mvcnet_v32_activation_20261024/ACTIVATION_TESTS_HOST.log",
+            "v3_regression": "PASS"
+          },
+          "level_1": {
+            "path": "ai4s/prompts/LEVEL1_RESEARCH_v3.2.md",
+            "prompt_id": "MIEEG_AI4S_RESEARCH",
+            "version": "3.2"
+          },
+          "level_2": {
+            "path": "ai4s/prompts/LEVEL2_EXECUTION_v3.2.md",
+            "prompt_id": "MIEEG_AI4S_EXECUTION",
+            "version": "3.2"
+          },
+          "level_3": {
+            "path": "ai4s/programs/mvcnet/PROJECT_PROMPT_v3.2.md",
+            "prompt_id": "MVCNET_MI_EEG_PROJECT",
+            "version": "3.2"
+          },
+          "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+          "required_paths": [
+            "ai4s/programs/mvcnet/PROGRAM.yaml",
+            "ai4s/programs/mvcnet/research/STATE.yaml",
+            "ai4s/programs/mvcnet/research/EVIDENCE_INDEX.yaml"
+          ],
+          "runtime_controller": {
+            "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+            "version": "3.0"
+          },
+          "status": "ACTIVE"
+        }
+      ],
+      "retired_drafts": [
+        {
+          "activation_requirement": "Settle this Program active Run/operation/continuation and campaign; use activate_evaluation_governance.py",
+          "chain_id": "mvcnet-transaction-v2.1-evaluation",
+          "compatibility": "PASS",
+          "evaluation_evidence_version": "1",
+          "implementation_readiness": {
+            "evaluation_regression": "PASS",
+            "evidence": "_work/ai4s-proposed-retirement-20260917/regression.log",
+            "gpu_acceptance": "NOT_RUN",
+            "offline_test_count": 163
+          },
+          "level_1": {
+            "path": "ai4s/prompts/LEVEL1_RESEARCH_v2.1.md",
+            "prompt_id": "MIEEG_AI4S_RESEARCH",
+            "version": "2.1"
+          },
+          "level_2": {
+            "path": "ai4s/prompts/LEVEL2_EXECUTION_v2.1.md",
+            "prompt_id": "MIEEG_AI4S_EXECUTION",
+            "version": "2.1"
+          },
+          "level_3": {
+            "path": "ai4s/programs/mvcnet/PROJECT_PROMPT_v0.7.md",
+            "prompt_id": "MVCNET_MI_EEG_PROJECT",
+            "version": "0.7"
+          },
+          "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+          "required_paths": [
+            "ai4s/programs/mvcnet/PROGRAM.yaml",
+            "ai4s/programs/mvcnet/research/STATE.yaml",
+            "ai4s/programs/mvcnet/research/EVIDENCE_INDEX.yaml",
+            "ai4s/prompts/EVALUATION_EVIDENCE.md",
+            "scripts/ai4s/evaluation.py"
+          ],
+          "runtime_controller": {
+            "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+            "version": "2.0"
+          },
+          "status": "DRAFT"
+        }
+      ]
+    },
+    "ota": {
+      "active_chain": {
+        "activated_at": "2026-10-29T14:03:36.169653+00:00",
+        "activation_authority": "2026-10-29 current chat: 用户明确授权“授权完成激活v3.3”；仅 OTA 提示词激活及其必要历史对账，不授权新训练或恢复研究。",
+        "activation_review": "LOCAL_DOCUMENT_AND_IDLE_BOUNDARY_REGRESSION",
+        "based_on_chain_id": "ota-transaction-v3.1",
+        "chain_id": "ota-transaction-v3.3",
+        "compatibility": "PASS",
+        "continuation_policy_version": "evidence_to_design_v1",
+        "evaluation_evidence_version": "1",
+        "implementation_readiness": {
+          "authorization_transition_guard": {
+            "evidence": "tests/run_ai4s_transaction_regression.py",
+            "status": "PASS"
+          },
+          "frozen_contract_guard": {
+            "evidence": "tests/run_ai4s_transaction_regression.py",
+            "status": "PASS"
+          },
+          "gpu_capacity_acceptance": "NOT_RUN",
+          "prompt_index_guard": {
+            "evidence": "tests/run_ai4s_transaction_regression.py",
+            "status": "PASS"
+          },
+          "seed_cap_guard": {
+            "evidence": "tests/run_ai4s_transaction_regression.py",
+            "status": "PASS"
+          },
+          "v33_regression": "PASS",
+          "v33_regression_evidence": "ai4s/_work/prompt_v33_implementation_20261029/LAUNCH_TESTS.log"
+        },
+        "level_1": {
+          "path": "ai4s/prompts/LEVEL1_RESEARCH_v3.3.md",
+          "prompt_id": "MIEEG_AI4S_RESEARCH",
+          "version": "3.3"
+        },
+        "level_2": {
+          "path": "ai4s/prompts/LEVEL2_EXECUTION_v3.3.md",
+          "prompt_id": "MIEEG_AI4S_EXECUTION",
+          "version": "3.3"
+        },
+        "level_3": {
+          "path": "ai4s/programs/ota/PROJECT_PROMPT_v3.3.md",
+          "prompt_id": "OTA_MI_EEG_PROJECT",
+          "version": "3.3"
+        },
+        "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+        "required_paths": [
+          "ai4s/programs/ota/PROGRAM.yaml",
+          "ai4s/programs/ota/research/STATE.yaml",
+          "ai4s/programs/ota/research/EVIDENCE_INDEX.yaml",
+          "ai4s/programs/ota/research/ADMISSION.md",
+          "ai4s/programs/ota/research/CURRENT_UNDERSTANDING.md",
+          "ai4s/prompts/MIEEG_AI4S_SKILL_ROUTER.md"
+        ],
+        "runtime_controller": {
+          "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+          "version": "3.0"
+        },
+        "status": "ACTIVE"
+      },
+      "history_boundary": {
+        "note": "OTA 是新独立 Program；不导入其他 Program 的科研或执行历史。",
+        "prior_results_reclassified": false,
+        "prior_runs_reinterpreted": false
+      },
+      "legacy_work_binding": {
+        "campaign_id": "dsa-spar-v0.1-20260919",
+        "chain_id": "ota-transaction-v2.1",
+        "continuation_id": null,
+        "operation_id": null,
+        "queue_time_policy": "exclude_resource_wait",
+        "research_governance": {
+          "allowed_transitions": [
+            "SCREEN_NEW",
+            "DIAGNOSE_ONCE"
+          ],
+          "authorization_transition_required_for_continuation": true,
+          "paired_seed_cap": 2,
+          "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+          "required_transition_fields": [
+            "decision",
+            "run_action",
+            "evidence_basis",
+            "remaining_uncertainty",
+            "expected_information",
+            "stop_rule",
+            "next_stage"
+          ],
+          "run_action_by_transition": {
+            "DIAGNOSE_ONCE": "RUN_ALLOWED",
+            "SCREEN_NEW": "RUN_ALLOWED"
+          }
+        },
+        "research_governance_sha256": "38b118c12583e4090f9fdea9c23fda9ac4dfb07becc4ccfe454afab94595d5ab",
+        "run_round_id": "dsa-spar-r01-v0.1-repair1"
+      },
+      "legacy_work_bindings": [
+        {
+          "campaign_id": "dsa-spar-v0.1-20260919",
+          "chain_id": "ota-transaction-v2.1",
+          "continuation_id": null,
+          "contract": "ai4s/programs/ota/research/spar-r01-v0.1-repair1.yaml",
+          "contract_sha256": "c0f900b1ee7fddfe6fa2caf3094707012d8216332da138d2bfaa37185bac5343",
+          "operation_id": null,
+          "queue_time_policy": "exclude_resource_wait",
+          "research_governance": {
+            "allowed_transitions": [
+              "SCREEN_NEW",
+              "DIAGNOSE_ONCE"
+            ],
+            "authorization_transition_required_for_continuation": true,
+            "paired_seed_cap": 2,
+            "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+            "required_transition_fields": [
+              "decision",
+              "run_action",
+              "evidence_basis",
+              "remaining_uncertainty",
+              "expected_information",
+              "stop_rule",
+              "next_stage"
+            ],
+            "run_action_by_transition": {
+              "DIAGNOSE_ONCE": "RUN_ALLOWED",
+              "SCREEN_NEW": "RUN_ALLOWED"
+            }
+          },
+          "research_governance_sha256": "38b118c12583e4090f9fdea9c23fda9ac4dfb07becc4ccfe454afab94595d5ab",
+          "run_round_id": null,
+          "scope": "campaign"
+        },
+        {
+          "campaign_id": "dsa-spar-v0.1-20260919",
+          "chain_id": "ota-transaction-v2.1",
+          "continuation_id": null,
+          "contract": "ai4s/programs/ota/research/spar-r01-v0.1-repair1.yaml",
+          "contract_sha256": "c0f900b1ee7fddfe6fa2caf3094707012d8216332da138d2bfaa37185bac5343",
+          "operation_id": null,
+          "queue_time_policy": "exclude_resource_wait",
+          "research_governance": {
+            "allowed_transitions": [
+              "SCREEN_NEW",
+              "DIAGNOSE_ONCE"
+            ],
+            "authorization_transition_required_for_continuation": true,
+            "paired_seed_cap": 2,
+            "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+            "required_transition_fields": [
+              "decision",
+              "run_action",
+              "evidence_basis",
+              "remaining_uncertainty",
+              "expected_information",
+              "stop_rule",
+              "next_stage"
+            ],
+            "run_action_by_transition": {
+              "DIAGNOSE_ONCE": "RUN_ALLOWED",
+              "SCREEN_NEW": "RUN_ALLOWED"
+            }
+          },
+          "research_governance_sha256": "38b118c12583e4090f9fdea9c23fda9ac4dfb07becc4ccfe454afab94595d5ab",
+          "run_round_id": "dsa-spar-r01-v0.1-repair1",
+          "scope": "work"
+        }
+      ],
+      "retired_chains": [
+        {
+          "activated_at": "2026-09-17T11:06:43+00:00",
+          "activation_authority": "user authorized OTA Program admission and bounded campaign",
+          "chain_id": "ota-transaction-v2.1",
+          "compatibility": "PASS",
+          "implementation_readiness": {
+            "authorization_transition_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "frozen_contract_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "gpu_capacity_acceptance": "NOT_RUN",
+            "prompt_index_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "seed_cap_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "transaction_unit_regression": "PASS",
+            "transport_profile_support": "PENDING_PROXYJUMP_PROFILE_SUPPORT"
+          },
+          "level_1": {
+            "path": "ai4s/prompts/LEVEL1_RESEARCH_v2.1.md",
+            "prompt_id": "MIEEG_AI4S_RESEARCH",
+            "version": "2.1"
+          },
+          "level_2": {
+            "path": "ai4s/prompts/LEVEL2_EXECUTION_v2.1.md",
+            "prompt_id": "MIEEG_AI4S_EXECUTION",
+            "version": "2.1"
+          },
+          "level_3": {
+            "path": "ai4s/programs/ota/PROJECT_PROMPT_v0.1.md",
+            "prompt_id": "OTA_MI_EEG_PROJECT",
+            "version": "0.1"
+          },
+          "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+          "required_paths": [
+            "ai4s/programs/ota/PROGRAM.yaml",
+            "ai4s/programs/ota/research/STATE.yaml",
+            "ai4s/programs/ota/research/EVIDENCE_INDEX.yaml",
+            "ai4s/programs/ota/research/ADMISSION.md"
+          ],
+          "runtime_controller": {
+            "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+            "version": "2.0"
+          },
+          "status": "ACTIVE"
+        },
+        {
+          "activated_at": "2026-09-17T11:06:43+00:00",
+          "activation_authority": "user requested AI4S v3.0 implementation and all-Program activation on 2026-09-25",
+          "chain_id": "ota-transaction-v3.0",
+          "compatibility": "PASS",
+          "continuation_policy_version": "evidence_to_design_v1",
+          "evaluation_evidence_version": "1",
+          "implementation_readiness": {
+            "authorization_transition_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "frozen_contract_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "gpu_capacity_acceptance": "NOT_RUN",
+            "prompt_index_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "seed_cap_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "transaction_unit_regression": "PASS",
+            "transport_profile_support": "PENDING_PROXYJUMP_PROFILE_SUPPORT",
+            "v3_regression": "PASS"
+          },
+          "level_1": {
+            "path": "ai4s/prompts/LEVEL1_RESEARCH_v3.0.md",
+            "prompt_id": "MIEEG_AI4S_RESEARCH",
+            "version": "3.0"
+          },
+          "level_2": {
+            "path": "ai4s/prompts/LEVEL2_EXECUTION_v3.0.md",
+            "prompt_id": "MIEEG_AI4S_EXECUTION",
+            "version": "3.0"
+          },
+          "level_3": {
+            "path": "ai4s/programs/ota/PROJECT_PROMPT_v3.0.md",
+            "prompt_id": "OTA_MI_EEG_PROJECT",
+            "version": "3.0"
+          },
+          "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+          "required_paths": [
+            "ai4s/programs/ota/PROGRAM.yaml",
+            "ai4s/programs/ota/research/STATE.yaml",
+            "ai4s/programs/ota/research/EVIDENCE_INDEX.yaml",
+            "ai4s/programs/ota/research/ADMISSION.md"
+          ],
+          "runtime_controller": {
+            "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+            "version": "3.0"
+          },
+          "status": "ACTIVE"
+        },
+        {
+          "activated_at": "2026-10-08T13:25:28.000164+00:00",
+          "activation_authority": "User explicitly requested v3.1 activation and every Program admission update in current conversation on 2026-10-08; does not authorize experiments.",
+          "activation_review": "CLOSED_SEE_REVIEW_DISPOSITION",
+          "based_on_chain_id": "ota-transaction-v3.0",
+          "chain_id": "ota-transaction-v3.1",
+          "compatibility": "PASS",
+          "continuation_policy_version": "evidence_to_design_v1",
+          "evaluation_evidence_version": "1",
+          "implementation_readiness": {
+            "authorization_transition_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "frozen_contract_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "gpu_capacity_acceptance": "NOT_RUN",
+            "prompt_index_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "seed_cap_guard": {
+              "evidence": "tests/run_ai4s_transaction_regression.py",
+              "status": "PASS"
+            },
+            "transaction_unit_regression": "PASS",
+            "transaction_unit_regression_evidence": "ai4s/_work/prompt_v31_activation_20261008/REGRESSION_VERIFIED.log",
+            "transport_profile_support": "PENDING_PROXYJUMP_PROFILE_SUPPORT",
+            "v31_activation_regression": "PASS",
+            "v31_activation_regression_evidence": "ai4s/_work/prompt_v31_activation_20261008/CODE_TESTS_R2.log",
+            "v31_regression": "PASS",
+            "v31_regression_evidence": "ai4s/_work/prompt_v31_activation_20261008/REGRESSION_VERIFIED.log",
+            "v3_regression": "PASS"
+          },
+          "level_1": {
+            "path": "ai4s/prompts/LEVEL1_RESEARCH_v3.1.md",
+            "prompt_id": "MIEEG_AI4S_RESEARCH",
+            "version": "3.1"
+          },
+          "level_2": {
+            "path": "ai4s/prompts/LEVEL2_EXECUTION_v3.1.md",
+            "prompt_id": "MIEEG_AI4S_EXECUTION",
+            "version": "3.1"
+          },
+          "level_3": {
+            "path": "ai4s/programs/ota/PROJECT_PROMPT_v3.1.md",
+            "prompt_id": "OTA_MI_EEG_PROJECT",
+            "version": "3.1"
+          },
+          "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+          "required_paths": [
+            "ai4s/programs/ota/PROGRAM.yaml",
+            "ai4s/programs/ota/research/STATE.yaml",
+            "ai4s/programs/ota/research/EVIDENCE_INDEX.yaml",
+            "ai4s/programs/ota/research/ADMISSION.md"
+          ],
+          "runtime_controller": {
+            "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+            "version": "3.0"
+          },
+          "status": "ACTIVE"
+        }
+      ]
+    },
+    "sstdpn": {
+      "active_chain": {
+        "activated_at": "2026-10-29T12:10:14.550746+00:00",
+        "activation_authority": "User authorized v3.3 implementation and idle Program prompt activation in this chat on 2026-10-29; no experiment activation, launch or rerun.",
+        "activation_review": "LOCAL_DOCUMENT_AND_IDLE_BOUNDARY_REGRESSION",
+        "admission_report": "ai4s/_work/baseline_program_admission_20260919/REPORT.md",
+        "based_on_chain_id": "sstdpn-transaction-v3.2",
+        "chain_id": "sstdpn-transaction-v3.3",
+        "compatibility": "PASS",
+        "continuation_policy_version": "evidence_to_design_v1",
+        "evaluation_evidence_version": "1",
+        "implementation_readiness": {
+          "authorization_transition_guard": {
+            "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+            "status": "PASS"
+          },
+          "frozen_contract_guard": {
+            "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+            "status": "PASS"
+          },
+          "gpu_capacity_acceptance": "NOT_RUN",
+          "prompt_index_guard": {
+            "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+            "status": "PASS"
+          },
+          "seed_cap_guard": {
+            "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+            "status": "PASS"
+          },
+          "v33_regression": "PASS",
+          "v33_regression_evidence": "ai4s/_work/prompt_v33_implementation_20261029/LAUNCH_TESTS.log"
+        },
+        "level_1": {
+          "path": "ai4s/prompts/LEVEL1_RESEARCH_v3.3.md",
+          "prompt_id": "MIEEG_AI4S_RESEARCH",
+          "version": "3.3"
+        },
+        "level_2": {
+          "path": "ai4s/prompts/LEVEL2_EXECUTION_v3.3.md",
+          "prompt_id": "MIEEG_AI4S_EXECUTION",
+          "version": "3.3"
+        },
+        "level_3": {
+          "path": "ai4s/programs/sstdpn/PROJECT_PROMPT_v3.3.md",
+          "prompt_id": "SSTDPN_MI_EEG_PROJECT",
+          "version": "3.3"
+        },
+        "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+        "required_paths": [
+          "ai4s/programs/sstdpn/PROGRAM.yaml",
+          "ai4s/programs/sstdpn/research/STATE.yaml",
+          "ai4s/programs/sstdpn/research/EVIDENCE_INDEX.yaml",
+          "ai4s/programs/sstdpn/research/ADMISSION.md",
+          "ai4s/programs/sstdpn/research/HISTORY_BOUNDARIES.md",
+          "ai4s/prompts/EVALUATION_EVIDENCE.md",
+          "scripts/ai4s/evaluation.py",
+          "ai4s/programs/sstdpn/research/NEXT_RESEARCH.md",
+          "ai4s/prompts/MIEEG_AI4S_SKILL_ROUTER.md"
+        ],
+        "runtime_controller": {
+          "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+          "version": "3.0"
+        },
+        "status": "ACTIVE"
+      },
+      "history_boundary": {
+        "historical_runtime_inherited": false,
+        "note": "历史只作来源和科学边界；不重置选择暴露或精确关闭限制。",
+        "prior_results_reclassified": false,
+        "prior_runs_reinterpreted": false
+      },
+      "legacy_work_binding": {
+        "campaign_id": "sstdpn-wcc-first-training-20260923",
+        "chain_id": "sstdpn-transaction-v2.1",
+        "continuation_id": null,
+        "operation_id": null,
+        "queue_time_policy": "exclude_resource_wait",
+        "research_governance": {
+          "allowed_transitions": [
+            "REFINE_ONCE",
+            "DIAGNOSE_ONCE",
+            "CONFIRM_TO_CAP",
+            "MATURE_AND_FREEZE",
+            "RETIRE",
+            "DISCOVER_NEXT",
+            "SCREEN_NEW",
+            "EVALUATE_FROZEN"
+          ],
+          "authorization_transition_required_for_continuation": true,
+          "capability_not_execution_authorization": true,
+          "paired_seed_cap": 5,
+          "paired_seed_cap_basis": "shared_existing_program_default_not_a_training_budget; prior exposure/usage remains cumulative",
+          "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+          "required_transition_fields": [
+            "decision",
+            "run_action",
+            "source_decision_record",
+            "source_evidence_ids",
+            "evidence_basis",
+            "remaining_uncertainty",
+            "expected_information",
+            "stop_rule",
+            "next_stage"
+          ],
+          "run_action_by_transition": {
+            "CONFIRM_TO_CAP": "RUN_ALLOWED",
+            "DIAGNOSE_ONCE": "RUN_ALLOWED",
+            "DISCOVER_NEXT": "DESIGN_ONLY",
+            "EVALUATE_FROZEN": "RUN_ALLOWED",
+            "MATURE_AND_FREEZE": "NO_RUN",
+            "REFINE_ONCE": "RUN_ALLOWED",
+            "RETIRE": "NO_RUN",
+            "SCREEN_NEW": "RUN_ALLOWED"
+          }
+        },
+        "research_governance_sha256": "54e1a394b8c622d5e9769a11aa756a75b9f88e188aa4772c4a9320e4776466cc",
+        "run_round_id": "wcc-r01-v0.1-repair4"
+      },
+      "legacy_work_bindings": [
+        {
+          "campaign_id": "sstdpn-sdc-structural-screen-20261008",
+          "chain_id": "sstdpn-transaction-v3.0",
+          "continuation_id": null,
+          "operation_id": null,
+          "queue_time_policy": "exclude_resource_wait",
+          "research_governance": {
+            "allowed_transitions": [
+              "REFINE_ONCE",
+              "DIAGNOSE_ONCE",
+              "CONFIRM_TO_CAP",
+              "MATURE_AND_FREEZE",
+              "RETIRE",
+              "DISCOVER_NEXT",
+              "SCREEN_NEW",
+              "EVALUATE_FROZEN"
+            ],
+            "authorization_transition_required_for_continuation": true,
+            "capability_not_execution_authorization": true,
+            "paired_seed_cap": 5,
+            "paired_seed_cap_basis": "shared_existing_program_default_not_a_training_budget; prior exposure/usage remains cumulative",
+            "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+            "required_transition_fields": [
+              "decision",
+              "run_action",
+              "source_decision_record",
+              "source_evidence_ids",
+              "evidence_basis",
+              "remaining_uncertainty",
+              "expected_information",
+              "stop_rule",
+              "next_stage"
+            ],
+            "run_action_by_transition": {
+              "CONFIRM_TO_CAP": "RUN_ALLOWED",
+              "DIAGNOSE_ONCE": "RUN_ALLOWED",
+              "DISCOVER_NEXT": "DESIGN_ONLY",
+              "EVALUATE_FROZEN": "RUN_ALLOWED",
+              "MATURE_AND_FREEZE": "NO_RUN",
+              "REFINE_ONCE": "RUN_ALLOWED",
+              "RETIRE": "NO_RUN",
+              "SCREEN_NEW": "RUN_ALLOWED"
+            }
+          },
+          "research_governance_sha256": "54e1a394b8c622d5e9769a11aa756a75b9f88e188aa4772c4a9320e4776466cc",
+          "run_round_id": null,
+          "scope": "campaign"
+        },
+        {
+          "campaign_id": "sstdpn-sdc-structural-screen-20261008",
+          "chain_id": "sstdpn-transaction-v3.0",
+          "continuation_id": null,
+          "operation_id": null,
+          "queue_time_policy": "exclude_resource_wait",
+          "research_governance": {
+            "allowed_transitions": [
+              "REFINE_ONCE",
+              "DIAGNOSE_ONCE",
+              "CONFIRM_TO_CAP",
+              "MATURE_AND_FREEZE",
+              "RETIRE",
+              "DISCOVER_NEXT",
+              "SCREEN_NEW",
+              "EVALUATE_FROZEN"
+            ],
+            "authorization_transition_required_for_continuation": true,
+            "capability_not_execution_authorization": true,
+            "paired_seed_cap": 5,
+            "paired_seed_cap_basis": "shared_existing_program_default_not_a_training_budget; prior exposure/usage remains cumulative",
+            "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+            "required_transition_fields": [
+              "decision",
+              "run_action",
+              "source_decision_record",
+              "source_evidence_ids",
+              "evidence_basis",
+              "remaining_uncertainty",
+              "expected_information",
+              "stop_rule",
+              "next_stage"
+            ],
+            "run_action_by_transition": {
+              "CONFIRM_TO_CAP": "RUN_ALLOWED",
+              "DIAGNOSE_ONCE": "RUN_ALLOWED",
+              "DISCOVER_NEXT": "DESIGN_ONLY",
+              "EVALUATE_FROZEN": "RUN_ALLOWED",
+              "MATURE_AND_FREEZE": "NO_RUN",
+              "REFINE_ONCE": "RUN_ALLOWED",
+              "RETIRE": "NO_RUN",
+              "SCREEN_NEW": "RUN_ALLOWED"
+            }
+          },
+          "research_governance_sha256": "54e1a394b8c622d5e9769a11aa756a75b9f88e188aa4772c4a9320e4776466cc",
+          "run_round_id": "sdc-r01-v0.1-repair2",
+          "scope": "work"
+        },
+        {
+          "campaign_id": "sstdpn-sfp-structural-screen-20261009",
+          "chain_id": "sstdpn-transaction-v3.1",
+          "continuation_id": null,
+          "operation_id": null,
+          "queue_time_policy": "exclude_resource_wait",
+          "research_governance": {
+            "allowed_transitions": [
+              "REFINE_ONCE",
+              "DIAGNOSE_ONCE",
+              "CONFIRM_TO_CAP",
+              "MATURE_AND_FREEZE",
+              "RETIRE",
+              "DISCOVER_NEXT",
+              "SCREEN_NEW",
+              "EVALUATE_FROZEN"
+            ],
+            "authorization_transition_required_for_continuation": true,
+            "capability_not_execution_authorization": true,
+            "paired_seed_cap": 5,
+            "paired_seed_cap_basis": "shared_existing_program_default_not_a_training_budget; prior exposure/usage remains cumulative",
+            "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+            "required_transition_fields": [
+              "decision",
+              "run_action",
+              "source_decision_record",
+              "source_evidence_ids",
+              "evidence_basis",
+              "remaining_uncertainty",
+              "expected_information",
+              "stop_rule",
+              "next_stage"
+            ],
+            "run_action_by_transition": {
+              "CONFIRM_TO_CAP": "RUN_ALLOWED",
+              "DIAGNOSE_ONCE": "RUN_ALLOWED",
+              "DISCOVER_NEXT": "DESIGN_ONLY",
+              "EVALUATE_FROZEN": "RUN_ALLOWED",
+              "MATURE_AND_FREEZE": "NO_RUN",
+              "REFINE_ONCE": "RUN_ALLOWED",
+              "RETIRE": "NO_RUN",
+              "SCREEN_NEW": "RUN_ALLOWED"
+            }
+          },
+          "research_governance_sha256": "54e1a394b8c622d5e9769a11aa756a75b9f88e188aa4772c4a9320e4776466cc",
+          "run_round_id": null,
+          "scope": "campaign"
+        },
+        {
+          "campaign_id": "sstdpn-frr-r01-20261024",
+          "chain_id": "sstdpn-transaction-v3.2",
+          "continuation_id": null,
+          "operation_id": null,
+          "queue_time_policy": "exclude_resource_wait",
+          "research_governance": {
+            "allowed_transitions": [
+              "REFINE_ONCE",
+              "DIAGNOSE_ONCE",
+              "CONFIRM_TO_CAP",
+              "MATURE_AND_FREEZE",
+              "RETIRE",
+              "DISCOVER_NEXT",
+              "SCREEN_NEW",
+              "EVALUATE_FROZEN"
+            ],
+            "authorization_transition_required_for_continuation": true,
+            "capability_not_execution_authorization": true,
+            "paired_seed_cap": 5,
+            "paired_seed_cap_basis": "shared_existing_program_default_not_a_training_budget; prior exposure/usage remains cumulative",
+            "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+            "required_transition_fields": [
+              "decision",
+              "run_action",
+              "source_decision_record",
+              "source_evidence_ids",
+              "evidence_basis",
+              "remaining_uncertainty",
+              "expected_information",
+              "stop_rule",
+              "next_stage"
+            ],
+            "run_action_by_transition": {
+              "CONFIRM_TO_CAP": "RUN_ALLOWED",
+              "DIAGNOSE_ONCE": "RUN_ALLOWED",
+              "DISCOVER_NEXT": "DESIGN_ONLY",
+              "EVALUATE_FROZEN": "RUN_ALLOWED",
+              "MATURE_AND_FREEZE": "NO_RUN",
+              "REFINE_ONCE": "RUN_ALLOWED",
+              "RETIRE": "NO_RUN",
+              "SCREEN_NEW": "RUN_ALLOWED"
+            }
+          },
+          "research_governance_sha256": "54e1a394b8c622d5e9769a11aa756a75b9f88e188aa4772c4a9320e4776466cc",
+          "run_round_id": null,
+          "scope": "campaign"
+        }
+      ],
+      "retired_chains": [
+        {
+          "activated_at": "2026-09-19T08:11:57.103973+00:00",
+          "activation_authority": "user: 为DBConformer＋SST-DPN  建立program",
+          "admission_report": "ai4s/_work/baseline_program_admission_20260919/REPORT.md",
+          "chain_id": "sstdpn-transaction-v2.1",
+          "compatibility": "PASS",
+          "evaluation_evidence_version": "1",
+          "implementation_readiness": {
+            "authorization_transition_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "evaluation_regression": "PASS",
+            "frozen_contract_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "gpu_capacity_acceptance": "NOT_RUN",
+            "program_transport_acceptance": "NOT_RUN",
+            "prompt_index_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "seed_cap_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "transaction_unit_regression": "163_PASS_1_PREEXISTING_MVCNET_HOST_ASSERTION_FAILURE"
+          },
+          "level_1": {
+            "path": "ai4s/prompts/LEVEL1_RESEARCH_v2.1.md",
+            "prompt_id": "MIEEG_AI4S_RESEARCH",
+            "version": "2.1"
+          },
+          "level_2": {
+            "path": "ai4s/prompts/LEVEL2_EXECUTION_v2.1.md",
+            "prompt_id": "MIEEG_AI4S_EXECUTION",
+            "version": "2.1"
+          },
+          "level_3": {
+            "path": "ai4s/programs/sstdpn/PROJECT_PROMPT_v0.1.md",
+            "prompt_id": "SSTDPN_MI_EEG_PROJECT",
+            "version": "0.1"
+          },
+          "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+          "required_paths": [
+            "ai4s/programs/sstdpn/PROGRAM.yaml",
+            "ai4s/programs/sstdpn/research/STATE.yaml",
+            "ai4s/programs/sstdpn/research/EVIDENCE_INDEX.yaml",
+            "ai4s/programs/sstdpn/research/ADMISSION.md",
+            "ai4s/programs/sstdpn/research/HISTORY_BOUNDARIES.md",
+            "ai4s/prompts/EVALUATION_EVIDENCE.md",
+            "scripts/ai4s/evaluation.py"
+          ],
+          "runtime_controller": {
+            "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+            "version": "2.0"
+          },
+          "status": "ACTIVE"
+        },
+        {
+          "activated_at": "2026-09-19T08:11:57.103973+00:00",
+          "activation_authority": "user requested AI4S v3.0 implementation and all-Program activation on 2026-09-25",
+          "admission_report": "ai4s/_work/baseline_program_admission_20260919/REPORT.md",
+          "chain_id": "sstdpn-transaction-v3.0",
+          "compatibility": "PASS",
+          "continuation_policy_version": "evidence_to_design_v1",
+          "evaluation_evidence_version": "1",
+          "implementation_readiness": {
+            "authorization_transition_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "evaluation_regression": "PASS",
+            "frozen_contract_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "gpu_capacity_acceptance": "NOT_RUN",
+            "program_transport_acceptance": "NOT_RUN",
+            "prompt_index_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "seed_cap_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "transaction_unit_regression": "163_PASS_1_PREEXISTING_MVCNET_HOST_ASSERTION_FAILURE",
+            "v3_regression": "PASS"
+          },
+          "level_1": {
+            "path": "ai4s/prompts/LEVEL1_RESEARCH_v3.0.md",
+            "prompt_id": "MIEEG_AI4S_RESEARCH",
+            "version": "3.0"
+          },
+          "level_2": {
+            "path": "ai4s/prompts/LEVEL2_EXECUTION_v3.0.md",
+            "prompt_id": "MIEEG_AI4S_EXECUTION",
+            "version": "3.0"
+          },
+          "level_3": {
+            "path": "ai4s/programs/sstdpn/PROJECT_PROMPT_v3.0.md",
+            "prompt_id": "SSTDPN_MI_EEG_PROJECT",
+            "version": "3.0"
+          },
+          "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+          "required_paths": [
+            "ai4s/programs/sstdpn/PROGRAM.yaml",
+            "ai4s/programs/sstdpn/research/STATE.yaml",
+            "ai4s/programs/sstdpn/research/EVIDENCE_INDEX.yaml",
+            "ai4s/programs/sstdpn/research/ADMISSION.md",
+            "ai4s/programs/sstdpn/research/HISTORY_BOUNDARIES.md",
+            "ai4s/prompts/EVALUATION_EVIDENCE.md",
+            "scripts/ai4s/evaluation.py"
+          ],
+          "runtime_controller": {
+            "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+            "version": "3.0"
+          },
+          "status": "ACTIVE"
+        },
+        {
+          "activated_at": "2026-10-08T13:25:30.739588+00:00",
+          "activation_authority": "User explicitly requested v3.1 activation and every Program admission update in current conversation on 2026-10-08; does not authorize experiments.",
+          "activation_review": "CLOSED_SEE_REVIEW_DISPOSITION",
+          "admission_report": "ai4s/_work/baseline_program_admission_20260919/REPORT.md",
+          "based_on_chain_id": "sstdpn-transaction-v3.0",
+          "chain_id": "sstdpn-transaction-v3.1",
+          "compatibility": "PASS",
+          "continuation_policy_version": "evidence_to_design_v1",
+          "evaluation_evidence_version": "1",
+          "implementation_readiness": {
+            "authorization_transition_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "evaluation_regression": "PASS",
+            "frozen_contract_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "gpu_capacity_acceptance": "NOT_RUN",
+            "program_transport_acceptance": "NOT_RUN",
+            "prompt_index_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "seed_cap_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "transaction_unit_regression": "PASS",
+            "transaction_unit_regression_evidence": "ai4s/_work/prompt_v31_activation_20261008/REGRESSION_VERIFIED.log",
+            "v31_activation_regression": "PASS",
+            "v31_activation_regression_evidence": "ai4s/_work/prompt_v31_activation_20261008/CODE_TESTS_R2.log",
+            "v31_regression": "PASS",
+            "v31_regression_evidence": "ai4s/_work/prompt_v31_activation_20261008/REGRESSION_VERIFIED.log",
+            "v3_regression": "PASS"
+          },
+          "level_1": {
+            "path": "ai4s/prompts/LEVEL1_RESEARCH_v3.1.md",
+            "prompt_id": "MIEEG_AI4S_RESEARCH",
+            "version": "3.1"
+          },
+          "level_2": {
+            "path": "ai4s/prompts/LEVEL2_EXECUTION_v3.1.md",
+            "prompt_id": "MIEEG_AI4S_EXECUTION",
+            "version": "3.1"
+          },
+          "level_3": {
+            "path": "ai4s/programs/sstdpn/PROJECT_PROMPT_v3.1.md",
+            "prompt_id": "SSTDPN_MI_EEG_PROJECT",
+            "version": "3.1"
+          },
+          "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+          "required_paths": [
+            "ai4s/programs/sstdpn/PROGRAM.yaml",
+            "ai4s/programs/sstdpn/research/STATE.yaml",
+            "ai4s/programs/sstdpn/research/EVIDENCE_INDEX.yaml",
+            "ai4s/programs/sstdpn/research/ADMISSION.md",
+            "ai4s/programs/sstdpn/research/HISTORY_BOUNDARIES.md",
+            "ai4s/prompts/EVALUATION_EVIDENCE.md",
+            "scripts/ai4s/evaluation.py"
+          ],
+          "runtime_controller": {
+            "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+            "version": "3.0"
+          },
+          "status": "ACTIVE"
+        },
+        {
+          "activated_at": "2026-10-20T15:45:16.259468+00:00",
+          "activation_authority": "User explicitly requested DBConformer and SST-DPN v3.2 adaptation and activation in this conversation on 2026-10-20; no experiment execution authorized.",
+          "activation_review": "LOCAL_TEXT_REVIEW_AND_FOCUSED_ACTIVATION_REGRESSION",
+          "admission_report": "ai4s/_work/baseline_program_admission_20260919/REPORT.md",
+          "based_on_chain_id": "sstdpn-transaction-v3.1",
+          "chain_id": "sstdpn-transaction-v3.2",
+          "compatibility": "PASS",
+          "continuation_policy_version": "evidence_to_design_v1",
+          "evaluation_evidence_version": "1",
+          "implementation_readiness": {
+            "authorization_transition_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "evaluation_regression": "PASS",
+            "frozen_contract_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "gpu_capacity_acceptance": "NOT_RUN",
+            "program_transport_acceptance": "NOT_RUN",
+            "prompt_index_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "seed_cap_guard": {
+              "evidence": "ai4s/_work/baseline_program_admission_20260919/shared_regression.log",
+              "status": "PASS"
+            },
+            "transaction_unit_regression": "PASS",
+            "transaction_unit_regression_evidence": "ai4s/_work/prompt_v31_activation_20261008/REGRESSION_VERIFIED.log",
+            "v31_activation_regression": "PASS",
+            "v31_activation_regression_evidence": "ai4s/_work/prompt_v31_activation_20261008/CODE_TESTS_R2.log",
+            "v31_regression": "PASS",
+            "v31_regression_evidence": "ai4s/_work/prompt_v31_activation_20261008/REGRESSION_VERIFIED.log",
+            "v32_regression": "PASS",
+            "v32_regression_evidence": "ai4s/_work/prompt_v32_activation_20261020/ACTIVATION_TESTS.log",
+            "v3_regression": "PASS"
+          },
+          "level_1": {
+            "path": "ai4s/prompts/LEVEL1_RESEARCH_v3.2.md",
+            "prompt_id": "MIEEG_AI4S_RESEARCH",
+            "version": "3.2"
+          },
+          "level_2": {
+            "path": "ai4s/prompts/LEVEL2_EXECUTION_v3.2.md",
+            "prompt_id": "MIEEG_AI4S_EXECUTION",
+            "version": "3.2"
+          },
+          "level_3": {
+            "path": "ai4s/programs/sstdpn/PROJECT_PROMPT_v3.2.md",
+            "prompt_id": "SSTDPN_MI_EEG_PROJECT",
+            "version": "3.2"
+          },
+          "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+          "required_paths": [
+            "ai4s/programs/sstdpn/PROGRAM.yaml",
+            "ai4s/programs/sstdpn/research/STATE.yaml",
+            "ai4s/programs/sstdpn/research/EVIDENCE_INDEX.yaml",
+            "ai4s/programs/sstdpn/research/ADMISSION.md",
+            "ai4s/programs/sstdpn/research/HISTORY_BOUNDARIES.md",
+            "ai4s/prompts/EVALUATION_EVIDENCE.md",
+            "scripts/ai4s/evaluation.py"
+          ],
+          "runtime_controller": {
+            "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+            "version": "3.0"
+          },
+          "status": "ACTIVE"
+        }
+      ]
+    }
+  },
+  "schema_version": "mieeg-ai4s-prompt-index-v1",
+  "updated_at": "2026-10-29T12:14:01.222699+00:00"
+}
