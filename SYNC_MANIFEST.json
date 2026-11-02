@@ -5,7 +5,7 @@
     "不自动递归补齐引用；未公开引用见每库SYNC_MANIFEST.json。",
     "不上传凭据、SSH配置、数据集、checkpoint、原始预测、机器日志或完整实验目录。"
   ],
-  "exported_at": "2026-11-02T15:14:56.563795+00:00",
+  "exported_at": "2026-11-02T15:42:36.288712+00:00",
   "files": [
     {
       "bytes": 10735,
@@ -334,7 +334,9 @@
         "round_id": "ds07-r1-science1-readerfix1"
       },
       "paused": false,
+      "source_in_this_repository": true,
       "source_path": "ai4s/programs/dsainet/research/STATE.yaml",
+      "source_public_url": "https://github.com/oldlady21/lzx-dsainet-ai4s-context/blob/main/ai4s/programs/dsainet/research/STATE.yaml",
       "source_sha256": "d422732db80c8fdb81391b69bbdaccd89c9e0952c0f5ebac33d7c8ceebdcf5ef",
       "source_updated_at": "2026-11-02T13:51:27.710314+00:00",
       "status": "WAITING_REMOTE"
@@ -342,7 +344,7 @@
   },
   "policy_version": "public-documents-v1",
   "repository": "oldlady21/lzx-dsainet-ai4s-context",
-  "snapshot_id": "90cdb89bc1be55be9957389af19b375063286d0f71e76420776a6e4fef5b8b1a",
+  "snapshot_id": "9e6bb4ea54d71848876be5f381fa6e4000fe8dcc243467b0ddebd9f19bd3d1c4",
   "unpublished_references": [
     {
       "from": "AGENTS.md",
