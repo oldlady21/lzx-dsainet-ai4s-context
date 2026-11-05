@@ -5,7 +5,7 @@
     "不自动递归补齐引用；未公开引用见每库SYNC_MANIFEST.json。",
     "不上传凭据、SSH配置、数据集、checkpoint、原始预测、机器日志或完整实验目录。"
   ],
-  "exported_at": "2026-11-04T12:33:17.851048+00:00",
+  "exported_at": "2026-11-05T13:48:30.043664+00:00",
   "files": [
     {
       "bytes": 10735,
@@ -19,26 +19,26 @@
       "source_sha256": "07275190a06ab6840fe6d73efae716d3d8f3c278e532da75943b72819c55f0bb"
     },
     {
-      "bytes": 699706,
+      "bytes": 710072,
       "path": "DECISIONS.md",
-      "public_git_blob_sha1": "7eb5c4df54ae47de312642be115836a778550b58",
-      "public_sha256": "e294db96d1e88e65584afcd80a58154677120ea16fe62f121f3c680adfcf6609",
+      "public_git_blob_sha1": "b0c2935504cb2217e516c8968c7d8aef40d6eb92",
+      "public_sha256": "9fa55e54f13933aae0ec43ad95c543c0f914654e740c1fc5a9352408e2f02b82",
       "redactions": {
         "host_alias": 16,
         "ipv4": 2,
         "unix_home_path": 5
       },
-      "source_sha256": "978344069ab94b5e3c0cd39a176cd40582486862a27cdaf793c8aeb6c29cd770"
+      "source_sha256": "89544348c72860c7ab770a165ea8e34684a9d1ab72687954cc173bed88f6bd88"
     },
     {
-      "bytes": 300944,
+      "bytes": 310703,
       "path": "PAPER.md",
-      "public_git_blob_sha1": "97a44b47db580ad1494bb33da0729c6b98730242",
-      "public_sha256": "3dd5f09400126a75946af035dd7045d4ba7791362a99a8318bc4a7868deb3879",
+      "public_git_blob_sha1": "31516b4351b0790a144a67d76969bcd64ab05e00",
+      "public_sha256": "ad9c6ed0a01fd27ecc2a61e26544dd44ee406401b6b570e2e09be0e17bd8402b",
       "redactions": {
         "host_alias": 1
       },
-      "source_sha256": "160182ce11dba8e340f68fa0d360990f9c75e134a0a7fb6462244b650d1cf80c"
+      "source_sha256": "9c2fdf93a855cdbb6906543f29d1b152c24f41bd359a6a38a47708b0eac3d076"
     },
     {
       "bytes": 10385,
@@ -49,14 +49,14 @@
       "source_sha256": "8783ba6211cc754ba274f367ccfd036860507297c371788ffeecc2dd373912f7"
     },
     {
-      "bytes": 365701,
+      "bytes": 375196,
       "path": "TASKS.md",
-      "public_git_blob_sha1": "3e4b92a0fbec54c60f8fa678a264df4db07f39b2",
-      "public_sha256": "a2080f11a9672fa2cec0728dd41fdecc585a80ab932b85b2a61ff2523095b37a",
+      "public_git_blob_sha1": "a1646354ca873ac2a284d78efd3ac281d894d4cd",
+      "public_sha256": "e518df6e7d05854f45e4d9744bd37eab7b411659a1b31aaddbfcb0f05472d730",
       "redactions": {
         "host_alias": 9
       },
-      "source_sha256": "972481060b9a74628589f70e5f00066d7e6b16c5db0c5632b7043d4f3c6b789b"
+      "source_sha256": "ab4051e2855d4a335c821f808830128458bffba7c26b379565f1881eb70dc220"
     },
     {
       "bytes": 118035,
@@ -89,12 +89,12 @@
       "source_sha256": "b04578187a3894e3e7db0509be5d28a9c390a397caf8fc64cfce1095ec7f778b"
     },
     {
-      "bytes": 7006,
+      "bytes": 7442,
       "path": "ai4s/programs/dsainet/PROJECT_PROMPT_v3.3.md",
-      "public_git_blob_sha1": "55b56549a182f8509d0a091a7c8cb71af14afbbc",
-      "public_sha256": "3f5ba268c27445626c8b45e253e0ed5b53ad465f2c93193a963323b5e21b56f4",
+      "public_git_blob_sha1": "1bc6f7db99de2625bc61930a8361aae1aadf7900",
+      "public_sha256": "1173c525685f2636087389aac285561769a10dbde7faeca38a3306a9c9809f5f",
       "redactions": {},
-      "source_sha256": "3f5ba268c27445626c8b45e253e0ed5b53ad465f2c93193a963323b5e21b56f4"
+      "source_sha256": "1173c525685f2636087389aac285561769a10dbde7faeca38a3306a9c9809f5f"
     },
     {
       "bytes": 7521,
@@ -105,24 +105,24 @@
       "source_sha256": "8835b27d84df860eafbe5e51b6f3588d39e5eb1bc36b2f79bd22f4c4f8501b46"
     },
     {
-      "bytes": 36917,
+      "bytes": 37819,
       "path": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
-      "public_git_blob_sha1": "6a7d50374d2548a022fc8ad0c257ced972a0743b",
-      "public_sha256": "937dffd498dc36c0c4dd77a042e2b7f830c0197b992f65a1df95909492d5a2af",
+      "public_git_blob_sha1": "5fddabd415fe83cc453f4fb06266b45436f5e5f3",
+      "public_sha256": "c17d87b3622157a8f2e461cdc85b5fe34b939fac2ddc720f83edbe22a94df1a3",
       "redactions": {},
-      "source_sha256": "937dffd498dc36c0c4dd77a042e2b7f830c0197b992f65a1df95909492d5a2af"
+      "source_sha256": "c17d87b3622157a8f2e461cdc85b5fe34b939fac2ddc720f83edbe22a94df1a3"
     },
     {
-      "bytes": 390049,
+      "bytes": 434355,
       "path": "ai4s/programs/dsainet/research/EVIDENCE_INDEX.yaml",
-      "public_git_blob_sha1": "469799ad085f691d891d47f0c240759c8d0a2b20",
-      "public_sha256": "74049c31483fed8a0a769c2142da2bfe5e0e2eeaf159c5e7264d22deac61d418",
+      "public_git_blob_sha1": "bdcbcc13b3468466e49f526d7ea4159f6061cad8",
+      "public_sha256": "0ceafbdfd646b0b405f785fab49ffaf744211853a1273c88af74ac0d7cd741cf",
       "redactions": {
         "machine_field": 18,
         "unix_home_path": 7,
         "workspace_prefix": 7
       },
-      "source_sha256": "972c05ddec0b67c9aecbf2c2e6ea664c82da2d2944426269a5b03fb127027b77"
+      "source_sha256": "6f9eea3394aa5d585c155590f805350578f272b958b3bcd21a1d7998ffa65f29"
     },
     {
       "bytes": 1743,
@@ -133,16 +133,16 @@
       "source_sha256": "b5b829a3df10efe0ad7b24921dbd7ebdac89b791891217219c7ee6f0458e66e8"
     },
     {
-      "bytes": 982731,
+      "bytes": 1036464,
       "path": "ai4s/programs/dsainet/research/STATE.yaml",
-      "public_git_blob_sha1": "8a89d1c270d3d1516d5be55af7fab67c80c21ca8",
-      "public_sha256": "912a816cbf491ba29dfefb73e6e79385d28003265849e1431d582002d1516910",
+      "public_git_blob_sha1": "74b1c08ff9647340a73662caa7bcf5b4f6e748df",
+      "public_sha256": "546294f490c37739bda04797b439fd05243a3b3cd8b4b5effc331321bba2400a",
       "redactions": {
         "host_alias": 7,
-        "machine_field": 156,
+        "machine_field": 160,
         "unix_home_path": 9
       },
-      "source_sha256": "28bf59339b71b2e612beecc4090580fc2d44e674b64c791c14f1bc4551a7692f"
+      "source_sha256": "4ef0f3c4228815d8817087a085c44164036f9a4d3220a7754ad8d2ea4955ceea"
     },
     {
       "bytes": 81227,
@@ -232,20 +232,20 @@
       "source_sha256": "605ad28f8b5f8361f34c0e9135533e9354dde05ab866ac6e20c3777e5b39e63b"
     },
     {
-      "bytes": 9058,
+      "bytes": 9481,
       "path": "ai4s/prompts/LEVEL1_RESEARCH_v3.3.md",
-      "public_git_blob_sha1": "8ad3f67178af72ac7bcd97e7b6fc4de8004b7f63",
-      "public_sha256": "5b811d7ddcaba970267f1e2ff43c8a45550f8cc61add685e2ce17bff61b63cef",
+      "public_git_blob_sha1": "334259c006c7d86ee8fd2d525ef7ac4010af9114",
+      "public_sha256": "d4e5c0f16d864431943247d5f6ad62ce354d4940ec75472fb17a67e3545a40fa",
       "redactions": {},
-      "source_sha256": "5b811d7ddcaba970267f1e2ff43c8a45550f8cc61add685e2ce17bff61b63cef"
+      "source_sha256": "d4e5c0f16d864431943247d5f6ad62ce354d4940ec75472fb17a67e3545a40fa"
     },
     {
-      "bytes": 19581,
+      "bytes": 23489,
       "path": "ai4s/prompts/LEVEL2_EXECUTION_v3.3.md",
-      "public_git_blob_sha1": "807f4b237287b23f09880cc34dc1f2d6c4b3247c",
-      "public_sha256": "80267dfbce9cf97d7bbbe013cced9d435af64f277aeaf21e935448b717d3e93d",
+      "public_git_blob_sha1": "6b3c657b7891553f57b8cd61a0aa6357e4b83a47",
+      "public_sha256": "4eafbb2b73437ea8cec19cef70b53c86aec8e657ebc614aaaf755d9ff8ebe7ec",
       "redactions": {},
-      "source_sha256": "80267dfbce9cf97d7bbbe013cced9d435af64f277aeaf21e935448b717d3e93d"
+      "source_sha256": "4eafbb2b73437ea8cec19cef70b53c86aec8e657ebc614aaaf755d9ff8ebe7ec"
     },
     {
       "bytes": 9362,
@@ -329,22 +329,19 @@
   "observed_local_state": {
     "dsainet": {
       "active_operation": null,
-      "active_run": {
-        "dispatch_status": "REMOTE_ACCEPTED",
-        "round_id": "ds07-r1-science1-devicefix1"
-      },
-      "paused": false,
+      "active_run": null,
+      "paused": true,
       "source_in_this_repository": true,
       "source_path": "ai4s/programs/dsainet/research/STATE.yaml",
       "source_public_url": "https://github.com/oldlady21/lzx-dsainet-ai4s-context/blob/main/ai4s/programs/dsainet/research/STATE.yaml",
-      "source_sha256": "28bf59339b71b2e612beecc4090580fc2d44e674b64c791c14f1bc4551a7692f",
-      "source_updated_at": "2026-11-04T06:38:47.163479+00:00",
-      "status": "WAITING_REMOTE"
+      "source_sha256": "4ef0f3c4228815d8817087a085c44164036f9a4d3220a7754ad8d2ea4955ceea",
+      "source_updated_at": "2026-11-05T13:09:08.803027+00:00",
+      "status": "COMPLETE_MAX_ROUNDS"
     }
   },
   "policy_version": "public-documents-v1",
   "repository": "oldlady21/lzx-dsainet-ai4s-context",
-  "snapshot_id": "5dae4390d496e847d07030d1b6a783473faad105371868dd914dbf999ea13c9d",
+  "snapshot_id": "4b6cf40300d3141373f3a013740f58eb7815dd169840ebf49f2734d3ba9d91d9",
   "unpublished_references": [
     {
       "from": "AGENTS.md",
@@ -520,6 +517,18 @@
     },
     {
       "from": "DECISIONS.md",
+      "not_in_snapshot": "ai4s/programs/dbconformer/research/reassessment_20261104_post_sgp/SGP_DESIGN_CONSTRAINTS.md"
+    },
+    {
+      "from": "DECISIONS.md",
+      "not_in_snapshot": "ai4s/programs/dbconformer/research/reassessment_20261104_post_sgp/research_brief.md"
+    },
+    {
+      "from": "DECISIONS.md",
+      "not_in_snapshot": "ai4s/programs/dbconformer/research/reassessment_20261104_post_sgp/source_identification_design/PROTOCOL_DRAFT.md"
+    },
+    {
+      "from": "DECISIONS.md",
       "not_in_snapshot": "ai4s/programs/dbconformer/research/sbn_r1/SCIENCE_START_GATES.json"
     },
     {
@@ -545,6 +554,14 @@
     {
       "from": "DECISIONS.md",
       "not_in_snapshot": "ai4s/programs/dbconformer/research/snr_r1/REPORT.md"
+    },
+    {
+      "from": "DECISIONS.md",
+      "not_in_snapshot": "ai4s/programs/dbconformer/research/source_geometry_r1/FINAL_REPORT.md"
+    },
+    {
+      "from": "DECISIONS.md",
+      "not_in_snapshot": "ai4s/programs/dbconformer/research/source_geometry_r1/STARTUP_REPORT.md"
     },
     {
       "from": "DECISIONS.md",
@@ -1064,6 +1081,18 @@
     },
     {
       "from": "PAPER.md",
+      "not_in_snapshot": "ai4s/programs/dbconformer/research/reassessment_20261104_post_sgp/SGP_DESIGN_CONSTRAINTS.md"
+    },
+    {
+      "from": "PAPER.md",
+      "not_in_snapshot": "ai4s/programs/dbconformer/research/reassessment_20261104_post_sgp/research_brief.md"
+    },
+    {
+      "from": "PAPER.md",
+      "not_in_snapshot": "ai4s/programs/dbconformer/research/reassessment_20261104_post_sgp/source_identification_design/PROTOCOL_DRAFT.md"
+    },
+    {
+      "from": "PAPER.md",
       "not_in_snapshot": "ai4s/programs/dbconformer/research/sbn_r1/SCIENCE_START_GATES.json"
     },
     {
@@ -1089,6 +1118,14 @@
     {
       "from": "PAPER.md",
       "not_in_snapshot": "ai4s/programs/dbconformer/research/snr_r1/REPORT.md"
+    },
+    {
+      "from": "PAPER.md",
+      "not_in_snapshot": "ai4s/programs/dbconformer/research/source_geometry_r1/FINAL_REPORT.md"
+    },
+    {
+      "from": "PAPER.md",
+      "not_in_snapshot": "ai4s/programs/dbconformer/research/source_geometry_r1/STARTUP_REPORT.md"
     },
     {
       "from": "PAPER.md",
@@ -1796,6 +1833,18 @@
     },
     {
       "from": "TASKS.md",
+      "not_in_snapshot": "ai4s/programs/dbconformer/research/reassessment_20261104_post_sgp/SGP_DESIGN_CONSTRAINTS.md"
+    },
+    {
+      "from": "TASKS.md",
+      "not_in_snapshot": "ai4s/programs/dbconformer/research/reassessment_20261104_post_sgp/research_brief.md"
+    },
+    {
+      "from": "TASKS.md",
+      "not_in_snapshot": "ai4s/programs/dbconformer/research/reassessment_20261104_post_sgp/source_identification_design/PROTOCOL_DRAFT.md"
+    },
+    {
+      "from": "TASKS.md",
       "not_in_snapshot": "ai4s/programs/dbconformer/research/sbn_r1/SCIENCE_START_GATES.json"
     },
     {
@@ -1821,6 +1870,14 @@
     {
       "from": "TASKS.md",
       "not_in_snapshot": "ai4s/programs/dbconformer/research/snr_r1/REPORT.md"
+    },
+    {
+      "from": "TASKS.md",
+      "not_in_snapshot": "ai4s/programs/dbconformer/research/source_geometry_r1/FINAL_REPORT.md"
+    },
+    {
+      "from": "TASKS.md",
+      "not_in_snapshot": "ai4s/programs/dbconformer/research/source_geometry_r1/STARTUP_REPORT.md"
     },
     {
       "from": "TASKS.md",
@@ -2257,6 +2314,10 @@
     {
       "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
       "not_in_snapshot": "ai4s/programs/dsainet/research/ds07-r1/HANDOFF.json"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/ds07-r1/analysis_20261105/REPORT_ZH.md"
     },
     {
       "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",

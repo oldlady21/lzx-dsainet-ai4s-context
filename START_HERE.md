@@ -1,8 +1,8 @@
 # lzx-dsainet-ai4s 讨论资料入口
 
 仓库：https://github.com/oldlady21/lzx-dsainet-ai4s-context
-导出时间（UTC）：2026-11-04T12:33:17.851048+00:00
-快照身份：`5dae4390d496e847d07030d1b6a783473faad105371868dd914dbf999ea13c9d`
+导出时间（UTC）：2026-11-05T13:48:30.043664+00:00
+快照身份：`4b6cf40300d3141373f3a013740f58eb7815dd169840ebf49f2734d3ba9d91d9`
 
 这是本地已保存文件的公开讨论副本。来源与公开文件 SHA-256、脱敏计数、未公开引用见 [SYNC_MANIFEST.json](SYNC_MANIFEST.json)。
 机器字段已机械脱敏；保留原研究身份、冻结边界、预算、证据状态和历史。它不替代本地权威记录，不授予执行/恢复/改协议权限。
@@ -17,16 +17,13 @@
 {
   "dsainet": {
     "source_path": "ai4s/programs/dsainet/research/STATE.yaml",
-    "source_sha256": "28bf59339b71b2e612beecc4090580fc2d44e674b64c791c14f1bc4551a7692f",
+    "source_sha256": "4ef0f3c4228815d8817087a085c44164036f9a4d3220a7754ad8d2ea4955ceea",
     "source_public_url": "https://github.com/oldlady21/lzx-dsainet-ai4s-context/blob/main/ai4s/programs/dsainet/research/STATE.yaml",
     "source_in_this_repository": true,
-    "source_updated_at": "2026-11-04T06:38:47.163479+00:00",
-    "status": "WAITING_REMOTE",
-    "paused": false,
-    "active_run": {
-      "round_id": "ds07-r1-science1-devicefix1",
-      "dispatch_status": "REMOTE_ACCEPTED"
-    },
+    "source_updated_at": "2026-11-05T13:09:08.803027+00:00",
+    "status": "COMPLETE_MAX_ROUNDS",
+    "paused": true,
+    "active_run": null,
     "active_operation": null
   }
 }

@@ -8099,3 +8099,65 @@ State active Run cleared, paused preserved; original163h cap/start/queue credit 
 timezone导入与后继目录身份校验已修复。初始TECH和repair1启动失败记录/不可变包均保留；packfix1仅在已批准repair1父目录内新增不可变子目录。17项回归、39文件源闭包、Lab10真实预算消费者与完整启动到容量边界预验收通过，后继2026-11-01_dsainet_ds07_r1_tech1-repair1-packfix1已启动，PID1401399、只读分析后处理PID1402110。23:48:38北京时间仍等待N臂GPU，四臂资格和5epoch TECH完成0/4，余额约2.91848h；等待单独记账，不重复credit。72项科学训练/审计均未启动，TECH验收和完整成本仍待实测；P0-CUE仍关闭，没有科学Claim。
 
 [修复与派发记录](ai4s/programs/dsainet/research/ds07-r1/repair1/LAUNCH_REPORT212.md)。
+
+
+### MVCNET-XSN-R1-VERIFIED-NO-SIGNAL-20261104
+XSN-R1同Run完成90fit+90check，0失败/0OOM；完整结果留Lab10，核心正式analysis_v1_recovery intake，原始logits两套独立复算一致NO_SIGNAL。P0−S0 −0.192901pp（seed71 −0.135031pp、seed72 −0.250772pp；5/9正向）。P0−C0 +0.096451pp、P0−N0 +0.212191pp未过门；P0−R0 +0.366512pp过门不能替代主门。关闭该固定开发配置，不新增训练或释放Claim。 原起点2026-10-29T13:20Z、480h预算和全部历史保持。权威记录：`ai4s/programs/mvcnet/research/xsn-r1/execution/budget480/analysis_20261104/REPORT.md`。
+
+
+### MVCNET-ACM-R1-POST-XSN-REASSESSMENT-20261104
+XSN-R1固定配置已NO_SIGNAL关闭，结论/原起点/480h及全部历史保持。ACM-R1重评为有条件值得一次四臂开发探索，但生产资格、冻结判读及独立预算尚未就绪；本轮不启动训练、无新Run/seed/Claim。P0须先胜同期S0，再区分完全关闭N0和反向R0；不追加D0/B0、不叠加XSN。近期XSN原生S0成本×4为37.512192process-h，有效并发4条件规划约18–24h，并发2约29–42h（含假设余量，非实测/上界）。36h仅为未来预算商议目标；ACM预算UNASSIGNED，不挪用XSN余额。论文层面补VCN主方法强近邻/归因/范围仍优先于默认增加辅助模块。权威依据与关键对照：`ai4s/programs/mvcnet/research/next_auxiliary_20261029/reassessment_20261104/REPORT.md`。
+
+
+### DBCONFORMER-POST-SGP-RESEARCH-DESIGN-20261104
+
+用户明确停止SGP直接性能优化；旧54SCI/3复用TECH、平均改善、个体风险失败、机制未知及原成本保留，不默认补投影/阈值/分组/Adam变体或方向遥测。本轮方向设计完成。后续待选任务为核对源资产暴露/会话角色、A/B人数、匹配n和时间采样独立性，再冻结可辨信息与退化退出规则；本轮不执行数据分析、特征抽取或训练。没有已入选主方法，SGP旧144h不转移。
+
+[下一轮问题与关键控制](ai4s/programs/dbconformer/research/reassessment_20261104_post_sgp/research_brief.md)；[继承约束](ai4s/programs/dbconformer/research/reassessment_20261104_post_sgp/SGP_DESIGN_CONSTRAINTS.md)。
+
+
+### DBCONFORMER-SOURCE-IDENTIFICATION-PREPARATION-20261104
+
+下一轮源内识别已完成元数据资格：固定排除subject0后8名source/16会话单元，整run互斥两半每类36条；旧预处理审计四SHA与冻结资产一致。提出互斥被试A/B×拟合会话交换的4编码器草案，仅source开发识别，不是4个性能方法臂；普通CE稳定几何不自动构成session配对增量。待完成实际标准化/采样/固定checkpoint路径、融合表示消费者、预先判读及成本核算，再形成执行范围；没有新训练授权。0新拟合/forward/目标效果读取，预算UNASSIGNED，旧合同/State/预算不变。
+
+[下一轮识别设计](ai4s/programs/dbconformer/research/reassessment_20261104_post_sgp/source_identification_design/PROTOCOL_DRAFT.md)。
+
+
+### MVCNET-ACM-R1-ONCE42-FROZEN-PREPARATION-20261104
+用户已授权ACM-R1一次性四臂探索，独立42h，准备起点2026-11-04T13:54:00Z，含准备耗时；32h Transaction上限和6h收尾预留，不挪用XSN预算。四臂S0/P0/N0/R0、seeds73/74、72fit+72check、8项全新资格及主门/两项关键对照冻结；不调参救援。CPU生产目标、合成真实Transaction intake/独立复算、最终103文件包闭集与哈希检查通过；这些不构成科学效果或Lab10资格通过。派发前controller接线验收进行中，真实Lab10资格与成本门通过后才自动进入完整训练。XSN NO_SIGNAL关闭结论、原480h起点/预算、全部历史保留；论文不增加Claim。权威状态与后续更新见 `ai4s/programs/mvcnet/research/STATE.yaml`、`ai4s/programs/mvcnet/research/acm-r1/execution/EXECUTION_REPORT.md`。
+
+
+### MVCNET-ACM-R1-STARTUP-INVALID-20261104
+ACM42独立campaign唯一初始Run真实启动后，在source-import证据发射阶段因缺identity_pass字段exit2，已正式metadata-only failure intake为INVALID，paused=true，active_run=null。8项GPU资格/72fit/72check均0启动，成本门未执行，无科学效果/Claim，不能将本次失败写为NO_SIGNAL。7个核心文件43,255字节已哈希核验，完整目录和日志留Lab10；原冻结合同和包保留。隔离工程修复与真实消费者回归准备中，不自动重提。42h原起点2026-11-04T13:54Z保持；截至15:03:29Z累计1.158160h，余额40.841840h，未扣任何排队/停机credit。XSN旧campaign完整快照、NO_SIGNAL关闭及原480h历史逐项比对一致。详见 `ai4s/programs/mvcnet/research/acm-r1/execution/EXECUTION_REPORT.md`、`FAILURE_CLOSEOUT.json`。
+
+
+### MVCNET-ACM-R1-REPAIR1-QUALIFIED-FULL-TRAINING-20261104
+用户批准一次工程修复Run，沿用独立42h与2026-11-04T13:54Z原起点，不抵扣旧失败/停机，不转移XSN预算。不可变后继 `2026-11-04_mvcnet_acm_r1_lab10_r1_repair1-full-w1` 只修source-import的identity_pass/shape_pass证据字段及必要身份接线，四臂/73-74种子/18 split/训练配置/科学门均保持。原失败Run的INVALID和原包不改。最终124文件/122依赖、真实接口回放、控制器真实恢复登记/拒绝重复、62项共享接口验收通过；Lab10源导入与8/8全新资格真实PASS，成本门及独立复算PASS（K=3.724604，训练+check冻结预测13.389569h，可用31.941565h，另预留6h收尾）。23:45进入完整训练，同Run唯一派发；截至23:46:11，72fit完成0/运行4/待68/失败0，72check全待模型全局封存。累计1.869065h、余额40.130935h，扣纯资源等待2.429977s，原起点不变。完整结果留服务器，最终核心正式intake与科学判读尚待；未读科学中间效果、无Claim。XSN NO_SIGNAL关闭及原480h/全部历史保持。权威更新：`ai4s/programs/mvcnet/research/acm-r1/execution/repair1/REPORT.md`、`LAUNCH_BINDING.json`与Program STATE。
+
+
+### DBCONFORMER-SOURCE-GEOMETRY-R1-LAUNCH-20261105
+
+用户已授权并启动4编码器源内识别：A/B互斥源组×拟合会话交换，seed3/100epoch固定final，fit-only标准化，query训练后eval提取80维；24h独立预算从2026-11-04T15:00Z计本轮准备，纯资源等待独立记账，SGP旧账不移用、直接优化保持停止。唯一Run 2026-11-04_dbconformer_source_geometry_r1_lab10-full-w1 已远端核实，现场1 SCI运行/3待调度，0完成/0 SCI失败。真实TECH前向一次exit0/零optimizer，首次publication缺Transaction ID的工程失败及成本完整保留，已通过原冻结消费者派生补齐父身份恢复同Run，未改raw/合同/Bundle或重复任务。21项本轮离线与62项共享接口核验、最终55文件闭包/argv通过；Grok原NEEDS_REVISION及具体修复单列，不伪称外审改判或新科研结论。启动准备已完成；待原SCI4全部完成后核验、intake与分析。不得因排队或恢复封装重复训练。
+
+[启动、资格与封装恢复](ai4s/programs/dbconformer/research/source_geometry_r1/STARTUP_REPORT.md)。
+
+
+### DBCONFORMER-SOURCE-GEOMETRY-R1-CLOSEOUT-20261105
+
+源内识别4次SCI均完成100epoch/3600步、每项单次attempt，无重训；远端完整manifest验证、约2.89MB analysis_v1本地核验/intake、冻结分析、独立特征重算及标准apply-decision全部完成。原判INCONCLUSIVE/STOP：16个跨会话C均正，但仅11/16编码器×被试观测过噪声相对门，4/8人在两个encoder下均通过，未达到冻结全面一致要求。停止当前对象的方法投入，不挑子组/encoder、不加seed/模块或放宽门；不否定整个几何家族、不宣称session配对增量/独立确认/论文核心。原封装失败、元数据重放、登记映射修复和成本全部保留，原合同/源包不变。State COMPLETE_MAX_ROUNDS/paused、无活动Run/operation，SGP直接优化继续停止，无Claim或自动后继。
+
+[冻结结果与处置](ai4s/programs/dbconformer/research/source_geometry_r1/FINAL_REPORT.md)。
+
+
+### DBCONFORMER-POST-GEOMETRY-REASSESSMENT-20261105
+
+- [x] 仅设计完成几何R1后六候选比较、历史精确关闭边界、一手前作限定核对及一次Grok独立反驳，记录NO_QUALIFIED_CORE_DIRECTION与全部意见处置。
+- [x] 写明测量问题可识别性/资产前提、成熟逆解/低秩/平滑/有效破坏算子对照、个体风险及同信息改名停止条件；当前没有合格核心方法或自动后继。
+- [x] 维持0训练/前向/EEG特征目标分析/新Run/预算/Claim及SGP停止；未来全文差异与文档资产资格只是待考虑的设计缺口，不激活实验任务。
+
+研究记录：`ai4s/programs/dbconformer/research/reassessment_20261105_post_geometry/research_brief.md`。运行态仍只看Program STATE，历史合同及成本不变。
+
+
+### MVCNET-ACM-R1-CHECKREPAIR2-CLOSED-20261105
+- [x] ACM-R1检查工程修复、旧失败Run正式收尾、来源72模型逐字节核验与唯一零拟合补跑：72/72 check完成、0失败；限定核心22.23MB核验并正式intake，冻结独立复算/判读NO_SIGNAL已登记。
+- [x] 保留原42h/起点、全部失败与撤回修复历史，完整模型留Lab10；不调参救援，不新训练，不挪用XSN预算。精确关闭、成本及研究约束：ai4s/programs/mvcnet/research/acm-r1/execution/checkrepair2/analysis_20261105/REPORT.md、PRECISE_CLOSURE.json、FINAL_COST.json；Program State/Evidence为权威。
