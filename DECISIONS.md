@@ -15643,3 +15643,11 @@ ACM42独立campaign唯一初始Run真实启动后，在source-import证据发射
 
 ### MVCNET-ACM-R1-CHECKREPAIR2-CLOSED-20261105
 用户授权“修复并补跑检查”，原repair1因epochs=0检查入口被误作训练配置而失败，已正式INVALID收尾，72个完整拟合/8项资格及全部失败历史保留。唯一checkrepair2 Run复用已哈希核验72模型，仅执行1项来源完整性门+72项check，新增拟合/资格拟合均0；Lab10来源/成本门及独立成本复算PASS，72/72检查完成0失败，22,225,398字节核心包已verify/intake，完整产物/checkpoint留服务器。冻结原始logit独立重放与共享判读：NO_SIGNAL。P0-S0 +0.733025pp主门通过，P0-N0 +0.868056pp通过；P0-R0 +0.761960pp但seed74 -0.115741pp，违反每seed严格正向，关键对照门失败。状态COMPLETE_MAX_ROUNDS，不调参、不救援、不追加训练，无论文Claim/等价结论。原独立42h及2026-11-04T13:54Z起点不变，停机/准备/回拉/分析均计入；最终成本见ai4s/programs/mvcnet/research/acm-r1/execution/checkrepair2/analysis_20261105/FINAL_COST.json。精确关闭见ai4s/programs/mvcnet/research/acm-r1/execution/checkrepair2/analysis_20261105/PRECISE_CLOSURE.json及REPORT.md。XSN NO_SIGNAL关闭、480h及全部历史保持。
+
+
+### MVCNET-VCN-MINIMAL-STRUCTURE-READONLY-ZERO-TRAINING-20261106
+用户授权收束方向、只读设计与零训练可辨识性核查，决定是否训练。已完成隔离CPU两个B2×22×1000生产IFNet/native CE-CVC-CMC合成实例：只合并非raw running、保持四affine及raw统计独立，输出/已核查F-C-E-P梯度/raw预测差均0；共享增强affine有真实梯度差异（共享梯度等于三份求和），但不证明性能。固定bank置换仅重命名；首版量词断言失败和修正痕迹保留。当前生产X四hash绑定，18条窗口重放匹配trial[0,4)/cue[-2,2)，历史S8 X完整身份UNKNOWN。另找到现成cue对齐DSAINet候选资产并核验5hash，MVCNet协议尚未绑定，不默认重建数据或重置exposure。真实Grok-4.6-build独立意见STOP_MAIN_INNOVATION_INVESTMENT；最终STOP_AS_NEW_MAIN_INNOVATION/HOLD_TRAINING，仅保留P1支架和P1对普通双BN的未来论文补证草案。0科学fit/0optimizer.step/0GPU/0远程/0新Run，State/原42h与480h预算/全部旧关闭保持。此为投入选择，非新科学NO_SIGNAL。理由、代价情景与外审处置：ai4s/programs/mvcnet/research/normalization_minimal_20261106/research_brief.md、DECISION.json、review/LOCAL_DISPOSITION.json。
+
+
+### MVCNET-CORE-DIRECTION-CUE-ALIGNED-DESIGN-20261106
+2026-11-06 MVCNet v3.3 选题。三视角构思与独立 Grok 反驳后，优先核对 cue 对齐下原生 MVCNet 相对同 IFNet、同增强 CE 的净增量。同期 P1−B0 只回答支架适用范围。净增量成立后才考虑提示窗口依赖。逐试次预提示参考作为备选，待因果可达性与历史对照核查。阶段为 DESIGN_ONLY，预算未分配。依据与停止分支见[研究简报](ai4s/programs/mvcnet/research/next_core_direction_20261106/research_brief.md)。

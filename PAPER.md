@@ -3292,3 +3292,11 @@ ACM42独立campaign唯一初始Run真实启动后，在source-import证据发射
 
 ### MVCNET-ACM-R1-CHECKREPAIR2-CLOSED-20261105
 ACM-R1单向CMC辅助更新开发筛查已按冻结四臂/73-74种子完成，结果NO_SIGNAL，不进入正向辅助创新Claim。P0相对同期S0均值+0.733025pp且主门通过，但相对反向R0在seed74为-0.115741pp，未通过每seed正向的关键归因对照；不能仅凭均值优势宣称单向辅助端保护优于反向更新，也不据此宣称所有CMC保护无效或等价。仅为九个held-check subject、两seed的开发证据，非独立确认，outer正式评估未读取。报告及精确负边界：ai4s/programs/mvcnet/research/acm-r1/execution/checkrepair2/analysis_20261105/REPORT.md与PRECISE_CLOSURE.json；已有VCN-P1及XSN关闭历史保持。
+
+
+### MVCNET-VCN-MINIMAL-STRUCTURE-READONLY-ZERO-TRAINING-20261106
+本轮只读/零训练核查收窄VCN解释：在逐view普通BN训练、raw-only评估路径，保持四affine和raw统计独立时，合并增强内部running缓冲在两个合成生产objective实例中对输出/梯度/raw预测差均0；不能据此宣称四套增强统计各有必要。类型特异affine相对共享增强affine确是活干预，但近邻已覆盖条件BN/affine适配，未建立新主创新；512个训练期参数差不等于推理效率贡献。原S8 scoped效用/归因保留，不升为cue对齐、跨范围或独立确认。当前生产资产18条直接重放支持cue[-2,2)；历史S8 X身份未闭合，不追改旧配对或曝光。现成cue资产候选可供后续另选科学对象，不据此扩大授权。本轮不训练、无新增性能/等效/机制Claim。详见ai4s/programs/mvcnet/research/normalization_minimal_20261106/research_brief.md与DECISION.json。
+
+
+### MVCNET-CORE-DIRECTION-CUE-ALIGNED-DESIGN-20261106
+MVCNet 拟议论文问题聚焦于 cue 对齐后多视图训练相对同骨干强监督的跨被试增量，以及增量对提示时序的依赖。VCN-P1 继续引用既有 scoped 证据。当前阶段是比较设计，独立确认和正式 Claim 均待证。拟议对照、替代解释及备选问题见[研究简报](ai4s/programs/mvcnet/research/next_core_direction_20261106/research_brief.md)。

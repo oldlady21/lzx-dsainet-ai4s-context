@@ -8161,3 +8161,14 @@ ACM42独立campaign唯一初始Run真实启动后，在source-import证据发射
 ### MVCNET-ACM-R1-CHECKREPAIR2-CLOSED-20261105
 - [x] ACM-R1检查工程修复、旧失败Run正式收尾、来源72模型逐字节核验与唯一零拟合补跑：72/72 check完成、0失败；限定核心22.23MB核验并正式intake，冻结独立复算/判读NO_SIGNAL已登记。
 - [x] 保留原42h/起点、全部失败与撤回修复历史，完整模型留Lab10；不调参救援，不新训练，不挪用XSN预算。精确关闭、成本及研究约束：ai4s/programs/mvcnet/research/acm-r1/execution/checkrepair2/analysis_20261105/REPORT.md、PRECISE_CLOSURE.json、FINAL_COST.json；Program State/Evidence为权威。
+
+
+### MVCNET-VCN-MINIMAL-STRUCTURE-READONLY-ZERO-TRAINING-20261106
+- [x] 收束VCN最小必要结构问题，复用N1/S8历史；完成隔离合成CPU零训练等价/非退化审计、真实输入来源与cue候选资产核查及一次独立科研反驳。
+- [x] 决定暂不投入科学训练，并停止将本题作为新增主创新；不为M补B64/长期资格，不增随机路由臂，不救援旧Run/转预算。0fit/0optimizer.step，原状态与全部历史保留。
+- 研究对象已收束，下一项是论文贡献与cue对齐评价范围取舍；并非已批准或待自动派发的训练任务。权威材料：ai4s/programs/mvcnet/research/normalization_minimal_20261106/research_brief.md、DECISION.json与Program Evidence Index的research_preparations。
+
+
+### MVCNET-CORE-DIRECTION-CUE-ALIGNED-DESIGN-20261106
+- [x] 汇总 MVCNet 历史证据，完成多视角构思、限定一手近邻核对和独立反驳，收敛下一设计优先项。
+- [ ] 设计候选的下一只读核查是 cue 资产、MVCNet loader、评价划分、增强与计算预算绑定。阶段范围与关键反例见[研究简报](ai4s/programs/mvcnet/research/next_core_direction_20261106/research_brief.md)。
