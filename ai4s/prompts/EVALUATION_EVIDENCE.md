@@ -204,4 +204,4 @@ conda run -n mieeg python scripts/ai4s/program_controller.py `
 
 ## 7. 外部审查与边界
 
-正式完整性审计与 result-to-claim 默认由一次独立于执行者的 Grok 联合外审完成，先审完整性，再解释主张，保留两项原有清单。两份结构化报告可引用同一真实原始 trace；不要求两次调用或两个外部审查者。触发、复用及增量复审按 `ai4s/prompts/EXTERNAL_REVIEW.md`。调用方只交付精确材料、计划哈希、claim ID、evidence IDs 和指定输出位置；审查返回给 AI4S 作为 report/trace，不自行补实验、启动 pipeline、更新知识库或改变 Program 状态。审查不可用时如实写 pending/缺口；不能把缺审当成不支持结论，也不能当成支持性结论。
+正式完整性审计与 result-to-claim 默认由一次独立于执行者的 agy/Gemini 联合外审完成；已有冻结合同明确指定 Grok 的保持原绑定。先审完整性，再解释主张，保留两项原有清单。两份结构化报告可引用同一真实原始 trace；不要求两次调用或两个外部审查者。触发、复用及增量复审按 `ai4s/prompts/EXTERNAL_REVIEW.md`。调用方只交付精确材料、计划哈希、claim ID、evidence IDs 和指定输出位置；审查返回给 AI4S 作为 report/trace，不自行补实验、启动 pipeline、更新知识库或改变 Program 状态。审查不可用时如实写 pending/缺口；不能把缺审当成不支持结论，也不能当成支持性结论。

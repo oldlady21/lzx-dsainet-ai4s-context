@@ -1001,6 +1001,91 @@
       "score_cells": 0,
       "score_cells_expected": 54,
       "source_direction_id": "DSAINET-INTER-WINDOW-LAB10-DISPATCH-20261108"
+    },
+    {
+      "artifacts": {
+        "CORE_RESULTS.json": {
+          "ref": "ai4s/programs/dsainet/research/next_direction_20261106/inter_window/analysis_budget411/CORE_RESULTS.json",
+          "sha256": "f646ae992aeb4cf5844a5eea78656029f7983837fe965b84eed9effeb46e7e28"
+        },
+        "REPORT.md": {
+          "ref": "ai4s/programs/dsainet/research/next_direction_20261106/inter_window/analysis_budget411/REPORT.md",
+          "sha256": "4365f63ebef342e894bfa2a95c615376930234e2dc7c2babed4f0d5f0b0214dd"
+        },
+        "analyze.py": {
+          "ref": "ai4s/programs/dsainet/research/next_direction_20261106/inter_window/analysis_budget411/analyze.py",
+          "sha256": "52bb44c86b988305ee36e474787def15a0c44183dad1cf214014f08002356a0b"
+        }
+      },
+      "date": "2026-11-10",
+      "decision": "STOP_FIXED_DIRECTIONAL_HYPOTHESIS",
+      "direction_id": "DSAINET-INTER-WINDOW-BUDGET411-RESULT-20261110",
+      "gates_passed": 2,
+      "gates_total": 11,
+      "intake_scope": "analysis_v1",
+      "role": "verified_developmental_screen",
+      "run_ref": "2026-11-10_dsainet_inter_window_lab10-reuse17-budget411-full-w1",
+      "verified_cells": 54
+    },
+    {
+      "artifacts": {
+        "research_brief.md": {
+          "ref": "ai4s/programs/dsainet/research/structure_reassessment_20261111/research_brief.md",
+          "sha256": "c7907b701f26b30a062b5f43f68aecef2d68e10ac92b9fcf505aad2daf5e8a62"
+        }
+      },
+      "chain_id": "dsainet-transaction-v3.4",
+      "date": "2026-11-11",
+      "decision": "CLOSE_INT02_DESIGN_RETAIN_COARSE_CONDITIONAL_FINE_PROJECTION_FOR_DESIGN",
+      "direction_id": "DSAINET-STRUCTURE-REASSESSMENT-20261111",
+      "role": "development_evidence_design_only",
+      "source_evidence_ids": [
+        "DSAINET-INTER-WINDOW-BUDGET411-RESULT-20261110",
+        "DS-BASELINE-MAP-2026-08-26",
+        "AI4S-DSAINET-dsa-cru-v0.1-resume2",
+        "AI4S-DSAINET-dsa-rns-v0.1-audit-resume2"
+      ]
+    },
+    {
+      "artifacts": {
+        "STAGE_A_RESULTS.md": {
+          "ref": "ai4s/programs/dsainet/research/structure_reassessment_20261111/STAGE_A_RESULTS.md",
+          "sha256": "5bc32d14ce49b18582e07326c1c974fbe9d96b4a94d970d9e7175b9838e4e081"
+        },
+        "STAGE_A_VERIFIED_RESULTS.json": {
+          "ref": "ai4s/programs/dsainet/research/structure_reassessment_20261111/STAGE_A_VERIFIED_RESULTS.json",
+          "sha256": "f2e27a436edc06ec04f4d139da151978995a44885fc4eb55c7e4f3e2fb29a175"
+        }
+      },
+      "date": "2026-11-11",
+      "decision": "STOP_FIXED_STAGE_A_PROMOTION",
+      "direction_id": "DSAINET-COARSE-CONDITIONAL-STAGEA-20261111",
+      "fits": 45,
+      "role": "verified_source_only_development_screen",
+      "run_ref": "2026-11-11_dsainet_coarse_conditional_projection_stagea-techfield1-full-w1"
+    },
+    {
+      "artifacts": {
+        "research_brief.md": {
+          "ref": "ai4s/programs/dsainet/research/within_avg4_order_20261111/research_brief.md",
+          "sha256": "10ee8eb35b4c0f10c03a24657585886573e8d75ac06b5972ad114f6cf8d40030"
+        }
+      },
+      "chain_id": "dsainet-transaction-v3.4",
+      "date": "2026-11-11",
+      "decision": "RETAIN_WITHIN_AVG4_ORDER_DESIGN_ONLY",
+      "design_change": "Encode the reversal-odd component from the two native spatial projections before the first pool and allocate eight existing fine-branch token coordinates to it, on the unchanged position grid.",
+      "direction_id": "DSAINET-WITHIN-AVG4-ORDER-DESIGN-20261111",
+      "judgment_change": "Honor STOP_FIXED_STAGE_A_PROMOTION. Test order within the first Avg4 cell, which the native downstream and the historical post-pool ORD path cannot distinguish in the constructed activation pair.",
+      "next_contrast": "Frozen source features with native, sign-stripped, symmetric, and unconstrained bidirectional controls before any end-to-end proposal. Compare matched coarse placement if the screen supports investment.",
+      "role": "development_evidence_design_only",
+      "source_evidence_ids": [
+        "DSAINET-COARSE-CONDITIONAL-STAGEA-20261111",
+        "DSAINET-INTER-WINDOW-BUDGET411-RESULT-20261110",
+        "DS-BASELINE-MAP-2026-08-26",
+        "AI4S-DSAINET-dsa-ord-v0.1-stageA-repair6",
+        "AI4S-DSAINET-dsa-nfi-v0.2-Q"
+      ]
     }
   ],
   "engineering_preparations": [

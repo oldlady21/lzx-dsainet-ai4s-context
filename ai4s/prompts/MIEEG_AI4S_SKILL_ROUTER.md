@@ -9,7 +9,7 @@ description: 在 MI-EEG 仓库中启动、恢复或审阅已登记的 AI4S Progr
 
 ## 外部审查后端与材料授权
 
-需要外部 agent 审查时，先读取 [Grok 统一审查规则]([REDACTED_MACHINE])，自动通过 `grok-build-collab` 的 `review` 模式执行；用户已对以后所有任务、项目和 skills 持续授权 Grok 外审调用及相关材料发送到 Grok/xAI，无需逐次确认。该规则替代本文件及其引用中的默认审查后端、逐次授权和仅因 Codex MCP 缺失而降级的约定；原审查清单、轮次、输出结构、科学门和执行权限保持有效。
+需要外部 agent 审查时，新任务默认读取 [agy-cli-collab]([REDACTED_MACHINE])，以 `review` 模式调用 Gemini；遵循全局 AGENTS.md 与项目授权，只发送本次必需且允许的材料。既有冻结合同的 reviewer 绑定、用户明确指定的后端及平台审批仍然有效。保持原审查清单、轮次、输出结构、独立性、科学门和执行权限；审查失败或证据未读取时不得标记通过。
 
 
 只在用户明确调用 `$mieeg-ai4s` 时使用。工作根目录为 `./`。这是入口路由；研究与执行规则由仓库中的活动提示词链、Program 和冻结合同维护。

@@ -4,13 +4,13 @@
 
 历史 staging、Run 或机器载荷若在本地缺失，查 [外盘归档资产指南](../docs/ASSET_ARCHIVE.md) 和精确归档索引；五个 Program 均有历史资产迁移。旧结构路径仍先按 `archive/PATH_MAP.json` 解析。资产恢复不改变 State、Evidence Index、冻结合同或实验授权。
 
-| Program | v3.3 项目提示词（生效以索引为准） | 当前状态入口 |
+| Program | v3.4 项目提示词（生效以索引为准） | 当前状态入口 |
 |---|---|---|
-| MVCNet | `programs/mvcnet/PROJECT_PROMPT_v3.3.md` | `programs/mvcnet/research/STATE.yaml` |
-| DSAINet | `programs/dsainet/PROJECT_PROMPT_v3.3.md` | `programs/dsainet/research/STATE.yaml` |
-| OTA | `programs/ota/PROJECT_PROMPT_v3.3.md` | `programs/ota/research/STATE.yaml` |
-| DBConformer | `programs/dbconformer/PROJECT_PROMPT_v3.3.md` | `programs/dbconformer/research/STATE.yaml` |
-| SST-DPN | `programs/sstdpn/PROJECT_PROMPT_v3.3.md` | `programs/sstdpn/research/STATE.yaml` |
+| MVCNet | `programs/mvcnet/PROJECT_PROMPT_v3.4.md` | `programs/mvcnet/research/STATE.yaml` |
+| DSAINet | `programs/dsainet/PROJECT_PROMPT_v3.4.md` | `programs/dsainet/research/STATE.yaml` |
+| OTA | `programs/ota/PROJECT_PROMPT_v3.4.md` | `programs/ota/research/STATE.yaml` |
+| DBConformer | `programs/dbconformer/PROJECT_PROMPT_v3.4.md` | `programs/dbconformer/research/STATE.yaml` |
+| SST-DPN | `programs/sstdpn/PROJECT_PROMPT_v3.4.md` | `programs/sstdpn/research/STATE.yaml` |
 
 2026-09-19：DBConformer、SST-DPN 已按用户选择接入 v2.1。历史基模与研究边界随各自 Evidence Index 引用，初始未创建 campaign 或启动实验。接入验证见 `_work/baseline_program_admission_20260919/REPORT.md`。
 
@@ -32,11 +32,13 @@ MVCNet 和 DSAINet 均已接入 Transaction v2。接入不启动实验；当前�
 
 ## 正式评估与版本激活
 
+五个 Program 的新工作默认链已激活 v3.4。既有 campaign、冻结 Run 和执行授权沿用原绑定。见[激活验收](_work/prompt_v34_implementation_20261111/ACTIVATION.md)。
+
 2026-10-29：L1/L2 与五 Program L3 v3.3 已交付。MVCNet、DSAINet、SST-DPN 的新工作链已激活；OTA 后经用户明确授权、旧 SPAR 本地完整性复核与历史收尾，亦已激活 v3.3，继续暂停。DBConformer 在 SBN-R1 收尾后，依用户明确指令完成空闲边界检查并激活 v3.3，继续暂停，本轮仅下一方向设计。旧工作、合同及预算保持原绑定，没有新实验授权。当前详情以 Prompt Index 和 State 为准；[初始实施与验收](_work/prompt_v33_implementation_20261029/REPORT.md)、[OTA 后续激活](_work/ota_v33_activation_20261029/REPORT.md)、[DBConformer 接入与研究设计](programs/dbconformer/research/reassessment_v33_20261029/research_brief.md)。
 
 新工作读取索引指定的 L1/L2/L3。已有工作按其精确旧绑定收尾；普通探索不建立正式评估台账，正式候选的选择审计、benchmark 与 Claim 确认按 `prompts/EVALUATION_EVIDENCE.md`。
 
-用 `python scripts/ai4s/activate_evaluation_governance.py --program <program> --target-version 3.3` 只读预览。该版本要求空闲边界、就绪检查及完整父绑定；已有活动 Run／operation／待续接或未收尾 campaign 时阻断。`--apply` 才切换获准 Program 的新工作默认链，不改 State、历史合同或实验权限。DBConformer／OTA 本次不自动等待后切换；后续操作重新核对状态与授权。
+用 `python scripts/ai4s/activate_evaluation_governance.py --program <program> --target-version 3.4` 只读预览。v3.4 要求空闲边界、就绪检查及完整父绑定；已有活动 Run／operation／待续接或未收尾 campaign 时阻断。`--apply` 才切换获准 Program 的新工作默认链，不改 State、历史合同或实验权限。后续切换时重新核对状态与授权。
 
 基模理解、可用的历史认识、反例与未决问题从各 L3 的唯一研究总览入口读取。新方向构思按活动 L2 和 `prompts/MIEEG_AI4S_SKILL_ROUTER.md`；明确的高价值下一步直接推进，Foundry 仍独立调用。
 

@@ -118,7 +118,7 @@
   ],
   "program_id": "dsainet",
   "prompt_governance": {
-    "expected_active_chain_id": "dsainet-transaction-v3.3",
+    "expected_active_chain_id": "dsainet-transaction-v3.4",
     "index": "ai4s/PROMPT_INDEX.yaml",
     "mismatch_policy": "BLOCK"
   },
