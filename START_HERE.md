@@ -1,8 +1,8 @@
 # lzx-dsainet-ai4s 讨论资料入口
 
 仓库：https://github.com/oldlady21/lzx-dsainet-ai4s-context
-导出时间（UTC）：2026-11-11T14:43:58.647385+00:00
-快照身份：`5304c4d6b9412213901a71278a0e0cdb6d6d0d4dfa19724fc78c257e969ca0ea`
+导出时间（UTC）：2026-11-12T15:05:19.250070+00:00
+快照身份：`17c12f4c5cbcfa63f7da35d99549d8bb3aaf80109ac37e5fa05b082f031dc5ee`
 
 这是本地已保存文件的公开讨论副本。来源与公开文件 SHA-256、脱敏计数、未公开引用见 [SYNC_MANIFEST.json](SYNC_MANIFEST.json)。
 机器字段已机械脱敏；保留原研究身份、冻结边界、预算、证据状态和历史。它不替代本地权威记录，不授予执行/恢复/改协议权限。

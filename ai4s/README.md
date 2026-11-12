@@ -56,6 +56,8 @@ MVCNet 和 DSAINet 均已接入 Transaction v2。接入不启动实验；当前�
 
 Lab10 校内用 `[REDACTED_MACHINE]`，校外用 `[REDACTED_MACHINE]` 经 `[REDACTED_MACHINE]` 跳板。完整 SSH 配置集中在 `experiments/REMOTE_LAB10_AI4S.md`；切换连接链路时继续核对同一 Run，不重新提交实验。
 
+2026-11-12 用户确定执行地点。各 Program 的新长时实验默认绑定 Lab10，包括完整训练、跨折或跨 seed 批量拟合、长时审计和持续占用本机计算资源的诊断。本机执行短时低负载的源码核对、单批 smoke、小样本 TECH 与精简结果复算。选址以实际耗时和持续资源占用判断。已有 Run 按冻结执行器收尾。需迁移的未完任务先核对已封存资产、继续或复用资格以及目标端成本，并按该 Run 的授权和预算门推进。
+
 ## 目录职责
 
 | 路径 | 用途与编辑边界 |

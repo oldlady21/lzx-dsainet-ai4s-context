@@ -1086,6 +1086,183 @@
         "AI4S-DSAINET-dsa-ord-v0.1-stageA-repair6",
         "AI4S-DSAINET-dsa-nfi-v0.2-Q"
       ]
+    },
+    {
+      "artifacts": {
+        "SOLVERFIX1_VERIFIED_RESULTS.json": {
+          "ref": "ai4s/programs/dsainet/research/within_avg4_order_20261111/SOLVERFIX1_VERIFIED_RESULTS.json",
+          "sha256": "95ad655886ec9681eaaa3eb0ede927be08e178553f264499824d8aac5c57db29"
+        }
+      },
+      "chain_id": "dsainet-transaction-v3.4",
+      "comparisons_failed": [
+        "U",
+        "ABS",
+        "S"
+      ],
+      "comparisons_passed": [
+        "Q"
+      ],
+      "date": "2026-11-12",
+      "decision": "STOP_FIXED_WITHIN_AVG4_ORDER_PROMOTION",
+      "direction_id": "DSAINET-WITHIN-AVG4-ORDER-SOLVERFIX1-RESULT-20261112",
+      "failed_fits": 0,
+      "fits": 45,
+      "role": "verified_source_only_development_screen",
+      "run_ref": "2026-11-11_dsainet_within_avg4_order_screen1-rolefix1-solverfix1-full-w1",
+      "source_evidence_ids": [
+        "DSAINET-WITHIN-AVG4-ORDER-DESIGN-20261111"
+      ],
+      "verified_intake_scope": "analysis_v1"
+    },
+    {
+      "artifacts": {
+        "POST_SOLVERFIX1_REASSESSMENT_20261112.md": {
+          "ref": "ai4s/programs/dsainet/research/within_avg4_order_20261111/POST_SOLVERFIX1_REASSESSMENT_20261112.md",
+          "sha256": "4a953cb64a18653a15fb9877731dd381c23fb5c4bff3285952f56762a66f1b25"
+        }
+      },
+      "chain_id": "dsainet-transaction-v3.4",
+      "date": "2026-11-12",
+      "decision": "CLOSE_WITHIN_AVG4_ORDER_RETAIN_SUBWINDOW_QUERY_DESIGN_ONLY",
+      "design_change": "Preserve native carrier and K/V. Test paired, opposite query perturbations from actual same-cell Avg8 subwindows, combined after softmax.",
+      "direction_id": "DSAINET-POST-SOLVERFIX1-STRUCTURE-REASSESSMENT-20261112",
+      "judgment_change": "User closes the exact Avg4 signed-lag path. A passed Q alone and missed net utility and subject safety against the remaining required controls.",
+      "next_contrast": "Four-arm paper design only: native, true paired query, strength-and-parallel-component matched within-trial misalignment, and same-information learnable single query.",
+      "role": "development_evidence_reassessment_and_design_only",
+      "source_evidence_ids": [
+        "DSAINET-WITHIN-AVG4-ORDER-SOLVERFIX1-RESULT-20261112",
+        "DSAINET-INTER-WINDOW-BUDGET411-RESULT-20261110",
+        "DSAINET-STRUCTURE-REASSESSMENT-20261111",
+        "DSAINET-COARSE-CONDITIONAL-STAGEA-20261111",
+        "DSAINET-DS07-R1-MERGED-VERIFIED-ANALYSIS-20261105",
+        "DS-BASELINE-MAP-2026-08-26",
+        "AI4S-DSAINET-dsa-ord-v0.1-stageA-repair6",
+        "DSAINET-CUE-GRID-DIRECTION-REVIEW-20261106",
+        "DSAINET-DS07-CLOSURE-AND-IF20261029-03-REASSESSMENT-20261106"
+      ]
+    },
+    {
+      "artifacts": {
+        "PREPARATION.md": {
+          "ref": "ai4s/programs/dsainet/research/subwindow_query_20261112/PREPARATION.md",
+          "sha256": "74adb25c3a1b56a2664120a8d42a967067a200a4c2e9af38f3f7ffcf46aaedfe"
+        },
+        "TECH_COST_RECHECK.json": {
+          "ref": "ai4s/programs/dsainet/research/subwindow_query_20261112/TECH_COST_RECHECK.json",
+          "sha256": "d35cf1477e39e44b20434c10b58ceac5ce4694b9fd70ceff70e271632d46154b"
+        }
+      },
+      "audits_planned": 36,
+      "chain_id": "dsainet-transaction-v3.4",
+      "date": "2026-11-12",
+      "decision": "PASS_REVISED_DESIGN_LOCAL_TECH_COST_PLAN_ONLY",
+      "direction_id": "DSAINET-SUBWINDOW-QUERY-TECH-PREP-20261112",
+      "fits_planned": 36,
+      "role": "design_review_and_local_tech_no_scientific_run",
+      "science_started": false,
+      "source_evidence_ids": [
+        "DSAINET-POST-SOLVERFIX1-STRUCTURE-REASSESSMENT-20261112"
+      ]
+    },
+    {
+      "artifact_manifest_sha256": "4d50e25650697619737c4b8e539bd623c5456c8a09880b6e04ccff363265bd56",
+      "artifacts": {
+        "REMOTE_ANALYSIS.json": {
+          "ref": "ai4s/programs/dsainet/research/subwindow_query_20261112/analysis_workerfix1/REMOTE_ANALYSIS.json",
+          "sha256": "fc7931f765eef91bafb2adcaf85c8ebd94e64d4ed634b26c6662dd6d0484392a"
+        },
+        "REPORT_ZH.md": {
+          "ref": "ai4s/programs/dsainet/research/subwindow_query_20261112/analysis_workerfix1/REPORT_ZH.md",
+          "sha256": "483ab4f18f008c7acf8a3aaba17f318b65948d002d9b8fcedde54b42f6a09bfc"
+        },
+        "VERIFIED_INTAKE.json": {
+          "ref": "ai4s/programs/dsainet/research/subwindow_query_20261112/analysis_workerfix1/VERIFIED_INTAKE.json",
+          "sha256": "63ad02040c62056d0c9d47ad0b51b624198e645014890af83edc311df942d815"
+        },
+        "VERIFIED_RESULTS.json": {
+          "ref": "ai4s/programs/dsainet/research/subwindow_query_20261112/analysis_workerfix1/VERIFIED_RESULTS.json",
+          "sha256": "0c5c10bb705b7878b55ce35406a29bba18865196ddf45bc3133f27f3e64ae61d"
+        }
+      },
+      "audits": 36,
+      "chain_id": "dsainet-transaction-v3.4",
+      "comparisons_failed": [
+        "P-N",
+        "P-J",
+        "P-L"
+      ],
+      "comparisons_passed": [],
+      "contract_sha256": "e1126934ea5faa08594ffc2a964a699a98bef18714e5901d767251d598a1d747",
+      "date": "2026-11-12",
+      "decision": "RETIRE_FIXED_CANDIDATE",
+      "direction_id": "DSAINET-SUBWINDOW-QUERY-WORKERFIX1-RESULT-20261112",
+      "failed_audits": 0,
+      "failed_fits": 0,
+      "fits": 36,
+      "full_payload_local": false,
+      "judgment_change": "Retire the fixed same-cell dual-query candidate. Mean accuracy was lower versus native and misaligned controls; the mean accuracy gain versus same-information single query did not pass raw NLL, positive-subject, or individual-risk gates.",
+      "next_contrast": null,
+      "protocol_sha256": "d84c3c6e145a20d8dbf564bcf36b765863784cd689cf0465a0c6efc7c6a22ced",
+      "role": "verified_single_seed_nine_subject_development_screen",
+      "run_ref": "2026-11-12_dsainet_subwindow_query_r1-science1-workerfix1-full-w1",
+      "source_evidence_ids": [
+        "DSAINET-POST-SOLVERFIX1-STRUCTURE-REASSESSMENT-20261112",
+        "DSAINET-SUBWINDOW-QUERY-TECH-PREP-20261112"
+      ],
+      "verified_intake_scope": "analysis_v1"
+    },
+    {
+      "artifacts": {
+        "POST_WORKERFIX1_REASSESSMENT_20261112.md": {
+          "ref": "ai4s/programs/dsainet/research/subwindow_query_20261112/POST_WORKERFIX1_REASSESSMENT_20261112.md",
+          "sha256": "6647dad11e656e63750a9ba73713139f4791b63ae12eaf7ba39e496c02131488"
+        }
+      },
+      "chain_id": "dsainet-transaction-v3.4",
+      "date": "2026-11-12",
+      "decision": "CLOSE_FIXED_SUBWINDOW_QUERY_NO_NEW_STRUCTURE_SELECTED",
+      "design_change": "Close this fixed candidate and its continuous optimization. Keep DS-03 on file and DS-01 deferred without efficacy verdicts.",
+      "direction_id": "DSAINET-POST-WORKERFIX1-STRUCTURE-REASSESSMENT-20261112",
+      "judgment_change": "All three necessary comparisons failed. Preserved scale separation and full-context evidence constrain future designs. Existing candidates lack a pre-specified, evidence-grounded prediction that separates a concrete intervention from its strongest simple control.",
+      "new_experiment_started": false,
+      "next_contrast": null,
+      "role": "user_confirmed_fixed_candidate_closure_and_cumulative_investment_reassessment",
+      "run_ref": "2026-11-12_dsainet_subwindow_query_r1-science1-workerfix1-full-w1",
+      "source_evidence_ids": [
+        "DSAINET-SUBWINDOW-QUERY-WORKERFIX1-RESULT-20261112",
+        "DS-BASELINE-MAP-2026-08-26",
+        "DSAINET-WITHIN-AVG4-ORDER-SOLVERFIX1-RESULT-20261112",
+        "DSAINET-INTER-WINDOW-BUDGET411-RESULT-20261110",
+        "DSAINET-DS07-R1-MERGED-VERIFIED-ANALYSIS-20261105",
+        "DSAINET-COARSE-CONDITIONAL-STAGEA-20261111",
+        "DSAINET-P0-CUE-LINEAGE-CLOSED-BY-USER-20261101",
+        "DSAINET-POST-HISTALIGN-INVESTMENT-20261108",
+        "DSAINET-DS07-CLOSURE-AND-IF20261029-03-REASSESSMENT-20261106"
+      ]
+    },
+    {
+      "artifacts": {
+        "DS03_SCIENTIFIC_DISPOSITION_20261112.md": {
+          "ref": "ai4s/programs/dsainet/research/foundry_if20261029_03_reassessment_20261106/DS03_SCIENTIFIC_DISPOSITION_20261112.md",
+          "sha256": "bafa952eb9e40a11521609341d474581e7fe4433d0f42893d81edb8fa295c2b7"
+        }
+      },
+      "candidate_ref": "IF-20261029-03/IF-20261029-DS-03/card-v2",
+      "chain_id": "dsainet-transaction-v3.4",
+      "date": "2026-11-12",
+      "decision": "CLOSE_DS03_DESIGN_NO_INDEPENDENT_RADIUS_ANCHOR",
+      "direction_id": "DSAINET-DS03-SCIENTIFIC-DISPOSITION-20261112",
+      "efficacy_tested": false,
+      "judgment_change": "Recurrence-analysis precedents do not identify a class-relevant interval on the exact normalized latent interface, or predict incremental utility over an equal-budget Gaussian dictionary.",
+      "new_experiment_started": false,
+      "next_contrast": null,
+      "role": "design_stage_scientific_discrimination",
+      "source_evidence_ids": [
+        "DSAINET-POST-WORKERFIX1-STRUCTURE-REASSESSMENT-20261112",
+        "DSAINET-DS07-CLOSURE-AND-IF20261029-03-REASSESSMENT-20261106",
+        "DS-BASELINE-MAP-2026-08-26"
+      ]
     }
   ],
   "engineering_preparations": [
