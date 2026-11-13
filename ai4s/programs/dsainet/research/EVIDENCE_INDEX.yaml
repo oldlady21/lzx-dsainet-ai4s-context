@@ -1263,6 +1263,328 @@
         "DSAINET-DS07-CLOSURE-AND-IF20261029-03-REASSESSMENT-20261106",
         "DS-BASELINE-MAP-2026-08-26"
       ]
+    },
+    {
+      "artifacts": {
+        "DS01_SCIENTIFIC_DISPOSITION_20261112.md": {
+          "ref": "ai4s/programs/dsainet/research/foundry_if20261029_03_reassessment_20261106/DS01_SCIENTIFIC_DISPOSITION_20261112.md",
+          "sha256": "85ed1fe41b7ac97fa7243139e9b9adb6b43dea4e833cb436bf09e2e1326d4419"
+        }
+      },
+      "candidate_ref": "IF-20261029-03/IF-20261029-DS-01/card-v2",
+      "chain_id": "dsainet-transaction-v3.4",
+      "date": "2026-11-12",
+      "decision": "CLOSE_DS01_DESIGN_SHORT_WINDOW_AND_INCREMENT_UNSUPPORTED",
+      "direction_id": "DSAINET-DS01-SCIENTIFIC-DISPOSITION-20261112",
+      "ds03_disposition": "CLOSE_DS03_DESIGN_NO_INDEPENDENT_RADIUS_ANCHOR",
+      "efficacy_tested": false,
+      "judgment_change": "The fixed short-window estimator lacks independent single-trial stability evidence and matched class-utility evidence versus complete same-frequency cross-spectra, full complex STFT, and traditional bispectral readouts.",
+      "new_experiment_started": false,
+      "next_contrast": null,
+      "role": "design_stage_scientific_discrimination",
+      "source_evidence_ids": [
+        "DSAINET-DS03-SCIENTIFIC-DISPOSITION-20261112",
+        "DSAINET-POST-WORKERFIX1-STRUCTURE-REASSESSMENT-20261112",
+        "DSAINET-DS07-CLOSURE-AND-IF20261029-03-REASSESSMENT-20261106",
+        "DSAINET-INTER-WINDOW-PREPARATION-20261108"
+      ]
+    },
+    {
+      "artifacts": {
+        "POST_FOUNDRY_STRUCTURE_SEARCH_20261112.md": {
+          "ref": "ai4s/programs/dsainet/research/foundry_if20261029_03_reassessment_20261106/POST_FOUNDRY_STRUCTURE_SEARCH_20261112.md",
+          "sha256": "559fd63fd86485becf7bad01ec4563e7ce85831b382503e252dd1dc705347147"
+        }
+      },
+      "chain_id": "dsainet-transaction-v3.4",
+      "closed_candidate_ids": [
+        "IF-20261029-DS-01",
+        "IF-20261029-DS-02",
+        "IF-20261029-DS-03",
+        "IF-20261029-DS-04",
+        "IF-20261029-DS-05",
+        "IF-20261029-DS-06",
+        "IF-20261029-DS-07"
+      ],
+      "date": "2026-11-12",
+      "decision": "CLOSE_FOUNDRY_BATCH_NO_NEW_STRUCTURE_SELECTED",
+      "direction_id": "DSAINET-IF-20261029-03-CLOSED-AND-STRUCTURE-SEARCH-20261112",
+      "foundry_source_sha256": "39af17cf7de399f5d46c4d3e32daa75036b7b1d2c459cfd03bc349de13e2a66d",
+      "judgment_change": "Independent evidence motivates spatial observation reliability, hemispheric patterns and waveform-sensitive time representation. None of the concrete proposals supplies a host-relevant prediction that distinguishes it from the strongest simple controls and close prior methods.",
+      "new_candidate_selected": false,
+      "new_experiment_started": false,
+      "next_contrast": null,
+      "role": "user_confirmed_batch_closure_and_bounded_structure_discovery",
+      "source_evidence_ids": [
+        "DSAINET-DS01-SCIENTIFIC-DISPOSITION-20261112",
+        "DSAINET-DS03-SCIENTIFIC-DISPOSITION-20261112",
+        "DSAINET-DS07-R1-MERGED-VERIFIED-ANALYSIS-20261105",
+        "DSAINET-POST-WORKERFIX1-STRUCTURE-REASSESSMENT-20261112",
+        "DSAINET-CUE-GRID-DIRECTION-REVIEW-20261106",
+        "DS-BASELINE-MAP-2026-08-26"
+      ],
+      "source_foundry_run": "IF-20261029-03"
+    },
+    {
+      "artifacts": {
+        "ELECTRODE_AVAILABILITY_SCIENTIFIC_DISPOSITION_20261112.md": {
+          "ref": "ai4s/programs/dsainet/research/foundry_if20261029_03_reassessment_20261106/ELECTRODE_AVAILABILITY_SCIENTIFIC_DISPOSITION_20261112.md",
+          "sha256": "fee5910a233b13fc6e555db46e22a4bd2ccc6fa91cf4474ec4774489dad12d60"
+        }
+      },
+      "chain_id": "dsainet-transaction-v3.4",
+      "date": "2026-11-12",
+      "decision": "CLOSE_DIRECTION_NO_PREDECLARABLE_ADVANTAGE_OVER_MATCHED_CONTROLS",
+      "direction_id": "DSAINET-ELECTRODE-AVAILABILITY-SCIENTIFIC-DISPOSITION-20261112",
+      "efficacy_tested": false,
+      "judgment_change": "Public releases contain traceable natural channel-quality annotations and metadata for offline same-trial method comparison. No independent clean counterpart was verified for the natural failures, and no independent evidence fixes a condition predicting structural benefit over both same-mask spherical interpolation and dynamic spatial filtering.",
+      "new_candidate_selected": false,
+      "new_experiment_started": false,
+      "next_contrast": null,
+      "role": "design_stage_scientific_discrimination",
+      "source_evidence_ids": [
+        "DSAINET-IF-20261029-03-CLOSED-AND-STRUCTURE-SEARCH-20261112",
+        "DS-BASELINE-MAP-2026-08-26"
+      ]
+    },
+    {
+      "artifacts": {
+        "research_brief.md": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/research_brief.md",
+          "sha256": "e62909b882ac05eae5857db7b3b11f132b2cf77a57a158bfc4c2c4dc6ddd351f"
+        }
+      },
+      "attachment_sha256": "549c65667d2aea669f4f1fbd413df5f84f9127491cf40910b12ec0bdf6401396",
+      "chain_id": "dsainet-transaction-v3.4",
+      "date": "2026-11-13",
+      "decision": "CONFIRM_ELECTRODE_CLOSURE_KEEP_A_FOR_SCIENTIFIC_DESIGN_DEFER_B",
+      "direction_id": "DSAINET-PORTFOLIO-5-INVESTMENT-REVIEW-20261113",
+      "efficacy_tested": false,
+      "judgment_change": "A defines a separable within-trial interval trajectory hypothesis. Its observability and directional utility remain unverified. B shares its key function symmetry with prediction-time antisymmetrization and has no independent directional advantage.",
+      "new_candidate_selected": false,
+      "new_experiment_started": false,
+      "next_contrast": "Design a source-only observability check of real beta valley depth versus its distance-, endpoint-, and cue-conditioned expectation on the native token grid.",
+      "role": "design_stage_candidate_investment_review",
+      "source_evidence_ids": [
+        "DSAINET-ELECTRODE-AVAILABILITY-SCIENTIFIC-DISPOSITION-20261112",
+        "DS-BASELINE-MAP-2026-08-26",
+        "AI4S-DSAINET-CMCR-v0.1-MECHANISM-20260917",
+        "DSAINET-CSUI-v0.1-20260917",
+        "DSAINET-POST-WORKERFIX1-STRUCTURE-REASSESSMENT-20261112"
+      ]
+    },
+    {
+      "artifacts": {
+        "OBSERVABILITY_PLAN.md": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/OBSERVABILITY_PLAN.md",
+          "sha256": "fca39c11d7600ac65d046b8fcde50f90ff7ad128cd6ff5834120a92f6d1ea200"
+        },
+        "OBSERVABILITY_REPORT.md": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/OBSERVABILITY_REPORT.md",
+          "sha256": "a20f94ed9e1e07b39d661db8c881e3a9aa8580abe7d54106f55fb68cfee4acf4"
+        },
+        "OBSERVABILITY_RESULTS.json": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/OBSERVABILITY_RESULTS.json",
+          "sha256": "88c0fedf11dd8e3d4b489f1e1a561850cf26f8adc65365928cefb04c9eba7d14"
+        },
+        "observability.py": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/observability.py",
+          "sha256": "4477b05a7257d13564680992ee47f36d13fb23f4d20ff1dab3ae424edf070592"
+        }
+      },
+      "chain_id": "dsainet-transaction-v3.4",
+      "date": "2026-11-13",
+      "decision": "OBSERVABILITY_PASS_FOUR_ARM_DESIGN_ONLY",
+      "direction_id": "DSAINET-BETA-VALLEY-SOURCE-OBSERVABILITY-20261113",
+      "efficacy_tested": false,
+      "judgment_change": "Matched interior beta valley variation replicated in both sessions for five of six source-training subjects and the separate source-validation subject under fixed amplitude and filter sensitivity controls. A05T failed pair coverage. Model efficacy and physiological attribution are untested.",
+      "new_experiment_started": false,
+      "next_contrast": "Native versus real interval valley, conditional expected interval valley, and same beta token-content input, design only.",
+      "role": "label_blind_source_only_signal_diagnostic",
+      "source_evidence_ids": [
+        "DSAINET-PORTFOLIO-5-INVESTMENT-REVIEW-20261113"
+      ]
+    },
+    {
+      "artifacts": {
+        "BUDGET_SCENARIOS.json": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/BUDGET_SCENARIOS.json",
+          "sha256": "71ff95ce9059b697679127e7a53633aa7a11ba139fd71b387925b2c533ff719b"
+        },
+        "LOCAL_TECH.json": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/LOCAL_TECH.json",
+          "sha256": "63f3544560b9b6b94d2e0d759c3ffe74af2a7732bcad89b422816f4f15ac05e3"
+        },
+        "PREPARATION_REPORT.md": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/PREPARATION_REPORT.md",
+          "sha256": "d9cb00dad3b2dd19e0c75e7031d13e4ed5ad96e76264d23a0396d948c9296381"
+        },
+        "PROTOCOL.json": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/PROTOCOL.json",
+          "sha256": "d7a4bfc245e5fa422c8b962c6527710cda6f4fd3fd7db1d9140bced1a6abc598"
+        },
+        "WAVEFORM_VERIFICATION.json": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/WAVEFORM_VERIFICATION.json",
+          "sha256": "933c7c149776e50f8570cf61047e995bb655863109fa9204339e6a0a4d204eac"
+        },
+        "beta_model.py": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/beta_model.py",
+          "sha256": "256b5dc7551c1845a54ad5d57d9cf2765ab09f2af260cdf562c97d496e9e44bc"
+        },
+        "cost.py": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/cost.py",
+          "sha256": "886563d09e2f4fa82bcd4a3e24edc4bbf280850f81f723966fad3ebe357a5c4e"
+        },
+        "data.py": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/data.py",
+          "sha256": "160b7f3ae00967b8a11c93205c399d5d3c0ec3b1c4c1c0eab3c872ec1bc0eb8f"
+        },
+        "decision.py": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/decision.py",
+          "sha256": "5cbcf884cbdbf0dbf90699c8f9bba59cebc6f535aa9e6244050856b2a5422fdc"
+        },
+        "tech.py": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/tech.py",
+          "sha256": "7924ddf5825344dae0e55b16c9e652b18b4c5891b5c021305854e2176d2503ba"
+        },
+        "worker.py": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/worker.py",
+          "sha256": "f68e7b323f0045d6f3fc5f88f91985549d1ca1d03faa2d87a91305db4497484b"
+        }
+      },
+      "chain_id": "dsainet-transaction-v3.4",
+      "date": "2026-11-13",
+      "decision": "LOCAL_CHECK_PASS_LAB10_TRANSPORT_APPROVAL_REQUIRED",
+      "direction_id": "DSAINET-BETA-VALLEY-FOUR-ARM-PREPARATION-20261113",
+      "efficacy_tested": false,
+      "lab10_tech_started": false,
+      "next_contrast": "Run only Lab10 zero-update N/A/D/T TECH after exact transport approval and refresh costs.",
+      "remote_uploaded": false,
+      "role": "frozen_scientific_design_and_local_technical_preparation",
+      "science_audits_started": 0,
+      "science_fits_started": 0,
+      "source_evidence_ids": [
+        "DSAINET-BETA-VALLEY-SOURCE-OBSERVABILITY-20261113"
+      ]
+    },
+    {
+      "approved_hours": 462,
+      "artifacts": {
+        "AUTHORIZATION462.json": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/AUTHORIZATION462.json",
+          "sha256": "195ce277298111130f5caf579b13174a6b8ada76df0d34d427e78efac30c2c8f"
+        },
+        "cost_lab10.py": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/cost_lab10.py",
+          "sha256": "e6f0cabdafb60f05cbbb19ac361305644d366b05af887923d17d60dc01a00044"
+        },
+        "lab10_tech1/COST.json": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/lab10_tech1/COST.json",
+          "sha256": "eb309bf3125013b1e17580f1af75338f6f4b65ff0282e1d369bc03fc5adfb251"
+        },
+        "lab10_tech1/PROFILE.json": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/lab10_tech1/PROFILE.json",
+          "sha256": "d65db4928a0103dca06004a7402e76406eced2c728085a3515b0b1e4a41983f0"
+        },
+        "lab10_tech1/REPORT.md": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/lab10_tech1/REPORT.md",
+          "sha256": "3503941a67cc69843d217046e353c701eb44f6766a2369051fe98f0331651ec5"
+        },
+        "lab10_tech1/run_status.json": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/lab10_tech1/run_status.json",
+          "sha256": "88119172b9ea1baf1a0c2b515b49961c87b57539f78e8a967de7a43f4c10e59e"
+        },
+        "lab10_tech1/scheduler_metrics.json": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/lab10_tech1/scheduler_metrics.json",
+          "sha256": "70f99bb9fa9dcc4c25e591f2fb6596a456d96089a7f181c49566d37a12183cd8"
+        },
+        "lab10_tech1/scheduler_status.json": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/lab10_tech1/scheduler_status.json",
+          "sha256": "8357f9de475e4be10b0b21ba78772acaae27f95f4d1dccfc4345c9cc315802cd"
+        },
+        "lab10_tech1/tech_budget462.py": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/lab10_tech1/tech_budget462.py",
+          "sha256": "62125f3cdf95645618fa3e3313e9e842d7417a369ff959a4074cf208f296c228"
+        }
+      },
+      "chain_id": "dsainet-transaction-v3.4",
+      "date": "2026-11-13",
+      "decision": "LAB10_TECH_PASS_SCIENCE_BUDGET_AND_AUTHORIZATION_PENDING",
+      "direction_id": "DSAINET-BETA-VALLEY-LAB10-TECH1-20261113",
+      "efficacy_tested": false,
+      "role": "lab10_zero_update_tech_and_science_cost_calibration",
+      "run_id": "2026-11-13_dsainet_beta_valley_r1-tech1",
+      "science_audits_started": 0,
+      "science_fits_started": 0,
+      "source_evidence_ids": [
+        "DSAINET-BETA-VALLEY-FOUR-ARM-PREPARATION-20261113"
+      ]
+    },
+    {
+      "approved_hours": 478,
+      "artifacts": {
+        "AUTHORIZATION478.json": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/AUTHORIZATION478.json",
+          "sha256": "67fb81bfb96e024c5914e98523f82c563acc2eb054bee88912fbc84556566974"
+        }
+      },
+      "chain_id": "dsainet-transaction-v3.4",
+      "date": "2026-11-13",
+      "decision": "BUDGET_EXTENSION_RECORDED_SCIENCE_LAUNCH_PENDING",
+      "direction_id": "DSAINET-BETA-VALLEY-BUDGET478-20261113",
+      "role": "cumulative_budget_authorization",
+      "science_audits_started": 0,
+      "science_fits_started": 0,
+      "source_evidence_ids": [
+        "DSAINET-BETA-VALLEY-LAB10-TECH1-20261113"
+      ]
+    },
+    {
+      "artifacts": {
+        "POST_AUDITFIX1_REASSESSMENT_20261114.md": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/analysis_auditfix1/POST_AUDITFIX1_REASSESSMENT_20261114.md",
+          "sha256": "a15252aadbe777c8a8f8bfe79bdb9bd2af005a237a61dc73638e1af6bff5f374"
+        },
+        "PROTOCOL.json": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/PROTOCOL.json",
+          "sha256": "d7a4bfc245e5fa422c8b962c6527710cda6f4fd3fd7db1d9140bced1a6abc598"
+        },
+        "REPORT.md": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/analysis_auditfix1/REPORT.md",
+          "sha256": "690b982b86af22e6d5167af5bdcf8c99dd32a55fbedfbbccae5cb31224af11f2"
+        },
+        "VERIFIED_RESULTS.json": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/analysis_auditfix1/VERIFIED_RESULTS.json",
+          "sha256": "8f44a6c4bf993d96f1909d2ffc27e435a763cf5dd99f1f727d579e0f80f9e76b"
+        },
+        "analysis_v1.tar.gz": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/analysis_auditfix1/analysis_v1.tar.gz",
+          "sha256": "aedb6c77e3813baca6f626b5b5513962d27b8a731a88319c249825752f7fbbee"
+        },
+        "recompute.py": {
+          "ref": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/analysis_auditfix1/recompute.py",
+          "sha256": "e57cef35894ef4d4d21730ce1f34ee7e49d54c27b364c9a5dd68605ce3de8018"
+        }
+      },
+      "audit_count_sealed": 36,
+      "chain_id": "dsainet-transaction-v3.4",
+      "date": "2026-11-14",
+      "decision": "STOP_FIXED_A_NO_NEW_STRUCTURE_SELECTED",
+      "direction_id": "DSAINET-BETA-VALLEY-AUDITFIX1-CLOSEOUT-20261114",
+      "fit_count_reused": 36,
+      "mechanism_interaction_nats": -0.049419448693915895,
+      "new_experiment_started": false,
+      "next_contrast": null,
+      "parent_run_id": "2026-11-13_dsainet_beta_valley_r1-science1-full-w1",
+      "role": "verified_development_screen_closeout_and_structure_reassessment",
+      "run_id": "2026-11-13_dsainet_beta_valley_r1-science1-auditfix1",
+      "source_evidence_ids": [
+        "DSAINET-BETA-VALLEY-BUDGET478-20261113",
+        "DSAINET-BETA-VALLEY-SOURCE-OBSERVABILITY-20261113",
+        "DS-BASELINE-MAP-2026-08-26",
+        "DSAINET-POST-WORKERFIX1-STRUCTURE-REASSESSMENT-20261112",
+        "DSAINET-ELECTRODE-AVAILABILITY-SCIENTIFIC-DISPOSITION-20261112"
+      ]
     }
   ],
   "engineering_preparations": [

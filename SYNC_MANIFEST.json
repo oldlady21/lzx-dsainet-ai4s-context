@@ -5,7 +5,7 @@
     "不自动递归补齐引用；未公开引用见每库SYNC_MANIFEST.json。",
     "不上传凭据、SSH配置、数据集、checkpoint、原始预测、机器日志或完整实验目录。"
   ],
-  "exported_at": "2026-11-12T15:05:19.250070+00:00",
+  "exported_at": "2026-11-13T17:37:08.407899+00:00",
   "files": [
     {
       "bytes": 10818,
@@ -113,24 +113,24 @@
       "source_sha256": "8835b27d84df860eafbe5e51b6f3588d39e5eb1bc36b2f79bd22f4c4f8501b46"
     },
     {
-      "bytes": 52269,
+      "bytes": 55757,
       "path": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
-      "public_git_blob_sha1": "cd4fbc6d82087f54cda233ae949f246571c31de3",
-      "public_sha256": "dfd1248897165a02639b4b7c52e42e53f5500a844f43dd78898420298d2b9fdc",
+      "public_git_blob_sha1": "b3c08aaa442f2a2860c867c877effe6b858445aa",
+      "public_sha256": "23ca7282e88e973686b720642e708fe882a937944d869e7c0a66eb1ae2897936",
       "redactions": {},
-      "source_sha256": "dfd1248897165a02639b4b7c52e42e53f5500a844f43dd78898420298d2b9fdc"
+      "source_sha256": "23ca7282e88e973686b720642e708fe882a937944d869e7c0a66eb1ae2897936"
     },
     {
-      "bytes": 480756,
+      "bytes": 497979,
       "path": "ai4s/programs/dsainet/research/EVIDENCE_INDEX.yaml",
-      "public_git_blob_sha1": "ce2131009d4e56c867b8a4e545b59aecb4078272",
-      "public_sha256": "ccb554b7855bb266fc022aa69333b7ed5b0f723be6caafa437410d7063c1f9c7",
+      "public_git_blob_sha1": "ee079e4fb61e855bc0c1188ec42a259c0d53cff8",
+      "public_sha256": "76c79e4b94b6d4c38aa7c8fb01a60fe6c65c4726f33cea62a8c45557c892826e",
       "redactions": {
         "machine_field": 19,
         "unix_home_path": 7,
         "workspace_prefix": 7
       },
-      "source_sha256": "2eadbc2ff6d7e0fe2224f123e711c58f2fbafa14ea83d470b1a6e87d7d84c1ef"
+      "source_sha256": "e3154714aa5b1a8e463902ad62fded743bf7d1762a2fe097646c811a4201645c"
     },
     {
       "bytes": 1743,
@@ -248,12 +248,12 @@
       "source_sha256": "d4e5c0f16d864431943247d5f6ad62ce354d4940ec75472fb17a67e3545a40fa"
     },
     {
-      "bytes": 8246,
+      "bytes": 8266,
       "path": "ai4s/prompts/LEVEL1_RESEARCH_v3.4.md",
-      "public_git_blob_sha1": "508c3acf491a394b97a3c512aacfbf585de0f5f1",
-      "public_sha256": "f5ab7a207c66ddf14997acbf612979227611987b41ac1b8e391388aa956ad634",
+      "public_git_blob_sha1": "2bd51134e3dfc2b08211b0e36e5b29a3692f13b2",
+      "public_sha256": "697fafc593bb51569298ace26ad361c222fb93e34c00f76c125f0722bee36ba0",
       "redactions": {},
-      "source_sha256": "f5ab7a207c66ddf14997acbf612979227611987b41ac1b8e391388aa956ad634"
+      "source_sha256": "697fafc593bb51569298ace26ad361c222fb93e34c00f76c125f0722bee36ba0"
     },
     {
       "bytes": 23489,
@@ -264,12 +264,12 @@
       "source_sha256": "4eafbb2b73437ea8cec19cef70b53c86aec8e657ebc614aaaf755d9ff8ebe7ec"
     },
     {
-      "bytes": 23782,
+      "bytes": 24093,
       "path": "ai4s/prompts/LEVEL2_EXECUTION_v3.4.md",
-      "public_git_blob_sha1": "4f73fbb62d1c4e8142aca358e8dc2628f555bf00",
-      "public_sha256": "5baeac30dcefc080882e3ca0f96309c8aebac2def75b600528aa9f2ac522d626",
+      "public_git_blob_sha1": "1cfb18fd1b82aa9e2b1547320619174e82280daa",
+      "public_sha256": "f161f68c31a88976f0c20698873543d9a594626e4f4dceb729fde358653c1d17",
       "redactions": {},
-      "source_sha256": "5baeac30dcefc080882e3ca0f96309c8aebac2def75b600528aa9f2ac522d626"
+      "source_sha256": "f161f68c31a88976f0c20698873543d9a594626e4f4dceb729fde358653c1d17"
     },
     {
       "bytes": 9320,
@@ -283,14 +283,14 @@
       "source_sha256": "af3d86340269cb290f76df2a162b907c9cdf1dfe2027f26538739116461f9a1f"
     },
     {
-      "bytes": 38098,
+      "bytes": 39162,
       "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
-      "public_git_blob_sha1": "dff3da2ee475975036c324bb6265768fb4839375",
-      "public_sha256": "6c371d8697fb2c689b264d172368f43f20a94e9426760b34f49416cc787389a7",
+      "public_git_blob_sha1": "1037988c2fe36130fcc7471c150ca68af1e64e9f",
+      "public_sha256": "0783480e66fa24de2e9832a8b55f63d5c8d1dd53062ae590074692e1ddf2eab7",
       "redactions": {
         "host_alias": 4
       },
-      "source_sha256": "e6870a285e14462de680495627b434ba3dc82af0302b031d375d775813978b4d"
+      "source_sha256": "fd753f578650ed879294f1c9c4bad685421037b03e763a9e0c86a90c0d46fca6"
     },
     {
       "bytes": 20850,
@@ -365,7 +365,7 @@
   },
   "policy_version": "public-documents-v1",
   "repository": "oldlady21/lzx-dsainet-ai4s-context",
-  "snapshot_id": "17c12f4c5cbcfa63f7da35d99549d8bb3aaf80109ac37e5fa05b082f031dc5ee",
+  "snapshot_id": "b3a2b63018c84819b52a4f0316e20d7ae55a29ed826d4b03cf66afd1e78ed7e5",
   "unpublished_references": [
     {
       "from": "AGENTS.md",
@@ -2389,7 +2389,19 @@
     },
     {
       "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/foundry_if20261029_03_reassessment_20261106/DS01_SCIENTIFIC_DISPOSITION_20261112.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
       "not_in_snapshot": "ai4s/programs/dsainet/research/foundry_if20261029_03_reassessment_20261106/DS03_SCIENTIFIC_DISPOSITION_20261112.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/foundry_if20261029_03_reassessment_20261106/ELECTRODE_AVAILABILITY_SCIENTIFIC_DISPOSITION_20261112.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/foundry_if20261029_03_reassessment_20261106/POST_FOUNDRY_STRUCTURE_SEARCH_20261112.md"
     },
     {
       "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
@@ -2562,6 +2574,18 @@
     {
       "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
       "not_in_snapshot": "ai4s/programs/dsainet/research/p0-wmp-d1/review/REVIEW_DISPOSITION.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/portfolio_review_20261113/OBSERVABILITY_REPORT.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/portfolio_review_20261113/four_arm/analysis_auditfix1/POST_AUDITFIX1_REASSESSMENT_20261114.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/portfolio_review_20261113/research_brief.md"
     },
     {
       "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
