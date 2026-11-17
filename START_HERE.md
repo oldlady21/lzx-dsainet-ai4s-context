@@ -1,8 +1,8 @@
 # lzx-dsainet-ai4s 讨论资料入口
 
 仓库：https://github.com/oldlady21/lzx-dsainet-ai4s-context
-导出时间（UTC）：2026-11-13T17:37:08.407899+00:00
-快照身份：`b3a2b63018c84819b52a4f0316e20d7ae55a29ed826d4b03cf66afd1e78ed7e5`
+导出时间（UTC）：2026-11-17T11:04:52.470422+00:00
+快照身份：`0498f97dd6563dc92d356656cf328066b2ad6b3514e06cd2b7ce4421d426b3c3`
 
 这是本地已保存文件的公开讨论副本。来源与公开文件 SHA-256、脱敏计数、未公开引用见 [SYNC_MANIFEST.json](SYNC_MANIFEST.json)。
 机器字段已机械脱敏；保留原研究身份、冻结边界、预算、证据状态和历史。它不替代本地权威记录，不授予执行/恢复/改协议权限。
@@ -51,6 +51,7 @@
 - [ai4s/programs/dsainet/PROGRAM.yaml](<ai4s/programs/dsainet/PROGRAM.yaml>)
 - [ai4s/programs/dsainet/PROJECT_PROMPT_v3.3.md](<ai4s/programs/dsainet/PROJECT_PROMPT_v3.3.md>)
 - [ai4s/programs/dsainet/PROJECT_PROMPT_v3.4.md](<ai4s/programs/dsainet/PROJECT_PROMPT_v3.4.md>)
+- [ai4s/programs/dsainet/PROJECT_PROMPT_v4.0.md](<ai4s/programs/dsainet/PROJECT_PROMPT_v4.0.md>)
 - [ai4s/programs/dsainet/research/CLAIM_LEDGER.yaml](<ai4s/programs/dsainet/research/CLAIM_LEDGER.yaml>)
 - [ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md](<ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md>)
 - [ai4s/programs/dsainet/research/EVIDENCE_INDEX.yaml](<ai4s/programs/dsainet/research/EVIDENCE_INDEX.yaml>)
@@ -67,8 +68,10 @@
 - [ai4s/prompts/EXTERNAL_REVIEW.md](<ai4s/prompts/EXTERNAL_REVIEW.md>)
 - [ai4s/prompts/LEVEL1_RESEARCH_v3.3.md](<ai4s/prompts/LEVEL1_RESEARCH_v3.3.md>)
 - [ai4s/prompts/LEVEL1_RESEARCH_v3.4.md](<ai4s/prompts/LEVEL1_RESEARCH_v3.4.md>)
+- [ai4s/prompts/LEVEL1_RESEARCH_v4.0.md](<ai4s/prompts/LEVEL1_RESEARCH_v4.0.md>)
 - [ai4s/prompts/LEVEL2_EXECUTION_v3.3.md](<ai4s/prompts/LEVEL2_EXECUTION_v3.3.md>)
 - [ai4s/prompts/LEVEL2_EXECUTION_v3.4.md](<ai4s/prompts/LEVEL2_EXECUTION_v3.4.md>)
+- [ai4s/prompts/LEVEL2_EXECUTION_v4.0.md](<ai4s/prompts/LEVEL2_EXECUTION_v4.0.md>)
 - [ai4s/prompts/MIEEG_AI4S_SKILL_ROUTER.md](<ai4s/prompts/MIEEG_AI4S_SKILL_ROUTER.md>)
 - [ai4s/prompts/TRANSACTION_RUNTIME.md](<ai4s/prompts/TRANSACTION_RUNTIME.md>)
 - [docs/notes/DSAINET_BASELINE_EVIDENCE_MAP_2026-08-26.md](<docs/notes/DSAINET_BASELINE_EVIDENCE_MAP_2026-08-26.md>)

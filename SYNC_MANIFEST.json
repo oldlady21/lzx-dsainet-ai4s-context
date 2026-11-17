@@ -5,7 +5,7 @@
     "不自动递归补齐引用；未公开引用见每库SYNC_MANIFEST.json。",
     "不上传凭据、SSH配置、数据集、checkpoint、原始预测、机器日志或完整实验目录。"
   ],
-  "exported_at": "2026-11-13T17:37:08.407899+00:00",
+  "exported_at": "2026-11-17T11:04:52.470422+00:00",
   "files": [
     {
       "bytes": 10818,
@@ -59,34 +59,34 @@
       "source_sha256": "1a7337947f0337e25de7cf54357aef3f3a4bdbee170cc64a3af8439a192fcfa5"
     },
     {
-      "bytes": 141903,
+      "bytes": 153655,
       "path": "ai4s/PROMPT_INDEX.yaml",
-      "public_git_blob_sha1": "58a0454386f28f8560492ca24032efc653ef158d",
-      "public_sha256": "94bbaaf5d61e995f0bcd5dc6cc6fc986dc48074a3ab6c2dcb1beba9f5134148d",
+      "public_git_blob_sha1": "df614be58d1ce6b10d204dae4245e31e0da2fd4a",
+      "public_sha256": "88612b2e8e927895afbc9321f5ee4ecbd8726992205db2d1ba2cfbfe0a77c247",
       "redactions": {},
-      "source_sha256": "7a3f28b0472af1799a115f3d9f996347e6f569d3561896d78ed1160a4bd16946"
+      "source_sha256": "6dc768a45ba69a915f75e679a18b0ee349addc2e1b07a8c96cdf6101d3637c27"
     },
     {
-      "bytes": 12519,
+      "bytes": 12624,
       "path": "ai4s/README.md",
-      "public_git_blob_sha1": "dfc68e33c2e9f5a674ef7f4af0b3bb8c64dbaf86",
-      "public_sha256": "f2392a3beee979c5d8fa074b1b7b3b3faeed53ab1b161ed010568276f37068ce",
+      "public_git_blob_sha1": "cda7f3fdb825167354a295827f58b5d344b8e165",
+      "public_sha256": "e2489efe96a923dc922b2cbc5a2acce797c7a3f98475abaa0084b29ad89f2573",
       "redactions": {
         "host_alias": 4
       },
-      "source_sha256": "c76e172b0e76772892bc99469141432a5a9e46510d043e5938193702810567ee"
+      "source_sha256": "3ab9f6fe60aec956148a86fcc7a01f2d90bf5c1f1e095229cac014c94e565693"
     },
     {
       "bytes": 6039,
       "path": "ai4s/programs/dsainet/PROGRAM.yaml",
-      "public_git_blob_sha1": "671e19254ef7104d23534831652ddd6e99eec96b",
-      "public_sha256": "3c67dbd976a0d7bfe78ea6c014a2dd9e93f608c6ab8eb7431d79fb55dabed7e5",
+      "public_git_blob_sha1": "b8df1ace3ff10a56c68dbee582f6eaedcf935a66",
+      "public_sha256": "454e47e8d946972c200e6c1d886c772c554d65dfd53911cc26857f8603539241",
       "redactions": {
         "host_alias": 1,
         "machine_field": 9,
         "workspace_prefix": 1
       },
-      "source_sha256": "2c3d96c4493e3a73d5f52358f394e5ab1bf7b698d91d63cb9740a0272882eb6c"
+      "source_sha256": "b5c3c390880e66a88406c86aec3694b09bd3adc7d768ad0e330be1c6602d4465"
     },
     {
       "bytes": 7442,
@@ -105,6 +105,14 @@
       "source_sha256": "1c05b18dce252369897698f2f11e9f5dacc7e03b3e0c48a7640731eea36ebc34"
     },
     {
+      "bytes": 7363,
+      "path": "ai4s/programs/dsainet/PROJECT_PROMPT_v4.0.md",
+      "public_git_blob_sha1": "6938baeb9eb87972de9fbfb9ba55e2d36088b00b",
+      "public_sha256": "c27fa5d05f8f5fccd213a3f8e5b8844b266db4ad47d0247b92d1f2e5c5cf926a",
+      "redactions": {},
+      "source_sha256": "c27fa5d05f8f5fccd213a3f8e5b8844b266db4ad47d0247b92d1f2e5c5cf926a"
+    },
+    {
       "bytes": 7521,
       "path": "ai4s/programs/dsainet/research/CLAIM_LEDGER.yaml",
       "public_git_blob_sha1": "aa85f5a8e87efcac9b606d68b33c105567cc4109",
@@ -113,24 +121,24 @@
       "source_sha256": "8835b27d84df860eafbe5e51b6f3588d39e5eb1bc36b2f79bd22f4c4f8501b46"
     },
     {
-      "bytes": 55757,
+      "bytes": 58909,
       "path": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
-      "public_git_blob_sha1": "b3c08aaa442f2a2860c867c877effe6b858445aa",
-      "public_sha256": "23ca7282e88e973686b720642e708fe882a937944d869e7c0a66eb1ae2897936",
+      "public_git_blob_sha1": "336504b26adaa2cd7b2c28f01b1ad685794107f4",
+      "public_sha256": "87aca8e9eaed77872e7bc5387b9af5a934d2a4fcee18a3cb211daa55e922ed07",
       "redactions": {},
-      "source_sha256": "23ca7282e88e973686b720642e708fe882a937944d869e7c0a66eb1ae2897936"
+      "source_sha256": "87aca8e9eaed77872e7bc5387b9af5a934d2a4fcee18a3cb211daa55e922ed07"
     },
     {
-      "bytes": 497979,
+      "bytes": 507145,
       "path": "ai4s/programs/dsainet/research/EVIDENCE_INDEX.yaml",
-      "public_git_blob_sha1": "ee079e4fb61e855bc0c1188ec42a259c0d53cff8",
-      "public_sha256": "76c79e4b94b6d4c38aa7c8fb01a60fe6c65c4726f33cea62a8c45557c892826e",
+      "public_git_blob_sha1": "8a9b812b9ac68f8e2a3f7511ce638239118b7fd3",
+      "public_sha256": "e00dae1486424260e038a57911c05cd49bdfe5b4cd75ca6e1fc666ebcd336f99",
       "redactions": {
         "machine_field": 19,
         "unix_home_path": 7,
         "workspace_prefix": 7
       },
-      "source_sha256": "e3154714aa5b1a8e463902ad62fded743bf7d1762a2fe097646c811a4201645c"
+      "source_sha256": "df12fdfbaff2c020888fe93e25f7309d4f7b8034d29fcd8575337edb17b03ae9"
     },
     {
       "bytes": 1743,
@@ -256,6 +264,14 @@
       "source_sha256": "697fafc593bb51569298ace26ad361c222fb93e34c00f76c125f0722bee36ba0"
     },
     {
+      "bytes": 8583,
+      "path": "ai4s/prompts/LEVEL1_RESEARCH_v4.0.md",
+      "public_git_blob_sha1": "318e6fa081ca9ff6c5a9ea67ac559f95d25302e9",
+      "public_sha256": "e66ac43b66bf96aecb9638c7d24c5cdbc66fa109578306c0f8ab02f6c287bd64",
+      "redactions": {},
+      "source_sha256": "e66ac43b66bf96aecb9638c7d24c5cdbc66fa109578306c0f8ab02f6c287bd64"
+    },
+    {
       "bytes": 23489,
       "path": "ai4s/prompts/LEVEL2_EXECUTION_v3.3.md",
       "public_git_blob_sha1": "6b3c657b7891553f57b8cd61a0aa6357e4b83a47",
@@ -270,6 +286,14 @@
       "public_sha256": "f161f68c31a88976f0c20698873543d9a594626e4f4dceb729fde358653c1d17",
       "redactions": {},
       "source_sha256": "f161f68c31a88976f0c20698873543d9a594626e4f4dceb729fde358653c1d17"
+    },
+    {
+      "bytes": 26254,
+      "path": "ai4s/prompts/LEVEL2_EXECUTION_v4.0.md",
+      "public_git_blob_sha1": "ace940298b23729062bd8a38240c9c5e19700112",
+      "public_sha256": "15fa1846421cdaee7f9cbe79c57360fee299bfd7e4270ca955e34a48a0f8c715",
+      "redactions": {},
+      "source_sha256": "15fa1846421cdaee7f9cbe79c57360fee299bfd7e4270ca955e34a48a0f8c715"
     },
     {
       "bytes": 9320,
@@ -365,7 +389,7 @@
   },
   "policy_version": "public-documents-v1",
   "repository": "oldlady21/lzx-dsainet-ai4s-context",
-  "snapshot_id": "b3a2b63018c84819b52a4f0316e20d7ae55a29ed826d4b03cf66afd1e78ed7e5",
+  "snapshot_id": "0498f97dd6563dc92d356656cf328066b2ad6b3514e06cd2b7ce4421d426b3c3",
   "unpublished_references": [
     {
       "from": "AGENTS.md",
@@ -2329,6 +2353,10 @@
     },
     {
       "from": "ai4s/README.md",
+      "not_in_snapshot": "ai4s/_work/prompt_v4_design_20261116/REPORT.md"
+    },
+    {
+      "from": "ai4s/README.md",
       "not_in_snapshot": "ai4s/_work/resource_summary_20261014/REPORT.md"
     },
     {
@@ -2350,6 +2378,18 @@
     {
       "from": "ai4s/README.md",
       "not_in_snapshot": "docs/ASSET_ARCHIVE.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/compositional_mi_20261116/research_brief.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/cross_branch_summary_20261114/research_brief.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/cross_branch_summary_20261114/validation_budget483/REPORT.md"
     },
     {
       "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",

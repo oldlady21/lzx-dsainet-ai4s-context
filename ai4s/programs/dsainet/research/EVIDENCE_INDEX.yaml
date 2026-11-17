@@ -1585,6 +1585,167 @@
         "DSAINET-POST-WORKERFIX1-STRUCTURE-REASSESSMENT-20261112",
         "DSAINET-ELECTRODE-AVAILABILITY-SCIENTIFIC-DISPOSITION-20261112"
       ]
+    },
+    {
+      "artifacts": {
+        "research_brief.md": {
+          "ref": "ai4s/programs/dsainet/research/cross_branch_summary_20261114/research_brief.md",
+          "sha256": "61d2a871a7ab7f90cbd1ff74656b7caf2861500685d968d1673f78fb4a1c485f"
+        }
+      },
+      "candidate_selected_for_training": false,
+      "chain_id": "dsainet-transaction-v3.4",
+      "date": "2026-11-14",
+      "decision": "RETAIN_RECEIVER_CONDITIONED_SHARED_MESSAGE_FOR_ZERO_TRAINING_DISCRIMINATION",
+      "design_change": "Reuse frozen native checkpoints and both full token grids. Compare native messages, broadcast native mean and zero message before testing receiver-conditioned one-query exchange against donor-only and uniform summaries.",
+      "direction_id": "DSAINET-CROSS-BRANCH-SHARED-MESSAGE-SCREEN-DESIGN-20261114",
+      "external_review_status": "not_performed",
+      "judgment_change": "The registered dense-inter comparisons do not isolate position-varying messages. Frozen projection onto the shared temporal component can separate its effect from suppressing cross-branch messages entirely.",
+      "new_experiment_started": false,
+      "next_contrast": "Source-validation-only paired N/O/Z, then G versus N/D/U conditional on the O contrasts. The decision depends on ACC, raw NLL, both seeds and worst seed-by-subject risk. The panel is selection-exposed development evidence.",
+      "role": "candidate_design_for_frozen_source_screen",
+      "source_evidence_ids": [
+        "DS-BASELINE-MAP-2026-08-26",
+        "AI4S-DSAINET-dsainet-r02-inter-attention-lesion-v0.1",
+        "AI4S-DSAINET-dsainet-r03-ilud-v0.1-r4",
+        "DSAINET-INTER-WINDOW-BUDGET411-RESULT-20261110",
+        "DSAINET-POST-WORKERFIX1-STRUCTURE-REASSESSMENT-20261112",
+        "DSAINET-BETA-VALLEY-AUDITFIX1-CLOSEOUT-20261114",
+        "AI4S-DSAINET-dsainet-r01-lvt-v0.1"
+      ]
+    },
+    {
+      "artifacts": {
+        "ASSET_VERIFICATION.json": {
+          "ref": "ai4s/programs/dsainet/research/cross_branch_summary_20261114/ASSET_VERIFICATION.json",
+          "sha256": "02724765736cc12e039be57aec164773fbee2c82f81f0087255208f770bf3027"
+        },
+        "PREPARATION.md": {
+          "ref": "ai4s/programs/dsainet/research/cross_branch_summary_20261114/PREPARATION.md",
+          "sha256": "5950c035082daca667f7a92d8bcbbd22783b5fdb5ff28907cfa24b90413bfd63"
+        },
+        "run_validation.py": {
+          "ref": "ai4s/programs/dsainet/research/cross_branch_summary_20261114/run_validation.py",
+          "sha256": "4b0c75c0ec384b31acc751e6559f553a0660e89e25b8472f25ef06915eb7461b"
+        },
+        "verify_assets.py": {
+          "ref": "ai4s/programs/dsainet/research/cross_branch_summary_20261114/verify_assets.py",
+          "sha256": "2852a028e43783928f4789c66302008df4927412db1f9b6aad9f8cf1686cb34e"
+        }
+      },
+      "chain_id": "dsainet-transaction-v3.4",
+      "date": "2026-11-14",
+      "decision": "ASSETS_PASS_PAUSED_CUMULATIVE_BUDGET",
+      "direction_id": "DSAINET-CROSS-BRANCH-SHARED-MESSAGE-SOURCE-QUALIFICATION-20261114",
+      "native_checkpoints_verified": 18,
+      "new_experiment_started": false,
+      "next_contrast": "Refresh budget, then require exact N identity on all source validation rows. Run N/O/Z and conditionally release G/D/U.",
+      "role": "local_asset_qualification_and_budget_gate",
+      "source_evidence_ids": [
+        "DSAINET-CROSS-BRANCH-SHARED-MESSAGE-SCREEN-DESIGN-20261114"
+      ],
+      "source_validation_forwards": 0,
+      "source_validation_logit_identity": "NOT_RUN",
+      "source_validation_scoring_rows": 16704,
+      "synthetic_logit_identity": "PASS"
+    },
+    {
+      "approved_total_hours": 483,
+      "artifacts": {
+        "AUTHORIZATION483.json": {
+          "ref": "ai4s/programs/dsainet/research/cross_branch_summary_20261114/AUTHORIZATION483.json",
+          "sha256": "47c69eadf3f37e763e48dfd6ac73d6e0230d615d3a94887bef879615c34235c5"
+        },
+        "AUTHORIZATION483_UTC.json": {
+          "ref": "ai4s/programs/dsainet/research/cross_branch_summary_20261114/AUTHORIZATION483_UTC.json",
+          "sha256": "2e84250b5c211ab5b1f196d61890b6feafce35f9c3a07d6f95137abc3dd8dccd"
+        },
+        "recompute.py": {
+          "ref": "ai4s/programs/dsainet/research/cross_branch_summary_20261114/recompute.py",
+          "sha256": "8a6c40bb9c434ecbcfbedc78540100b22c584de882532e2cc03a1186c9bd0ff4"
+        },
+        "run_budget483.py": {
+          "ref": "ai4s/programs/dsainet/research/cross_branch_summary_20261114/run_budget483.py",
+          "sha256": "1a401493bad956eddc84f04519989adee1d361946eb6c1430b92030c4a78b7e5"
+        },
+        "validation_budget483/REPORT.md": {
+          "ref": "ai4s/programs/dsainet/research/cross_branch_summary_20261114/validation_budget483/REPORT.md",
+          "sha256": "df9619b10b738e0f0cd6a9ea23a23c1aabb4b00548f17873bd9389aa64d4d85d"
+        },
+        "validation_budget483/SEALED_RESULT.json": {
+          "ref": "ai4s/programs/dsainet/research/cross_branch_summary_20261114/validation_budget483/SEALED_RESULT.json",
+          "sha256": "19c9c33d409a29d6eeae1f7f8f33750936f958122b303d4bdbba5b7edbcc9571"
+        },
+        "validation_budget483/TECH.json": {
+          "ref": "ai4s/programs/dsainet/research/cross_branch_summary_20261114/validation_budget483/TECH.json",
+          "sha256": "f9afae3d5d42d8638e4eeb864775cd9acc179b4878e1650ba2f9f276abd41066"
+        },
+        "validation_budget483/VERIFIED_RESULTS.json": {
+          "ref": "ai4s/programs/dsainet/research/cross_branch_summary_20261114/validation_budget483/VERIFIED_RESULTS.json",
+          "sha256": "da6692f4096b075b5a01194b2c6b0a33e731ba8bc41bb4325acd95b03200a020"
+        }
+      },
+      "chain_id": "dsainet-transaction-v3.4",
+      "date": "2026-11-14",
+      "decision": "STOP_STAGE_A",
+      "direction_id": "DSAINET-CROSS-BRANCH-SHARED-MESSAGE-ZERO-TRAINING-STOP-20261114",
+      "fits": 0,
+      "judgment_change": "Mean broadcast met the native retention and individual-risk gates. Compared with zero messages, its ACC increased and raw NLL worsened in both seeds, failing the frozen utility conditions.",
+      "native_logit_identity": "PASS_EXACT",
+      "next_contrast": null,
+      "role": "verified_frozen_source_development_screen",
+      "source_evidence_ids": [
+        "DSAINET-CROSS-BRANCH-SHARED-MESSAGE-SCREEN-DESIGN-20261114",
+        "DSAINET-CROSS-BRANCH-SHARED-MESSAGE-SOURCE-QUALIFICATION-20261114"
+      ],
+      "source_validation_rows": 16704,
+      "stage_b_executed": false,
+      "target_forwards": 0,
+      "training": 0
+    },
+    {
+      "artifacts": {
+        "research_brief.md": {
+          "ref": "ai4s/programs/dsainet/research/compositional_mi_20261116/research_brief.md",
+          "sha256": "b7d2704a4d10ffb9af1c0a22fa3a79a0a24df2b3d6506bbce4c2801c86be3059"
+        }
+      },
+      "candidate_selected_for_training": false,
+      "chain_id": "dsainet-transaction-v3.4",
+      "date": "2026-11-16",
+      "decision": "RETAIN_COMPOSITIONAL_MI_FOR_DATA_QUALIFICATION_ONLY",
+      "design_change": "Join three anatomical-part predictions within the same localized EEG window before temporal pooling. Hold features, part heads and trial support fixed across readouts.",
+      "direction_id": "DSAINET-COMPOSITIONAL-MI-STRUCTURE-SCREEN-20261116",
+      "external_review_status": "not_performed",
+      "judgment_change": "Fixed-window message and timing changes remain closed at their tested scope. Compositional MI presents a distinct question with identifiable first- and second-order alternatives. Readily verifiable sources did not qualify trial-level factorial MI data with adequate cue separation.",
+      "new_experiment_started": false,
+      "next_contrast": "If trial data qualify, test the unseen real three-part state against pooled independent marginals and a pairwise maximum-entropy readout on the same trials. Use a matched simple time-frequency encoder to test DSAINet-specific utility.",
+      "public_trial_data_qualified": false,
+      "role": "bounded_structure_screen_and_primary_data_metadata_check",
+      "source_evidence_ids": [
+        "DS-BASELINE-MAP-2026-08-26",
+        "RACR-R5-2026-08-24",
+        "DSAINET-INTER-WINDOW-BUDGET411-RESULT-20261110",
+        "DSAINET-WITHIN-AVG4-ORDER-SOLVERFIX1-RESULT-20261112",
+        "DSAINET-SUBWINDOW-QUERY-WORKERFIX1-RESULT-20261112",
+        "DSAINET-BETA-VALLEY-AUDITFIX1-CLOSEOUT-20261114",
+        "DSAINET-CROSS-BRANCH-SHARED-MESSAGE-ZERO-TRAINING-STOP-20261114"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v3.4",
+      "date": "2026-11-17",
+      "decision": "RETAIN_AND_PAUSE",
+      "direction_id": "DSAINET-COMPOSITIONAL-MI-USER-PAUSE-20261117",
+      "judgment_change": "User retained the compositional motor-imagery direction and paused advancement at data qualification.",
+      "new_experiment_started": false,
+      "next_contrast": null,
+      "public_trial_data_qualified": false,
+      "resumption_condition": "Explicit user instruction to resume; restart at data qualification.",
+      "role": "user_direction_disposition",
+      "source_evidence_ids": [
+        "DSAINET-COMPOSITIONAL-MI-STRUCTURE-SCREEN-20261116"
+      ]
     }
   ],
   "engineering_preparations": [

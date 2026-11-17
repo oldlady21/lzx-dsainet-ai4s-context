@@ -4,10 +4,10 @@
 
 历史 staging、Run 或机器载荷若在本地缺失，查 [外盘归档资产指南](../docs/ASSET_ARCHIVE.md) 和精确归档索引；五个 Program 均有历史资产迁移。旧结构路径仍先按 `archive/PATH_MAP.json` 解析。资产恢复不改变 State、Evidence Index、冻结合同或实验授权。
 
-| Program | v3.4 项目提示词（生效以索引为准） | 当前状态入口 |
+| Program | 项目提示词（生效以索引为准） | 当前状态入口 |
 |---|---|---|
 | MVCNet | `programs/mvcnet/PROJECT_PROMPT_v3.4.md` | `programs/mvcnet/research/STATE.yaml` |
-| DSAINet | `programs/dsainet/PROJECT_PROMPT_v3.4.md` | `programs/dsainet/research/STATE.yaml` |
+| DSAINet | `programs/dsainet/PROJECT_PROMPT_v4.0.md` | `programs/dsainet/research/STATE.yaml` |
 | OTA | `programs/ota/PROJECT_PROMPT_v3.4.md` | `programs/ota/research/STATE.yaml` |
 | DBConformer | `programs/dbconformer/PROJECT_PROMPT_v3.4.md` | `programs/dbconformer/research/STATE.yaml` |
 | SST-DPN | `programs/sstdpn/PROJECT_PROMPT_v3.4.md` | `programs/sstdpn/research/STATE.yaml` |
@@ -32,7 +32,7 @@ MVCNet 和 DSAINet 均已接入 Transaction v2。接入不启动实验；当前�
 
 ## 正式评估与版本激活
 
-五个 Program 的新工作默认链已激活 v3.4。既有 campaign、冻结 Run 和执行授权沿用原绑定。见[激活验收](_work/prompt_v34_implementation_20261111/ACTIVATION.md)。
+2026-11-17：DSAINet 的新工作默认链已激活 v4.0，其余 Program 当前为 v3.4。既有 campaign、冻结 Run 和执行授权沿用原绑定。见 [v4.0 离线验收](_work/prompt_v4_design_20261116/REPORT.md)与 [v3.4 激活验收](_work/prompt_v34_implementation_20261111/ACTIVATION.md)。
 
 2026-10-29：L1/L2 与五 Program L3 v3.3 已交付。MVCNet、DSAINet、SST-DPN 的新工作链已激活；OTA 后经用户明确授权、旧 SPAR 本地完整性复核与历史收尾，亦已激活 v3.3，继续暂停。DBConformer 在 SBN-R1 收尾后，依用户明确指令完成空闲边界检查并激活 v3.3，继续暂停，本轮仅下一方向设计。旧工作、合同及预算保持原绑定，没有新实验授权。当前详情以 Prompt Index 和 State 为准；[初始实施与验收](_work/prompt_v33_implementation_20261029/REPORT.md)、[OTA 后续激活](_work/ota_v33_activation_20261029/REPORT.md)、[DBConformer 接入与研究设计](programs/dbconformer/research/reassessment_v33_20261029/research_brief.md)。
 
