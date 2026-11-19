@@ -1,5 +1,7 @@
 # PAPER.md
 
+2026-11-17 BNCI2014002 已具备独立比较的数据和划分。14 人、15 路 EEG、右手/双脚二分类，统一为 cue 后 4 秒、250 Hz。CO 衡量同 session 的无反馈校准到有反馈阶段泛化。当前仅作为[评估设置](experiments/BNCI2014002_EVALUATION_PROTOCOL.md)登记，尚无性能结果。
+
 2026-10-09用户确认：DSAINet/Zhou2016按现有20/20全量结果归档并纳入独立paper-aligned本地补充基线，ACC75.4423%、Weighted-F1 74.5420%；原文差−2.77/−3.31pp及外审WARN保留。只读诊断定位S3左手失分，确认RNG/loader执行差异，但差距因果未闭环。当前工作关闭，不启动追平实验，不进入BNCI UEP主表、不声称精确复现或优势；原归档不改，见[诊断及用户确认](results/archives/mieeg-zhou2016-loso-v1/dsainet/diagnosis_20261009/README.md)。
 
 

@@ -95,9 +95,9 @@
 
 `[Analysis]` DSAINet 的核心位置不是“发明多尺度”或“首次把注意力用于 EEG”，而是把三件事组合成一个紧凑合同：共享词元化、显式细/粗时间支路、分层次的尺度内/尺度间注意力。论文证据更适合支持这一系统组合的经验有效性，不足以把其中任一概念单独声明为新颖。
 
-![Figure 1：DSAINet 与代表性 CNN-Transformer 混合架构的结构对照](<./refs/paper-cards/dsainet/assets/fig-01-architecture.png>)
+![Figure 1：DSAINet 与代表性 CNN-Transformer 混合架构的结构对照](<assets/fig-01-architecture.png>)
 
-[打开原图，放大查看](<./refs/paper-cards/dsainet/assets/fig-01-architecture.png>)
+[打开原图，放大查看](<assets/fig-01-architecture.png>)
 
 *Figure 1｜作者给出的结构对照。该图用于理解 DSAINet 的职责拆分，不构成外部新颖性验证。[Paper: PDF p. 2, Fig. 1]*
 
@@ -137,8 +137,8 @@
 
 ### 输入与输出
 
-- `[Paper]` 输入：单试次 EEG，$X\in\mathbb{R}^{C\times T}$，其中 $C$ 为通道数，$T$ 为时间采样点。[Paper: PDF p. 3, Eq. 1]
-- `[Paper]` 输出：类别 logits $\hat y$，由两个池化分支表示拼接后线性分类得到。[Paper: PDF p. 5, Eq. 19]
+- `[Paper]` 输入：单试次 EEG，<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mrow><mi>C</mi><mo>×</mo><mi>T</mi></mrow></msup></mrow><annotation encoding="application/x-tex">X\in\mathbb{R}^{C\times T}</annotation></semantics></math>，其中 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math> 为通道数，<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math> 为时间采样点。[Paper: PDF p. 3, Eq. 1]
+- `[Paper]` 输出：类别 logits <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mi>y</mi><mo>^</mo></mover></mrow><annotation encoding="application/x-tex">\hat y</annotation></semantics></math>，由两个池化分支表示拼接后线性分类得到。[Paper: PDF p. 5, Eq. 19]
 
 ### 数据流
 
@@ -159,16 +159,16 @@ EEG X (C × T)
 
 [Paper: PDF pp. 3-5, Fig. 2, Eq. 1-19]
 
-![Figure 2：DSAINet 完整架构与数据流](<./refs/paper-cards/dsainet/assets/fig-02-overall-architecture.png>)
+![Figure 2：DSAINet 完整架构与数据流](<assets/fig-02-overall-architecture.png>)
 
-[打开原图，放大查看](<./refs/paper-cards/dsainet/assets/fig-02-overall-architecture.png>)
+[打开原图，放大查看](<assets/fig-02-overall-architecture.png>)
 
 *Figure 2｜共享时空词元化 → 细/粗时间卷积 → 分支内细化 → 分支间交互 → 自适应聚合与分类。该图是理解方法调用链的主图。[Paper: PDF p. 4, Fig. 2]*
 
 ### 训练与实现合同
 
-- `[Paper]` 固定架构设置：embedding dimension $d=40$，4 个 attention heads；tokenizer 的 $f_1=16$，时间核 64/16，depth multiplier $D=2$，pooling 4/8；细支路核 3/7，粗支路核 11/15；卷积 expansion ratio 4，FFN expansion ratio 2，dropout 0.25。[Paper: PDF p. 7, Sec. IV-D]
-- `[Paper]` 优化：Adam，weight decay $10^{-4}$；batch size、learning rate 和 epochs 按数据集改变，详见 Table II。[Paper: PDF p. 7, Table II]
+- `[Paper]` 固定架构设置：embedding dimension <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mn>40</mn></mrow><annotation encoding="application/x-tex">d=40</annotation></semantics></math>，4 个 attention heads；tokenizer 的 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>=</mo><mn>16</mn></mrow><annotation encoding="application/x-tex">f_1=16</annotation></semantics></math>，时间核 64/16，depth multiplier <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">D=2</annotation></semantics></math>，pooling 4/8；细支路核 3/7，粗支路核 11/15；卷积 expansion ratio 4，FFN expansion ratio 2，dropout 0.25。[Paper: PDF p. 7, Sec. IV-D]
+- `[Paper]` 优化：Adam，weight decay <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>10</mn><mrow><mo>−</mo><mn>4</mn></mrow></msup></mrow><annotation encoding="application/x-tex">10^{-4}</annotation></semantics></math>；batch size、learning rate 和 epochs 按数据集改变，详见 Table II。[Paper: PDF p. 7, Table II]
 - `[Paper]` 计算环境：8× NVIDIA GeForce RTX 4090。[Paper: PDF p. 7, Sec. IV-D]
 - `[Paper]` 反馈环：标准监督分类训练；论文未描述在线反馈、自适应部署或跨任务联合训练。
 
@@ -184,12 +184,12 @@ EEG X (C × T)
 
 | 模块 | 功能 | 为什么需要 | 输入与输出 | 支持证据 | 移除后的已测效果 |
 |---|---|---|---|---|---|
-| Shared Spatiotemporal Tokenization | 从原始 EEG 形成紧凑共享词元 | 统一不同通道数/时长输入到共同 token 表示 | $X:C\times T\rightarrow Z_0:N\times d$ | 方法定义；未单独整体移除 [Paper: PDF p. 3, Eq. 1-5] | 仅测去 positional embedding：2a 61.79→59.76，2b 76.41→75.71，ADFTD 59.65→57.06 [Paper: PDF p. 8, Table V] |
-| Fine/Coarse-Scale Temporal Convolution | 以不同 kernel 捕获局部与更宽时间上下文 | 避免只依赖单一时间范围 | $Z_0\rightarrow Z_f,Z_c$ | 单支路消融 [Paper: PDF pp. 3-4, Eq. 6-10; p. 8, Table V] | 仅细支：59.82/75.94/58.57；仅粗支：60.19/75.74/57.84，均低于完整模型 61.79/76.41/59.65；只支持三项任务中的组合优势 |
-| Intra-Branch Attentive Refinement | 同尺度内部自注意力细化 | 强化每支内的 salient token relation | $Z_b\rightarrow Z_b^{ref}$ | 去分支内注意力消融 [Paper: PDF p. 4, Eq. 11-12; p. 8, Table V] | 2a/2b/ADFTD 为 60.07/75.49/58.97 |
-| Inter-Branch Attentive Interaction | 细↔粗双向 cross-attention | 交换不同时间尺度上下文 | $(Z_f,Z_c)\rightarrow(Z'_f,Z'_c)$ | 去分支间注意力与去全部 interaction 消融 [Paper: PDF pp. 4-5, Eq. 13-16; p. 8, Table V] | 去 inter：60.14/75.56/57.65；去全部 attentive interaction：59.36/75.90/57.62 |
-| Adaptive Token Aggregation | 学习 token 权重并池化 | 避免把所有 token 展平到重分类头，也避免等权平均 | $Z'_b\rightarrow p_b\in\mathbb{R}^d$ | 与平均池化比较 [Paper: PDF p. 5, Eq. 17-18; p. 8, Table V] | 59.82/75.58/56.92；ADFTD 降幅最大 2.73 pp |
-| Linear classifier | 拼接两个分支向量并分类 | 以紧凑 readout 输出 logits | $[p_f\Vert p_c]\rightarrow\hat y$ | 无独立 head 对照 [Paper: PDF p. 5, Eq. 19] | Not assessable；没有 matched-parameter nonlinear readout 对照 |
+| Shared Spatiotemporal Tokenization | 从原始 EEG 形成紧凑共享词元 | 统一不同通道数/时长输入到共同 token 表示 | <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>:</mo><mi>C</mi><mo>×</mo><mi>T</mi><mo>→</mo><msub><mi>Z</mi><mn>0</mn></msub><mo>:</mo><mi>N</mi><mo>×</mo><mi>d</mi></mrow><annotation encoding="application/x-tex">X:C\times T\rightarrow Z_0:N\times d</annotation></semantics></math> | 方法定义；未单独整体移除 [Paper: PDF p. 3, Eq. 1-5] | 仅测去 positional embedding：2a 61.79→59.76，2b 76.41→75.71，ADFTD 59.65→57.06 [Paper: PDF p. 8, Table V] |
+| Fine/Coarse-Scale Temporal Convolution | 以不同 kernel 捕获局部与更宽时间上下文 | 避免只依赖单一时间范围 | <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Z</mi><mn>0</mn></msub><mo>→</mo><msub><mi>Z</mi><mi>f</mi></msub><mo separator="true">,</mo><msub><mi>Z</mi><mi>c</mi></msub></mrow><annotation encoding="application/x-tex">Z_0\rightarrow Z_f,Z_c</annotation></semantics></math> | 单支路消融 [Paper: PDF pp. 3-4, Eq. 6-10; p. 8, Table V] | 仅细支：59.82/75.94/58.57；仅粗支：60.19/75.74/57.84，均低于完整模型 61.79/76.41/59.65；只支持三项任务中的组合优势 |
+| Intra-Branch Attentive Refinement | 同尺度内部自注意力细化 | 强化每支内的 salient token relation | <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Z</mi><mi>b</mi></msub><mo>→</mo><msubsup><mi>Z</mi><mi>b</mi><mrow><mi>r</mi><mi>e</mi><mi>f</mi></mrow></msubsup></mrow><annotation encoding="application/x-tex">Z_b\rightarrow Z_b^{ref}</annotation></semantics></math> | 去分支内注意力消融 [Paper: PDF p. 4, Eq. 11-12; p. 8, Table V] | 2a/2b/ADFTD 为 60.07/75.49/58.97 |
+| Inter-Branch Attentive Interaction | 细↔粗双向 cross-attention | 交换不同时间尺度上下文 | <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><msub><mi>Z</mi><mi>f</mi></msub><mo separator="true">,</mo><msub><mi>Z</mi><mi>c</mi></msub><mo stretchy="false">)</mo><mo>→</mo><mo stretchy="false">(</mo><msubsup><mi>Z</mi><mi>f</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msubsup><mo separator="true">,</mo><msubsup><mi>Z</mi><mi>c</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msubsup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(Z_f,Z_c)\rightarrow(Z&#x27;_f,Z&#x27;_c)</annotation></semantics></math> | 去分支间注意力与去全部 interaction 消融 [Paper: PDF pp. 4-5, Eq. 13-16; p. 8, Table V] | 去 inter：60.14/75.56/57.65；去全部 attentive interaction：59.36/75.90/57.62 |
+| Adaptive Token Aggregation | 学习 token 权重并池化 | 避免把所有 token 展平到重分类头，也避免等权平均 | <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>Z</mi><mi>b</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msubsup><mo>→</mo><msub><mi>p</mi><mi>b</mi></msub><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mi>d</mi></msup></mrow><annotation encoding="application/x-tex">Z&#x27;_b\rightarrow p_b\in\mathbb{R}^d</annotation></semantics></math> | 与平均池化比较 [Paper: PDF p. 5, Eq. 17-18; p. 8, Table V] | 59.82/75.58/56.92；ADFTD 降幅最大 2.73 pp |
+| Linear classifier | 拼接两个分支向量并分类 | 以紧凑 readout 输出 logits | <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><msub><mi>p</mi><mi>f</mi></msub><mi mathvariant="normal">∥</mi><msub><mi>p</mi><mi>c</mi></msub><mo stretchy="false">]</mo><mo>→</mo><mover accent="true"><mi>y</mi><mo>^</mo></mover></mrow><annotation encoding="application/x-tex">[p_f\Vert p_c]\rightarrow\hat y</annotation></semantics></math> | 无独立 head 对照 [Paper: PDF p. 5, Eq. 19] | Not assessable；没有 matched-parameter nonlinear readout 对照 |
 
 `[Analysis]` Table V 是删减式组合消融。它表明列出的完整组合在三个数据集上优于相应删减版本，但没有证明每个模块在所有十个数据集上都必要，也没有把“模块预期功能”与“其实际实现的功能机制”完全隔离。
 
@@ -199,28 +199,20 @@ EEG X (C × T)
 
 ### 9.1 共享词元化
 
-$$
-X\in\mathbb{R}^{C\times T},\qquad
-F=\Phi_{tok}(X)\in\mathbb{R}^{f_2\times1\times N}
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>X</mi><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mrow><mi>C</mi><mo>×</mo><mi>T</mi></mrow></msup><mo separator="true">,</mo><mspace width="2em"/><mi>F</mi><mo>=</mo><msub><mi mathvariant="normal">Φ</mi><mrow><mi>t</mi><mi>o</mi><mi>k</mi></mrow></msub><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mrow><msub><mi>f</mi><mn>2</mn></msub><mo>×</mo><mn>1</mn><mo>×</mo><mi>N</mi></mrow></msup></mrow><annotation encoding="application/x-tex">X\in\mathbb{R}^{C\times T},\qquad F=\Phi_{tok}(X)\in\mathbb{R}^{f_2\times1\times N}</annotation></semantics></math>
 
-$$
-\tilde Z=\operatorname{Transpose}(\operatorname{Squeeze}(F))\in\mathbb{R}^{N\times f_2},
-\qquad Z^{(0)}=P(\tilde Z)\in\mathbb{R}^{N\times d}
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mover accent="true"><mi>Z</mi><mo>~</mo></mover><mo>=</mo><mi mathvariant="normal">Transpose</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi mathvariant="normal">Squeeze</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mrow><mi>N</mi><mo>×</mo><msub><mi>f</mi><mn>2</mn></msub></mrow></msup><mo separator="true">,</mo><mspace width="2em"/><msup><mi>Z</mi><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></msup><mo>=</mo><mi>P</mi><mo stretchy="false">(</mo><mover accent="true"><mi>Z</mi><mo>~</mo></mover><mo stretchy="false">)</mo><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mrow><mi>N</mi><mo>×</mo><mi>d</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\tilde Z=\operatorname{Transpose}(\operatorname{Squeeze}(F))\in\mathbb{R}^{N\times f_2}, \qquad Z^{(0)}=P(\tilde Z)\in\mathbb{R}^{N\times d}</annotation></semantics></math>
 
-- $C,T,N,d$：通道数、采样点数、token 数、embedding dimension。
+- <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo separator="true">,</mo><mi>T</mi><mo separator="true">,</mo><mi>N</mi><mo separator="true">,</mo><mi>d</mi></mrow><annotation encoding="application/x-tex">C,T,N,d</annotation></semantics></math>：通道数、采样点数、token 数、embedding dimension。
 - 目的：把不同通道数的 EEG 转为统一 token 序列。
 - 直觉：先做局部时间滤波与全通道空间混合，再让后续双时间分支共享同一输入基底。
 - 来源：[Paper: PDF p. 3, Eq. 1-5]
 
 ### 9.2 轻量时间卷积残差
 
-$$
-H_b^{(\ell)}=H_b^{(\ell-1)}+\alpha_b^{(\ell)}\tilde H_b^{(\ell)},\qquad b\in\{f,c\}
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msubsup><mi>H</mi><mi>b</mi><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">ℓ</mi><mo stretchy="false">)</mo></mrow></msubsup><mo>=</mo><msubsup><mi>H</mi><mi>b</mi><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">ℓ</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msubsup><mo>+</mo><msubsup><mi>α</mi><mi>b</mi><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">ℓ</mi><mo stretchy="false">)</mo></mrow></msubsup><msubsup><mover accent="true"><mi>H</mi><mo>~</mo></mover><mi>b</mi><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">ℓ</mi><mo stretchy="false">)</mo></mrow></msubsup><mo separator="true">,</mo><mspace width="2em"/><mi>b</mi><mo>∈</mo><mo stretchy="false">{</mo><mi>f</mi><mo separator="true">,</mo><mi>c</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">H_b^{(\ell)}=H_b^{(\ell-1)}+\alpha_b^{(\ell)}\tilde H_b^{(\ell)},\qquad b\in\{f,c\}</annotation></semantics></math>
 
-其中 $\tilde H_b^{(\ell)}$ 由 depthwise temporal convolution、grouped pointwise expansion/projection、GELU 和 BN 组成；$\alpha_b^{(\ell)}$ 是可学习残差缩放。
+其中 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mover accent="true"><mi>H</mi><mo>~</mo></mover><mi>b</mi><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">ℓ</mi><mo stretchy="false">)</mo></mrow></msubsup></mrow><annotation encoding="application/x-tex">\tilde H_b^{(\ell)}</annotation></semantics></math> 由 depthwise temporal convolution、grouped pointwise expansion/projection、GELU 和 BN 组成；<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>α</mi><mi>b</mi><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">ℓ</mi><mo stretchy="false">)</mo></mrow></msubsup></mrow><annotation encoding="application/x-tex">\alpha_b^{(\ell)}</annotation></semantics></math> 是可学习残差缩放。
 
 - 目的：以低成本堆叠不同 kernel 的时间变换。
 - 直觉：每层学习一个受标量门控的时间残差，而不是重写整支表示。
@@ -228,46 +220,32 @@ $$
 
 ### 9.3 分支内自注意力
 
-$$
-\bar Z_b^{(m)}=\operatorname{LN}\bigl(Z_b^{(m-1)}+
-\operatorname{MHA}(Z_b^{(m-1)},Z_b^{(m-1)},Z_b^{(m-1)})\bigr)
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msubsup><mover accent="true"><mi>Z</mi><mo>ˉ</mo></mover><mi>b</mi><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></msubsup><mo>=</mo><mi mathvariant="normal">LN</mi><mo>⁡</mo><mo fence="true" stretchy="true" minsize="1.2em" maxsize="1.2em">(</mo><msubsup><mi>Z</mi><mi>b</mi><mrow><mo stretchy="false">(</mo><mi>m</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msubsup><mo>+</mo><mi mathvariant="normal">MHA</mi><mo>⁡</mo><mo stretchy="false">(</mo><msubsup><mi>Z</mi><mi>b</mi><mrow><mo stretchy="false">(</mo><mi>m</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msubsup><mo separator="true">,</mo><msubsup><mi>Z</mi><mi>b</mi><mrow><mo stretchy="false">(</mo><mi>m</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msubsup><mo separator="true">,</mo><msubsup><mi>Z</mi><mi>b</mi><mrow><mo stretchy="false">(</mo><mi>m</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msubsup><mo stretchy="false">)</mo><mo fence="true" stretchy="true" minsize="1.2em" maxsize="1.2em">)</mo></mrow><annotation encoding="application/x-tex">\bar Z_b^{(m)}=\operatorname{LN}\bigl(Z_b^{(m-1)}+ \operatorname{MHA}(Z_b^{(m-1)},Z_b^{(m-1)},Z_b^{(m-1)})\bigr)</annotation></semantics></math>
 
-$$
-Z_b^{(m)}=\operatorname{LN}\bigl(\bar Z_b^{(m)}+\operatorname{FFN}(\bar Z_b^{(m)})\bigr)
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msubsup><mi>Z</mi><mi>b</mi><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></msubsup><mo>=</mo><mi mathvariant="normal">LN</mi><mo>⁡</mo><mo fence="true" stretchy="true" minsize="1.2em" maxsize="1.2em">(</mo><msubsup><mover accent="true"><mi>Z</mi><mo>ˉ</mo></mover><mi>b</mi><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></msubsup><mo>+</mo><mi mathvariant="normal">FFN</mi><mo>⁡</mo><mo stretchy="false">(</mo><msubsup><mover accent="true"><mi>Z</mi><mo>ˉ</mo></mover><mi>b</mi><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></msubsup><mo stretchy="false">)</mo><mo fence="true" stretchy="true" minsize="1.2em" maxsize="1.2em">)</mo></mrow><annotation encoding="application/x-tex">Z_b^{(m)}=\operatorname{LN}\bigl(\bar Z_b^{(m)}+\operatorname{FFN}(\bar Z_b^{(m)})\bigr)</annotation></semantics></math>
 
 - 目的：在已形成的单一尺度内细化 token 关系。
 - 来源：[Paper: PDF p. 4, Eq. 11-12]
 
 ### 9.4 双向跨分支交互
 
-$$
-\bar Z_f=\operatorname{LN}\bigl(Z_f+\beta_1\operatorname{MHA}(Z_f,Z_c,Z_c)\bigr)
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mover accent="true"><mi>Z</mi><mo>ˉ</mo></mover><mi>f</mi></msub><mo>=</mo><mi mathvariant="normal">LN</mi><mo>⁡</mo><mo fence="true" stretchy="true" minsize="1.2em" maxsize="1.2em">(</mo><msub><mi>Z</mi><mi>f</mi></msub><mo>+</mo><msub><mi>β</mi><mn>1</mn></msub><mi mathvariant="normal">MHA</mi><mo>⁡</mo><mo stretchy="false">(</mo><msub><mi>Z</mi><mi>f</mi></msub><mo separator="true">,</mo><msub><mi>Z</mi><mi>c</mi></msub><mo separator="true">,</mo><msub><mi>Z</mi><mi>c</mi></msub><mo stretchy="false">)</mo><mo fence="true" stretchy="true" minsize="1.2em" maxsize="1.2em">)</mo></mrow><annotation encoding="application/x-tex">\bar Z_f=\operatorname{LN}\bigl(Z_f+\beta_1\operatorname{MHA}(Z_f,Z_c,Z_c)\bigr)</annotation></semantics></math>
 
-$$
-\bar Z_c=\operatorname{LN}\bigl(Z_c+\beta_2\operatorname{MHA}(Z_c,Z_f,Z_f)\bigr)
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mover accent="true"><mi>Z</mi><mo>ˉ</mo></mover><mi>c</mi></msub><mo>=</mo><mi mathvariant="normal">LN</mi><mo>⁡</mo><mo fence="true" stretchy="true" minsize="1.2em" maxsize="1.2em">(</mo><msub><mi>Z</mi><mi>c</mi></msub><mo>+</mo><msub><mi>β</mi><mn>2</mn></msub><mi mathvariant="normal">MHA</mi><mo>⁡</mo><mo stretchy="false">(</mo><msub><mi>Z</mi><mi>c</mi></msub><mo separator="true">,</mo><msub><mi>Z</mi><mi>f</mi></msub><mo separator="true">,</mo><msub><mi>Z</mi><mi>f</mi></msub><mo stretchy="false">)</mo><mo fence="true" stretchy="true" minsize="1.2em" maxsize="1.2em">)</mo></mrow><annotation encoding="application/x-tex">\bar Z_c=\operatorname{LN}\bigl(Z_c+\beta_2\operatorname{MHA}(Z_c,Z_f,Z_f)\bigr)</annotation></semantics></math>
 
-- $\beta_1,\beta_2$：两个交互方向的可学习强度。
+- <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>β</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>β</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\beta_1,\beta_2</annotation></semantics></math>：两个交互方向的可学习强度。
 - 目的：让 fine query 吸收 coarse context，同时让 coarse query 吸收 fine detail。
 - 直觉：两个方向共享“交互范式”，但 query 与 key/value 的角色相反。
 - 来源：[Paper: PDF pp. 4-5, Eq. 13-16]
 
 ### 9.5 自适应词元聚合与分类
 
-$$
-w_{b,n}=\frac{\exp(q^\top z_{b,n})}{\sum_{j=1}^{N}\exp(q^\top z_{b,j})},
-\qquad p_b=\sum_{n=1}^{N}w_{b,n}z_{b,n}
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>w</mi><mrow><mi>b</mi><mo separator="true">,</mo><mi>n</mi></mrow></msub><mo>=</mo><mfrac><mrow><mi>exp</mi><mo>⁡</mo><mo stretchy="false">(</mo><msup><mi>q</mi><mi mathvariant="normal">⊤</mi></msup><msub><mi>z</mi><mrow><mi>b</mi><mo separator="true">,</mo><mi>n</mi></mrow></msub><mo stretchy="false">)</mo></mrow><mrow><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><mi>exp</mi><mo>⁡</mo><mo stretchy="false">(</mo><msup><mi>q</mi><mi mathvariant="normal">⊤</mi></msup><msub><mi>z</mi><mrow><mi>b</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mfrac><mo separator="true">,</mo><mspace width="2em"/><msub><mi>p</mi><mi>b</mi></msub><mo>=</mo><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><msub><mi>w</mi><mrow><mi>b</mi><mo separator="true">,</mo><mi>n</mi></mrow></msub><msub><mi>z</mi><mrow><mi>b</mi><mo separator="true">,</mo><mi>n</mi></mrow></msub></mrow><annotation encoding="application/x-tex">w_{b,n}=\frac{\exp(q^\top z_{b,n})}{\sum_{j=1}^{N}\exp(q^\top z_{b,j})}, \qquad p_b=\sum_{n=1}^{N}w_{b,n}z_{b,n}</annotation></semantics></math>
 
-$$
-\hat y=W_{cls}[p_f\Vert p_c]+b_{cls}
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mover accent="true"><mi>y</mi><mo>^</mo></mover><mo>=</mo><msub><mi>W</mi><mrow><mi>c</mi><mi>l</mi><mi>s</mi></mrow></msub><mo stretchy="false">[</mo><msub><mi>p</mi><mi>f</mi></msub><mi mathvariant="normal">∥</mi><msub><mi>p</mi><mi>c</mi></msub><mo stretchy="false">]</mo><mo>+</mo><msub><mi>b</mi><mrow><mi>c</mi><mi>l</mi><mi>s</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\hat y=W_{cls}[p_f\Vert p_c]+b_{cls}</annotation></semantics></math>
 
-- $q$：实现中两分支共享的可学习 token 打分向量。
-- 目的：把可变长度 token 序列压缩为两个 $d$ 维分支向量。
+- <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi></mrow><annotation encoding="application/x-tex">q</annotation></semantics></math>：实现中两分支共享的可学习 token 打分向量。
+- 目的：把可变长度 token 序列压缩为两个 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math> 维分支向量。
 - 来源：[Paper: PDF p. 5, Eq. 17-19]
 
 ### 9.6 编号公式覆盖索引
@@ -276,24 +254,24 @@ $$
 
 | 论文公式 | 作用 | 定位 |
 |---|---|---|
-| Equation 1 | 定义输入 $X\in\mathbb{R}^{C\times T}$ | [Paper: PDF p. 3, Equation 1] |
-| Equation 2 | tokenizer 输出特征 $F$ | [Paper: PDF p. 3, Equation 2] |
-| Equation 3 | squeeze + transpose 得到 token 序列 $\tilde Z$ | [Paper: PDF p. 3, Equation 3] |
-| Equation 4 | 投影到统一 embedding $Z^{(0)}$ | [Paper: PDF p. 3, Equation 4] |
-| Equation 5 | 缩放并加入 learnable positional encoding，得到 $Z_0$ | [Paper: PDF p. 3, Equation 5] |
-| Equation 6 | 转成 channel-first 的 $H_0=Z_0^\top$ | [Paper: PDF p. 3, Equation 6] |
-| Equation 7 | 定义 depthwise temporal + grouped pointwise 的分支变换 $\tilde H_b^{(\ell)}$ | [Paper: PDF p. 3, Equation 7] |
-| Equation 8 | 以 $\alpha_b^{(\ell)}$ 缩放的时间卷积残差更新 | [Paper: PDF p. 4, Equation 8] |
-| Equation 9 | 把两个时间分支恢复为 token form $Z_f,Z_c$ | [Paper: PDF p. 4, Equation 9] |
-| Equation 10 | 以 $\alpha_1,\alpha_2$ 把共享 token 回注入两分支 | [Paper: PDF p. 4, Equation 10] |
+| Equation 1 | 定义输入 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mrow><mi>C</mi><mo>×</mo><mi>T</mi></mrow></msup></mrow><annotation encoding="application/x-tex">X\in\mathbb{R}^{C\times T}</annotation></semantics></math> | [Paper: PDF p. 3, Equation 1] |
+| Equation 2 | tokenizer 输出特征 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi></mrow><annotation encoding="application/x-tex">F</annotation></semantics></math> | [Paper: PDF p. 3, Equation 2] |
+| Equation 3 | squeeze + transpose 得到 token 序列 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mi>Z</mi><mo>~</mo></mover></mrow><annotation encoding="application/x-tex">\tilde Z</annotation></semantics></math> | [Paper: PDF p. 3, Equation 3] |
+| Equation 4 | 投影到统一 embedding <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>Z</mi><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">Z^{(0)}</annotation></semantics></math> | [Paper: PDF p. 3, Equation 4] |
+| Equation 5 | 缩放并加入 learnable positional encoding，得到 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Z</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">Z_0</annotation></semantics></math> | [Paper: PDF p. 3, Equation 5] |
+| Equation 6 | 转成 channel-first 的 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub><mo>=</mo><msubsup><mi>Z</mi><mn>0</mn><mi mathvariant="normal">⊤</mi></msubsup></mrow><annotation encoding="application/x-tex">H_0=Z_0^\top</annotation></semantics></math> | [Paper: PDF p. 3, Equation 6] |
+| Equation 7 | 定义 depthwise temporal + grouped pointwise 的分支变换 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mover accent="true"><mi>H</mi><mo>~</mo></mover><mi>b</mi><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">ℓ</mi><mo stretchy="false">)</mo></mrow></msubsup></mrow><annotation encoding="application/x-tex">\tilde H_b^{(\ell)}</annotation></semantics></math> | [Paper: PDF p. 3, Equation 7] |
+| Equation 8 | 以 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>α</mi><mi>b</mi><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">ℓ</mi><mo stretchy="false">)</mo></mrow></msubsup></mrow><annotation encoding="application/x-tex">\alpha_b^{(\ell)}</annotation></semantics></math> 缩放的时间卷积残差更新 | [Paper: PDF p. 4, Equation 8] |
+| Equation 9 | 把两个时间分支恢复为 token form <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Z</mi><mi>f</mi></msub><mo separator="true">,</mo><msub><mi>Z</mi><mi>c</mi></msub></mrow><annotation encoding="application/x-tex">Z_f,Z_c</annotation></semantics></math> | [Paper: PDF p. 4, Equation 9] |
+| Equation 10 | 以 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>α</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>α</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\alpha_1,\alpha_2</annotation></semantics></math> 把共享 token 回注入两分支 | [Paper: PDF p. 4, Equation 10] |
 | Equation 11 | 分支内 MHA 残差与 layer normalization | [Paper: PDF p. 4, Equation 11] |
 | Equation 12 | 分支内 FFN 残差与 layer normalization | [Paper: PDF p. 4, Equation 12] |
 | Equation 13 | fine query 从 coarse key/value 吸收信息 | [Paper: PDF p. 4, Equation 13] |
 | Equation 14 | fine 方向 cross-attention 后的 FFN 更新 | [Paper: PDF p. 5, Equation 14] |
 | Equation 15 | coarse query 从 fine key/value 吸收信息 | [Paper: PDF p. 5, Equation 15] |
 | Equation 16 | coarse 方向 cross-attention 后的 FFN 更新 | [Paper: PDF p. 5, Equation 16] |
-| Equation 17 | softmax token 权重 $w_{b,n}$ | [Paper: PDF p. 5, Equation 17] |
-| Equation 18 | 加权池化分支向量 $p_b$ | [Paper: PDF p. 5, Equation 18] |
+| Equation 17 | softmax token 权重 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>w</mi><mrow><mi>b</mi><mo separator="true">,</mo><mi>n</mi></mrow></msub></mrow><annotation encoding="application/x-tex">w_{b,n}</annotation></semantics></math> | [Paper: PDF p. 5, Equation 17] |
+| Equation 18 | 加权池化分支向量 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mi>b</mi></msub></mrow><annotation encoding="application/x-tex">p_b</annotation></semantics></math> | [Paper: PDF p. 5, Equation 18] |
 | Equation 19 | 拼接两分支并线性分类 | [Paper: PDF p. 5, Equation 19] |
 | Equation 20 | ACC 定义 | [Paper: PDF p. 7, Equation 20] |
 | Equation 21 | weighted F1 定义 | [Paper: PDF p. 7, Equation 21] |
@@ -327,7 +305,7 @@ $$
 | 位置编码消融 | token order cue 有用 | 去 positional embedding，三项任务 | ACC 分别降低 2.03、0.70、2.59 pp | 在三项任务的当前实现中，位置编码与性能相关 | 位置编码在所有十项任务中必要；降幅只由 token order 机制导致 | [Paper: PDF p. 8, Table V] |
 | 双尺度分支消融 | 两支组合优于单支 | single fine / single coarse vs full | 三项任务中 full 均最高；2b 上 single fine 75.94 接近 full 76.41 | 组合在三项任务上提供小到中等增益 | 两支一定学习到固定的生理 fine/coarse 语义；两支在每个样本上互补 | [Paper: PDF pp. 8-9, Table V] |
 | 注意力消融 | 尺度内细化与尺度间交互有贡献 | 去全部 interaction、去 intra、去 inter | 三项任务均低于 full；降幅随数据集变化 | 这些模块在三项代表任务中具有组合效用 | 每个 attention map 的视觉结构就是效用来源；双向方向均独立必要 | [Paper: PDF pp. 8-9, Table V] |
-| 聚合消融 | 学习 token 权重优于均值池化 | adaptive aggregation vs average pooling | ADFTD 59.65→56.92，2a 61.79→59.82，2b 76.41→75.58 | 当前三项任务中自适应聚合优于简单均值 | 学到的权重是可靠时域解释；共享 $q$ 最优 | [Paper: PDF pp. 8-9, Table V] |
+| 聚合消融 | 学习 token 权重优于均值池化 | adaptive aggregation vs average pooling | ADFTD 59.65→56.92，2a 61.79→59.82，2b 76.41→75.58 | 当前三项任务中自适应聚合优于简单均值 | 学到的权重是可靠时域解释；共享 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi></mrow><annotation encoding="application/x-tex">q</annotation></semantics></math> 最优 | [Paper: PDF pp. 8-9, Table V] |
 | 架构深度敏感性 | 紧凑深度已足够 | temporal blocks 1-4；attention layers 0-3；四数据集 | 2 个 temporal blocks 和 1 个 attention layer整体最佳或近最佳 | 深度增加收益有限，支持紧凑选择 | 搜索覆盖全部重要超参数；该深度对所有十数据集最优 | [Paper: PDF p. 9, Fig. 3] |
 | segment length | 对切段长度不过度敏感 | 四个非 MI 数据集，多种时长 | 多数在中等窗口附近最佳；模式因数据集不同 | 在测试范围内性能对时长具有一定稳健性 | 任意切段策略都稳健；时长变化与样本数量变化已完全解耦 | [Paper: PDF p. 10, Fig. 4] |
 | 复杂度比较 | 准确率—效率折中有利 | PhysioNet-MI；MACs、parameters、ACC | 76.99K、73.67 MMACs、63.87% ACC；Deformer 2.60M、586.92 MMACs、63.37% | 离线静态复杂度和参数规模有利 | 实机低延迟、低功耗或高吞吐部署已验证 | [Paper: PDF p. 10, Fig. 5] |
@@ -349,21 +327,21 @@ $$
 
 ### 10.4 图形证据阅读
 
-![Figure 3：架构深度敏感性](<./refs/paper-cards/dsainet/assets/fig-03-hyperparameter-sensitivity.png>)
+![Figure 3：架构深度敏感性](<assets/fig-03-hyperparameter-sensitivity.png>)
 
-[打开原图，放大查看](<./refs/paper-cards/dsainet/assets/fig-03-hyperparameter-sensitivity.png>)
+[打开原图，放大查看](<assets/fig-03-hyperparameter-sensitivity.png>)
 
 *Figure 3｜两个 Temporal Convolution blocks 与一层 attention 在四个代表数据集上整体最佳或近最佳。它支持紧凑配置选择，但不是全部架构超参数的完整搜索。[Paper: PDF p. 9, Fig. 3]*
 
-![Figure 4：segment length 敏感性](<./refs/paper-cards/dsainet/assets/fig-04-segment-length.png>)
+![Figure 4：segment length 敏感性](<assets/fig-04-segment-length.png>)
 
-[打开原图，放大查看](<./refs/paper-cards/dsainet/assets/fig-04-segment-length.png>)
+[打开原图，放大查看](<assets/fig-04-segment-length.png>)
 
 *Figure 4｜不同任务对片段长度呈现不同曲线；中等窗口通常较稳健。长度变化同时改变时间上下文与样本构造，因此不能只解释为模型时间感受野变化。[Paper: PDF p. 10, Fig. 4]*
 
-![Figure 5：PhysioNet-MI 的准确率—效率比较](<./refs/paper-cards/dsainet/assets/fig-05-accuracy-efficiency.png>)
+![Figure 5：PhysioNet-MI 的准确率—效率比较](<assets/fig-05-accuracy-efficiency.png>)
 
-[打开原图，放大查看](<./refs/paper-cards/dsainet/assets/fig-05-accuracy-efficiency.png>)
+[打开原图，放大查看](<assets/fig-05-accuracy-efficiency.png>)
 
 *Figure 5｜横轴为静态 MACs、气泡为参数量。该图支持离线复杂度优势，不等同于目标设备上的 latency、memory 或 energy 证据。[Paper: PDF p. 10, Fig. 5]*
 
@@ -397,15 +375,15 @@ $$
 
 > 下列图像都是后验关联可视化。它们可以说明模型归因与任务相关脑区/时间结构相容，但不能单独证明真实神经生理机制、因果定位或 attention weight 等同 explanation。
 
-![Figure 6：八个代表数据集的平均显著性图](<./refs/paper-cards/dsainet/assets/fig-06-saliency-maps.png>)
+![Figure 6：八个代表数据集的平均显著性图](<assets/fig-06-saliency-maps.png>)
 
-[打开原图，放大查看](<./refs/paper-cards/dsainet/assets/fig-06-saliency-maps.png>)
+[打开原图，放大查看](<assets/fig-06-saliency-maps.png>)
 
 *Figure 6｜显著性分布随数据集变化，并与作者引用的任务相关脑区叙述相容；需要 deletion、shuffle 与随机化 sanity checks 才能提升机制解释强度。[Paper: PDF pp. 10-11, Fig. 6]*
 
-![Figure 7：分支内与分支间注意力模式](<./refs/paper-cards/dsainet/assets/fig-07-attention-patterns.png>)
+![Figure 7：分支内与分支间注意力模式](<assets/fig-07-attention-patterns.png>)
 
-[打开原图，放大查看](<./refs/paper-cards/dsainet/assets/fig-07-attention-patterns.png>)
+[打开原图，放大查看](<assets/fig-07-attention-patterns.png>)
 
 *Figure 7｜三数据集上的 intra/inter attention pattern 不同。图样支持“交互并非固定模板”的描述，但不直接隔离其 label utility 或两个方向的独立必要性。[Paper: PDF pp. 11-12, Fig. 7]*
 

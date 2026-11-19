@@ -1,8 +1,8 @@
 # lzx-dsainet-ai4s 讨论资料入口
 
 仓库：https://github.com/oldlady21/lzx-dsainet-ai4s-context
-导出时间（UTC）：2026-11-17T11:04:52.470422+00:00
-快照身份：`0498f97dd6563dc92d356656cf328066b2ad6b3514e06cd2b7ce4421d426b3c3`
+导出时间（UTC）：2026-11-19T15:16:23.633365+00:00
+快照身份：`1e81f4a604088074ae957d64fbcd24c8f799d24cf7da2ae3989c44f903b9b34f`
 
 这是本地已保存文件的公开讨论副本。来源与公开文件 SHA-256、脱敏计数、未公开引用见 [SYNC_MANIFEST.json](SYNC_MANIFEST.json)。
 机器字段已机械脱敏；保留原研究身份、冻结边界、预算、证据状态和历史。它不替代本地权威记录，不授予执行/恢复/改协议权限。
@@ -49,8 +49,6 @@
 - [ai4s/PROMPT_INDEX.yaml](<ai4s/PROMPT_INDEX.yaml>)
 - [ai4s/README.md](<ai4s/README.md>)
 - [ai4s/programs/dsainet/PROGRAM.yaml](<ai4s/programs/dsainet/PROGRAM.yaml>)
-- [ai4s/programs/dsainet/PROJECT_PROMPT_v3.3.md](<ai4s/programs/dsainet/PROJECT_PROMPT_v3.3.md>)
-- [ai4s/programs/dsainet/PROJECT_PROMPT_v3.4.md](<ai4s/programs/dsainet/PROJECT_PROMPT_v3.4.md>)
 - [ai4s/programs/dsainet/PROJECT_PROMPT_v4.0.md](<ai4s/programs/dsainet/PROJECT_PROMPT_v4.0.md>)
 - [ai4s/programs/dsainet/research/CLAIM_LEDGER.yaml](<ai4s/programs/dsainet/research/CLAIM_LEDGER.yaml>)
 - [ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md](<ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md>)
@@ -66,11 +64,7 @@
 - [ai4s/programs/dsainet/research/p0-ord-ec-r1/closeout_analysis/REPORT_ZH.md](<ai4s/programs/dsainet/research/p0-ord-ec-r1/closeout_analysis/REPORT_ZH.md>)
 - [ai4s/prompts/EVALUATION_EVIDENCE.md](<ai4s/prompts/EVALUATION_EVIDENCE.md>)
 - [ai4s/prompts/EXTERNAL_REVIEW.md](<ai4s/prompts/EXTERNAL_REVIEW.md>)
-- [ai4s/prompts/LEVEL1_RESEARCH_v3.3.md](<ai4s/prompts/LEVEL1_RESEARCH_v3.3.md>)
-- [ai4s/prompts/LEVEL1_RESEARCH_v3.4.md](<ai4s/prompts/LEVEL1_RESEARCH_v3.4.md>)
 - [ai4s/prompts/LEVEL1_RESEARCH_v4.0.md](<ai4s/prompts/LEVEL1_RESEARCH_v4.0.md>)
-- [ai4s/prompts/LEVEL2_EXECUTION_v3.3.md](<ai4s/prompts/LEVEL2_EXECUTION_v3.3.md>)
-- [ai4s/prompts/LEVEL2_EXECUTION_v3.4.md](<ai4s/prompts/LEVEL2_EXECUTION_v3.4.md>)
 - [ai4s/prompts/LEVEL2_EXECUTION_v4.0.md](<ai4s/prompts/LEVEL2_EXECUTION_v4.0.md>)
 - [ai4s/prompts/MIEEG_AI4S_SKILL_ROUTER.md](<ai4s/prompts/MIEEG_AI4S_SKILL_ROUTER.md>)
 - [ai4s/prompts/TRANSACTION_RUNTIME.md](<ai4s/prompts/TRANSACTION_RUNTIME.md>)

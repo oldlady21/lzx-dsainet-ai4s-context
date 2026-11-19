@@ -1,5 +1,9 @@
 # DECISIONS.md
 
+## 2026-11-17 BNCI2014002 独立统一评估协议
+
+用户确认按 `mieeg-uep-bnci2014002-v1` 接入全量 2,240 试次。CO 固定 T→E，CV 和 LOSO 使用 T+E。预处理统一为 cue 后 `[0,4)`、0.5–40 Hz、250 Hz。数据准备和划分验收已完成，本轮停在训练前。见[协议与验收](experiments/BNCI2014002_EVALUATION_PROTOCOL.md)。
+
 ## 2026-10-09 DSAINet/Zhou2016现有结果纳入本地补充基线
 
 用户明确确认按现有结果归档和纳入本地基线。采纳唯一实验 `2026-10-09_dsainet_zhou2016_loso_full_local_w2`，20/20×100epoch、validation_best；ACC75.4423%、Weighted-F1 74.5420%，保持 `paper-aligned`、`ARCHIVED_LOCAL_BASELINE_WITH_WARNINGS`。原文均值差−2.77/−3.31pp、独立审查WARN和诊断因果未闭环均保留，不升级为精确复现，不进入BNCI UEP主表。原冻结机器/分析证据不改，新增诊断与用户确认附录；本轮工作关闭，后续官方执行路径对照需另行授权，不自动补训、调参或上传。见[诊断及确认](results/archives/mieeg-zhou2016-loso-v1/dsainet/diagnosis_20261009/README.md)。

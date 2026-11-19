@@ -1,5 +1,7 @@
 # TASKS.md
 
+- [x] 2026-11-17 BNCI2014002 数据接入：按独立协议生成 2,240 个试次，复核数据哈希及 CO/CV/LOSO 的 490 个划分单元。见[协议与验收](experiments/BNCI2014002_EVALUATION_PROTOCOL.md)。当前未启动训练。
+
 
 
 

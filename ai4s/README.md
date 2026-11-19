@@ -6,10 +6,10 @@
 
 | Program | 项目提示词（生效以索引为准） | 当前状态入口 |
 |---|---|---|
-| MVCNet | `programs/mvcnet/PROJECT_PROMPT_v3.4.md` | `programs/mvcnet/research/STATE.yaml` |
+| MVCNet | `programs/mvcnet/PROJECT_PROMPT_v4.1.md` | `programs/mvcnet/research/STATE.yaml` |
 | DSAINet | `programs/dsainet/PROJECT_PROMPT_v4.0.md` | `programs/dsainet/research/STATE.yaml` |
 | OTA | `programs/ota/PROJECT_PROMPT_v3.4.md` | `programs/ota/research/STATE.yaml` |
-| DBConformer | `programs/dbconformer/PROJECT_PROMPT_v3.4.md` | `programs/dbconformer/research/STATE.yaml` |
+| DBConformer | `programs/dbconformer/PROJECT_PROMPT_v4.0.md` | `programs/dbconformer/research/STATE.yaml` |
 | SST-DPN | `programs/sstdpn/PROJECT_PROMPT_v3.4.md` | `programs/sstdpn/research/STATE.yaml` |
 
 2026-09-19：DBConformer、SST-DPN 已按用户选择接入 v2.1。历史基模与研究边界随各自 Evidence Index 引用，初始未创建 campaign 或启动实验。接入验证见 `_work/baseline_program_admission_20260919/REPORT.md`。
@@ -28,17 +28,25 @@ AI4S 是新科研流程的唯一编排入口：一个基模一个 Program，内�
    字段、返回结构、遥测补写或来源子清单发生变化时，按 runtime“字段接口与产物闭环”验证实际生产者到消费者，运行原统一入口的 `--suite interfaces`；通用接口通过不替代 Program 专属分析／复用分支覆盖。近期案例与修复见 [_work/retro_field_contract_20261028/REPORT.md](_work/retro_field_contract_20261028/REPORT.md)。
 5. 用 `python scripts/ai4s/program_controller.py --program <program> next-action` 查动作。摘要、日志和解释均不授予执行权限；按原授权及冻结规则推进。
 
+### v4 追加核验与阶段汇报
+
+本节用于绑定 v4 共享执行规则的新工作和未冻结研究复盘。冻结工作按精确原链、合同和授权执行。
+
+- **追加核验前先说明它会改变哪个决定。** 在现有 brief、分析记录或进度汇报中，写明待决问题、要补齐的证据缺口，以及不同结果各自会怎样改变去留、设计、主张范围或原定资格判定。能用既有证据决定就直接收尾。正反结果都不会改变决定时，保留已有认识并停止追查。
+- **有明确决策价值时完成整组必要核验。** 在现有授权、数据角色、预算及冻结边界内，自主完成足以作出该决定的检查和复算。用已有覆盖排除重复工作。达到预定证据或停止条件后，直接登记决定，并进入已获准的下一项行动。新异常只有会改变决定才继续查；确缺数据、权限或额度时，说明具体阻塞和停点。
+- **阶段汇报先给四项。** 当前研究问题、所在阶段、已做决定及其依据、当前停点。若继续，注明唯一下一项行动和完成条件；若暂停或结束，注明恢复条件或已关闭的范围。技术细节放在四项之后，复用原 brief、结果或交接记录。
+
 MVCNet 和 DSAINet 均已接入 Transaction v2。接入不启动实验；当前状态仍以 State 为准。旧 VOGD operation 已按用户授权关闭，未记为 verified intake 或科学负结果。
 
 ## 正式评估与版本激活
 
-2026-11-17：DSAINet 的新工作默认链已激活 v4.0，其余 Program 当前为 v3.4。既有 campaign、冻结 Run 和执行授权沿用原绑定。见 [v4.0 离线验收](_work/prompt_v4_design_20261116/REPORT.md)与 [v3.4 激活验收](_work/prompt_v34_implementation_20261111/ACTIVATION.md)。
+2026-11-17：DSAINet、MVCNet 与 DBConformer 的新工作默认链先后激活 v4.0。各 Program 的当前版本查 [Prompt Index](PROMPT_INDEX.yaml)，既有 campaign、冻结 Run 和执行授权按精确绑定读取。见 [v4.0 离线验收](_work/prompt_v4_design_20261116/REPORT.md)与 [v3.4 激活验收](_work/prompt_v34_implementation_20261111/ACTIVATION.md)。
 
 2026-10-29：L1/L2 与五 Program L3 v3.3 已交付。MVCNet、DSAINet、SST-DPN 的新工作链已激活；OTA 后经用户明确授权、旧 SPAR 本地完整性复核与历史收尾，亦已激活 v3.3，继续暂停。DBConformer 在 SBN-R1 收尾后，依用户明确指令完成空闲边界检查并激活 v3.3，继续暂停，本轮仅下一方向设计。旧工作、合同及预算保持原绑定，没有新实验授权。当前详情以 Prompt Index 和 State 为准；[初始实施与验收](_work/prompt_v33_implementation_20261029/REPORT.md)、[OTA 后续激活](_work/ota_v33_activation_20261029/REPORT.md)、[DBConformer 接入与研究设计](programs/dbconformer/research/reassessment_v33_20261029/research_brief.md)。
 
 新工作读取索引指定的 L1/L2/L3。已有工作按其精确旧绑定收尾；普通探索不建立正式评估台账，正式候选的选择审计、benchmark 与 Claim 确认按 `prompts/EVALUATION_EVIDENCE.md`。
 
-用 `python scripts/ai4s/activate_evaluation_governance.py --program <program> --target-version 3.4` 只读预览。v3.4 要求空闲边界、就绪检查及完整父绑定；已有活动 Run／operation／待续接或未收尾 campaign 时阻断。`--apply` 才切换获准 Program 的新工作默认链，不改 State、历史合同或实验权限。后续切换时重新核对状态与授权。
+用 `python scripts/ai4s/activate_evaluation_governance.py --program <program> --target-version 4.0` 只读预览。v4.0 要求空闲边界、就绪检查及完整父绑定；已有活动 Run／operation／待续接或未收尾 campaign 时阻断。`--apply` 才切换获准 Program 的新工作默认链，不改 State、历史合同或实验权限。后续切换时重新核对状态与授权。
 
 基模理解、可用的历史认识、反例与未决问题从各 L3 的唯一研究总览入口读取。新方向构思按活动 L2 和 `prompts/MIEEG_AI4S_SKILL_ROUTER.md`；明确的高价值下一步直接推进，Foundry 仍独立调用。
 

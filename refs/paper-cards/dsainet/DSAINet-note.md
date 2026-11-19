@@ -30,7 +30,7 @@ DSAINet 研究的是：面对不同 EEG 任务，能否复用同一套轻量网�
 
 ## 2. 先理解三个背景概念
 
-**一个 trial 是一段多通道 EEG。** 例如 22 个电极各记录 1000 个时间点，就得到一个 $22\times1000$ 的矩阵。分类网络的任务是根据整段信号给出一个类别。电极之间有空间关系，时间点之间有时间关系；网络需要把二者组织成适合分类的表示。
+**一个 trial 是一段多通道 EEG。** 例如 22 个电极各记录 1000 个时间点，就得到一个 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>22</mn><mo>×</mo><mn>1000</mn></mrow><annotation encoding="application/x-tex">22\times1000</annotation></semantics></math> 的矩阵。分类网络的任务是根据整段信号给出一个类别。电极之间有空间关系，时间点之间有时间关系；网络需要把二者组织成适合分类的表示。
 
 **Token 是编码后的时间位置。** 本文的 token 不是单个原始采样点，而是卷积和池化后得到的特征向量。每个向量已经混合了一定时间范围和多个电极的信息。后面的时间卷积及注意力都在这些 token 上操作。
 
@@ -52,35 +52,33 @@ DSAINet 的核心思路是把工作分开安排：卷积形成时间表征，自
 
 ## 4. 顺着模型走一遍
 
-![DSAINet 完整架构](<./refs/paper-cards/dsainet/assets/fig-02-overall-architecture.png>)
+![DSAINet 完整架构](<assets/fig-02-overall-architecture.png>)
 
-[打开原图，放大查看](<./refs/paper-cards/dsainet/assets/fig-02-overall-architecture.png>)
+[打开原图，放大查看](<assets/fig-02-overall-architecture.png>)
 
 *原论文 Figure 2，PDF p. 4。读图顺序：共同编码 → 两个时间卷积分支 → 各分支内部自注意力 → 双向交叉注意力 → 加权聚合 → 分类。*
 
 ### 4.1 共同编码：先把原始电极信号变成特征序列
 
-输入记为 $X\in\mathbb R^{C\times T}$，$C$ 是电极数，$T$ 是时间采样点。时空编码器包含时间卷积、跨所有电极的深度空间卷积和两次池化，输出为 $F\in\mathbb R^{f_2\times1\times N}$。其中 $f_2$ 是特征通道数，$N$ 是池化后的时间位置数。转置、投影、加入位置编码后，得到共同输入 $Z_0\in\mathbb R^{N\times d}$；论文设置 $d=40$。[PDF pp. 3、7，Eqs. 1–5]
+输入记为 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mrow><mi>C</mi><mo>×</mo><mi>T</mi></mrow></msup></mrow><annotation encoding="application/x-tex">X\in\mathbb R^{C\times T}</annotation></semantics></math>，<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math> 是电极数，<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math> 是时间采样点。时空编码器包含时间卷积、跨所有电极的深度空间卷积和两次池化，输出为 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mrow><msub><mi>f</mi><mn>2</mn></msub><mo>×</mo><mn>1</mn><mo>×</mo><mi>N</mi></mrow></msup></mrow><annotation encoding="application/x-tex">F\in\mathbb R^{f_2\times1\times N}</annotation></semantics></math>。其中 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">f_2</annotation></semantics></math> 是特征通道数，<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math> 是池化后的时间位置数。转置、投影、加入位置编码后，得到共同输入 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Z</mi><mn>0</mn></msub><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mrow><mi>N</mi><mo>×</mo><mi>d</mi></mrow></msup></mrow><annotation encoding="application/x-tex">Z_0\in\mathbb R^{N\times d}</annotation></semantics></math>；论文设置 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mn>40</mn></mrow><annotation encoding="application/x-tex">d=40</annotation></semantics></math>。[PDF pp. 3、7，Eqs. 1–5]
 
 电极轴压缩到 1，不代表只剩一个空间特征。多个特征通道可以保存不同的空间投影。准确地说，两条后续分支共用同一组时空编码结果，并没有各自重新读取原始电极。
 
-**教学示例，非论文实验数据。** 两个电极在某时刻输出 $(2,6)$，一个空间滤波器用权重 $(0.25,0.75)$，得到 $0.25\times2+0.75\times6=5$；另一个滤波器若用 $(1,-1)$，得到 $-4$。电极维虽然被合并，但不同滤波器仍能保留不同空间组合。
+**教学示例，非论文实验数据。** 两个电极在某时刻输出 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>2</mn><mo separator="true">,</mo><mn>6</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(2,6)</annotation></semantics></math>，一个空间滤波器用权重 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>0.25</mn><mo separator="true">,</mo><mn>0.75</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(0.25,0.75)</annotation></semantics></math>，得到 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.25</mn><mo>×</mo><mn>2</mn><mo>+</mo><mn>0.75</mn><mo>×</mo><mn>6</mn><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">0.25\times2+0.75\times6=5</annotation></semantics></math>；另一个滤波器若用 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>1</mn><mo separator="true">,</mo><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(1,-1)</annotation></semantics></math>，得到 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">-4</annotation></semantics></math>。电极维虽然被合并，但不同滤波器仍能保留不同空间组合。
 
 ### 4.2 双尺度卷积：让相同输入接受不同时间范围的观察
 
-细分支的两层核大小为 3、7，粗分支为 11、15。两支输入相同，输出也都是 $N\times d$；没有一支比另一支少一半词元。变化的是感受野，而不是采样率或序列长度。[PDF pp. 3–4、7，Eqs. 6–10]
+细分支的两层核大小为 3、7，粗分支为 11、15。两支输入相同，输出也都是 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>×</mo><mi>d</mi></mrow><annotation encoding="application/x-tex">N\times d</annotation></semantics></math>；没有一支比另一支少一半词元。变化的是感受野，而不是采样率或序列长度。[PDF pp. 3–4、7，Eqs. 6–10]
 
 为了提高效率，每个块先做 depthwise temporal convolution，即每个特征通道独立沿时间卷积，再用分组逐点变换进行通道扩张和投影，并加入 GELU、批归一化。最终把学到的修正量加回原输入。
 
-设 $H_b^{(\ell-1)}\in\mathbb R^{d\times N}$ 是第 $b$ 个分支上一层的输入，$\widetilde H_b^{(\ell)}$ 是该块算出的同形状修正量，$\alpha_b^{(\ell)}$ 为可学习标量，则
+设 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>H</mi><mi>b</mi><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">ℓ</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msubsup><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mrow><mi>d</mi><mo>×</mo><mi>N</mi></mrow></msup></mrow><annotation encoding="application/x-tex">H_b^{(\ell-1)}\in\mathbb R^{d\times N}</annotation></semantics></math> 是第 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math> 个分支上一层的输入，<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mover accent="true"><mi>H</mi><mo stretchy="true">~</mo></mover><mi>b</mi><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">ℓ</mi><mo stretchy="false">)</mo></mrow></msubsup></mrow><annotation encoding="application/x-tex">\widetilde H_b^{(\ell)}</annotation></semantics></math> 是该块算出的同形状修正量，<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>α</mi><mi>b</mi><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">ℓ</mi><mo stretchy="false">)</mo></mrow></msubsup></mrow><annotation encoding="application/x-tex">\alpha_b^{(\ell)}</annotation></semantics></math> 为可学习标量，则
 
-$$
-H_b^{(\ell)}=H_b^{(\ell-1)}+\alpha_b^{(\ell)}\widetilde H_b^{(\ell)}.
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msubsup><mi>H</mi><mi>b</mi><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">ℓ</mi><mo stretchy="false">)</mo></mrow></msubsup><mo>=</mo><msubsup><mi>H</mi><mi>b</mi><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">ℓ</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msubsup><mo>+</mo><msubsup><mi>α</mi><mi>b</mi><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">ℓ</mi><mo stretchy="false">)</mo></mrow></msubsup><msubsup><mover accent="true"><mi>H</mi><mo stretchy="true">~</mo></mover><mi>b</mi><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">ℓ</mi><mo stretchy="false">)</mo></mrow></msubsup><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">H_b^{(\ell)}=H_b^{(\ell-1)}+\alpha_b^{(\ell)}\widetilde H_b^{(\ell)}.</annotation></semantics></math>
 
 这个式子的用途是让模型学习“需要改多少”，而不是强制用新特征完全替换旧特征。[PDF p. 4，Eq. 8]
 
-**教学示例。** 某位置原值为 2，卷积块输出的修正量为 1.9，标量为 0.1，那么输出为 $2+0.1\times1.9=2.19$。标量若为零，这条新增修正就不会改变该层输入。这个例子仅解释残差式；卷积块内的完整 GELU 手算见 X-Ray 第四节。
+**教学示例。** 某位置原值为 2，卷积块输出的修正量为 1.9，标量为 0.1，那么输出为 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>+</mo><mn>0.1</mn><mo>×</mo><mn>1.9</mn><mo>=</mo><mn>2.19</mn></mrow><annotation encoding="application/x-tex">2+0.1\times1.9=2.19</annotation></semantics></math>。标量若为零，这条新增修正就不会改变该层输入。这个例子仅解释残差式；卷积块内的完整 GELU 手算见 X-Ray 第四节。
 
 更大的核允许观察更宽的上下文，但不强制学出更有用或更互补的特征。例如短核和长核都可能学得接近恒等变换。因而“结构上是双尺度”和“功能上互补”需要分开判断。
 
@@ -90,15 +88,13 @@ $$
 
 卷积形成两种表征后，自注意力分别处理两条分支。它根据内容相似性，决定当前位置应从同支的哪些位置接收信息。其后还有残差、LayerNorm 和前馈网络。它不只是给原特征乘一个重要性系数，而是把其他位置的信息混合进来。[PDF p. 4，Eqs. 11–12]
 
-解释这个过程需要三个量：query 表示当前位置要找什么，key 表示各候选位置如何被匹配，value 表示实际要传来的内容。对一个 attention head，若 $Q,K\in\mathbb R^{N\times d_h}$、$V\in\mathbb R^{N\times d_v}$，标准计算为
+解释这个过程需要三个量：query 表示当前位置要找什么，key 表示各候选位置如何被匹配，value 表示实际要传来的内容。对一个 attention head，若 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo separator="true">,</mo><mi>K</mi><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mrow><mi>N</mi><mo>×</mo><msub><mi>d</mi><mi>h</mi></msub></mrow></msup></mrow><annotation encoding="application/x-tex">Q,K\in\mathbb R^{N\times d_h}</annotation></semantics></math>、<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mrow><mi>N</mi><mo>×</mo><msub><mi>d</mi><mi>v</mi></msub></mrow></msup></mrow><annotation encoding="application/x-tex">V\in\mathbb R^{N\times d_v}</annotation></semantics></math>，标准计算为
 
-$$
-A=\operatorname{softmax}_{row}\!\left(\frac{QK^\top}{\sqrt{d_h}}\right),\qquad O=AV.
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mo>=</mo><msub><mrow><mi mathvariant="normal">softmax</mi><mo>⁡</mo></mrow><mrow><mi>r</mi><mi>o</mi><mi>w</mi></mrow></msub><mtext> ⁣</mtext><mrow><mo fence="true">(</mo><mfrac><mrow><mi>Q</mi><msup><mi>K</mi><mi mathvariant="normal">⊤</mi></msup></mrow><msqrt><msub><mi>d</mi><mi>h</mi></msub></msqrt></mfrac><mo fence="true">)</mo></mrow><mo separator="true">,</mo><mspace width="2em"/><mi>O</mi><mo>=</mo><mi>A</mi><mi>V</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">A=\operatorname{softmax}_{row}\!\left(\frac{QK^\top}{\sqrt{d_h}}\right),\qquad O=AV.</annotation></semantics></math>
 
-$A\in\mathbb R^{N\times N}$ 的每行是一组和为 1 的接收权重，$O\in\mathbb R^{N\times d_v}$ 是接收结果。这里展开的是原文 MHA 所封装的标准注意力算子。
+<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mrow><mi>N</mi><mo>×</mo><mi>N</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A\in\mathbb R^{N\times N}</annotation></semantics></math> 的每行是一组和为 1 的接收权重，<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mrow><mi>N</mi><mo>×</mo><msub><mi>d</mi><mi>v</mi></msub></mrow></msup></mrow><annotation encoding="application/x-tex">O\in\mathbb R^{N\times d_v}</annotation></semantics></math> 是接收结果。这里展开的是原文 MHA 所封装的标准注意力算子。
 
-**教学示例。** 取一个 query，对两个位置算出的缩放后匹配分数为 $(\ln3,0)$，softmax 得到 $(3/4,1/4)$。若两个 value 为 $(2,0)$、$(0,2)$，接收结果就是 $0.75(2,0)+0.25(0,2)=(1.5,0.5)$。两者都参与了输出，只是贡献比例不同。
+**教学示例。** 取一个 query，对两个位置算出的缩放后匹配分数为 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>ln</mi><mo>⁡</mo><mn>3</mn><mo separator="true">,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(\ln3,0)</annotation></semantics></math>，softmax 得到 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>3</mn><mi mathvariant="normal">/</mi><mn>4</mn><mo separator="true">,</mo><mn>1</mn><mi mathvariant="normal">/</mi><mn>4</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(3/4,1/4)</annotation></semantics></math>。若两个 value 为 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>2</mn><mo separator="true">,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(2,0)</annotation></semantics></math>、<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(0,2)</annotation></semantics></math>，接收结果就是 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.75</mn><mo stretchy="false">(</mo><mn>2</mn><mo separator="true">,</mo><mn>0</mn><mo stretchy="false">)</mo><mo>+</mo><mn>0.25</mn><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><mn>2</mn><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mn>1.5</mn><mo separator="true">,</mo><mn>0.5</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">0.75(2,0)+0.25(0,2)=(1.5,0.5)</annotation></semantics></math>。两者都参与了输出，只是贡献比例不同。
 
 作者将这一模块称为“细化”。但自注意力本身也能建立长程依赖，所以这种分工是设计安排，不是数学上保证卷积与注意力绝不重叠的功能边界。
 
@@ -106,39 +102,33 @@ $A\in\mathbb R^{N\times N}$ 的每行是一组和为 1 的接收权重，$O\in\m
 
 自注意力的 Q、K、V 来自同一分支；交叉注意力把 Q 留在接收方，把 K、V 换成另一分支。细支更新可写成
 
-$$
-\overline Z_f=\operatorname{LN}\!\left(Z_f+\beta_1\operatorname{MHA}(Z_f,Z_c,Z_c)\right).
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mover accent="true"><mi>Z</mi><mo stretchy="true">‾</mo></mover><mi>f</mi></msub><mo>=</mo><mi mathvariant="normal">LN</mi><mo>⁡</mo><mtext> ⁣</mtext><mrow><mo fence="true">(</mo><msub><mi>Z</mi><mi>f</mi></msub><mo>+</mo><msub><mi>β</mi><mn>1</mn></msub><mi mathvariant="normal">MHA</mi><mo>⁡</mo><mo stretchy="false">(</mo><msub><mi>Z</mi><mi>f</mi></msub><mo separator="true">,</mo><msub><mi>Z</mi><mi>c</mi></msub><mo separator="true">,</mo><msub><mi>Z</mi><mi>c</mi></msub><mo stretchy="false">)</mo><mo fence="true">)</mo></mrow><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">\overline Z_f=\operatorname{LN}\!\left(Z_f+\beta_1\operatorname{MHA}(Z_f,Z_c,Z_c)\right).</annotation></semantics></math>
 
-$Z_f,Z_c\in\mathbb R^{N\times d}$ 是已经细化的细/粗表征，$\beta_1$ 是可学习标量，LN 为逐词元 LayerNorm。随后还有 FFN、残差和第二次 LN。粗支反向查询细支，使用另一个标量 $\beta_2$。[PDF pp. 4–5，Eqs. 13–16]
+<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Z</mi><mi>f</mi></msub><mo separator="true">,</mo><msub><mi>Z</mi><mi>c</mi></msub><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mrow><mi>N</mi><mo>×</mo><mi>d</mi></mrow></msup></mrow><annotation encoding="application/x-tex">Z_f,Z_c\in\mathbb R^{N\times d}</annotation></semantics></math> 是已经细化的细/粗表征，<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>β</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">\beta_1</annotation></semantics></math> 是可学习标量，LN 为逐词元 LayerNorm。随后还有 FFN、残差和第二次 LN。粗支反向查询细支，使用另一个标量 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>β</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\beta_2</annotation></semantics></math>。[PDF pp. 4–5，Eqs. 13–16]
 
-**接续教学示例。** 现在把上面的 $(1.5,0.5)$ 理解为从粗支收到的消息。细支当前词元是 $(0,1)$，取 $\beta_1=0.5$，残差结果为 $(0.75,1.25)$。其均值为 1、标准差为 0.25；在忽略稳定项、LN 仿射参数取 1 和 0 的教学条件下，归一化后为 $(-1,1)$。若示例 FFN 输出取零，后续残差与第二次 LN 仍得到 $(-1,1)$。
+**接续教学示例。** 现在把上面的 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>1.5</mn><mo separator="true">,</mo><mn>0.5</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(1.5,0.5)</annotation></semantics></math> 理解为从粗支收到的消息。细支当前词元是 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(0,1)</annotation></semantics></math>，取 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>β</mi><mn>1</mn></msub><mo>=</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">\beta_1=0.5</annotation></semantics></math>，残差结果为 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>0.75</mn><mo separator="true">,</mo><mn>1.25</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(0.75,1.25)</annotation></semantics></math>。其均值为 1、标准差为 0.25；在忽略稳定项、LN 仿射参数取 1 和 0 的教学条件下，归一化后为 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mo>−</mo><mn>1</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(-1,1)</annotation></semantics></math>。若示例 FFN 输出取零，后续残差与第二次 LN 仍得到 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mo>−</mo><mn>1</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(-1,1)</annotation></semantics></math>。
 
-结构“双向”不等于两个方向传同样的内容或同样重要。实际效果还依赖 value、输出投影和 $\beta$。尤其要注意：将 $\beta$ 设为零只关掉消息项，不能自动等同于删除整个模块，因为 LN 和 FFN 仍然存在。
+结构“双向”不等于两个方向传同样的内容或同样重要。实际效果还依赖 value、输出投影和 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi></mrow><annotation encoding="application/x-tex">\beta</annotation></semantics></math>。尤其要注意：将 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi></mrow><annotation encoding="application/x-tex">\beta</annotation></semantics></math> 设为零只关掉消息项，不能自动等同于删除整个模块，因为 LN 和 FFN 仍然存在。
 
 ### 4.5 聚合：最后决定哪些词元值得进入分类向量
 
-每支需要从 $N$ 个词元变成一个向量。模型用共享的可学习向量 $q\in\mathbb R^d$ 给词元打分：
+每支需要从 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math> 个词元变成一个向量。模型用共享的可学习向量 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mi>d</mi></msup></mrow><annotation encoding="application/x-tex">q\in\mathbb R^d</annotation></semantics></math> 给词元打分：
 
-$$
-w_{b,n}=\frac{\exp(q^\top z_{b,n})}{\sum_{j=1}^{N}\exp(q^\top z_{b,j})},\qquad p_b=\sum_{n=1}^{N}w_{b,n}z_{b,n}.
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>w</mi><mrow><mi>b</mi><mo separator="true">,</mo><mi>n</mi></mrow></msub><mo>=</mo><mfrac><mrow><mi>exp</mi><mo>⁡</mo><mo stretchy="false">(</mo><msup><mi>q</mi><mi mathvariant="normal">⊤</mi></msup><msub><mi>z</mi><mrow><mi>b</mi><mo separator="true">,</mo><mi>n</mi></mrow></msub><mo stretchy="false">)</mo></mrow><mrow><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><mi>exp</mi><mo>⁡</mo><mo stretchy="false">(</mo><msup><mi>q</mi><mi mathvariant="normal">⊤</mi></msup><msub><mi>z</mi><mrow><mi>b</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mfrac><mo separator="true">,</mo><mspace width="2em"/><msub><mi>p</mi><mi>b</mi></msub><mo>=</mo><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><msub><mi>w</mi><mrow><mi>b</mi><mo separator="true">,</mo><mi>n</mi></mrow></msub><msub><mi>z</mi><mrow><mi>b</mi><mo separator="true">,</mo><mi>n</mi></mrow></msub><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">w_{b,n}=\frac{\exp(q^\top z_{b,n})}{\sum_{j=1}^{N}\exp(q^\top z_{b,j})},\qquad p_b=\sum_{n=1}^{N}w_{b,n}z_{b,n}.</annotation></semantics></math>
 
-$z_{b,n}\in\mathbb R^d$ 是交互后的词元，$w_{b,n}$ 是标量，$p_b\in\mathbb R^d$ 是分支的整段表示。共享 $q$ 意味着使用相同评分方式，但内容不同，权重仍然可以不同。[PDF p. 5，Eqs. 17–18]
+<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>z</mi><mrow><mi>b</mi><mo separator="true">,</mo><mi>n</mi></mrow></msub><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mi>d</mi></msup></mrow><annotation encoding="application/x-tex">z_{b,n}\in\mathbb R^d</annotation></semantics></math> 是交互后的词元，<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>w</mi><mrow><mi>b</mi><mo separator="true">,</mo><mi>n</mi></mrow></msub></mrow><annotation encoding="application/x-tex">w_{b,n}</annotation></semantics></math> 是标量，<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mi>b</mi></msub><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mi>d</mi></msup></mrow><annotation encoding="application/x-tex">p_b\in\mathbb R^d</annotation></semantics></math> 是分支的整段表示。共享 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi></mrow><annotation encoding="application/x-tex">q</annotation></semantics></math> 意味着使用相同评分方式，但内容不同，权重仍然可以不同。[PDF p. 5，Eqs. 17–18]
 
-**教学示例。** 取 $q=(\ln3,0)$。细支有两个词元 $(1,0)$、$(0,2)$，评分为 $(\ln3,0)$，权重为 $(0.75,0.25)$，得到 $p_f=(0.75,0.5)$。粗支若有 $(0,1)$、$(1,1)$，权重变成 $(0.25,0.75)$，得到 $p_c=(0.75,1)$。
+**教学示例。** 取 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>=</mo><mo stretchy="false">(</mo><mi>ln</mi><mo>⁡</mo><mn>3</mn><mo separator="true">,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">q=(\ln3,0)</annotation></semantics></math>。细支有两个词元 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>1</mn><mo separator="true">,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(1,0)</annotation></semantics></math>、<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(0,2)</annotation></semantics></math>，评分为 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>ln</mi><mo>⁡</mo><mn>3</mn><mo separator="true">,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(\ln3,0)</annotation></semantics></math>，权重为 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>0.75</mn><mo separator="true">,</mo><mn>0.25</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(0.75,0.25)</annotation></semantics></math>，得到 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mi>f</mi></msub><mo>=</mo><mo stretchy="false">(</mo><mn>0.75</mn><mo separator="true">,</mo><mn>0.5</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">p_f=(0.75,0.5)</annotation></semantics></math>。粗支若有 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(0,1)</annotation></semantics></math>、<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>1</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(1,1)</annotation></semantics></math>，权重变成 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>0.25</mn><mo separator="true">,</mo><mn>0.75</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(0.25,0.75)</annotation></semantics></math>，得到 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mi>c</mi></msub><mo>=</mo><mo stretchy="false">(</mo><mn>0.75</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">p_c=(0.75,1)</annotation></semantics></math>。
 
 最后拼接两支表示并线性分类：
 
-$$
-\widehat y=W_{cls}[p_f\Vert p_c]+b_{cls}.
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mover accent="true"><mi>y</mi><mo stretchy="true">^</mo></mover><mo>=</mo><msub><mi>W</mi><mrow><mi>c</mi><mi>l</mi><mi>s</mi></mrow></msub><mo stretchy="false">[</mo><msub><mi>p</mi><mi>f</mi></msub><mi mathvariant="normal">∥</mi><msub><mi>p</mi><mi>c</mi></msub><mo stretchy="false">]</mo><mo>+</mo><msub><mi>b</mi><mrow><mi>c</mi><mi>l</mi><mi>s</mi></mrow></msub><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">\widehat y=W_{cls}[p_f\Vert p_c]+b_{cls}.</annotation></semantics></math>
 
-对 $K$ 类问题，$W_{cls}\in\mathbb R^{K\times2d}$，$b_{cls}\in\mathbb R^K$，$\widehat y$ 是 logits。[PDF p. 5，Eq. 19]
+对 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math> 类问题，<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>W</mi><mrow><mi>c</mi><mi>l</mi><mi>s</mi></mrow></msub><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mrow><mi>K</mi><mo>×</mo><mn>2</mn><mi>d</mi></mrow></msup></mrow><annotation encoding="application/x-tex">W_{cls}\in\mathbb R^{K\times2d}</annotation></semantics></math>，<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mrow><mi>c</mi><mi>l</mi><mi>s</mi></mrow></msub><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mi>K</mi></msup></mrow><annotation encoding="application/x-tex">b_{cls}\in\mathbb R^K</annotation></semantics></math>，<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mi>y</mi><mo stretchy="true">^</mo></mover></mrow><annotation encoding="application/x-tex">\widehat y</annotation></semantics></math> 是 logits。[PDF p. 5，Eq. 19]
 
-接上例，拼接结果为 $(0.75,0.5,0.75,1)$。若二分类矩阵两行为 $(1,0,1,0)$、$(0,1,0,1)$，偏置为 $(0.2,0)$，得到 logits $(1.7,1.5)$。softmax 后第一类概率约 0.5498，因此预测第一类。到这里，一段输入如何变成最终类别就闭合了。
+接上例，拼接结果为 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>0.75</mn><mo separator="true">,</mo><mn>0.5</mn><mo separator="true">,</mo><mn>0.75</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(0.75,0.5,0.75,1)</annotation></semantics></math>。若二分类矩阵两行为 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>1</mn><mo separator="true">,</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(1,0,1,0)</annotation></semantics></math>、<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(0,1,0,1)</annotation></semantics></math>，偏置为 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>0.2</mn><mo separator="true">,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(0.2,0)</annotation></semantics></math>，得到 logits <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>1.7</mn><mo separator="true">,</mo><mn>1.5</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(1.7,1.5)</annotation></semantics></math>。softmax 后第一类概率约 0.5498，因此预测第一类。到这里，一段输入如何变成最终类别就闭合了。
 
-当 $q=0$ 时，所有权重都变成 $1/N$，该模块退化为均值池化。自适应聚合的价值是允许模型偏重某些时间位置；池化后分类头只面对 $2d$ 个数，也避免把全部词元展平形成很宽的线性层。
+当 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">q=0</annotation></semantics></math> 时，所有权重都变成 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi mathvariant="normal">/</mi><mi>N</mi></mrow><annotation encoding="application/x-tex">1/N</annotation></semantics></math>，该模块退化为均值池化。自适应聚合的价值是允许模型偏重某些时间位置；池化后分类头只面对 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>d</mi></mrow><annotation encoding="application/x-tex">2d</annotation></semantics></math> 个数，也避免把全部词元展平形成很宽的线性层。
 
 <a id="reading-section-05"></a>
 
@@ -148,7 +138,7 @@ $$
 
 作者使用五个 MI 数据集，以及抑郁、神经退行性疾病、心理负荷和认知注意相关数据，共十个数据集。固定的是主要架构超参数；batch size、学习率、训练轮数、预处理和评估协议按数据集改变。[PDF pp. 5–7，Tables I–II]
 
-例如嵌入宽度为 40、attention heads 为 4、dropout 为 0.25；但 batch size 为 32 或 128，学习率为 $10^{-3}$ 或 $10^{-4}$，epochs 为 30 或 100。Shin2018 使用 100 epochs，因此不能把“非 MI 任务全部训练 30 epochs”当作论文设置。
+例如嵌入宽度为 40、attention heads 为 4、dropout 为 0.25；但 batch size 为 32 或 128，学习率为 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>10</mn><mrow><mo>−</mo><mn>3</mn></mrow></msup></mrow><annotation encoding="application/x-tex">10^{-3}</annotation></semantics></math> 或 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>10</mn><mrow><mo>−</mo><mn>4</mn></mrow></msup></mrow><annotation encoding="application/x-tex">10^{-4}</annotation></semantics></math>，epochs 为 30 或 100。Shin2018 使用 100 epochs，因此不能把“非 MI 任务全部训练 30 epochs”当作论文设置。
 
 下表给出主表 ACC 均值及与表内第二名的差值。单位为百分数，差值为百分点。[PDF p. 8，Tables III–IV；差值为算术整理]
 
@@ -188,9 +178,9 @@ Table V 另有 `w/o Attentive Interaction`，2a/2b/ADFTD 分别下降 2.43/0.51/
 
 ### 5.3 浅网络是否足够、计算量是否较低
 
-![不同卷积与注意力深度的结果](<./refs/paper-cards/dsainet/assets/fig-03-hyperparameter-sensitivity.png>)
+![不同卷积与注意力深度的结果](<assets/fig-03-hyperparameter-sensitivity.png>)
 
-[打开原图，放大查看](<./refs/paper-cards/dsainet/assets/fig-03-hyperparameter-sensitivity.png>)
+[打开原图，放大查看](<assets/fig-03-hyperparameter-sensitivity.png>)
 
 *原论文 Figure 3，PDF p. 9。横轴分别为时间卷积块数和注意力层数，纵轴为 ACC/F1。*
 
@@ -218,7 +208,7 @@ Table III 中，PhysioNet-MI 上 DSAINet 的 ACC/F1 为 63.90/63.87，Deformer �
 
 论文报告五个随机种子及 folds/LOSO runs 的 mean±std，但没有充分明确可重建的聚合顺序，也没有提供逐被试差值和成对统计检验。[PDF p. 7]
 
-一个教学例子能说明问题：两个 seeds 的被试成绩都是 $(40,80)$，各 seed 平均分均为 60，于是 seed 平均分的标准差为零，但被试之间仍差 40 个百分点。必须知道 std 对什么单位计算，才能解释“稳定”。也不能仅凭两列均值和 std 判断统计显著性。
+一个教学例子能说明问题：两个 seeds 的被试成绩都是 <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>40</mn><mo separator="true">,</mo><mn>80</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(40,80)</annotation></semantics></math>，各 seed 平均分均为 60，于是 seed 平均分的标准差为零，但被试之间仍差 40 个百分点。必须知道 std 对什么单位计算，才能解释“稳定”。也不能仅凭两列均值和 std 判断统计显著性。
 
 论文没有完整披露所有基线的调参预算、模型选择细节和版本；channel-wise z-score 的统计量拟合范围也不够明确。应把这些保留为复现信息缺口，既不能直接断言不公平或泄漏，也不能替原文假定这些问题全部已解决。
 
