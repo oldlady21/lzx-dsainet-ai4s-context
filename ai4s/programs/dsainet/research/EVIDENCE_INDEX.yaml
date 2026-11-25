@@ -247,6 +247,870 @@
   ],
   "direction_decisions": [
     {
+      "chain_id": "dsainet-transaction-v4.1",
+      "decision_record": "ai4s/programs/dsainet/research/dsainet-b0-patch-preelu-polyphase-r1_decision.yaml",
+      "direction_id": "DSAINET-B0-PATCH-PREELU-POLYPHASE-20261124",
+      "dispatch_precondition": "Verified source training and smoke to be frozen and dispatched by the coordinating agent",
+      "dispatch_report": "ai4s/programs/dsainet/research/b0_patch_preelu_polyphase_20261124/DISPATCH_REPORT.md",
+      "dispatch_run_id": "2026-11-24_dsainet_b0_patch_preelu_polyphase_r1-full-w1",
+      "dispatch_status": "REMOTE_ACCEPTED",
+      "interpretation_boundary": "固定训练配方下的 001 cue4 A04–A06 T/E 源域结果。",
+      "judgment_change": "Local half-block means before the shared second ELU used 62 convolution sites instead of 250, preserved B0 within all four prespecified utility floors, and produced smaller token and true-margin RMS than equal-cost interleaved means in all four source cells at both checkpoints. Retain for one bounded matched source-training screen. Frozen accuracy versus the interleaved control did not exceed 0.5 pp in any cell.",
+      "qualification_decision": "PASS_PATCH_PREELU_POLYPHASE",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_patch_preelu_polyphase_20261124/FREEZE.json",
+      "qualification_freeze_sha256": "e8a37443396058fd81efbb6865509c76252aabf2cb08b4256d332dc76bb3ec7a",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_patch_preelu_polyphase_20261124/RESULT.json",
+      "qualification_result_sha256": "ba9b4fb2a08ecf034005b8dc6b4f873b1740c2f6c36b075b18a7117237c84f4e",
+      "record": "ai4s/programs/dsainet/research/b0_patch_preelu_polyphase_20261124/research_brief.md",
+      "remote_observed_at": "2026-11-24T22:27:44.022780+08:00",
+      "remote_status_record": "ai4s/programs/dsainet/research/b0_patch_preelu_polyphase_20261124/REMOTE_STATUS_20261124_222744.json",
+      "report": "ai4s/programs/dsainet/research/b0_patch_preelu_polyphase_20261124/QUALIFICATION_REPORT.md",
+      "scientific_fits": 0,
+      "screen_decision": "NO_SIGNAL",
+      "screen_disposition": "STOP_PATCH_PREELU_POLYPHASE",
+      "screen_report": "ai4s/programs/dsainet/research/b0_patch_preelu_polyphase_20261124/SCREEN_REPORT.md",
+      "screen_status_observed": "PASS",
+      "source_evidence_ids": [
+        "DSAINET-B0-CONVTIME-GROUP-TOPOLOGY-20261124",
+        "DSAINET-B0-SHARED-POOL-ANTIALIAS-20261124",
+        "DSAINET-B0-INTRA-FFN-AFFINE-QUOTIENT-20261124"
+      ],
+      "source_run_id": "2026-11-24_dsainet_b0_intra_ffn_affine_quotient_r1-full-w1",
+      "training_contract": "ai4s/programs/dsainet/research/dsainet-b0-patch-preelu-polyphase-r1.yaml",
+      "training_contract_sha256": "bb2fba1073d0ef38864622d9f3d95f9c22d49baad2bcc5e959fd7d8e5645adb8",
+      "transaction_contract_sha256": "9c6bc4425954a9520c116e432f404043d3860a3155bee8c15ce881d9dafbe59c",
+      "verified_screen_result": "ai4s/programs/dsainet/research/b0_patch_preelu_polyphase_20261124/VERIFIED_SCREEN_RESULT.json",
+      "verified_screen_result_sha256": "528e13375b1db05e22e0352e1444abc462c1f61ab21ecea4864436069c43ed21"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "continuation_report": "ai4s/programs/dsainet/research/b0_convtime_group_topology_20261124/CONTINUATION_REPORT.md",
+      "direction_id": "DSAINET-B0-CONVTIME-GROUP-TOPOLOGY-20261124",
+      "judgment_change": "After matching the exact removed edges and replacement norm, the fixed complementary depth graph had a worse terminal held-source descent prediction in all four cells than the shared depth graph. Close this concrete grouping before training.",
+      "qualification_decision": "STOP_CONVTIME_GROUP_TOPOLOGY",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_convtime_group_topology_20261124/RESULT.json",
+      "qualification_result_sha256": "f0a9dad0436fbc731d996e96ea5eb0e1db25430d34fdfab3c647c6b57af7cc39",
+      "record": "ai4s/programs/dsainet/research/b0_convtime_group_topology_20261124/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_convtime_group_topology_20261124/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-INTER-FFN-EXPECTED-READOUT-20261124"
+      ],
+      "source_run_id": "2026-11-24_dsainet_b0_intra_ffn_affine_quotient_r1-full-w1"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-INTER-FFN-EXPECTED-READOUT-20261124",
+      "judgment_change": "The lagged dropout-moment dictionary preserves clean risks and beats the rotated control in all four cells. Under identical native masks, static advantage fails in all four cells and seed 1 exceeds both SVD ceilings. Close this fixed dictionary.",
+      "next_direction_ids": [
+        "DSAINET-B0-CONVTIME-GROUP-TOPOLOGY-20261124"
+      ],
+      "qualification_decision": "STOP_INTER_FFN_EXPECTED_READOUT_MASK",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_inter_ffn_expected_readout_20261124/RESULT.json",
+      "qualification_result_sha256": "e7938b6fa1c7107b53b81297305fd59f6bd13e19f04fb430cc73ffeebd0f0f43",
+      "record": "ai4s/programs/dsainet/research/b0_inter_ffn_expected_readout_20261124/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_inter_ffn_expected_readout_20261124/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-INTER-FFN-MASK-VISIBLE-20261124"
+      ],
+      "source_run_id": "2026-11-24_dsainet_b0_intra_ffn_affine_quotient_r1-full-w1"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-INTER-FFN-MASK-VISIBLE-20261124",
+      "judgment_change": "Replay matched the previous mask panel exactly. Forecast classifier masks match native draws, but matching dictionary to same-trial mask increases RMS relative to shifted masks, the static dictionary and equal-rank SVD in all four cells. Close this mask-dependent use of fixed coefficients.",
+      "next_direction_ids": [
+        "DSAINET-B0-INTER-FFN-EXPECTED-READOUT-20261124"
+      ],
+      "qualification_decision": "STOP_INTER_FFN_MASK_VISIBLE",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_inter_ffn_mask_visible_20261124/RESULT.json",
+      "qualification_result_sha256": "b51074979af0e2fb1159e7ab01f03a41a7cb7abd6eb2a714175d96ff7f31f861",
+      "record": "ai4s/programs/dsainet/research/b0_inter_ffn_mask_visible_20261124/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_inter_ffn_mask_visible_20261124/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-INTER-FFN-READOUT-SUBSPACE-20261124"
+      ],
+      "source_run_id": "2026-11-24_dsainet_b0_intra_ffn_affine_quotient_r1-full-w1"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-INTER-FFN-READOUT-SUBSPACE-20261124",
+      "judgment_change": "Native clean replay and matched mechanism pass all four cells; the readout-visible subspace lowers logit error versus rotated control and equal-rank SVD. Under matched native training dropout, seed 1 T exceeds the frozen SVD relative-error ceiling by 0.72 percentage points. Close the fixed candidate before training.",
+      "next_direction_ids": [
+        "DSAINET-B0-INTER-FFN-MASK-VISIBLE-20261124"
+      ],
+      "qualification_decision": "STOP_INTER_FFN_READOUT_SUBSPACE_MASKED",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_inter_ffn_readout_subspace_20261124/RESULT.json",
+      "qualification_result_sha256": "04bd37f3e99de4181919e513e862b8aa3e8b9afb215f041f22e2bf56655e9786",
+      "record": "ai4s/programs/dsainet/research/b0_inter_ffn_readout_subspace_20261124/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_inter_ffn_readout_subspace_20261124/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-CONVTIME-MIRROR-UPDATES-20261124"
+      ],
+      "source_run_id": "2026-11-24_dsainet_b0_intra_ffn_affine_quotient_r1-full-w1"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "data_access": false,
+      "direction_id": "DSAINET-B0-CONVTIME-MIRROR-UPDATES-20261124",
+      "judgment_change": "Both native seeds failed the mirrored-update geometry gate, with at most 57.78 percent energy retained. Stop before waveform replay or utility.",
+      "next_direction_ids": [
+        "DSAINET-B0-INTER-FFN-READOUT-SUBSPACE-20261124"
+      ],
+      "qualification_decision": "STOP_CONVTIME_MIRROR_UPDATES_GEOMETRY",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_convtime_mirror_updates_20261124/RESULT.json",
+      "qualification_result_sha256": "5fbfce5cf06836bfe5a28736532cc6118bdb0f73216c185bf8b6b4422be99ef9",
+      "record": "ai4s/programs/dsainet/research/b0_convtime_mirror_updates_20261124/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_convtime_mirror_updates_20261124/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-CONVTIME-JOINT-MOMENTS-20261124"
+      ],
+      "source_run_id": "2026-11-24_dsainet_b0_intra_ffn_affine_quotient_r1-full-w1"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-CONVTIME-JOINT-MOMENTS-20261124",
+      "judgment_change": "Minor aligned-statistics residual fidelity advantage missed the prespecified matched-control threshold in all cells, and native/control scoring risks failed. Close the fixed pairing.",
+      "next_direction_ids": [
+        "DSAINET-B0-CONVTIME-MIRROR-UPDATES-20261124"
+      ],
+      "qualification_decision": "STOP_CONVTIME_JOINT_MOMENTS",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_convtime_joint_moments_20261124/RESULT.json",
+      "qualification_result_sha256": "1d339f2b151921687706598162b15ec2b45aeca3409cd2df14af16ded9e67ba9",
+      "record": "ai4s/programs/dsainet/research/b0_convtime_joint_moments_20261124/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_convtime_joint_moments_20261124/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-CROSS-SCALE-SCORE-ALIGNMENT-20261124"
+      ],
+      "source_run_id": "2026-11-24_dsainet_b0_intra_ffn_affine_quotient_r1-full-w1"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-CROSS-SCALE-SCORE-ALIGNMENT-20261124",
+      "judgment_change": "Aligned terminal score exchange preserved native and sham risks, but matched-net-accuracy advantage was below the frozen threshold in all four cells. Close the fixed exchange.",
+      "next_direction_ids": [
+        "DSAINET-B0-CONVTIME-JOINT-MOMENTS-20261124"
+      ],
+      "qualification_decision": "STOP_CROSS_SCALE_SCORE_ALIGNMENT",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_cross_scale_score_alignment_20261124/RESULT.json",
+      "qualification_result_sha256": "20cd8701d3dfd9e31c1e85594b6450368690f0eea535daabf81e90470b4c2115",
+      "record": "ai4s/programs/dsainet/research/b0_cross_scale_score_alignment_20261124/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_cross_scale_score_alignment_20261124/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-SHARED-POOL-ANTIALIAS-20261124"
+      ],
+      "source_run_id": "2026-11-24_dsainet_b0_intra_ffn_affine_quotient_r1-full-w1"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-SHARED-POOL-ANTIALIAS-20261124",
+      "judgment_change": "Adjacent three-tap smoothing preserved clean and phase-pressure utility and reduced phase sensitivity versus native, but lag-eight smoothing won all four matched-cost cells. Close the fixed operator.",
+      "next_direction_ids": [
+        "DSAINET-B0-CROSS-SCALE-SCORE-ALIGNMENT-20261124"
+      ],
+      "qualification_decision": "STOP_SHARED_POOL_ANTIALIAS",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_shared_pool_antialias_20261124/RESULT.json",
+      "qualification_result_sha256": "969e19ef4ca192e4174f7acc8729f67098b3f4f05e937a2773e73ba8f97493df",
+      "record": "ai4s/programs/dsainet/research/b0_shared_pool_antialias_20261124/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_shared_pool_antialias_20261124/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-READOUT-ANTITHETIC-20261124"
+      ],
+      "source_run_id": "2026-11-24_dsainet_b0_intra_ffn_affine_quotient_r1-full-w1"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "data_access": false,
+      "direction_id": "DSAINET-B0-SAME-CLASS-PAIR-MIXUP-DESIGN-20261124",
+      "judgment_change": "Proposed donor-source control compares pair sampling rules at the same structural placement. Design-only disposition before any candidate data, replay or fit.",
+      "next_direction_ids": [
+        "DSAINET-B0-CROSS-SCALE-SCORE-ALIGNMENT-20261124"
+      ],
+      "qualification_decision": "STOP_DESIGN_NO_STRUCTURAL_CONTRAST",
+      "record": "ai4s/programs/dsainet/research/b0_shared_pool_antialias_20261124/DESIGN_DISPOSITIONS.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-SHARED-POOL-ANTIALIAS-20261124"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-READOUT-ANTITHETIC-20261124",
+      "judgment_change": "Across-seed improvement against native independent dropout survived, but aligned final-readout antithetic dropout missed the matched derangement variance gate in all four cells. Close this fixed readout pairing.",
+      "next_direction_ids": [
+        "DSAINET-B0-SHARED-POOL-ANTIALIAS-20261124"
+      ],
+      "qualification_decision": "STOP_READOUT_ANTITHETIC",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_readout_antithetic_20261124/RESULT.json",
+      "qualification_result_sha256": "d62698cf9add9a7ae11378ec95b13b2d4bc8e9c292940f520fda56998588de91",
+      "record": "ai4s/programs/dsainet/research/b0_readout_antithetic_20261124/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_readout_antithetic_20261124/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "AI4S-DSAINET-dsainet-b0-intra-ffn-affine-quotient-r1"
+      ],
+      "source_run_id": "2026-11-24_dsainet_b0_intra_ffn_affine_quotient_r1-full-w1"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-INTRA-FFN-AFFINE-QUOTIENT-20261124",
+      "dispatch_report": "ai4s/programs/dsainet/research/b0_intra_ffn_affine_quotient_20261124/DISPATCH_REPORT.md",
+      "dispatch_run_id": "2026-11-24_dsainet_b0_intra_ffn_affine_quotient_r1-full-w1",
+      "dispatch_status": "REMOTE_ACCEPTED",
+      "formal_claim_release": false,
+      "qualification_decision": "WORTH_LIMITED_TRAINING",
+      "qualification_freeze_sha256": "c97e92ae837fbc09e42b29050d9239b157472cc8146ea189af9b4e75e5d7b235",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_intra_ffn_affine_quotient_20261124/RESULT.json",
+      "qualification_result_sha256": "ef9b72c901fbc8d4d436d394defa03bd1c578f85815b95e7b60e1cecac5580d7",
+      "record": "ai4s/programs/dsainet/research/b0_intra_ffn_affine_quotient_20261124/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_intra_ffn_affine_quotient_20261124/QUALIFICATION_REPORT.md",
+      "scientific_fits": 0,
+      "screen_closeout_report": "ai4s/programs/dsainet/research/b0_intra_ffn_affine_quotient_20261124/SCREEN_REPORT.md",
+      "screen_disposition": "STOP_INTRA_FFN_AFFINE_QUOTIENT",
+      "screen_evidence_id": "AI4S-DSAINET-dsainet-b0-intra-ffn-affine-quotient-r1",
+      "source_evidence_ids": [
+        "DSAINET-B0-DUAL-SCALE-INTRA-DISTANCE-BIAS-20261124",
+        "AI4S-DSAINET-dsainet-b0-inter-ffn-center-r1"
+      ],
+      "training_contract": "ai4s/programs/dsainet/research/dsainet-b0-intra-ffn-affine-quotient-r1.yaml",
+      "training_contract_sha256": "16c65e0fdca47b1bb0f77334b3850115115abde2bdf182cc4657440f23ae83e8"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-DUAL-SCALE-INTRA-DISTANCE-BIAS-20261124",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_DUAL_INTRA_DISTANCE_TANGENT",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_dual_scale_intra_distance_bias_20261124/RESULT.json",
+      "qualification_result_sha256": "0e718fb9a5a985cbb2e57e6a13f26b31935055080911b7174759c9df85d8ef15",
+      "record": "ai4s/programs/dsainet/research/b0_dual_scale_intra_distance_bias_20261124/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_dual_scale_intra_distance_bias_20261124/QUALIFICATION_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-INTRA-DROPOUT-GAUGE-20261124",
+        "AI4S-DSAINET-dsainet-b0-inter-ffn-center-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-INTRA-DROPOUT-GAUGE-20261124",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_INTRA_DROPOUT_GAUGE",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_intra_dropout_gauge_20261124/RESULT.json",
+      "qualification_result_sha256": "285c623b12c62ac8f14b0ccd9af573515fef12362dd7f2981b1f3bb603a6fc1b",
+      "record": "ai4s/programs/dsainet/research/b0_intra_dropout_gauge_20261124/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_intra_dropout_gauge_20261124/QUALIFICATION_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-FIRST-FILTER-PASSBAND-UPDATES-20261124",
+        "AI4S-DSAINET-dsainet-b0-inter-ffn-center-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-FIRST-FILTER-PASSBAND-UPDATES-20261124",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_FIRST_FILTER_PASSBAND_SAFETY",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_first_filter_passband_updates_20261124/RESULT.json",
+      "qualification_result_sha256": "12a8ff5825e31900d615293e15c1393976d4afbe5ff0cd811fba009ffbf14808",
+      "record": "ai4s/programs/dsainet/research/b0_first_filter_passband_updates_20261124/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_first_filter_passband_updates_20261124/QUALIFICATION_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-SMOOTH-POSITION-UPDATES-20261124",
+        "AI4S-DSAINET-dsainet-b0-inter-ffn-center-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-SMOOTH-POSITION-UPDATES-20261124",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_SMOOTH_POSITION_GEOMETRY",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_smooth_position_updates_20261124/RESULT.json",
+      "qualification_result_sha256": "229a5fe67b9f7f802bb0772fb1a8a17e3a9e7c8a9791465ffeb2361330f2fc52",
+      "record": "ai4s/programs/dsainet/research/b0_smooth_position_updates_20261124/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_smooth_position_updates_20261124/QUALIFICATION_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-PAIR-GAIN-COMPRESSION-20261124",
+        "AI4S-DSAINET-dsainet-b0-inter-ffn-center-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-PAIR-GAIN-COMPRESSION-20261124",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_PAIR_GAIN_COMPRESSION",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_pair_gain_compression_20261124/RESULT.json",
+      "qualification_result_sha256": "1848403319ab6e6a16699b8170603103835f149f1c882cd7268a898b9f8d657d",
+      "record": "ai4s/programs/dsainet/research/b0_pair_gain_compression_20261124/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_pair_gain_compression_20261124/QUALIFICATION_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-LOCAL-SCORE-SUPPORT-20261124",
+        "AI4S-DSAINET-dsainet-b0-inter-ffn-center-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-LOCAL-SCORE-SUPPORT-20261124",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_LOCAL_SCORE_SUPPORT",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_local_score_support_20261124/RESULT.json",
+      "qualification_result_sha256": "40e08ea4bad0a5264172c71a6a5b395a980c0cc01d572a01389be3ac99834472",
+      "record": "ai4s/programs/dsainet/research/b0_local_score_support_20261124/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_local_score_support_20261124/QUALIFICATION_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "AI4S-DSAINET-dsainet-b0-inter-ffn-center-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-INTER-FFN-CENTER-20261124",
+      "formal_claim_release": false,
+      "qualification_decision": "WORTH_LIMITED_TRAINING",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_inter_ffn_center_20261124/RESULT.json",
+      "qualification_result_sha256": "261a3a797bbcbdcf8269b49bca033bbdc5a50f701f300211391559fa3ae654b6",
+      "record": "ai4s/programs/dsainet/research/b0_inter_ffn_center_20261124/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_inter_ffn_center_20261124/QUALIFICATION_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-INTER-NORM-TYING-20261124"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-INTER-NORM-TYING-20261124",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_INTER_NORM_TYING",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_inter_norm_tying_20261124/RESULT.json",
+      "qualification_result_sha256": "4043e8743c4b7f0668f4847eb383373033a479299ac84e9a9aa4882077dd9d37",
+      "record": "ai4s/programs/dsainet/research/b0_inter_norm_tying_20261124/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_inter_norm_tying_20261124/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-INTER-MASS-DROPOUT-20261124"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-INTER-MASS-DROPOUT-20261124",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_INTER_MASS_DROPOUT_TECH",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_inter_mass_dropout_20261124/RESULT.json",
+      "qualification_result_sha256": "63588441fc01bd43a20379eaa763a4de6aab0a457eb4baaad86a93a14b32e2f8",
+      "record": "ai4s/programs/dsainet/research/b0_inter_mass_dropout_20261124/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_inter_mass_dropout_20261124/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-ELU-HALF-AXIS-20261124"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-ELU-HALF-AXIS-20261124",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_ELU_HALF_AXIS",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_elu_half_axis_20261124/RESULT.json",
+      "qualification_result_sha256": "c365a62879a98a86c6354df88d7764f42d4a81c73c6e047ce0240ae1925540bf",
+      "record": "ai4s/programs/dsainet/research/b0_elu_half_axis_20261124/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_elu_half_axis_20261124/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-SPATIAL-PAIR-DROPOUT-20261124"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-SPATIAL-PAIR-DROPOUT-20261124",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_SPATIAL_PAIR_DROPOUT",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_spatial_pair_dropout_20261124/RESULT.json",
+      "qualification_result_sha256": "e7ef740adf4e1c02327bf351ce192799a6362e20b379de370fa7d1c1d0bcf98c",
+      "record": "ai4s/programs/dsainet/research/b0_spatial_pair_dropout_20261124/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_spatial_pair_dropout_20261124/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "AI4S-DSAINET-dsainet-b0-spatial-graph-basis-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-SPATIAL-GRAPH-BASIS-20261124",
+      "formal_claim_release": false,
+      "qualification_decision": "WORTH_LIMITED_TRAINING",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_spatial_graph_basis_20261124/RESULT.json",
+      "qualification_result_sha256": "f81f312721dc2ff16c577f5b0ecf0be70a03729d1a24fd4ff8f6d464d187b7d4",
+      "record": "ai4s/programs/dsainet/research/b0_spatial_graph_basis_20261124/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_spatial_graph_basis_20261124/QUALIFICATION_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-INTER-DONOR-SELECTION-20261124"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-INTER-DONOR-SELECTION-20261124",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_INTER_DONOR_SELECTION",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_inter_donor_selection_20261124/RESULT.json",
+      "qualification_result_sha256": "4d23d3a2c5006b243257017dcf1ae0ef42bca3d1f5232d30ea191eead1e84e1f",
+      "record": "ai4s/programs/dsainet/research/b0_inter_donor_selection_20261124/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_inter_donor_selection_20261124/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-FIRST-TIME-BASIS-20261124"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-FIRST-TIME-BASIS-20261124",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_FIRST_TIME_BASIS",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_first_time_basis_20261124/RESULT.json",
+      "qualification_result_sha256": "e81ba7116e53a286ea5e27a05c291cc02864c451adfa151a481394241aed3146",
+      "record": "ai4s/programs/dsainet/research/b0_first_time_basis_20261124/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_first_time_basis_20261124/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-SKIP-SIGNAL-POSITION-20261123"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-SKIP-SIGNAL-POSITION-20261123",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_SKIP_SIGNAL_POSITION",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_skip_signal_position_20261123/RESULT.json",
+      "qualification_result_sha256": "990d82eeaccb9db8ed8682d7aedff6dadde9f3483f47923c18d4529119a16d72",
+      "record": "ai4s/programs/dsainet/research/b0_skip_signal_position_20261123/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_skip_signal_position_20261123/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-INTER-SCALE-RESIDUAL-20261123"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-INTER-SCALE-RESIDUAL-20261123",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_INTER_SCALE_RESIDUAL",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_inter_scale_residual_20261123/RESULT.json",
+      "qualification_result_sha256": "0a3568b2b177728b609e937d578e6494adf68e471a6225d40435ea636c3f6fee",
+      "record": "ai4s/programs/dsainet/research/b0_inter_scale_residual_20261123/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_inter_scale_residual_20261123/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-POOL-SCORE-FACTORIZATION-20261123"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-POOL-SCORE-FACTORIZATION-20261123",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_POOL_FACTOR_TECH",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_pool_score_factorization_20261123/RESULT.json",
+      "qualification_result_sha256": "3936bfb88f948c338a89939a0560c61c7e94e00190c042a20a3c8eb2b93c7f7d",
+      "record": "ai4s/programs/dsainet/research/b0_pool_score_factorization_20261123/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_pool_score_factorization_20261123/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-SUBJECT-GROUP-BN-20261123"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-SUBJECT-GROUP-BN-20261123",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_SUBJECT_GROUP_BN",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_subject_group_bn_20261123/RESULT.json",
+      "qualification_result_sha256": "fd1dbb0c6e399154adb7e0a6833819dc6f39593b2de155da74944b7815241191",
+      "record": "ai4s/programs/dsainet/research/b0_subject_group_bn_20261123/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_subject_group_bn_20261123/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-INTRA-LOAD-BALANCE-20261123"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-INTRA-LOAD-BALANCE-20261123",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_INTRA_LOAD_TECH",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_intra_load_balance_20261123/RESULT.json",
+      "qualification_result_sha256": "230c7a197961711aa7b17c60747b8b3ebf415cdcd44c25fa60dafceb471c3fb8",
+      "record": "ai4s/programs/dsainet/research/b0_intra_load_balance_20261123/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_intra_load_balance_20261123/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "AI4S-DSAINET-dsainet-b0-convtime-dc-split-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "confirmation_status": "NOT_QUALIFIED",
+      "continuation_report": "ai4s/programs/dsainet/research/b0_convtime_dc_split_20261123/CONTINUATION_REPORT.md",
+      "direction_id": "DSAINET-B0-CONVTIME-DC-SPLIT-20261123",
+      "dispatch_report": "ai4s/programs/dsainet/research/b0_convtime_dc_split_20261123/DISPATCH_REPORT.md",
+      "dispatch_run_id": "2026-11-23_dsainet_b0_convtime_dc_split_r1-full-w1",
+      "dispatch_status": "REMOTE_ACCEPTED",
+      "formal_claim_release": false,
+      "qualification_decision": "WORTH_LIMITED_TRAINING",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_convtime_dc_split_20261123/RESULT.json",
+      "qualification_result_sha256": "0a14b912f9661aa3117d1dd24aa48075f14d7fb37978b3391a4dcdb7b54dbf45",
+      "record": "ai4s/programs/dsainet/research/b0_convtime_dc_split_20261123/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_convtime_dc_split_20261123/QUALIFICATION_REPORT.md",
+      "scientific_fits": 0,
+      "scientific_fits_completed": 18,
+      "screen_disposition": "STOP_CONVTIME_DC_SPLIT",
+      "screen_evidence_id": "AI4S-DSAINET-dsainet-b0-convtime-dc-split-r1",
+      "screen_report": "ai4s/programs/dsainet/research/b0_convtime_dc_split_20261123/SCREEN_REPORT.md",
+      "screen_report_sha256": "bc58e5cbaddd29b53f4af1717eabc5f8db53797054b1e3c527f15e3bb42f24cd",
+      "source_evidence_ids": [
+        "AI4S-DSAINET-dsainet-b0-convtime-pointwise-tying-r1",
+        "DSAINET-B0-SPATIAL-PAIR-REDUNDANCY-20261123"
+      ],
+      "training_contract": "ai4s/programs/dsainet/research/dsainet-b0-convtime-dc-split-r1.yaml",
+      "training_contract_sha256": "f0e5b3c457c05d5aaf0fee22ed7cf65e3ae9f91421be00c6985a46213fce94d6",
+      "training_plan": "ai4s/programs/dsainet/research/b0_convtime_dc_split_20261123/TRAINING_PLAN.md"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-SPATIAL-PAIR-REDUNDANCY-20261123",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_SPATIAL_PAIR_RESIDUAL",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_spatial_pair_redundancy_20261123/RESULT.json",
+      "qualification_result_sha256": "9aa0af794a40b176cb75aab18126d4f625b61f01b7e5b4b4c9f67d65785ff078",
+      "record": "ai4s/programs/dsainet/research/b0_spatial_pair_redundancy_20261123/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_spatial_pair_redundancy_20261123/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-PAIRED-READOUT-ROTATION-20261123"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-PAIRED-READOUT-ROTATION-20261123",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_PAIRED_READOUT_ROTATION",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_paired_readout_rotation_20261123/RESULT.json",
+      "qualification_result_sha256": "9fbc4956ea9c83f67aacbfda009bc6c3824c46ce0e25e4da87179c16a6581ced",
+      "record": "ai4s/programs/dsainet/research/b0_paired_readout_rotation_20261123/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_paired_readout_rotation_20261123/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-JOINT-SPATIAL-TRIM-20261123"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-JOINT-SPATIAL-TRIM-20261123",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_SPATIAL_TRIM",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_joint_spatial_trim_20261123/RESULT.json",
+      "qualification_result_sha256": "10601f65f55cb0c1513ba7460e4325c29a12dad681f11202b1e3fb4818ddeff3",
+      "record": "ai4s/programs/dsainet/research/b0_joint_spatial_trim_20261123/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_joint_spatial_trim_20261123/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-INTRA-TIME-MIXER-20261123"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-INTRA-TIME-MIXER-20261123",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_STATIC_INTRA_TIME_MIXER",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_intra_time_mixer_20261123/RESULT.json",
+      "qualification_result_sha256": "0f08efa3291747b5a26c33df4248f2e382e1c2aa3ae831a4f1a3ca81320d436e",
+      "record": "ai4s/programs/dsainet/research/b0_intra_time_mixer_20261123/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_intra_time_mixer_20261123/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "AI4S-DSAINET-dsainet-b0-spatial-filter-radius-r1-repair1-gpu1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "confirmation_status": "NOT_QUALIFIED",
+      "direction_id": "DSAINET-B0-SPATIAL-FILTER-RADIUS-20261123",
+      "dispatch_report": "ai4s/programs/dsainet/research/b0_spatial_filter_radius_20261123/DISPATCH_REPORT.md",
+      "dispatch_run_id": "2026-11-23_dsainet_b0_spatial_filter_radius_r1-full-w1",
+      "dispatch_status": "REMOTE_ACCEPTED_WAIT_FOR_RESOURCES",
+      "formal_claim_release": false,
+      "inherited_scientific_fits": 17,
+      "qualification_decision": "WORTH_LIMITED_TRAINING",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_spatial_filter_radius_20261123/RESULT.json",
+      "qualification_result_sha256": "6eed71b02b2014d2496c3aa375b7c9152642a12e8c998becae8fa56d23cf941d",
+      "record": "ai4s/programs/dsainet/research/b0_spatial_filter_radius_20261123/research_brief.md",
+      "repair_run_id": "2026-11-23_dsainet_b0_spatial_filter_radius_r1_repair1_gpu1-full-w1",
+      "repaired_scientific_fits": 1,
+      "report": "ai4s/programs/dsainet/research/b0_spatial_filter_radius_20261123/QUALIFICATION_REPORT.md",
+      "scientific_fits": 0,
+      "screen_disposition": "STOP_FIXED_SPATIAL_RADIUS",
+      "screen_evidence_id": "AI4S-DSAINET-dsainet-b0-spatial-filter-radius-r1-repair1-gpu1",
+      "screen_report": "ai4s/programs/dsainet/research/b0_spatial_filter_radius_repair1_gpu1_20261123/SCREEN_REPORT.md",
+      "screen_report_sha256": "e3b8cc3e74fb123870e37febf1d82cf1637b0e1f5d6fa27ecc4e341e17abd90d",
+      "source_evidence_ids": [
+        "AI4S-DSAINET-dsainet-b0-convtime-pointwise-tying-r1",
+        "DSAINET-B0-INTER-KEY-NORM-20261123"
+      ],
+      "training_contract": "ai4s/programs/dsainet/research/dsainet-b0-spatial-filter-radius-r1.yaml",
+      "training_contract_sha256": "a4eb42e4d785f47fec8e1f6da11f949253f6ae5c83fb8d719a40a7db4c0c0d7f",
+      "training_plan": "ai4s/programs/dsainet/research/b0_spatial_filter_radius_20261123/TRAINING_PLAN.md"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-INTER-KEY-NORM-20261123",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_INTER_KEY_NORM",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_inter_key_norm_20261123/RESULT.json",
+      "qualification_result_sha256": "692edf14f9050c72679c7c940dba61edfe589f98649a87ab02f16e35f994c82d",
+      "record": "ai4s/programs/dsainet/research/b0_inter_key_norm_20261123/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_inter_key_norm_20261123/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-TOKENIZER-TAP-BASIS-20261123"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-TOKENIZER-TAP-BASIS-20261123",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_TAP_BASIS",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_tokenizer_tap_basis_20261123/RESULT.json",
+      "qualification_result_sha256": "837e941fc0019ac14db52348f969dd76c98d29c311c24a1a36fe3e248e91e168",
+      "record": "ai4s/programs/dsainet/research/b0_tokenizer_tap_basis_20261123/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_tokenizer_tap_basis_20261123/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-DEFERRED-POSITION-20261123"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-DEFERRED-POSITION-20261123",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_DEFERRED_POSITION",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_deferred_position_20261123/RESULT.json",
+      "qualification_result_sha256": "0b9b36a912be87e99bf3f02958eae6c6bd9e3d1fbc87a8167f23abdb8aea225a",
+      "record": "ai4s/programs/dsainet/research/b0_deferred_position_20261123/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_deferred_position_20261123/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-COMPLEMENTARY-BRANCH-MASKS-20261123"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-COMPLEMENTARY-BRANCH-MASKS-20261123",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_COMPLEMENTARY_MASKS",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_complementary_branch_masks_20261123/RESULT.json",
+      "qualification_result_sha256": "75dcf7640785f200b40b4761f54bdd893dae8669ebda4a4ff66d95252c298c8f",
+      "record": "ai4s/programs/dsainet/research/b0_complementary_branch_masks_20261123/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_complementary_branch_masks_20261123/REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "AI4S-DSAINET-dsainet-b0-convtime-pointwise-tying-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "confirmation_status": "NOT_QUALIFIED",
+      "direction_id": "DSAINET-B0-CONVTIME-POINTWISE-TYING-20261123",
+      "dispatch_report": "ai4s/programs/dsainet/research/b0_convtime_pointwise_tying_20261123/DISPATCH_REPORT.md",
+      "dispatch_run_id": "2026-11-23_dsainet_b0_convtime_pointwise_tying_r1-full-w1",
+      "dispatch_status": "REMOTE_ACCEPTED",
+      "early_snapshot_verification": "ai4s/programs/dsainet/research/b0_convtime_pointwise_tying_20261123/VERIFIED_EARLY_SNAPSHOTS.json",
+      "formal_claim_release": false,
+      "interpretation": "Frozen cross-scale pointwise sharing preserved B0 and matched within-scale stage sharing in all four source cells at 6400 fewer parameters. Licensed one source screen.",
+      "qualification_decision": "WORTH_LIMITED_TRAINING",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_convtime_pointwise_tying_20261123/RESULT.json",
+      "qualification_result_sha256": "2a27ddeb0a90fa0e5cd6ca12c7198bf4791564d0dfa7427af5a79e1e4918d151",
+      "record": "ai4s/programs/dsainet/research/b0_convtime_pointwise_tying_20261123/research_brief.md",
+      "scientific_fits": 0,
+      "scientific_fits_completed": 18,
+      "screen_disposition": "STOP_POINTWISE_SHARING_UTILITY_RISK",
+      "screen_evidence_id": "AI4S-DSAINET-dsainet-b0-convtime-pointwise-tying-r1",
+      "screen_report": "ai4s/programs/dsainet/research/b0_convtime_pointwise_tying_20261123/SCREEN_REPORT.md",
+      "screen_report_sha256": "877f9d0dd655eeaef611250045d85982d724a9bda8811bddade5a03c5c905379",
+      "source_evidence_ids": [
+        "DSAINET-B0-FFN-FOLD-20261123",
+        "AI4S-DSAINET-dsainet-b0-spatial-first-r1"
+      ],
+      "training_contract": "ai4s/programs/dsainet/research/dsainet-b0-convtime-pointwise-tying-r1.yaml",
+      "training_contract_sha256": "c2e9956d1c450b08ca7a51b31c9ad8eca2ed6dda9e0ee1ee12e854f825fd88a9",
+      "trajectory_fit_count": 0,
+      "trajectory_freeze": "ai4s/programs/dsainet/research/b0_convtime_pointwise_tying_20261123/TRAJECTORY_FREEZE.json",
+      "trajectory_receipt": "ai4s/programs/dsainet/research/b0_convtime_pointwise_tying_20261123/TRAJECTORY_REPLAY_RECEIPT.json",
+      "trajectory_report": "ai4s/programs/dsainet/research/b0_convtime_pointwise_tying_20261123/TRAJECTORY_REPORT.md",
+      "trajectory_result": "ai4s/programs/dsainet/research/b0_convtime_pointwise_tying_20261123/TRAJECTORY_RESULT.json",
+      "trajectory_result_sha256": "155d7dfa556278759d565d4d33f2cfaa9843d66e24c299a9a074e47129a4c6ec"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-FFN-FOLD-20261123",
+      "formal_claim_release": false,
+      "interpretation": "Conserves B0 source utility at width 64. Matched pruning and equal-dose displaced merging did not replicate the proposed compensation advantage. Exact folding candidate closed.",
+      "qualification_decision": "STOP_FIXED_FFN_FOLDING",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_ffn_fold_20261123/RESULT.json",
+      "qualification_result_sha256": "cc5b7739430dc872b53e45ef2487efebd44c42f541b60979f882bab22e93e855",
+      "record": "ai4s/programs/dsainet/research/b0_ffn_fold_20261123/research_brief.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "AI4S-DSAINET-dsainet-b0-spatial-first-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-SPATIAL-FIRST-20261123",
+      "dispatch_report": "ai4s/programs/dsainet/research/b0_spatial_first_20261123/DISPATCH_REPORT.md",
+      "dispatch_run_id": "2026-11-23_dsainet_b0_spatial_first_r1-full-w1",
+      "dispatch_status": "REMOTE_ACCEPTED",
+      "formal_claim_release": false,
+      "interpretation": "Folded spatial-first front end reproduces original frozen logits and preserves all decisions at lower front-block MACs. In real batch diagnostic P met predefined pre-training risk/approximation bounds. Qualifies one paired training screen.",
+      "qualification_decision": "WORTH_LIMITED_TRAINING",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_spatial_first_20261123/RESULT.json",
+      "qualification_result_sha256": "5ad9c900a41ca5f65aabca2f660b42346f4cd1f0cb3577c1e0a69c12d177b255",
+      "record": "ai4s/programs/dsainet/research/b0_spatial_first_20261123/research_brief.md",
+      "scientific_fits": 0,
+      "screen_closeout_report": "ai4s/programs/dsainet/research/b0_spatial_first_20261123/SCREEN_REPORT.md",
+      "screen_disposition": "STOP_SPATIAL_FIRST_UTILITY_RISK",
+      "screen_evidence_id": "AI4S-DSAINET-dsainet-b0-spatial-first-r1",
+      "snapshot_receipt": "ai4s/programs/dsainet/research/b0_spatial_first_20261123/VERIFIED_EARLY_SNAPSHOTS.json",
+      "source_evidence_ids": [
+        "DSAINET-B0-BLOCK-RELIABILITY-20261123",
+        "DSAINET-B0-HEAD-FACTOR-BUDGET-20261123"
+      ],
+      "training_contract": "ai4s/programs/dsainet/research/dsainet-b0-spatial-first-r1.yaml",
+      "training_contract_sha256": "e6ac614e23a9a2e1a5c9f75ac39be3cc8f5fb8946e998bb18be18f5de377a243",
+      "trajectory_fit_count": 0,
+      "trajectory_freeze": "ai4s/programs/dsainet/research/b0_spatial_first_20261123/TRAJECTORY_FREEZE.json",
+      "trajectory_report": "ai4s/programs/dsainet/research/b0_spatial_first_20261123/TRAJECTORY_REPORT.md",
+      "trajectory_result": "ai4s/programs/dsainet/research/b0_spatial_first_20261123/TRAJECTORY_RESULT.json",
+      "trajectory_result_sha256": "bdf23813041139adc7a7f40499a634b0425296643919b99712dab8322cdd50e7"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-BLOCK-RELIABILITY-20261123",
+      "formal_claim_release": false,
+      "interpretation": "Equal positive-logit dosage and original decisions preserved. NLL uniformly worse than native across the four cells; exact local-support confidence rule closed.",
+      "qualification_decision": "STOP_FIXED_BLOCK_RELIABILITY",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_block_reliability_20261123/RESULT.json",
+      "qualification_result_sha256": "0cf0d258f468de90c953a9ec91c9938c6d42f22fbab24abb65b89838b47397ae",
+      "record": "ai4s/programs/dsainet/research/b0_block_reliability_20261123/research_brief.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-HEAD-FACTOR-BUDGET-20261123"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-HEAD-FACTOR-BUDGET-20261123",
+      "formal_claim_release": false,
+      "interpretation": "The score and message bottlenecks both preserved frozen B0 utility at equal width budget. The score bottleneck did not dominate compression on the message side. Exact allocation claim closed.",
+      "qualification_decision": "STOP_FIXED_HEAD_FACTOR_BUDGET",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_head_factor_budget_20261123/RESULT.json",
+      "qualification_result_sha256": "0cc6992411664ef7f81908dc2053411f31f49a56cbfcf488b66cb2f0574dc629",
+      "record": "ai4s/programs/dsainet/research/b0_head_factor_budget_20261123/research_brief.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-RESIDUAL-START-PAIRS-20261123"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-RESIDUAL-START-PAIRS-20261123",
+      "formal_claim_release": false,
+      "interpretation": "Pair-cancelling initialization opens pw1 gradients at matching initial logits. Cross-person transfer is almost saturated and no seed/session cell supports a +0.02 increase over both comparable initializations.",
+      "qualification_decision": "STOP_FIXED_PAIR_START",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_residual_start_pairs_20261123/RESULT.json",
+      "qualification_result_sha256": "d0576108e1661d00c7fb74df5ac5f6c6421369d4b805fa9451b5928904492cca",
+      "record": "ai4s/programs/dsainet/research/b0_residual_start_pairs_20261123/research_brief.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-INTRA-PROJECTION-SHARING-20261122"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-INTRA-PROJECTION-SHARING-20261122",
+      "formal_claim_release": false,
+      "interpretation": "Matched Q/O and K/V sharing with complete context. Only seed 0 E passed the full gate. Exact frozen sharing choice closed.",
+      "qualification_decision": "STOP_FIXED_INTRA_PROJECTION_SHARING",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_intra_projection_sharing_20261122/RESULT.json",
+      "qualification_result_sha256": "7413a2669bc80376e45e89742ab6a1640d411edf78c83618968bb4615bbc0ced",
+      "record": "ai4s/programs/dsainet/research/b0_intra_projection_sharing_20261122/research_brief.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-ELU-POLARITY-SUPPORT-20261122"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-ELU-POLARITY-SUPPORT-20261122",
+      "formal_claim_release": false,
+      "interpretation": "ELU polarity split reconstructs. Fixed even response never surpassed native mixing, signed response or ordinary energy by the frozen margin. No support for long-window allocation.",
+      "qualification_decision": "STOP_FIXED_ELU_POLARITY_SUPPORT",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_elu_polarity_support_20261122/RESULT.json",
+      "qualification_result_sha256": "97ebab3bb0728d50474913deab7b6c678d9ab233f368551c1782705f7b1b62c2",
+      "record": "ai4s/programs/dsainet/research/b0_elu_polarity_support_20261122/research_brief.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-SPATIAL-BN-COMPANIONS-20261122"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-SPATIAL-BN-COMPANIONS-20261122",
+      "formal_claim_release": false,
+      "interpretation": "Batch companion dependency confirmed in the isolated forward probe. Fixed spatial BN site failed subject risk in seed 0 T and matched late normalization in seed 1 E too closely; two of four cells passed.",
+      "qualification_decision": "STOP_FIXED_BN_SITE",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_spatial_bn_companions_20261122/RESULT.json",
+      "qualification_result_sha256": "1641e25074b74095d4d7e27ead26e1b4d1175b2df03fc90f1b5387465f9bcabf",
+      "record": "ai4s/programs/dsainet/research/b0_spatial_bn_companions_20261122/research_brief.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-CONVTIME-SUPPORT-ENERGY-20261122"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-CONVTIME-SUPPORT-ENERGY-20261122",
+      "formal_claim_release": false,
+      "interpretation": "Reconstruction and dosage passed. Zero of twelve units exceeded frozen logit response floor; no label scoring or conclusion about refitting padding.",
+      "qualification_decision": "STOP_SUPPORT_TECH",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_convtime_support_energy_20261122/RESULT.json",
+      "qualification_result_sha256": "83962b287c89f70aaf3c2c7c43758f5d03b9ba02967f24e1df84c5fe95a8780b",
+      "record": "ai4s/programs/dsainet/research/b0_convtime_support_energy_20261122/research_brief.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-INTER-GRADIENT-ROUTE-20261122"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-INTER-GRADIENT-ROUTE-20261122",
+      "formal_claim_release": false,
+      "interpretation": "Exact forward. Matched gradient-direction benefits did not replicate across both frozen seeds. Closes only fixed source detach location.",
+      "qualification_decision": "STOP_FIXED_INTER_KV_GRADIENT_ROUTE",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_inter_gradient_route_20261122/RESULT.json",
+      "qualification_result_sha256": "8c704dced78e55b790da30688cb63b3c205d8aa393ed3ee0412c180fcf11e144",
+      "record": "ai4s/programs/dsainet/research/b0_inter_gradient_route_20261122/research_brief.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "AI4S-DSAINET-dsainet-b0-attention-token-grid-r1-py39fix1"
+      ]
+    },
+    {
       "control_standard": "ai4s/programs/dsainet/research/EXPERIMENT_CONTROL_STANDARD.md",
       "historical_verdicts_unchanged": true,
       "id": "ATTRIBUTION-STOP-20260921",
@@ -2571,6 +3435,1283 @@
         "DSAINET-DIRECT-INTRA-UPDATE-DIRECTION-20261119",
         "DSAINET-DIRECT-INTRA-UPDATE-ALIGNMENT-20261119",
         "DSAINET-DIRECT-INTRA-UPDATE-S-AXIS-ENDPOINT-20261119"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "date": "2026-11-21",
+      "decision": "RETAIN_FOR_SOURCE_DESIGN_CHECK",
+      "direction_id": "DSAINET-SCALE-SPATIAL-CONTRASTS-20261121",
+      "disposition": "CLOSED_FIXED_SCALE_SPECIFIC_READOUT_RETAIN_NATIVE_B0",
+      "execution_authorized": false,
+      "formal_claim_release": false,
+      "new_experiment_started": false,
+      "next_contrast": "Adjacent versus interleaved block grouping crossed with scale-specific versus shared spatial contrast, using the same input per grouping and 672 proposed parameters per extension. Native B0 anchors utility and subject risk.",
+      "qualification_decision": "RETAIN_FOR_FOUR_ARM_FIT_DESIGN",
+      "qualification_freeze_sha256": "1a8deced22ad6c643b38cf8a8c219fc208762e4f0be39e27db008a8b9ffa8f92",
+      "qualification_id": "dsainet-scale-spatial-contrasts-q1",
+      "qualification_report": "ai4s/programs/dsainet/research/scale_spatial_contrasts_20261121/QUALIFICATION_REPORT.md",
+      "qualification_result_sha256": "11bfcd218cfb52bbd74a9999c550bf02e8a13eb40f41c9446d06a592991a275d",
+      "qualification_scope": "No-training source feature qualification using A04-A06 T/E and two frozen cue4 B0 checkpoints. All four cells 3/3, all 12 units 16/16 filters. Zero injection and cropped-response parity passed. Original receipt serialization failure preserved and recovered by same-freeze replay. No labels, fitted arms or new model claim.",
+      "record": "ai4s/programs/dsainet/research/scale_spatial_contrasts_20261121/research_brief.md",
+      "role": "candidate_selection_design_only",
+      "scope": "Design and synthetic algebra only. Candidate reads within-pair and between-pair scatter of the same spatial log-energy trajectories at the shared tokenizer. No EEG, held-out subjects or BNCI2014002 accessed.",
+      "screen_completed": true,
+      "screen_decision": "STOP_FIXED_FOUR_ARM_SCREEN",
+      "screen_freeze_sha256": "295ac6e04ab069b4e97a24236c0df3e11800a2bb98a02a2a277722aa7814808c",
+      "screen_id": "dsainet-scale-spatial-contrasts-screen1",
+      "screen_report": "ai4s/programs/dsainet/research/scale_spatial_contrasts_20261121/SCREEN_REPORT.md",
+      "screen_result_sha256": "3863f9a1e508d8bc5be8a9fdfcebdf1526a7e7a8e40c793a5257149234d21937",
+      "screen_scope": "One authorized local exposed-source screen. Eight added-module fits of 672 parameters, B0 frozen, A04-A06 fit and A07-A09 T/E score. Adjacent P beats interleaved P in 4/4 cells, adjacent P vs shared fails the +0.5 pp threshold in 4/4 cells, interaction reverses at seed 1 T. Adjacent P and S both lose to B0 on seed 0 and win on seed 1, with one S risk violation. Retain B0. No joint retraining, held-out or 002 access.",
+      "source_evidence_ids": [
+        "LOCAL-DSAINET-ADD-ONE-SPATIAL-DIRECTION-20261118",
+        "DSAINET-SHORT-WINDOW-SPATIAL-RELATION-PERSISTENCE-20261118",
+        "DSAINET-TOKENIZER-LAG-DEPENDENT-MIXING-20261118",
+        "DSAINET-SCALE-INTERACTION-ATTRIBUTION-20261119",
+        "DSAINET-DIRECT-INTRA-UPDATE-REPLAY-CLOSEOUT-20261119"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "date": "2026-11-21",
+      "decision": "RETAIN_FOR_SOURCE_DESIGN_CHECK",
+      "direction_id": "DSAINET-SHARED-PATTERN-POOLING-20261121",
+      "disposition": "CLOSED_FIXED_SHARED_PATTERN_POOLING_RETAIN_NATIVE_B0",
+      "execution_authorized": false,
+      "formal_claim_release": false,
+      "new_experiment_started": false,
+      "next_contrast": "Shared pre-Avg8 adjacent pattern-weighted pooling versus adjacent energy and distant pattern pooling on identical inputs with zero fitted parameters. Native B0 anchors utility and individual risk.",
+      "qualification_decision": "STOP_TECHNICAL",
+      "qualification_freeze_sha256": "b2c3e240e2b4a79e3c30446e02e4399012d6457ef56b6ad387ed5019c50121c4",
+      "qualification_id": "dsainet-shared-pattern-pooling-q1",
+      "qualification_report": "ai4s/programs/dsainet/research/shared_pattern_pooling_20261121/QUALIFICATION_REPORT.md",
+      "qualification_result_sha256": "7558b874b43a01cc3ff5959696ae026b0fab645d644431997b6ea78ac29df44d",
+      "qualification_revision_decision": "RETAIN_FOR_UTILITY_SCREEN",
+      "qualification_revision_freeze_sha256": "fed3f6ae3ef9efd1b2db50d1b5effc9fb333161f244be370f943ed618b92b4ea",
+      "qualification_revision_id": "dsainet-shared-pattern-pooling-q1-r1",
+      "qualification_revision_location_sha256": "99a42b12f0af7e041983364acfcf6e641b1174c8bd6b1ebc71cf0d5e99267ede",
+      "qualification_revision_report": "ai4s/programs/dsainet/research/shared_pattern_pooling_20261121/QUALIFICATION_R1_REPORT.md",
+      "qualification_revision_result_sha256": "7cd8898061cfec04e38218288e6e33863858407f68b7626eac040ac9c3cf1008",
+      "qualification_revision_scope": "One authorized local technical revision. Six q1 seed 0 receipts reused unchanged. Located old FP32 rounding difference in seed 1 A04-T with independent FP64 and fsum agreement, then finished seed 1 A04-A06 T/E only. Independent FP64 pooling formula differences zero and exact native Avg8 plus logit rollback in all new batches. Frozen scientific thresholds unchanged. Per-cell counts 3/3, 3/3, 2/3, 3/3. Seed 1 A05-T misses P/A. Utility screen not run. No training, A07-A09, held-out or 002 waveform access.",
+      "qualification_scope": "A04-A06 T/E authorized source-only inference with two frozen cue4 B0. Both first 16-row preflights passed. All six seed 0 units passed and were preserved. Stopped in seed 1 A04-T before any full seed 1 unit due to equal-weight pool error 1.9073486328125e-6 above the frozen 1e-6 maximum. No thresholds changed, no training, no A07-A09, held-out or 002 waveform access. Utility screen deferred.",
+      "record": "ai4s/programs/dsainet/research/shared_pattern_pooling_20261121/research_brief.md",
+      "role": "candidate_selection_design_only",
+      "scope": "Prior reports, model source and synthetic algebra only. Proposed first qualification limited to two cue4 B0 checkpoints and A04-A06 T/E. No EEG or prediction access and no model forward or training this turn.",
+      "screen_completed": true,
+      "screen_decision": "STOP_RETAIN_B0",
+      "screen_freeze_sha256": "a880be4d7496765f3a262ab47a55e82cc08e21454ae2d6d81794d743eb01fd1e",
+      "screen_id": "dsainet-shared-pattern-pooling-screen1",
+      "screen_logit_lock_sha256": "9e6eb3b72fa04bcc5521abe7da5a82861b96b5e25d0c2dc1cd105065b4edf659",
+      "screen_report": "ai4s/programs/dsainet/research/shared_pattern_pooling_20261121/SCREEN_REPORT.md",
+      "screen_result_sha256": "eda24f1e472579f2ccdcc26f1458992c5337d6f527bb793392d41e56287a03a6",
+      "screen_scope": "One completed training-free source utility screen, two native frozen cue4 B0 on A07-A09 T/E. P versus A nets +1,-4,0,+1 and fails all four gates. P versus J passes seed 1 E only. P and A each beat B0 in only one cell and both meet individual risk limits. Logits sealed before labels. Retain native B0 and close the fixed shared-pooling instance. No training, held-out or 002 waveform access.",
+      "source_evidence_ids": [
+        "DSAINET-SCALE-SPATIAL-CONTRASTS-20261121",
+        "DSAINET-SHORT-WINDOW-SPATIAL-RELATION-PERSISTENCE-20261118",
+        "DSAINET-P0-ORD-EC-R1-VERIFIED-ANALYSIS-20261031"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "date": "2026-11-21",
+      "decision": "RETAIN_FOR_SOURCE_DESIGN_CHECK",
+      "direction_id": "DSAINET-SPATIAL-RESIDUAL-COUPLING-20261121",
+      "disposition": "CLOSED_FIXED_SPATIAL_RESIDUAL_COUPLING_RETAIN_NATIVE_B0",
+      "execution_authorized": false,
+      "formal_claim_release": false,
+      "new_experiment_started": false,
+      "next_contrast": "Shared token encoding of which retained spatial projection covaries more with the discarded subspace versus power-based and time-shifted assignment. Common true coupling magnitude, marginal powers, readout width and fitting budget. Proposed no-training source class contrast before any fit.",
+      "qualification_decision": "STOP_CLASS_CORRESPONDENCE",
+      "qualification_freeze_sha256": "b1ecbaa863b3ae49de6d3acedd0c55b4f055c21be5600a9c6290d3b04cc4286a",
+      "qualification_geometry_lock_sha256": "5fcf5d46c190bf7f925c036baf7a983412101585a425b74d425d20f650d3a074",
+      "qualification_id": "dsainet-spatial-residual-coupling-q1",
+      "qualification_report": "ai4s/programs/dsainet/research/spatial_residual_coupling_20261121/QUALIFICATION_REPORT.md",
+      "qualification_result_sha256": "9990abc457f19a19f9b74709a4a419f4ce87cdcc1a4d65da0ced747731f25bcc",
+      "qualification_scope": "Two frozen cue4 B0 checkpoints, A04-A06 T/E source only. Technical and coverage gates passed. Relative shared linear projection residuals 40.27–44.84 percent. All four class correspondence cells 0/3 by frozen effect and permutation thresholds. No fitting, utility screening, A07-A09, held-out or 002 data access.",
+      "record": "ai4s/programs/dsainet/research/spatial_residual_coupling_20261121/research_brief.md",
+      "role": "candidate_selection_design_only",
+      "scope": "Existing source reports, implementation, literature and synthetic algebra only. No EEG, checkpoint inference, fitting, held-out or 002 access.",
+      "source_evidence_ids": [
+        "DSAINET-SHARED-PATTERN-POOLING-20261121",
+        "LOCAL-DSAINET-ADD-ONE-SPATIAL-DIRECTION-20261118",
+        "DSAINET-SCALE-SPATIAL-CONTRASTS-20261121",
+        "DSAINET-SHORT-WINDOW-SPATIAL-RELATION-PERSISTENCE-20261118"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "date": "2026-11-21",
+      "decision": "RETAIN_FOR_SOURCE_DESIGN_CHECK",
+      "direction_id": "DSAINET-SENSOR-MU-PERSISTENCE-20261121",
+      "disposition": "CLOSED_FIXED_SENSOR_MU_PERSISTENCE_RETAIN_NATIVE_B0",
+      "execution_authorized": false,
+      "formal_claim_release": false,
+      "new_experiment_started": false,
+      "next_contrast": "Test whether low relative mu power persists at the same sensor in adjacent windows. Compare correctly assigned, region-averaged and misassigned fluctuation on identical regional inputs. Proposed sensor-level source qualification once per A04-A06 subject and T/E session, seed-specific technical rollback only. A possible subsequent shared token adapter would have 800 weights per arm with native B0 as risk reference.",
+      "qualification_decision": "STOP_CLASS_CORRESPONDENCE",
+      "qualification_freeze_sha256": "d7a8ed6451bd52fc705dce6e348d609c5a3cafa123a23574611488c3403a17b5",
+      "qualification_geometry_lock_sha256": "e948405ca8033c4e9fc07a7795b8efc401a76add4ea71cdcce46c0499fc7aeee",
+      "qualification_id": "dsainet-sensor-mu-persistence-q1",
+      "qualification_report": "ai4s/programs/dsainet/research/sensor_mu_persistence_20261121/QUALIFICATION_REPORT.md",
+      "qualification_result_sha256": "655803ea5b235d349cddb64c389cf3ac32c41e0f3d42c20ef1be57404ce8842a",
+      "qualification_scope": "One completed 001 A04-A06 T/E source-only qualification, with two frozen cue4 B0 checkpoints for zero-injection technical checks and sensor features counted once per subject session. All 1728 rows retained. Both seed rollbacks exact. Affine residual 28.35–38.61 percent, T and E both 0/3 for the joint hand direction and class accuracy effects with matched permutation. Initial pre-waveform assertion failure preserved, engineering fix retained identical scientific config. No fitting, utility screening, A07-A09, held-out or BNCI2014002 access.",
+      "record": "ai4s/programs/dsainet/research/sensor_mu_persistence_20261121/research_brief.md",
+      "role": "candidate_selection_design_only",
+      "scope": "Existing reports, implementation, literature and synthetic algebra only. No EEG, logits, checkpoint inference, model fit, held-out subjects or BNCI2014002 access.",
+      "source_evidence_ids": [
+        "DSAINET-SPATIAL-RESIDUAL-COUPLING-20261121",
+        "DSAINET-SCALE-SPATIAL-CONTRASTS-20261121",
+        "DSAINET-SHARED-PATTERN-POOLING-20261121",
+        "DSAINET-SHORT-WINDOW-SPATIAL-RELATION-PERSISTENCE-20261118"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "date": "2026-11-21",
+      "decision": "RETAIN_FOR_SOURCE_DESIGN_CHECK",
+      "direction_id": "DSAINET-HOMOLOGOUS-MU-REACTIVITY-20261121",
+      "disposition": "CLOSED_BY_USER_AFTER_STOP_CLASS_CORRESPONDENCE. All six four-class point differences vs J were positive, none passed its permutation gate. No utility screen or retuning of the fixed homologous median.",
+      "execution_authorized": false,
+      "formal_claim_release": false,
+      "new_experiment_started": false,
+      "next_contrast": "Compare the median of three homologous right-minus-left preparatory-to-task mu responses with the difference of hemisphere medians and a fixed outer-pair mismatch. Each arm receives all nine sensor log-power changes. Qualify on source hand-direction reversal and four-class increment before any proposed shared 400-weight adapter.",
+      "qualification_decision": "STOP_CLASS_CORRESPONDENCE",
+      "qualification_freeze_sha256": "6398bbab7443a549adb1f807c71b5c6f3b093c295f468d6e5f36b9a81f7700c1",
+      "qualification_id": "dsainet-homologous-mu-reactivity-q1",
+      "qualification_report": "ai4s/programs/dsainet/research/homologous_mu_reactivity_20261121/QUALIFICATION_REPORT.md",
+      "qualification_result_sha256": "47f49507118b64cdd13dec2ada4f4cf255c27590ad723122968f11e43600bfe6",
+      "qualification_scope": "Six authorized 001 MAT units A04-A06 T/E, 1728 aligned source trials. Technical and two B0 rollback checks passed. Source hand and four-class joint criterion T 0/3 and E 0/3. No fitting, utility screen, A07-A09, held-out or 002 data analysis.",
+      "qualification_tech_sha256": "914bf903a3621f2bea11b44d3a34b4d12051df97ba963945ac0cc61ee10f8510",
+      "record": "ai4s/programs/dsainet/research/homologous_mu_reactivity_20261121/research_brief.md",
+      "role": "candidate_selection_design_only",
+      "scope": "Existing reports, native code, published literature and synthetic algebra only. No EEG, checkpoint inference, training, held-out subjects or BNCI2014002 accessed.",
+      "source_evidence_ids": [
+        "DSAINET-SENSOR-MU-PERSISTENCE-20261121",
+        "DSAINET-SPATIAL-RESIDUAL-COUPLING-20261121",
+        "DSAINET-POST-HISTALIGN-INVESTMENT-20261108"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "date": "2026-11-21",
+      "decision": "RETAIN_FOR_SOURCE_DESIGN_CHECK",
+      "direction_id": "DSAINET-SHARED-FREQUENCY-ALIGNMENT-20261121",
+      "disposition": "STOP_UTILITY_SCREEN_FOR_FIXED_SHARED_SHIFT",
+      "execution_authorized": false,
+      "formal_claim_release": false,
+      "new_experiment_started": false,
+      "next_contrast": "Use identical source prototypes and regional spectral similarities to compare a common frequency shift across two spatial contrasts with opposite shifts, fixed pooling and independent alignment. Check A04-A06 T/E four-class balanced accuracy, prep-only effects and nonzero shifts before considering shared-token versus late fusion.",
+      "qualification_decision": "STOP_CLASS_CORRESPONDENCE",
+      "qualification_freeze_sha256": "2fd210216f8ca3d80a9b1c60ee5b2d3d72da624fb305b3f222b9eedaa2dc9d1f",
+      "qualification_id": "dsainet-shared-frequency-alignment-q1",
+      "qualification_report": "ai4s/programs/dsainet/research/shared_frequency_alignment_20261121/QUALIFICATION_REPORT.md",
+      "qualification_result_sha256": "9e3fb6f3a7ab514e409fe174690d4c7743e495f54dcdf1c849f1ca28447ce5e9",
+      "qualification_scope": "One authorized 001 A04-A06 T/E source-only qualification, six MAT units and 1728 original source rows. Technology passed. Joint class-transfer gate T 0/3 and E 0/3. No B0 forward, training, utility screen, held-out or BNCI2014002 analysis.",
+      "qualification_tech_sha256": "8053797d22fe19ec2edb37d79e37cced05f36a6eaa00bab06dde25fa30f2e3c7",
+      "record": "ai4s/programs/dsainet/research/shared_frequency_alignment_20261121/research_brief.md",
+      "role": "candidate_selection_design_only",
+      "scope": "Existing reports, host code, primary papers and constructed spectra only. Source qualification and utility unmeasured. No waveforms, weights, training, held-out subjects or BNCI2014002.",
+      "source_evidence_ids": [
+        "DSAINET-HOMOLOGOUS-MU-REACTIVITY-20261121",
+        "DSAINET-SENSOR-MU-PERSISTENCE-20261121",
+        "DSAINET-SPATIAL-RESIDUAL-COUPLING-20261121",
+        "DSAINET-SHARED-PATTERN-POOLING-20261121",
+        "DSAINET-SCALE-SPATIAL-CONTRASTS-20261121",
+        "DSAINET-PORTFOLIO-N1-N4-REVIEW-20261118"
+      ],
+      "user_closeout": "2026-11-22: close this fixed common-shift direction at the sealed qualification outcome."
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "date": "2026-11-22",
+      "decision": "RETAIN_FOR_SOURCE_DESIGN_CHECK",
+      "direction_id": "DSAINET-LOCAL-BETA-RESIDUAL-POOLING-20261122",
+      "disposition": "STOP_FIXED_MISALIGNED_CONTROL_AT_MATCHED_REMOVAL_GATE",
+      "equal_dose_assessment": {
+        "decision": "DO_NOT_RERUN_FIXED_SHIFT",
+        "receipt_sha256": "ce3099a7261de0d9b13dc3766bbf62264ee2f3e11a8ece0f4dc9ded3868aaf23",
+        "report": "ai4s/programs/dsainet/research/local_beta_residual_pooling_20261122/J_EQUAL_DOSE_REPORT.md",
+        "scope": "Identical six unlabeled source slices and eligible rows. Fixed half-window shifted directions with any scalar coefficients can meet the original dose tolerances on at most two of 1727 rows. Retain the original stopped qualification."
+      },
+      "execution_authorized": false,
+      "formal_claim_release": false,
+      "new_experiment_started": false,
+      "next_contrast": "Test whether subtracting an outside-column beta envelope separately in two windows before pooling improves cross-person four-class decoding over pooled subtraction, equally adaptive misaligned subtraction and marginal synchrony.",
+      "qualification_decision": "STOP_FEATURE_QUALIFICATION",
+      "qualification_freeze_sha256": "c97dee8dd372ccffa88b006265769ba2517c6d5e60b1b099a60f8582772072b9",
+      "qualification_id": "dsainet-local-beta-residual-pooling-q1",
+      "qualification_report": "ai4s/programs/dsainet/research/local_beta_residual_pooling_20261122/QUALIFICATION_REPORT.md",
+      "qualification_result_sha256": "84277a35724f5cb917ed7939725faa5ba1a21b00fb4341605c176ec2781d3066",
+      "qualification_scope": "One authorized 001 A04-A06 T/E source-only qualification. 1727 of 1728 rows passed base feature checks, gains and P-minus-C identity passed. Matched P/J subtraction dose coverage 0-0.35 percent versus 35 percent frozen minimum. Label stage not opened. No B0 forward, training, held-out or 002.",
+      "qualification_tech_sha256": "284a5d6829e87360f9f30f5dc534e78f13a69379e8d4a7f7b81439a56b39052a",
+      "record": "ai4s/programs/dsainet/research/local_beta_residual_pooling_20261122/research_brief.md",
+      "role": "candidate_selection_design_only",
+      "scope": "Historical reports, published work, native code and synthetic algebra only. No new EEG, model weights, training, held-out or 002 access.",
+      "source_evidence_ids": [
+        "DSAINET-SHARED-FREQUENCY-ALIGNMENT-20261121",
+        "DSAINET-SPATIAL-RESIDUAL-COUPLING-20261121"
+      ],
+      "source_report": "ai4s/programs/dsainet/research/spatial_relation_persistence_20261118/QUALIFICATION_REPORT.md",
+      "user_closeout": "2026-11-22: close this segmented beta residual direction and its fixed-shift dose revision."
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "date": "2026-11-22",
+      "direction_id": "DSAINET-S0-SHARED-TEMPORAL-POOLING-20261122",
+      "formal_claim_release": false,
+      "next_contrast": "Test convolution sharing at the encoder after stopping fixed shared readout.",
+      "qualification_decision": "STOP_FIXED_SHARED_POOLING",
+      "qualification_freeze_sha256": "81bce24a245ec166c18af798e267f5cde29be1d0ddad42fcd763197f95f56bfd",
+      "qualification_result_sha256": "c39f584f9b76bd13aad5a99e06b0aef39c06c2a5aa0d46f05f97204b8f30532e",
+      "qualification_tech_sha256": "57278549537c1f08ac6994d65854c92707c4e7226edc966cd62af28d19c34496",
+      "record": "ai4s/programs/dsainet/research/s0_shared_temporal_pooling_20261122/research_brief.md",
+      "role": "authorized_source_only_no_fit",
+      "source_evidence_ids": [
+        "DSAINET-LOCAL-BETA-RESIDUAL-POOLING-20261122",
+        "DSAINET-SCALE-INTERACTION-ATTRIBUTION-20261119"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "date": "2026-11-22",
+      "direction_id": "DSAINET-S0-SHARED-CONVTIME-20261122",
+      "formal_claim_release": false,
+      "next_contrast": "Compare the shared short stack with removing both ConvTime stacks.",
+      "qualification_decision": "STOP_FIXED_SHARED_CONVTIME",
+      "qualification_freeze_sha256": "10301a5ce1eba24cb2beae94501096d2a6e7fe579dd82c8bdd6ad2613a7a1ea4",
+      "qualification_result_sha256": "a42e913fe722a1599f53a3ed48e15ccc1552c33e30254189bbe2b65d2aa89eb0",
+      "qualification_tech_sha256": "ade8bd5ba4f03a1252b2024503783453661bff2106653428a63d16abb0b5aa24",
+      "record": "ai4s/programs/dsainet/research/s0_shared_convtime_20261122/research_brief.md",
+      "role": "authorized_source_only_no_fit",
+      "source_evidence_ids": [
+        "DSAINET-S0-SHARED-TEMPORAL-POOLING-20261122",
+        "DSAINET-SCALE-INTERACTION-ATTRIBUTION-20261119"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "date": "2026-11-22",
+      "direction_id": "DSAINET-S0-CONVTIME-REMOVAL-20261122",
+      "disposition": "RETAIN_S0_AND_COMPRESSION_EVIDENCE_STOP_CURRENT_NO_FIT_BATCH",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_FIXED_S0_COMPRESSION",
+      "qualification_freeze_sha256": "7907faa2a3d5f7aada6bbeb703820d404d20ed42a7087b95f39fec26499f8ac9",
+      "qualification_result_sha256": "e64d7bb0f21a7a85827edfb19624c6b0962bc82723737a679e43c6a79e98273a",
+      "qualification_tech_sha256": "89d66dbb1b44c5c6fe23734b13591030d4c007656d8248efe4a1b2ed1db57cf1",
+      "record": "ai4s/programs/dsainet/research/s0_convtime_removal_20261122/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/s0_convtime_removal_20261122/AUTONOMOUS_SOURCE_REPORT.md",
+      "role": "authorized_source_only_no_fit",
+      "scope": "Development scaffold S0 = two 001 cue4 context-0 A/A-direct checkpoints from 2026-10-24_dsainet_p0_cue_r1_costcal_r1-full-w1. All three rounds use exposed A04-A06 T/E only. Paired native B0 remains the risk reference. No additional fitting or remote dispatch.",
+      "source_evidence_ids": [
+        "DSAINET-S0-SHARED-CONVTIME-20261122",
+        "DSAINET-S0-SHARED-TEMPORAL-POOLING-20261122"
+      ],
+      "user_scope_correction": "The S0 scaffold instruction belonged to MVCNet. DSAINet continues with native B0. The three S0 outcomes retain only their historical A/A-direct, no-inter scope."
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "decision_limit": "Candidate and ordinary logit-average control have identical conditional hand odds. Native four-class gates and dose-matched early and anatomical-mismatch controls independently stop the candidate.",
+      "direction_id": "DSAINET-B0-LATE-HAND-REFLECTION-20261122",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_FIXED_LATE_HAND_REFLECTION",
+      "qualification_freeze_sha256": "4a0b1a958aadf2bb743cc898afe5d4136e6762c8aa07bab73376934d8d7b7474",
+      "qualification_result_sha256": "9909e7a6103e7bb447ce3dadbff60fd4e08a19d700c9b46bbe595971e0802180",
+      "qualification_tech_sha256": "ce5ebac79a8aa764df6dbf821179ef5c969c8dba508d3cb7adbace0ea3cb1af9",
+      "record": "ai4s/programs/dsainet/research/b0_late_hand_reflection_20261122/research_brief.md",
+      "role": "authorized_source_only_no_fit"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "decision_limit": "Preserved mean does not beat two matched controls. Early-late contrast control improves over B0 in all four mean ACC cells but crosses ordinary rank-16 by session.",
+      "direction_id": "DSAINET-B0-TOKENIZER-PRESERVE-SLOW-20261122",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_FIXED_SLOW_TOKENIZER",
+      "qualification_freeze_sha256": "7bb8902605687ae9db0911334675947ae787962a77e91893f5efc9a2291afe7e",
+      "qualification_result_sha256": "46d5f0ee1cea0a18f114bc04a7dddcf88540ec5a278390189361699be8e2c90c",
+      "qualification_tech_sha256": "cebac768bba608296494d8197c0059f72ab87946435ccaa5345b10c556048755",
+      "record": "ai4s/programs/dsainet/research/b0_tokenizer_preserve_slow_20261122/research_brief.md",
+      "role": "authorized_source_only_no_fit"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "decision_limit": "One GPT-6.2 Astra High targeted review recommended a fixed input subspace. With that control the slow odd direction does not beat the phase, frequency and simple rank controls.",
+      "direction_id": "DSAINET-B0-TOKENIZER-PRESERVE-ODD-20261122",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_FIXED_ODD_TOKENIZER",
+      "qualification_freeze_sha256": "d63d8497236c95ddf49804531d70484c207222b4bd8e08f3055e1837bfb1b7be",
+      "qualification_result_sha256": "88cd34998e24172f7bf65c23eaaa5859de7039d0af4208ce865b041b7bdbc022",
+      "qualification_tech_sha256": "a0db324202753440e154764cbec25a45ae104629b2a09e892c254dc2e77bb7e6",
+      "record": "ai4s/programs/dsainet/research/b0_tokenizer_preserve_odd_20261122/research_brief.md",
+      "role": "authorized_source_only_no_fit"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "decision_limit": "All four novel qualifications used the same exposed 001 A04-A06 T/E with two native B0 checkpoints. No fixed candidate crosses the training investment gate.",
+      "direction_id": "DSAINET-B0-RECIPROCAL-AFFINITY-20261122",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_FIXED_RECIPROCAL_AFFINITY",
+      "qualification_freeze_sha256": "ad40476f11e51f6e19f52f94818f4a0bbc02bb7f3ced6730fba75380ffd5a704",
+      "qualification_result_sha256": "d46c0a0c4f6e03e62a53f30dadd74f0fbdb0c7ac27329addd7aa70b6a25ff03b",
+      "qualification_tech_sha256": "3f09e53c5afac5406593523b7e6d0f6fb91fe2c69853d13ce38752de6a5c063c",
+      "record": "ai4s/programs/dsainet/research/b0_reciprocal_affinity_20261122/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_reciprocal_affinity_20261122/AUTONOMOUS_SOURCE_REPORT.md",
+      "role": "authorized_source_only_no_fit",
+      "user_closeout": "User requested closure of this four-round native-B0 batch. The frozen dispositions bound the tested instances; they do not exhaust the Program question or advance any other candidate."
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-SPECTRAL-SPATIAL-PAIRING-20261122",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_FIXED_SPECTRAL_PAIRING",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_spectral_spatial_pairing_20261122/RESULT.json",
+      "qualification_result_sha256": "a4e46a1351e7706172a50a86cd82cab4a0b32febeb5aff9299b5b541363efb48",
+      "record": "ai4s/programs/dsainet/research/b0_spectral_spatial_pairing_20261122/research_brief.md"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-WINDOWED-SPATIAL-ALLOCATION-20261122",
+      "formal_claim_release": false,
+      "qualification_decision": "PASS_FOR_LIMITED_TRAINING",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_windowed_spatial_allocation_20261122/QUALIFICATION_R1_RESULT.json",
+      "qualification_result_sha256": "f330500d0604ddb1d9e0ab3e9e98f70b9f3f4445008fb741ea7ade5906de4a9f",
+      "record": "ai4s/programs/dsainet/research/b0_windowed_spatial_allocation_20261122/research_brief.md",
+      "review": "GPT-6.2 Astra High [REDACTED_MACHINE] recommended a bounded screen after technical qualification; an identified time-local gain confound was addressed by per-window orthogonality and a position-only control.",
+      "screen_decision": "STOP_FIXED_SPATIAL_ALLOCATION",
+      "screen_pass_cells": 0,
+      "screen_report": "ai4s/programs/dsainet/research/b0_windowed_spatial_allocation_20261122/SCREEN_REPORT.md",
+      "screen_report_sha256": "c4de0f9d4fb4c5e2086dc3cced0d8328cf885c0aa97a046b148a677b5bbcb05d",
+      "screen_result": "ai4s/programs/dsainet/research/b0_windowed_spatial_allocation_20261122/VERIFIED_SCREEN_RESULT.json",
+      "screen_result_sha256": "40da5b939b5e0a5e1c5ca45c7cdd77dcac5cc6a5db10398b84b7d9b4d6d3bda7",
+      "screen_status": "VERIFIED_INTAKE",
+      "source_evidence_ids": [
+        "DSAINET-B0-SPECTRAL-SPATIAL-PAIRING-20261122",
+        "LOCAL-DSAINET-ADD-ONE-SPATIAL-DIRECTION-20261118"
+      ],
+      "training_contract": "ai4s/programs/dsainet/research/dsainet-window-spatial-r1-dispatch1.yaml",
+      "training_plan": "ai4s/programs/dsainet/research/b0_windowed_spatial_allocation_20261122/TRAINING_PLAN.md",
+      "training_run_id": "2026-11-22_dsainet_window_spatial_r1-dispatch1-full-w1",
+      "verified_round_evidence_id": "AI4S-DSAINET-dsainet-window-spatial-r1-dispatch1"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-TOKENIZER-PARITY-20261122",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_FIXED_PARITY_SMOOTHING",
+      "qualification_freeze_sha256": "0acdfb20422cec704306ce14fa5dc081af6739d213798963cd770bfa503b1066",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_tokenizer_parity_20261122/RESULT.json",
+      "qualification_result_sha256": "ea53eb8f5ff272144570f0cf76d09367f6b598ff2bbd67024ab1f2ac402e1bcf",
+      "qualification_tech_sha256": "3184573a69e31c7f95e7c4437303442cd794db0cfd7efe0292ac2d9954a3e4f7",
+      "record": "ai4s/programs/dsainet/research/b0_tokenizer_parity_20261122/research_brief.md",
+      "role": "authorized_source_only_no_fit",
+      "scope": "001 cue4 context 0 A04-A06 T/E, exposed source qualification; no parameter optimization.",
+      "source_evidence_ids": [
+        "DSAINET-B0-WINDOWED-SPATIAL-ALLOCATION-20261122"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-SPATIAL-PHASE-20261122",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_FIXED_SPATIAL_PHASE",
+      "qualification_freeze_sha256": "5fd42152b4b7fd6273c3752d6575eb5fc308628a166de6ead5332358e303fe8b",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_spatial_phase_20261122/RESULT.json",
+      "qualification_result_sha256": "3c0bee93b7c969aa82847702c3abc1120f32b544795093c451eb2afd5ae77a4a",
+      "qualification_tech_sha256": "34aaf1c869bc940eb5d7ba4a3c71b8a9443824165d7956635b6ee93813767acc",
+      "record": "ai4s/programs/dsainet/research/b0_spatial_phase_20261122/research_brief.md",
+      "role": "authorized_source_only_no_fit",
+      "scope": "001 cue4 context 0 A04-A06 T/E, exposed source qualification; no parameter optimization.",
+      "source_evidence_ids": [
+        "DSAINET-B0-TOKENIZER-PARITY-20261122"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-PAIRWISE-TOKENIZER-20261122",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_FIXED_PAIRWISE_TOKENIZER",
+      "qualification_freeze_sha256": "59fe39dbe1c57b77a34ae7d431bf525051235fbfc1a46bfe99c91ca8d5f497f9",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_pairwise_tokenizer_20261122/RESULT.json",
+      "qualification_result_sha256": "764263b0db0e05f07dd4b01f22634b9095f4dff9de7d34f299251c485cea67ee",
+      "qualification_tech_sha256": "ef9b73a229fd1252a37a752bfa3adb39e73ceaf05fcda6a27f630ee71caff827",
+      "record": "ai4s/programs/dsainet/research/b0_pairwise_tokenizer_20261122/research_brief.md",
+      "role": "authorized_source_only_no_fit",
+      "scope": "001 cue4 context 0 A04-A06 T/E, exposed source qualification; no parameter optimization.",
+      "source_evidence_ids": [
+        "DSAINET-B0-SPATIAL-PHASE-20261122"
+      ]
+    },
+    {
+      "b0_capability_pass_cells": 0,
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-CONVTIME-DECOUPLING-20261122",
+      "dispatch_report": "ai4s/programs/dsainet/research/b0_convtime_decoupling_20261122/DISPATCH_REPORT.md",
+      "dispatch_report_sha256": "79c619c096def2ac8c64fb6b90e119b2958efef38f18fd3859dfdceeba3389d0",
+      "formal_claim_release": false,
+      "qualification_decision": "WORTH_LIMITED_TRAINING",
+      "qualification_freeze_sha256": "e8af781784e5650109680d2b99291e55272fe575094755ad34d1264d54675bac",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_convtime_decoupling_20261122/RESULT.json",
+      "qualification_result_sha256": "970e00ecfb576659739925b3c7898b03dd71ee73778810b78516cb59be57cd7d",
+      "qualification_tech_sha256": "cbe70f7138da9d51297a0ea6d9925efdf7bb871669c27d044f8915b718728332",
+      "record": "ai4s/programs/dsainet/research/b0_convtime_decoupling_20261122/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_convtime_decoupling_20261122/AUTONOMOUS_SOURCE_REPORT.md",
+      "review": "ai4s/programs/dsainet/research/b0_convtime_decoupling_20261122/REVIEW_RECEIPT.md",
+      "role": "authorized_source_only_no_fit",
+      "scope": "001 cue4 context 0 A04-A06 T/E, exposed source qualification; no parameter optimization.",
+      "screen_disposition": "BASELINE_INADEQUATE",
+      "screen_report": "ai4s/programs/dsainet/research/b0_convtime_decoupling_20261122/SCREEN_REPORT.md",
+      "screen_report_sha256": "cd5f4404983e46236efc56ab88a582b8293aa1cf8dcc79ddf92a0c8642dedce3",
+      "screen_result": "ai4s/programs/dsainet/research/b0_convtime_decoupling_20261122/VERIFIED_SCREEN_RESULT.json",
+      "screen_result_sha256": "4a275d0fe2e5c85788227c989f1e3e691fbad9bcef70e1e98de7370b675094a9",
+      "screen_status": "VERIFIED_INTAKE",
+      "source_evidence_ids": [
+        "DSAINET-B0-PAIRWISE-TOKENIZER-20261122",
+        "DSAINET-S0-CONVTIME-REMOVAL-20261122"
+      ],
+      "training_contract": "ai4s/programs/dsainet/research/dsainet-b0-convtime-decoupling-r1.yaml",
+      "training_plan": "ai4s/programs/dsainet/research/b0_convtime_decoupling_20261122/TRAINING_PLAN.md",
+      "training_run_id": "2026-11-22_dsainet_b0_convtime_decoupling_r1-full-w1",
+      "user_closeout": "2026-11-22: close this dual ConvTime bypass after the frozen Lab10 decision; no independent confirmation.",
+      "verified_round_evidence_id": "AI4S-DSAINET-dsainet-b0-convtime-decoupling-r1"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "checks": [
+        {
+          "design": "ai4s/programs/dsainet/research/b0_structural_reliability_20261122/logit_scale_plan.md",
+          "disposition": "SCALE_IS_REQUIRED_CONTROL",
+          "freeze": "ai4s/programs/dsainet/research/b0_structural_reliability_20261122/LOGIT_SCALE_FREEZE.json",
+          "freeze_sha256": "10b02bb949e12929a9a3e10bb7073274a1e27d8e44c0685d8aad001586d1c3ca",
+          "result": "ai4s/programs/dsainet/research/b0_structural_reliability_20261122/LOGIT_SCALE_RESULT.json",
+          "result_sha256": "5098ca34089cac7645b160438212b684f15d9c7843beab36eb79b57020c2ed3d"
+        },
+        {
+          "design": "ai4s/programs/dsainet/research/b0_structural_reliability_20261122/phase_grid_plan.md",
+          "disposition": "STOP_FIXED_PHASE_GRID",
+          "freeze": "ai4s/programs/dsainet/research/b0_structural_reliability_20261122/PHASE_GRID_FREEZE.json",
+          "freeze_sha256": "73e8d5e3b46d66fc0daeb03b4f171a155eb86a4cec64ae8064db00ae2beed05c",
+          "pass_cells": 0,
+          "result": "ai4s/programs/dsainet/research/b0_structural_reliability_20261122/PHASE_GRID_RESULT.json",
+          "result_sha256": "067c36b1ca058dcf4bdec02bb355e08bb0b6aa0e42145846694e9bc88845aecc",
+          "tech": "ai4s/programs/dsainet/research/b0_structural_reliability_20261122/PHASE_GRID_TECH.json",
+          "tech_sha256": "546540b335668791535eb9671f99bd5ef7ac72026b8039ea1a5e6929cd72355f"
+        },
+        {
+          "design": "ai4s/programs/dsainet/research/b0_structural_reliability_20261122/readout_consensus_plan.md",
+          "disposition": "STOP_FIXED_READOUT_CONSENSUS",
+          "freeze": "ai4s/programs/dsainet/research/b0_structural_reliability_20261122/READOUT_CONSENSUS_FREEZE.json",
+          "freeze_sha256": "a03654d46a3a876261df78788faebd9cc64d78ac405cf3059423d9c368718cdc",
+          "pass_cells": 0,
+          "result": "ai4s/programs/dsainet/research/b0_structural_reliability_20261122/READOUT_CONSENSUS_RESULT.json",
+          "result_sha256": "dd13f8612913bf04776e1d7e45b4befe75b68e4733e14cfb998f95ef69455280",
+          "tech": "ai4s/programs/dsainet/research/b0_structural_reliability_20261122/READOUT_CONSENSUS_TECH.json",
+          "tech_sha256": "4ebdcb2cd995b3c64ae5c18e14c32d709cbd6c851ffd08f543aa774c0892584e"
+        },
+        {
+          "design": "ai4s/programs/dsainet/research/b0_structural_reliability_20261122/reference_quotient_plan.md",
+          "disposition": "STOP_FIXED_REFERENCE_QUOTIENT",
+          "freeze": "ai4s/programs/dsainet/research/b0_structural_reliability_20261122/REFERENCE_QUOTIENT_FREEZE.json",
+          "freeze_sha256": "b4d5a05d3b77a8ae96179af208afba08d70eda87cbe7f9c4fdbfa82d7c84f129",
+          "pass_cells": 0,
+          "result": "ai4s/programs/dsainet/research/b0_structural_reliability_20261122/REFERENCE_QUOTIENT_RESULT.json",
+          "result_sha256": "f2deb09dca334d03786d9f2fab5399df69189e79148dab210521858dea899595",
+          "tech": "ai4s/programs/dsainet/research/b0_structural_reliability_20261122/REFERENCE_QUOTIENT_TECH.json",
+          "tech_sha256": "ab2f35deee7cc7bdedd15e1c00d7f1ebf7d938a4879fabcf5e00f66ec7d38d6e"
+        },
+        {
+          "design": "ai4s/programs/dsainet/research/b0_structural_reliability_20261122/output_rank_plan.md",
+          "disposition": "STOP_FIXED_OUTPUT_RANK",
+          "freeze": "ai4s/programs/dsainet/research/b0_structural_reliability_20261122/OUTPUT_RANK_FREEZE.json",
+          "freeze_sha256": "f7ef8c7d86063d52b8c211ab0892813b160d6b46efe4b6cf9c85b97d641c72df",
+          "pass_cells": 0,
+          "result": "ai4s/programs/dsainet/research/b0_structural_reliability_20261122/OUTPUT_RANK_RESULT.json",
+          "result_sha256": "292c15f258d26eab2a72e5c5b1f191a9fbf9a959a006919e39337f801a91b069",
+          "tech": "ai4s/programs/dsainet/research/b0_structural_reliability_20261122/OUTPUT_RANK_TECH.json",
+          "tech_sha256": "a9e70e0417ad66e5c13ce3450f49130002847fac2244dcadc8a688c85831f47a"
+        },
+        {
+          "design": "ai4s/programs/dsainet/research/b0_structural_reliability_20261122/shared_rank_control_plan.md",
+          "disposition": "STOP_FIXED_SHARED_RANK",
+          "freeze": "ai4s/programs/dsainet/research/b0_structural_reliability_20261122/SHARED_RANK_CONTROL_FREEZE.json",
+          "freeze_sha256": "277a191f80733e1c09de33ce687487b546b8c6c5f9e1dbf745ad4f1c7538ffa6",
+          "pass_cells": 1,
+          "result": "ai4s/programs/dsainet/research/b0_structural_reliability_20261122/SHARED_RANK_CONTROL_RESULT.json",
+          "result_sha256": "21f17e6ada3cb504bb32c83885982440f463c65badafedc49aa6268fa605515f",
+          "tech": "ai4s/programs/dsainet/research/b0_structural_reliability_20261122/SHARED_RANK_CONTROL_TECH.json",
+          "tech_sha256": "6293c8896b5adc42d3ac58fa0292714ac5a3418801317451cd431aafb6ee17b0"
+        }
+      ],
+      "direction_id": "DSAINET-B0-STRUCTURAL-RELIABILITY-20261122",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_TESTED_STRUCTURAL_CANDIDATES_NO_TRAINING",
+      "record": "ai4s/programs/dsainet/research/b0_structural_reliability_20261122/AUTONOMOUS_SOURCE_REPORT.md",
+      "record_sha256": "5cc48f76f94ed35491e8498ac93df269e78c042a48481bd5feca5fe366da3d2b",
+      "role": "source_only_frozen_reanalysis_and_no_fit_comparisons",
+      "scientific_fits": 0,
+      "scope": "001 cue4 context 0, A04-A06 T/E only, two native B0 seeds",
+      "source_evidence_ids": [
+        "AI4S-DSAINET-dsainet-b0-convtime-decoupling-r1",
+        "DSAINET-B0-PAIRWISE-TOKENIZER-20261122"
+      ],
+      "user_closeout": "2026-11-22: close the five fixed structures; continue only with a distinguishable new candidate."
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-COVARIANCE-FACTOR-20261122",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_FIXED_COVARIANCE_FACTOR",
+      "qualification_freeze_sha256": "572aa8539c46138be55c427b11c8738173fb6d9a0c75ae29726850e70655f488",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_covariance_factor_20261122/RESULT.json",
+      "qualification_result_sha256": "c695625ab5f3c2f1a282384c623c309e55142670a476935eb4609a5793752549",
+      "record": "ai4s/programs/dsainet/research/b0_covariance_factor_20261122/research_brief.md",
+      "role": "authorized_source_only_no_fit",
+      "scientific_fits": 0,
+      "scope": "001 A04-A06 T/E, two fixed spectral windows and bands, no optimization; source class templates of other participants only.",
+      "source_evidence_ids": [
+        "DSAINET-B0-STRUCTURAL-RELIABILITY-20261122"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-HIERARCHICAL-BRANCH-SCORES-20261122",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_FIXED_HIERARCHICAL_BRANCH_SCORES",
+      "qualification_freeze_sha256": "8ed4dd4e7925c23402ac01c935db60da2d9719e6ec7aac08ad626cd13feb12d2",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_hierarchical_branch_scores_20261122/RESULT.json",
+      "qualification_result_sha256": "78cf5e2067eb3bc9168d2786703371d8c3482e3a7eaf40c0a57fc71a3a2fcc89",
+      "record": "ai4s/programs/dsainet/research/b0_hierarchical_branch_scores_20261122/research_brief.md",
+      "role": "authorized_source_only_no_fit",
+      "scientific_fits": 0,
+      "scope": "001 cue4 A04-A06 T/E exposed source, two native frozen B0.",
+      "source_evidence_ids": [
+        "DSAINET-B0-COVARIANCE-FACTOR-20261122"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-SESSION-DIRECTION-20261122",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_SESSION_DIRECTION_TECH",
+      "qualification_freeze_sha256": "646afdab1be3997644b571cc28b66a96415c80b13fc373ac50020fd146d30c1f",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_session_direction_20261122/RESULT.json",
+      "qualification_result_sha256": "f76f470c506a51896d5d00cdce5791ead628bf29074939111fd499f958702e43",
+      "record": "ai4s/programs/dsainet/research/b0_session_direction_20261122/research_brief.md",
+      "role": "authorized_source_only_no_fit",
+      "scientific_fits": 0,
+      "scope": "001 cue4 A04-A06 T/E exposed source, two native frozen B0.",
+      "source_evidence_ids": [
+        "DSAINET-B0-HIERARCHICAL-BRANCH-SCORES-20261122"
+      ]
+    },
+    {
+      "batch_disposition": "STOP_AFTER_TARGETED_REVIEW_NO_TRAINING",
+      "chain_id": "dsainet-transaction-v4.1",
+      "completed_screen_direction_ids": [
+        "DSAINET-B0-COVARIANCE-FACTOR-20261122",
+        "DSAINET-B0-HIERARCHICAL-BRANCH-SCORES-20261122",
+        "DSAINET-B0-SESSION-DIRECTION-20261122",
+        "DSAINET-B0-BOUNDARY-SELECTIVITY-20261122"
+      ],
+      "continuation_report": "ai4s/programs/dsainet/research/b0_boundary_selectivity_20261122/CONTINUATION_REPORT.md",
+      "continuation_report_sha256": "a404d738d1b096d85ad1234508cb1549b535a510181cd94cadb6f769c06e800a",
+      "direction_id": "DSAINET-B0-BOUNDARY-SELECTIVITY-20261122",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_FIXED_BOUNDARY_SELECTIVITY",
+      "qualification_freeze_sha256": "47bb0d8f73c7b6e32f791633defb1cb9ee506f1a17a29739e910418eb34c1dbe",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_boundary_selectivity_20261122/RESULT.json",
+      "qualification_result_sha256": "86b5c51270fc4638776a7e3fff10655309a285731ad87ccc810a4e3cc4b63dac",
+      "record": "ai4s/programs/dsainet/research/b0_boundary_selectivity_20261122/research_brief.md",
+      "review": "ai4s/programs/dsainet/research/b0_boundary_selectivity_20261122/ASTRA_REVIEW_RECEIPT.md",
+      "review_disposition": "NO_DISTINGUISHABLE_NEW_PREDICTION_IN_CURRENT_ASSETS",
+      "review_model": "GPT-6.2 Astra High",
+      "review_sha256": "dff4afcd9768fd5d598f8cfb9cbe442597a1cbe91d491660624964ac8898f4f7",
+      "review_status": "COMPLETED_SINGLE_TARGETED",
+      "role": "authorized_source_only_no_fit",
+      "scientific_fits": 0,
+      "scope": "001 cue4 A04-A06 T/E exposed source, two native frozen B0.",
+      "source_evidence_ids": [
+        "DSAINET-B0-SESSION-DIRECTION-20261122"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-CUE-ANCHOR-20261122",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_FIXED_POSITION_MISALIGNMENT_HYPOTHESIS",
+      "qualification_freeze_sha256": "4456d147573bff25ba64f3d8ee00757d8cc2a117fa6f07c37369dd8567d4d497",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_cue_anchor_20261122/RESULT.json",
+      "qualification_result_sha256": "b9d50e27ef4efd65c751e8649ee92c200e43fd4f8b92614c3347350543b36619",
+      "record": "ai4s/programs/dsainet/research/b0_cue_anchor_20261122/research_brief.md",
+      "role": "authorized_source_only_no_fit",
+      "scientific_fits": 0,
+      "scope": "001 cue4 A04-A06 T/E exposed source, two native frozen B0.",
+      "source_evidence_ids": [
+        "DSAINET-B0-BOUNDARY-SELECTIVITY-20261122"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-BRANCH-GAIN-FACTOR-20261122",
+      "formal_claim_release": false,
+      "qualification_decision": "STOP_FIXED_BRANCH_GAIN_FACTOR",
+      "qualification_freeze_sha256": "1dfa5fe1146d01fc2bec416b616261de7dcaf01f22d124dcc34633c27fde39c5",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_branch_gain_factor_20261122/RESULT.json",
+      "qualification_result_sha256": "e8198b1d9ed310de8536b87899238972fae9697d6be19af2736e6ef2032679d5",
+      "record": "ai4s/programs/dsainet/research/b0_branch_gain_factor_20261122/research_brief.md",
+      "role": "authorized_source_only_no_fit",
+      "scientific_fits": 0,
+      "scope": "001 cue4 A04-A06 T/E exposed source, two native frozen B0.",
+      "source_evidence_ids": [
+        "DSAINET-B0-CUE-ANCHOR-20261122"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-ATTENTION-TOKEN-GRID-20261122",
+      "dispatch_report": "ai4s/programs/dsainet/research/b0_asymmetric_token_grid_20261122/DISPATCH_REPORT.md",
+      "dispatch_run_id": "2026-11-22_dsainet_b0_attention_token_grid_r1-full-w1",
+      "dispatch_status": "REMOTE_ACCEPTED",
+      "formal_claim_release": false,
+      "py39_repair_contract": "ai4s/programs/dsainet/research/dsainet-b0-attention-token-grid-r1-py39fix1.yaml",
+      "py39_repair_report": "ai4s/programs/dsainet/research/b0_asymmetric_token_grid_20261122_py39fix1/DISPATCH_REPORT.md",
+      "py39_replacement_run_id": "2026-11-22_dsainet_b0_attention_token_grid_r1_py39fix1-full-w1",
+      "qualification_decision": "WORTH_LIMITED_TRAINING",
+      "qualification_freeze_sha256": "2b5a9d6edede18b581af9dd2e5e8824d661c23b0b5bf9a32aa7dbe187753f37c",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_asymmetric_token_grid_20261122/RESULT.json",
+      "qualification_result_sha256": "2ac8f32ea72f9dc9fbfd2c3634e63cae65b42393eba38a5a0c783b6472e008cf",
+      "record": "ai4s/programs/dsainet/research/b0_asymmetric_token_grid_20261122/research_brief.md",
+      "role": "authorized_source_only_no_fit",
+      "scientific_fits": 0,
+      "scope": "001 cue4 A04-A06 T/E exposed source, two native frozen B0.",
+      "screen_closeout_report": "ai4s/programs/dsainet/research/b0_asymmetric_token_grid_20261122_py39fix1/SCREEN_REPORT.md",
+      "screen_disposition": "STOP_UNIFORM_GRID_UTILITY_RISK",
+      "screen_evidence_id": "AI4S-DSAINET-dsainet-b0-attention-token-grid-r1-py39fix1",
+      "source_evidence_ids": [
+        "DSAINET-B0-BRANCH-GAIN-FACTOR-20261122"
+      ],
+      "training_contract": "ai4s/programs/dsainet/research/dsainet-b0-attention-token-grid-r1.yaml",
+      "training_contract_sha256": "a809d1acb7c8710fb1070e213bc0b3613a6a7e23c0a54f575ea0fd83539f685c"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-TEMPORAL-DELETION-CONSENSUS-20261125",
+      "qualification_decision": "STOP_TEMPORAL_DELETION_CONSENSUS",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_temporal_deletion_consensus_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "ef33219ad5fba1d5c8395bec17b16ad7f7c946434b2877cae47dde10038f9311",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_temporal_deletion_consensus_20261125/RESULT.json",
+      "qualification_result_sha256": "94591575e028376e33e8aa8b4b609038e105eaf1bf5e925b8eacc0130c8a5a15",
+      "record": "ai4s/programs/dsainet/research/b0_temporal_deletion_consensus_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_temporal_deletion_consensus_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_run_id": "2026-11-24_dsainet_b0_patch_preelu_polyphase_r1-full-w1"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-CONVTIME-SIGNED-ANCHOR-20261125",
+      "qualification_decision": "STOP_CONVTIME_SIGNED_ANCHOR",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_convtime_signed_anchor_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "2c3f14c4f876c017e8e4fe7d4c20d60de77cc4981702761315088d51fee744b1",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_convtime_signed_anchor_20261125/RESULT.json",
+      "qualification_result_sha256": "6f5465941d4f2ac6539a77873c2e09928ff62ecbeb49f031c89e65c16bb5fd63",
+      "record": "ai4s/programs/dsainet/research/b0_convtime_signed_anchor_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_convtime_signed_anchor_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_run_id": "2026-11-24_dsainet_b0_patch_preelu_polyphase_r1-full-w1"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-CLASS-CONTRAST-NORM-20261125",
+      "qualification_decision": "STOP_CLASS_CONTRAST_NORM",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_class_contrast_norm_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "cbdb93d48c0c29efc69ddea7bab7c16b80405d350a13698c03dad13280bdfb4e",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_class_contrast_norm_20261125/RESULT.json",
+      "qualification_result_sha256": "cefcd84b05babcc211c30f1c2aaf19733170eb5cabee3bf8244fd1b64dfb9c1f",
+      "record": "ai4s/programs/dsainet/research/b0_class_contrast_norm_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_class_contrast_norm_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_run_id": "2026-11-24_dsainet_b0_patch_preelu_polyphase_r1-full-w1"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-POLARITY-TOKEN-FUSION-20261125",
+      "qualification_decision": "STOP_POLARITY_TOKEN_FUSION",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_polarity_token_fusion_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "1892fc9249653b44ef39493ef609db6c1b3f95c7b62e03908fa68527e5ca269b",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_polarity_token_fusion_20261125/RESULT.json",
+      "qualification_result_sha256": "d4b1b28439a1fd53d97ffd74b3f6542abfd872f8962ab9c790439d18c2580812",
+      "record": "ai4s/programs/dsainet/research/b0_polarity_token_fusion_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_polarity_token_fusion_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_run_id": "2026-11-24_dsainet_b0_patch_preelu_polyphase_r1-full-w1"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-SPECTRAL-ELECTRODE-GAIN-20261125",
+      "qualification_decision": "STOP_SPECTRAL_ELECTRODE_GAIN",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_spectral_electrode_gain_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "30cad071fccd83f9948a920f20d29d7f50ae21d491cc62905c16b7c577a5a531",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_spectral_electrode_gain_20261125/RESULT.json",
+      "qualification_result_sha256": "50bcfc7220f1c374705dfb959b9e9bb320739b46a041296d7bc7c1e4da49a684",
+      "record": "ai4s/programs/dsainet/research/b0_spectral_electrode_gain_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_spectral_electrode_gain_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_run_id": "2026-11-24_dsainet_b0_patch_preelu_polyphase_r1-full-w1"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-SOURCE-DISAGREEMENT-AXES-20261125",
+      "qualification_decision": "STOP_SOURCE_DISAGREEMENT_AXES",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_source_disagreement_axes_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "d4896be6ff674dc29263bae2425ea0f5304859d32daad5a0d1ee9694efce68e3",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_source_disagreement_axes_20261125/RESULT.json",
+      "qualification_result_sha256": "688f1319e8c960a4444fb852bf2482e8a29447590b7b6df2def05b3fad8241bb",
+      "record": "ai4s/programs/dsainet/research/b0_source_disagreement_axes_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_source_disagreement_axes_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_run_id": "2026-11-24_dsainet_b0_patch_preelu_polyphase_r1-full-w1"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-INTER-FFN-CURVATURE-20261125",
+      "original_qualification_freeze": "ai4s/programs/dsainet/research/b0_inter_ffn_curvature_20261125/FREEZE.json",
+      "qualification_decision": "STOP_INTER_FFN_CURVATURE_EXACT_PREREQUISITE",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_inter_ffn_curvature_20261125/FREEZE_REPAIR2.json",
+      "qualification_freeze_sha256": "96c45668cf7284a792a2ca7e9d5131376888ba41122ad5822d6b40f0f9633c8c",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_inter_ffn_curvature_20261125/RESULT.json",
+      "qualification_result_sha256": "0f951eeeb5c462a0edefd20065c08040348c2c3193e2c31414d226997a39ae1a",
+      "record": "ai4s/programs/dsainet/research/b0_inter_ffn_curvature_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_inter_ffn_curvature_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_run_id": "2026-11-24_dsainet_b0_inter_ffn_center_r1-full-w1",
+      "targeted_review": "ai4s/programs/dsainet/research/b0_inter_ffn_curvature_20261125/TARGETED_REVIEW.md"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-CLASS-COOCCURRENCE-20261125",
+      "qualification_decision": "STOP_CLASS_COOCCURRENCE",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_class_cooccurrence_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "278065a1ead28f4e6e9d4f9d60f254fa30271a3cc2d2d01cc45da86c7ebd6e6a",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_class_cooccurrence_20261125/RESULT.json",
+      "qualification_result_sha256": "633e3d768973b87e59e4d7a780d2816e4dc747190916ddf919b7167ba8257c2b",
+      "record": "ai4s/programs/dsainet/research/b0_class_cooccurrence_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_class_cooccurrence_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_run_id": "2026-11-24_dsainet_b0_patch_preelu_polyphase_r1-full-w1"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-SOURCE-BN-ENSEMBLE-20261125",
+      "qualification_decision": "STOP_SOURCE_BN_ENSEMBLE",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_source_bn_ensemble_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "cbe7f0d68d97636ecaa0bc524dc8a98b688d8828b94e1542639a8a92a4d22acc",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_source_bn_ensemble_20261125/RESULT.json",
+      "qualification_result_sha256": "8e2a27afe06947e54795a6449d03e6125ac8d76ec298e08fbe2f980d805150ad",
+      "record": "ai4s/programs/dsainet/research/b0_source_bn_ensemble_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_source_bn_ensemble_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_run_id": "2026-11-24_dsainet_b0_patch_preelu_polyphase_r1-full-w1"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-LATE-CLASSIFIER-UPDATE-20261125",
+      "qualification_decision": "STOP_LATE_CLASSIFIER_UPDATE",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_late_classifier_update_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "eb9acd2c8781d47425b453c88af43fb8625745551f7cd6bdfa7a9c6e150c8d38",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_late_classifier_update_20261125/RESULT.json",
+      "qualification_result_sha256": "0438cb2c7367c7fc6cbac84e65082f6498fb859a0937d9c6e85d2bd456c0df44",
+      "record": "ai4s/programs/dsainet/research/b0_late_classifier_update_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_late_classifier_update_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "AI4S-DSAINET-dsainet-b0-convtime-pointwise-tying-r1",
+        "AI4S-DSAINET-dsainet-b0-patch-preelu-polyphase-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-LATE-SPATIAL-SOURCE-CONTRAST-20261125",
+      "qualification_decision": "STOP_LATE_SPATIAL_SOURCE_CONTRAST",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_late_spatial_source_contrast_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "f373213cc7a5cd9034e6f448b53543ddd9e97ae3eb0183520ce38f1ab2ad1350",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_late_spatial_source_contrast_20261125/RESULT.json",
+      "qualification_result_sha256": "3e786b4a20bf271baca3ae55163f9951ae6af56e4a7b4b6d7ba5f39a537e1f4f",
+      "record": "ai4s/programs/dsainet/research/b0_late_spatial_source_contrast_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_late_spatial_source_contrast_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-LATE-CLASSIFIER-UPDATE-20261125",
+        "AI4S-DSAINET-dsainet-b0-convtime-pointwise-tying-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-LATE-TOKEN-CHOICE-20261125",
+      "qualification_decision": "STOP_LATE_TOKEN_CHOICE",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_late_token_choice_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "feb260084846af137331b294e9d4559c7e3b45dc52fba97cb07a1ee82cf31090",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_late_token_choice_20261125/RESULT.json",
+      "qualification_result_sha256": "26f1a321a7a252408f84fb39079cd639e9244ef6ff08af42bc3caa5f95751424",
+      "record": "ai4s/programs/dsainet/research/b0_late_token_choice_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_late_token_choice_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-LATE-CLASSIFIER-UPDATE-20261125",
+        "DSAINET-B0-LATE-SPATIAL-SOURCE-CONTRAST-20261125",
+        "AI4S-DSAINET-dsainet-b0-patch-preelu-polyphase-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-SOURCE-CLASS-ALIGNMENT-20261125",
+      "qualification_decision": "STOP_SOURCE_CLASS_ALIGNMENT",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_source_class_alignment_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "bd5634946840b23e2e10b7a4ed85e1c207db119b283815045f9640ebe0c5c2e3",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_source_class_alignment_20261125/RESULT.json",
+      "qualification_result_sha256": "f8b370683cb9d2f6b59b82affbe1e7974ce1eb89a6168d0c2e3ff8ebe329e98b",
+      "record": "ai4s/programs/dsainet/research/b0_source_class_alignment_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_source_class_alignment_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-LATE-TOKEN-CHOICE-20261125",
+        "DSAINET-B0-LATE-CLASSIFIER-UPDATE-20261125",
+        "AI4S-DSAINET-dsainet-b0-convtime-pointwise-tying-r1",
+        "AI4S-DSAINET-dsainet-b0-patch-preelu-polyphase-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-LATE-SCALE-AGREEMENT-20261125",
+      "qualification_decision": "STOP_LATE_SCALE_AGREEMENT",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_late_scale_agreement_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "bdc4f9f9acb5e7e54ab9cf0d18cd27afcdc2e4ba7cf10507e0a3590737baf36d",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_late_scale_agreement_20261125/RESULT.json",
+      "qualification_result_sha256": "c4d4737d4ce070f8533db4030e0ce4b233dc24edf056c915d070c6f72b04ac18",
+      "record": "ai4s/programs/dsainet/research/b0_late_scale_agreement_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_late_scale_agreement_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-LATE-TOKEN-CHOICE-20261125",
+        "DSAINET-B0-SOURCE-CLASS-ALIGNMENT-20261125",
+        "AI4S-DSAINET-dsainet-b0-patch-preelu-polyphase-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-POOL-SCORE-GRADIENT-20261125",
+      "qualification_decision": "STOP_POOL_SCORE_GRADIENT",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_pool_score_gradient_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "42efccd1d57f405ee26391c67ed27f31b0648f6011103186c2fb2527f05263c8",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_pool_score_gradient_20261125/RESULT.json",
+      "qualification_result_sha256": "05cc1744cb81aea26838a58f543f1480f4328c2bd85db712555f0509cd8de179",
+      "record": "ai4s/programs/dsainet/research/b0_pool_score_gradient_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_pool_score_gradient_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-LATE-TOKEN-CHOICE-20261125",
+        "DSAINET-B0-LATE-SCALE-AGREEMENT-20261125",
+        "AI4S-DSAINET-dsainet-b0-patch-preelu-polyphase-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-LATE-BN-BUFFERS-20261125",
+      "qualification_decision": "STOP_LATE_BN_BUFFERS",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_late_bn_buffers_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "d78743fda552656c6af295f10eed0ff22700d6e1771c28f6345784e060afb3fd",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_late_bn_buffers_20261125/RESULT.json",
+      "qualification_result_sha256": "673488180ea6d381cf65d3f4486f43b9c2b3875cf9460eafb972770926581bdd",
+      "record": "ai4s/programs/dsainet/research/b0_late_bn_buffers_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_late_bn_buffers_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-POOL-SCORE-GRADIENT-20261125",
+        "DSAINET-B0-LATE-CLASSIFIER-UPDATE-20261125",
+        "AI4S-DSAINET-dsainet-b0-patch-preelu-polyphase-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-COMMON-MU-PHASE-20261125",
+      "qualification_decision": "STOP_COMMON_MU_PHASE",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_common_mu_phase_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "f1785bc1321a946b02b2febcfb22eda8e983a19cc252f6623a419f8aff5d6613",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_common_mu_phase_20261125/RESULT.json",
+      "qualification_result_sha256": "319461d95c63ee1660d4f519b3c2cbdd4e352e4a4642c2602bcff1ebc4c31c9a",
+      "record": "ai4s/programs/dsainet/research/b0_common_mu_phase_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_common_mu_phase_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-LATE-BN-BUFFERS-20261125",
+        "AI4S-DSAINET-dsainet-b0-convtime-pointwise-tying-r1",
+        "AI4S-DSAINET-dsainet-b0-patch-preelu-polyphase-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-POINTWISE-ONE-END-20261125",
+      "qualification_decision": "STOP_POINTWISE_ONE_END",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_pointwise_one_end_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "d9a8118826d246981f804270bf96eaf1dfb84dd76413dbee11296b62b035c511",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_pointwise_one_end_20261125/RESULT.json",
+      "qualification_result_sha256": "c86ff88b4bc8e33c07bdd9eb193076007f9ef8515e36edf90d1305cba768e989",
+      "record": "ai4s/programs/dsainet/research/b0_pointwise_one_end_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_pointwise_one_end_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-COMMON-MU-PHASE-20261125",
+        "DSAINET-B0-POOL-SCORE-GRADIENT-20261125",
+        "AI4S-DSAINET-dsainet-b0-convtime-pointwise-tying-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-CONVTIME-EVEN-RIDGE-20261125",
+      "qualification_decision": "STOP_CONVTIME_EVEN_RIDGE",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_convtime_even_ridge_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "c6564e1b33809b01c5eb8b0dfcb5fdc744e1439c43b33b469e6697d30bd14af6",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_convtime_even_ridge_20261125/RESULT.json",
+      "qualification_result_sha256": "4a17d0acdc2c6e6830c98b5c3c4890b3a97e798887407b10aeef65be4fb8aa34",
+      "record": "ai4s/programs/dsainet/research/b0_convtime_even_ridge_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_convtime_even_ridge_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-POINTWISE-ONE-END-20261125",
+        "AI4S-DSAINET-dsainet-b0-patch-preelu-polyphase-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-SPATIAL-FIRST-EXACT-MOMENTS-20261125",
+      "qualification_decision": "STOP_SPATIAL_EXACT_MOMENTS",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_spatial_first_exact_moments_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "6214d073028e6a0665f6effbee959e6a9c61c66e4d2c969cb5a7461c72d26042",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_spatial_first_exact_moments_20261125/RESULT.json",
+      "qualification_result_sha256": "a9ed4158923316f799da96ae9003bdfb4caff4f5648f0313e23648113389c368",
+      "record": "ai4s/programs/dsainet/research/b0_spatial_first_exact_moments_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_spatial_first_exact_moments_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-CONVTIME-EVEN-RIDGE-20261125",
+        "DSAINET-B0-LATE-BN-BUFFERS-20261125",
+        "AI4S-DSAINET-dsainet-b0-spatial-first-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-INTRA-SYMMETRIC-CONTENT-20261125",
+      "qualification_decision": "STOP_INTRA_SYMMETRIC_CONTENT",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_intra_symmetric_content_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "60971bb385ef53addefafa9a3d5c2419c2a7eec11106f21f3f2dd7121ffbefcf",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_intra_symmetric_content_20261125/RESULT.json",
+      "qualification_result_sha256": "ab66f9df70454ba806b9b6b674f4b0be5017bfaa68c2559cee0a091c080e3dba",
+      "record": "ai4s/programs/dsainet/research/b0_intra_symmetric_content_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_intra_symmetric_content_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-SPATIAL-FIRST-EXACT-MOMENTS-20261125",
+        "AI4S-DSAINET-dsainet-b0-patch-preelu-polyphase-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-DYNAMIC-TOKEN-PAIRS-20261125",
+      "qualification_decision": "STOP_DYNAMIC_TOKEN_PAIRS",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_dynamic_token_pairs_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "2e292144ccb02c39121eca66831a03495638d181453ecb9138ac6144889a2206",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_dynamic_token_pairs_20261125/RESULT.json",
+      "qualification_result_sha256": "3c704e61cad45167f193dbcc0ce8773c258881958a1b7564568fe3ff1310e07e",
+      "record": "ai4s/programs/dsainet/research/b0_dynamic_token_pairs_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_dynamic_token_pairs_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-INTRA-SYMMETRIC-CONTENT-20261125",
+        "AI4S-DSAINET-dsainet-b0-attention-token-grid-r1-py39fix1",
+        "AI4S-DSAINET-dsainet-b0-patch-preelu-polyphase-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-CROSS-SOURCE-SCALE-EXCHANGE-20261125",
+      "qualification_decision": "STOP_CROSS_SOURCE_SCALE_EXCHANGE",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_cross_source_scale_exchange_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "b11d118832f1c5f40ffc6dfbe4e1f0a77463a47f6e31800b324924dd1be7e38e",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_cross_source_scale_exchange_20261125/RESULT.json",
+      "qualification_result_sha256": "48133c2117dd65b046c126bc6edc14f410ded6ec67be096adb368847d855fb66",
+      "record": "ai4s/programs/dsainet/research/b0_cross_source_scale_exchange_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_cross_source_scale_exchange_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-DYNAMIC-TOKEN-PAIRS-20261125",
+        "DSAINET-B0-SOURCE-CLASS-ALIGNMENT-20261125",
+        "AI4S-DSAINET-dsainet-b0-patch-preelu-polyphase-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-INTER-QKV-AXIS-BUDGET-20261125",
+      "qualification_decision": "STOP_INTER_QKV_AXIS_BUDGET",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_inter_qkv_axis_budget_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "7eb94cfe1db70d38b6cba52a98f7da3b5a1e4f6678cf350576c9d26def6b4c35",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_inter_qkv_axis_budget_20261125/RESULT.json",
+      "qualification_result_sha256": "c8357f59f8f1132bf911075887f4b0cd77ca65a1e7ec45127acce53ef89b7f62",
+      "record": "ai4s/programs/dsainet/research/b0_inter_qkv_axis_budget_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_inter_qkv_axis_budget_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-CROSS-SOURCE-SCALE-EXCHANGE-20261125",
+        "AI4S-DSAINET-dsainet-b0-inter-ffn-center-r1",
+        "AI4S-DSAINET-dsainet-b0-patch-preelu-polyphase-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-SHARED-TOKENIZER-INPUT-BASIS-20261125",
+      "qualification_decision": "STOP_SHARED_TOKENIZER_INPUT_BASIS",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_shared_tokenizer_input_basis_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "330c63ef0e511cb88db8d0061d8c1a61061c70913afc17e11e3c1dfe6b2ebd3b",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_shared_tokenizer_input_basis_20261125/RESULT.json",
+      "qualification_result_sha256": "3debf564ee42e78514a2868f297d22a19a267e3e4e6d45ac1eee9a292b3bb246",
+      "record": "ai4s/programs/dsainet/research/b0_shared_tokenizer_input_basis_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_shared_tokenizer_input_basis_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-INTER-QKV-AXIS-BUDGET-20261125",
+        "AI4S-DSAINET-dsainet-b0-patch-preelu-polyphase-r1",
+        "DSAINET-B0-STRUCTURAL-RELIABILITY-20261122",
+        "DSAINET-B0-TOKENIZER-PRESERVE-SLOW-20261122"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-RESIDUAL-AXIS-TRANSFER-20261125",
+      "qualification_decision": "STOP_RESIDUAL_AXIS_TRANSFER",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_residual_axis_transfer_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "ed2d11db151005826abaef909e53c347c9c6e16ffd45c9075a34b64203a5bd3a",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_residual_axis_transfer_20261125/RESULT.json",
+      "qualification_result_sha256": "b05832cb06db2aba75211bd2754bcad1888058c977b0595a6a2cb6442b92d8e3",
+      "record": "ai4s/programs/dsainet/research/b0_residual_axis_transfer_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_residual_axis_transfer_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-SHARED-TOKENIZER-INPUT-BASIS-20261125",
+        "DSAINET-FIXED-BUDGET-SPATIAL-RANK-ALLOCATION-20261118",
+        "AI4S-DSAINET-dsainet-b0-patch-preelu-polyphase-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-INTER-SHARED-ROLE-BASIS-20261125",
+      "qualification_decision": "STOP_INTER_SHARED_ROLE_BASIS",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_inter_shared_role_basis_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "0d02db9b5a261d8c930486fbef4ed06df498acabb44f859506d9be7b822406da",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_inter_shared_role_basis_20261125/RESULT.json",
+      "qualification_result_sha256": "2d49642101ff7f7a8450438b4abdc811cd51c975b5a00baf2b064c268489e666",
+      "record": "ai4s/programs/dsainet/research/b0_inter_shared_role_basis_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_inter_shared_role_basis_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-INTER-QKV-AXIS-BUDGET-20261125",
+        "DSAINET-B0-RESIDUAL-AXIS-TRANSFER-20261125",
+        "AI4S-DSAINET-dsainet-b0-patch-preelu-polyphase-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-RESIDUAL-LAG-ORDER-20261125",
+      "qualification_decision": "STOP_RESIDUAL_LAG_ORDER",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_residual_lag_order_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "783df7dbdcbf31650cea85023d4b45aed0649d7729cc76526c601e75f8147495",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_residual_lag_order_20261125/RESULT.json",
+      "qualification_result_sha256": "0395decaec9fb385357daffc30521deb9ffaab67fd5bdd5e4889f05701d83ca3",
+      "record": "ai4s/programs/dsainet/research/b0_residual_lag_order_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_residual_lag_order_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-RESIDUAL-AXIS-TRANSFER-20261125",
+        "DSAINET-B0-INTER-SHARED-ROLE-BASIS-20261125",
+        "AI4S-DSAINET-dsainet-b0-patch-preelu-polyphase-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-INTER-TEMPORAL-MODE-20261125",
+      "qualification_decision": "STOP_INTER_TEMPORAL_MODE",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_inter_temporal_mode_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "64b7db36cdaab236d94c1b61029ceb9808315a1953bb09e6532bff75bc9156a2",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_inter_temporal_mode_20261125/RESULT.json",
+      "qualification_result_sha256": "9126a22597732bd8ab32a583a8aa5df97f69a9cef8569693abbc7e0d5d99e77d",
+      "record": "ai4s/programs/dsainet/research/b0_inter_temporal_mode_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_inter_temporal_mode_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-INTER-SHARED-ROLE-BASIS-20261125",
+        "DSAINET-B0-INTER-QKV-AXIS-BUDGET-20261125",
+        "AI4S-DSAINET-dsainet-b0-patch-preelu-polyphase-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-RECORDING-RUN-DRIFT-20261125",
+      "qualification_decision": "STOP_RECORDING_RUN_DRIFT",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_recording_run_drift_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "e242000141da8669e0da6b1797b4a9884d2f147200c329d3f228b09d950d8409",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_recording_run_drift_20261125/RESULT.json",
+      "qualification_result_sha256": "24c84b6723cbf716ac7b378ee47f8ce95a8d78672984d920acbf943937af1f48",
+      "record": "ai4s/programs/dsainet/research/b0_recording_run_drift_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_recording_run_drift_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-SESSION-DIRECTION-20261122",
+        "DSAINET-B0-SOURCE-BN-ENSEMBLE-20261125",
+        "AI4S-DSAINET-dsainet-b0-patch-preelu-polyphase-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-OBSERVED-TIME-SUPPORT-20261125-173251",
+      "qualification_decision": "STOP_OBSERVED_TIME_SUPPORT",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_observed_time_support_20261125_173251/FREEZE.json",
+      "qualification_freeze_sha256": "e4b3e6d5af3383f7a46742e8f1bbcd0ba4e7e0ae24c3d69437a4135367a63454",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_observed_time_support_20261125_173251/RESULT.json",
+      "qualification_result_sha256": "b032342d89cc212548c9ab97389634a8c1b711cdf142c06f53fe42e6396090ef",
+      "record": "ai4s/programs/dsainet/research/b0_observed_time_support_20261125_173251/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_observed_time_support_20261125_173251/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-RECORDING-RUN-DRIFT-20261125",
+        "DSAINET-B0-TEMPORAL-DELETION-CONSENSUS-20261125",
+        "AI4S-DSAINET-dsainet-b0-patch-preelu-polyphase-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "device_benchmark_executed": false,
+      "direction_id": "DSAINET-B0-CACHED-NATIVE-MOMENTS-20261125-175520",
+      "engineering_replay": "ai4s/programs/dsainet/research/b0_cached_native_moments_20261125_175520/SYNTHETIC_REPLAY.json",
+      "engineering_replay_sha256": "29cb86197b4829eeedca058bb5c20a6f72d1a16976fad70ea2eeecc52521667e",
+      "qualification_decision": "STOP_CACHED_NATIVE_MOMENTS_NO_DISTINCT_LEARNING_QUESTION",
+      "record": "ai4s/programs/dsainet/research/b0_cached_native_moments_20261125_175520/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_cached_native_moments_20261125_175520/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "scope": "design stop; synthetic computation only",
+      "source_domain_qualification_executed": false,
+      "source_evidence_ids": [
+        "DSAINET-B0-SPATIAL-FIRST-EXACT-MOMENTS-20261125"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-CROSS-SCALE-TIME-CENTERS-20261125-175909",
+      "qualification_decision": "STOP_CROSS_SCALE_TIME_CENTERS",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_cross_scale_time_centers_20261125_175909/FREEZE.json",
+      "qualification_freeze_sha256": "e6fd215be1f89c2f652c3da0d485a2315216469d5d24fe15d4a1892e3d0d67c0",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_cross_scale_time_centers_20261125_175909/RESULT.json",
+      "qualification_result_sha256": "7141688152f81a66657ca3faedc736b0163e1d6e735ab4cecb2a57bb070c2ad5",
+      "record": "ai4s/programs/dsainet/research/b0_cross_scale_time_centers_20261125_175909/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_cross_scale_time_centers_20261125_175909/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-CROSS-SCALE-SCORE-ALIGNMENT-20261124",
+        "DSAINET-B0-DUAL-SCALE-INTRA-DISTANCE-BIAS-20261124",
+        "DSAINET-B0-OBSERVED-TIME-SUPPORT-20261125-173251"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-CLASS-CONDITIONED-POOLING-20261125-180706",
+      "qualification_decision": "STOP_CLASS_CONDITIONED_POOLING",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_class_conditioned_pooling_20261125_180706/FREEZE.json",
+      "qualification_freeze_sha256": "5e3a16918c490a9eaf33b81916fda4e47bcdde38e7c67ac9bafcc5be2ca2bae2",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_class_conditioned_pooling_20261125_180706/RESULT.json",
+      "qualification_result_sha256": "f86f9ffd0883e9f2cc68469785a33c179884538fea3b30800c2eec7e28b5558c",
+      "record": "ai4s/programs/dsainet/research/b0_class_conditioned_pooling_20261125_180706/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_class_conditioned_pooling_20261125_180706/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-CLASS-COOCCURRENCE-20261125",
+        "DSAINET-B0-POOL-SCORE-GRADIENT-20261125",
+        "DSAINET-B0-OBSERVED-TIME-SUPPORT-20261125-173251"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-INTER-QK-DIAGONAL-GAUGE-20261125-181710",
+      "qualification_decision": "STOP_INTER_QK_DIAGONAL_GAUGE_NO_DISTINCT_OPTIMIZATION",
+      "record": "ai4s/programs/dsainet/research/b0_inter_qk_diagonal_gauge_20261125_181710/RESULT_REPORT.md",
+      "report": "ai4s/programs/dsainet/research/b0_inter_qk_diagonal_gauge_20261125_181710/RESULT_REPORT.md",
+      "report_sha256": "2e3671dfe77a9e253bade0543b8e1004e9a19e63fb566dfd561b51a835a1220a",
+      "scientific_fits": 0,
+      "scope": "design stop; exact equivalence with matched rowwise Adam and affine bias",
+      "source_domain_qualification_executed": false,
+      "source_evidence_ids": [
+        "DSAINET-B0-CLASS-CONDITIONED-POOLING-20261125-180706",
+        "DSAINET-B0-INTER-SHARED-ROLE-BASIS-20261125"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-INTER-QK-ORTHOGONAL-GAUGE-20261125-181710",
+      "qualification_decision": "STOP_INTER_QK_ORTHOGONAL_GAUGE",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_inter_qk_orthogonal_gauge_20261125_181710/FREEZE.json",
+      "qualification_freeze_sha256": "a24a3c60908beeca282ecfa3d62400206f931916dd5a9437b62f1b8a5bad4cc0",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_inter_qk_orthogonal_gauge_20261125_181710/RESULT.json",
+      "qualification_result_sha256": "9cd5f5ab80f70774bcacad8405656020a9f54ef0a9e0be66dd1efcd85e464975",
+      "record": "ai4s/programs/dsainet/research/b0_inter_qk_orthogonal_gauge_20261125_181710/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_inter_qk_orthogonal_gauge_20261125_181710/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-INTER-QK-DIAGONAL-GAUGE-20261125-181710",
+        "DSAINET-B0-CLASS-CONDITIONED-POOLING-20261125-180706",
+        "AI4S-DSAINET-dsainet-b0-patch-preelu-polyphase-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-MU-BETA-DETUNED-SIDEBANDS-20261125-182842",
+      "qualification_decision": "STOP_DETUNED_SIDEBAND_COVERAGE",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_mu_beta_detuned_sidebands_20261125_182842/FREEZE.json",
+      "qualification_freeze_sha256": "95615784ab75035e98ac392a7f9dcb1b8099b7fc1b44e3186abdfc992633cef7",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_mu_beta_detuned_sidebands_20261125_182842/RESULT.json",
+      "qualification_result_sha256": "c930744461258a5efd8e812f2c15baccecee1c7673a5bf7ec1b81007cc6d0c4a",
+      "record": "ai4s/programs/dsainet/research/b0_mu_beta_detuned_sidebands_20261125_182842/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_mu_beta_detuned_sidebands_20261125_182842/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-COMMON-MU-PHASE-20261125",
+        "DSAINET-B0-SPATIAL-PHASE-20261122",
+        "DSAINET-B0-RESIDUAL-LAG-ORDER-20261125"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-CURVATURE-HALF-RECOVERY-20261125-183515",
+      "qualification_decision": "STOP_CURVATURE_HALF_RECOVERY",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_curvature_half_recovery_20261125_183515/FREEZE.json",
+      "qualification_freeze_sha256": "4cd2f232ca8cdaf11ffcbb20bbcad2f714ecea23007e8dd8d31f15d15d3e5e5c",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_curvature_half_recovery_20261125_183515/RESULT.json",
+      "qualification_result_sha256": "7be7908fe3b028bc6c2bb8b2234b968bd6e3ee9841f048cd62a4122804e36886",
+      "record": "ai4s/programs/dsainet/research/b0_curvature_half_recovery_20261125_183515/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_curvature_half_recovery_20261125_183515/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "AI4S-DSAINET-dsainet-b0-patch-preelu-polyphase-r1",
+        "DSAINET-B0-OBSERVED-TIME-SUPPORT-20261125-173251"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-HALF-SCOUTS-20261125-184427",
+      "qualification_decision": "STOP_HALF_SCOUTS",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_half_scouts_20261125_184427/FREEZE.json",
+      "qualification_freeze_sha256": "95cf63e50b9faceda3b0ef60c1bf9abd4e60dde5b3121229d9e6740c4cf527be",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_half_scouts_20261125_184427/RESULT.json",
+      "qualification_result_sha256": "6a9195ab5a3802f375d0408c62742c75c95d55a75823585592e7327c408915bf",
+      "record": "ai4s/programs/dsainet/research/b0_half_scouts_20261125_184427/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_half_scouts_20261125_184427/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-CURVATURE-HALF-RECOVERY-20261125-183515",
+        "AI4S-DSAINET-dsainet-b0-patch-preelu-polyphase-r1",
+        "DSAINET-B0-OBSERVED-TIME-SUPPORT-20261125-173251"
       ]
     }
   ],
@@ -11459,6 +13600,170 @@
         "verified": true,
         "verified_at": null
       }
+    },
+    {
+      "claim_status": "no_paper_claim",
+      "decision": "NO_SIGNAL",
+      "decision_record": "ai4s/programs/dsainet/research/dsainet-window-spatial-r1-dispatch1_decision.yaml",
+      "evidence_id": "AI4S-DSAINET-dsainet-window-spatial-r1-dispatch1",
+      "executor_id": "lab10",
+      "follow_up_status": "v3_record_design_constraint_or_precise_closure",
+      "intake_status": "verified_ai4s_round",
+      "interpretation_boundary": "001 A04-A06 T/E exposed source folds. The frozen screen gates govern scientific disposition. Frozen same-state temporal controls produced zero prediction changes. Precise closure for this implementation.",
+      "prohibited_follow_up": "exact_candidate_rescue_or_recombination_under_the_frozen_contract",
+      "role": "exact_negative_boundary",
+      "round_contract": "ai4s/programs/dsainet/research/dsainet-window-spatial-r1-dispatch1.yaml",
+      "round_id": "dsainet-window-spatial-r1-dispatch1",
+      "run_id": "2026-11-22_dsainet_window_spatial_r1-dispatch1-full-w1"
+    },
+    {
+      "claim_status": "no_paper_claim",
+      "decision": "PROMISING_INCOMPLETE",
+      "decision_record": "ai4s/programs/dsainet/research/dsainet-b0-convtime-decoupling-r1_decision.yaml",
+      "evidence_id": "AI4S-DSAINET-dsainet-b0-convtime-decoupling-r1",
+      "executor_id": "lab10",
+      "follow_up_status": "v3_record_design_constraint_or_precise_closure",
+      "intake_status": "verified_ai4s_round",
+      "interpretation_boundary": "Exposed 001 cue4 A04-A06 leave-one-source-person paired screen; no claim or follow-on run.",
+      "role": "promising_incomplete_observation",
+      "round_contract": "ai4s/programs/dsainet/research/dsainet-b0-convtime-decoupling-r1.yaml",
+      "round_id": "dsainet-b0-convtime-decoupling-r1",
+      "run_id": "2026-11-22_dsainet_b0_convtime_decoupling_r1-full-w1"
+    },
+    {
+      "claim_status": "no_paper_claim",
+      "decision": "NO_SIGNAL",
+      "decision_record": "ai4s/programs/dsainet/research/dsainet-b0-attention-token-grid-r1-py39fix1_decision.yaml",
+      "evidence_id": "AI4S-DSAINET-dsainet-b0-attention-token-grid-r1-py39fix1",
+      "executor_id": "lab10",
+      "follow_up_status": "v3_record_design_constraint_or_precise_closure",
+      "intake_status": "verified_ai4s_round",
+      "interpretation_boundary": "Exposed 001 A04-A06 T/E paired source fits with equal attention grids; no paper claim or autonomous confirmation.",
+      "prohibited_follow_up": "exact_candidate_rescue_or_recombination_under_the_frozen_contract",
+      "role": "exact_negative_boundary",
+      "round_contract": "ai4s/programs/dsainet/research/dsainet-b0-attention-token-grid-r1-py39fix1.yaml",
+      "round_id": "dsainet-b0-attention-token-grid-r1-py39fix1",
+      "run_id": "2026-11-22_dsainet_b0_attention_token_grid_r1_py39fix1-full-w1"
+    },
+    {
+      "claim_status": "no_paper_claim",
+      "decision": "NO_SIGNAL",
+      "decision_record": "ai4s/programs/dsainet/research/dsainet-b0-spatial-first-r1_decision.yaml",
+      "evidence_id": "AI4S-DSAINET-dsainet-b0-spatial-first-r1",
+      "executor_id": "lab10",
+      "follow_up_status": "v3_record_design_constraint_or_precise_closure",
+      "intake_status": "verified_ai4s_round",
+      "interpretation_boundary": "Paired source-only efficiency screen on A04–A06 T/E. No independent confirmation or paper claim.",
+      "prohibited_follow_up": "exact_candidate_rescue_or_recombination_under_the_frozen_contract",
+      "role": "exact_negative_boundary",
+      "round_contract": "ai4s/programs/dsainet/research/dsainet-b0-spatial-first-r1.yaml",
+      "round_id": "dsainet-b0-spatial-first-r1",
+      "run_id": "2026-11-23_dsainet_b0_spatial_first_r1-full-w1"
+    },
+    {
+      "claim_status": "no_paper_claim",
+      "decision": "NO_SIGNAL",
+      "decision_record": "ai4s/programs/dsainet/research/dsainet-b0-convtime-pointwise-tying-r1_decision.yaml",
+      "evidence_id": "AI4S-DSAINET-dsainet-b0-convtime-pointwise-tying-r1",
+      "executor_id": "lab10",
+      "follow_up_status": "v3_record_design_constraint_or_precise_closure",
+      "intake_status": "verified_ai4s_round",
+      "interpretation_boundary": "Paired source-only efficiency screen on A04–A06 T/E. No independent confirmation or paper claim.",
+      "prohibited_follow_up": "exact_candidate_rescue_or_recombination_under_the_frozen_contract",
+      "role": "exact_negative_boundary",
+      "round_contract": "ai4s/programs/dsainet/research/dsainet-b0-convtime-pointwise-tying-r1.yaml",
+      "round_id": "dsainet-b0-convtime-pointwise-tying-r1",
+      "run_id": "2026-11-23_dsainet_b0_convtime_pointwise_tying_r1-full-w1"
+    },
+    {
+      "claim_status": "no_paper_claim",
+      "decision": "NO_SIGNAL",
+      "decision_record": "ai4s/programs/dsainet/research/dsainet-b0-spatial-filter-radius-r1-repair1-gpu1_decision.yaml",
+      "evidence_id": "AI4S-DSAINET-dsainet-b0-spatial-filter-radius-r1-repair1-gpu1",
+      "executor_id": "lab10",
+      "follow_up_status": "v3_record_design_constraint_or_precise_closure",
+      "intake_status": "verified_ai4s_round",
+      "interpretation_boundary": "Paired source-only radius-constraint screen on A04–A06 T/E. No independent confirmation or paper claim.",
+      "prohibited_follow_up": "exact_candidate_rescue_or_recombination_under_the_frozen_contract",
+      "role": "exact_negative_boundary",
+      "round_contract": "ai4s/programs/dsainet/research/dsainet-b0-spatial-filter-radius-r1-repair1-gpu1.yaml",
+      "round_id": "dsainet-b0-spatial-filter-radius-r1-repair1-gpu1",
+      "run_id": "2026-11-23_dsainet_b0_spatial_filter_radius_r1_repair1_gpu1-full-w1"
+    },
+    {
+      "claim_status": "no_paper_claim",
+      "decision": "NO_SIGNAL",
+      "decision_record": "ai4s/programs/dsainet/research/dsainet-b0-convtime-dc-split-r1_decision.yaml",
+      "evidence_id": "AI4S-DSAINET-dsainet-b0-convtime-dc-split-r1",
+      "executor_id": "lab10",
+      "follow_up_status": "v3_record_design_constraint_or_precise_closure",
+      "intake_status": "verified_ai4s_round",
+      "interpretation_boundary": "Paired source-only DC-contrast constraint screen on A04–A06 T/E. No independent confirmation or paper claim.",
+      "prohibited_follow_up": "exact_candidate_rescue_or_recombination_under_the_frozen_contract",
+      "role": "exact_negative_boundary",
+      "round_contract": "ai4s/programs/dsainet/research/dsainet-b0-convtime-dc-split-r1.yaml",
+      "round_id": "dsainet-b0-convtime-dc-split-r1",
+      "run_id": "2026-11-23_dsainet_b0_convtime_dc_split_r1-full-w1"
+    },
+    {
+      "claim_status": "no_paper_claim",
+      "decision": "NO_SIGNAL",
+      "decision_record": "ai4s/programs/dsainet/research/dsainet-b0-spatial-graph-basis-r1_decision.yaml",
+      "evidence_id": "AI4S-DSAINET-dsainet-b0-spatial-graph-basis-r1",
+      "executor_id": "lab10",
+      "follow_up_status": "v3_record_design_constraint_or_precise_closure",
+      "intake_status": "verified_ai4s_round",
+      "interpretation_boundary": "Paired source-only graph-subspace screen on A04–A06 T/E. No independent confirmation or paper claim.",
+      "prohibited_follow_up": "exact_candidate_rescue_or_recombination_under_the_frozen_contract",
+      "role": "exact_negative_boundary",
+      "round_contract": "ai4s/programs/dsainet/research/dsainet-b0-spatial-graph-basis-r1.yaml",
+      "round_id": "dsainet-b0-spatial-graph-basis-r1",
+      "run_id": "2026-11-24_dsainet_b0_spatial_graph_basis_r1-full-w1"
+    },
+    {
+      "claim_status": "no_paper_claim",
+      "decision": "NO_SIGNAL",
+      "decision_record": "ai4s/programs/dsainet/research/dsainet-b0-inter-ffn-center-r1_decision.yaml",
+      "evidence_id": "AI4S-DSAINET-dsainet-b0-inter-ffn-center-r1",
+      "executor_id": "lab10",
+      "follow_up_status": "v3_record_design_constraint_or_precise_closure",
+      "intake_status": "verified_ai4s_round",
+      "interpretation_boundary": "Paired source-only centered-FFN screen on A04–A06 T/E. No independent confirmation or paper claim.",
+      "prohibited_follow_up": "exact_candidate_rescue_or_recombination_under_the_frozen_contract",
+      "role": "exact_negative_boundary",
+      "round_contract": "ai4s/programs/dsainet/research/dsainet-b0-inter-ffn-center-r1.yaml",
+      "round_id": "dsainet-b0-inter-ffn-center-r1",
+      "run_id": "2026-11-24_dsainet_b0_inter_ffn_center_r1-full-w1"
+    },
+    {
+      "claim_status": "no_paper_claim",
+      "decision": "NO_SIGNAL",
+      "decision_record": "ai4s/programs/dsainet/research/dsainet-b0-intra-ffn-affine-quotient-r1_decision.yaml",
+      "evidence_id": "AI4S-DSAINET-dsainet-b0-intra-ffn-affine-quotient-r1",
+      "executor_id": "lab10",
+      "follow_up_status": "v3_record_design_constraint_or_precise_closure",
+      "intake_status": "verified_ai4s_round",
+      "interpretation_boundary": "Paired source-only Helmert versus omitted-coordinate intra FFN screen on A04–A06 T/E. No independent confirmation or paper claim.",
+      "prohibited_follow_up": "exact_candidate_rescue_or_recombination_under_the_frozen_contract",
+      "role": "exact_negative_boundary",
+      "round_contract": "ai4s/programs/dsainet/research/dsainet-b0-intra-ffn-affine-quotient-r1.yaml",
+      "round_id": "dsainet-b0-intra-ffn-affine-quotient-r1",
+      "run_id": "2026-11-24_dsainet_b0_intra_ffn_affine_quotient_r1-full-w1"
+    },
+    {
+      "claim_status": "no_paper_claim",
+      "decision": "NO_SIGNAL",
+      "decision_record": "ai4s/programs/dsainet/research/dsainet-b0-patch-preelu-polyphase-r1_decision.yaml",
+      "evidence_id": "AI4S-DSAINET-dsainet-b0-patch-preelu-polyphase-r1",
+      "executor_id": "lab10",
+      "follow_up_status": "v3_record_design_constraint_or_precise_closure",
+      "intake_status": "verified_ai4s_round",
+      "interpretation_boundary": "Paired source-only adjacent versus interleaved pre-ELU grouping screen on A04–A06 T/E. No independent confirmation or paper claim.",
+      "prohibited_follow_up": "exact_candidate_rescue_or_recombination_under_the_frozen_contract",
+      "role": "exact_negative_boundary",
+      "round_contract": "ai4s/programs/dsainet/research/dsainet-b0-patch-preelu-polyphase-r1.yaml",
+      "round_id": "dsainet-b0-patch-preelu-polyphase-r1",
+      "run_id": "2026-11-24_dsainet_b0_patch_preelu_polyphase_r1-full-w1"
     }
   ],
   "schema_version": "mieeg-ai4s-evidence-index-v1",
@@ -11605,5 +13910,5 @@
       "used_by_round": "dsa-kshape-v0.1-repair2"
     }
   ],
-  "updated_at": "2026-11-05T17:55:23.565025+00:00"
+  "updated_at": "2026-11-25T10:50:55.989482+00:00"
 }

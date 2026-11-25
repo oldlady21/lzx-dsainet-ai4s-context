@@ -1,8 +1,8 @@
 # lzx-dsainet-ai4s 讨论资料入口
 
 仓库：https://github.com/oldlady21/lzx-dsainet-ai4s-context
-导出时间（UTC）：2026-11-19T15:16:23.633365+00:00
-快照身份：`1e81f4a604088074ae957d64fbcd24c8f799d24cf7da2ae3989c44f903b9b34f`
+导出时间（UTC）：2026-11-25T10:57:18.886329+00:00
+快照身份：`d8c47a5a85756b3f929b5547c8feb568fe10bfff4d4341276a9c0b2ce4a83255`
 
 这是本地已保存文件的公开讨论副本。来源与公开文件 SHA-256、脱敏计数、未公开引用见 [SYNC_MANIFEST.json](SYNC_MANIFEST.json)。
 机器字段已机械脱敏；保留原研究身份、冻结边界、预算、证据状态和历史。它不替代本地权威记录，不授予执行/恢复/改协议权限。
@@ -17,10 +17,10 @@
 {
   "dsainet": {
     "source_path": "ai4s/programs/dsainet/research/STATE.yaml",
-    "source_sha256": "4ef0f3c4228815d8817087a085c44164036f9a4d3220a7754ad8d2ea4955ceea",
+    "source_sha256": "a0c881b1eceae38fd5830a035dc77440b454c0ce26def467d4d33987aa5b2291",
     "source_public_url": "https://github.com/oldlady21/lzx-dsainet-ai4s-context/blob/main/ai4s/programs/dsainet/research/STATE.yaml",
     "source_in_this_repository": true,
-    "source_updated_at": "2026-11-05T13:09:08.803027+00:00",
+    "source_updated_at": "2026-11-24T17:37:18.425137+00:00",
     "status": "COMPLETE_MAX_ROUNDS",
     "paused": true,
     "active_run": null,
@@ -49,7 +49,7 @@
 - [ai4s/PROMPT_INDEX.yaml](<ai4s/PROMPT_INDEX.yaml>)
 - [ai4s/README.md](<ai4s/README.md>)
 - [ai4s/programs/dsainet/PROGRAM.yaml](<ai4s/programs/dsainet/PROGRAM.yaml>)
-- [ai4s/programs/dsainet/PROJECT_PROMPT_v4.0.md](<ai4s/programs/dsainet/PROJECT_PROMPT_v4.0.md>)
+- [ai4s/programs/dsainet/PROJECT_PROMPT_v4.1.md](<ai4s/programs/dsainet/PROJECT_PROMPT_v4.1.md>)
 - [ai4s/programs/dsainet/research/CLAIM_LEDGER.yaml](<ai4s/programs/dsainet/research/CLAIM_LEDGER.yaml>)
 - [ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md](<ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md>)
 - [ai4s/programs/dsainet/research/EVIDENCE_INDEX.yaml](<ai4s/programs/dsainet/research/EVIDENCE_INDEX.yaml>)

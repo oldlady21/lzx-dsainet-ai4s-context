@@ -80,7 +80,7 @@ v3.1 新建或修改执行路径的验收按 `LEVEL2_EXECUTION_v3.1.md` 第4节�
 
 ## 恢复与失败
 
-Lab10 校外可使用 `[REDACTED_MACHINE]` 经 `[REDACTED_MACHINE]` 跳板，校内直连为 `[REDACTED_MACHINE]`。配置和命令见 `experiments/REMOTE_LAB10_AI4S.md`“校内直连与校外跳板”。这是同一目标的连接改道，保留原 RunId、路径与 executor；自动运输使用 Program.executors.lab10.host，不能假定已自动切换。断线先从可达链路核对原 Run，不能以直连失败为由新建任务。
+Lab10 校外默认使用 `[REDACTED_MACHINE]` 经 `[REDACTED_MACHINE]` 跳板，校内直连为 `[REDACTED_MACHINE]`。配置和命令见 `experiments/REMOTE_LAB10_AI4S.md`“校内直连与校外跳板”。这是同一目标的连接改道，保留原 RunId、路径与 executor；自动运输使用 Program.executors.lab10.host，不能假定已自动切换。断线先从可达链路核对原 Run，不能以直连失败为由新建任务。
 
 运输脚本的远端目录领取、节点运行锁与 Program 锁防止重复派发。未知远端状态保留同一 Run，不能用“没有回执”推断从未启动。重复 fetch 复核已有下载；一致的部分 intake 可以补齐；冲突文件拒绝合并。最终 PASS 后 manifest 写入中断可恢复封存，不重跑节点。
 

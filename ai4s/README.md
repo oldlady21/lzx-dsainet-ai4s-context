@@ -7,7 +7,7 @@
 | Program | 项目提示词（生效以索引为准） | 当前状态入口 |
 |---|---|---|
 | MVCNet | `programs/mvcnet/PROJECT_PROMPT_v4.1.md` | `programs/mvcnet/research/STATE.yaml` |
-| DSAINet | `programs/dsainet/PROJECT_PROMPT_v4.0.md` | `programs/dsainet/research/STATE.yaml` |
+| DSAINet | `programs/dsainet/PROJECT_PROMPT_v4.1.md` | `programs/dsainet/research/STATE.yaml` |
 | OTA | `programs/ota/PROJECT_PROMPT_v3.4.md` | `programs/ota/research/STATE.yaml` |
 | DBConformer | `programs/dbconformer/PROJECT_PROMPT_v4.0.md` | `programs/dbconformer/research/STATE.yaml` |
 | SST-DPN | `programs/sstdpn/PROJECT_PROMPT_v3.4.md` | `programs/sstdpn/research/STATE.yaml` |
@@ -62,7 +62,7 @@ MVCNet 和 DSAINet 均已接入 Transaction v2。接入不启动实验；当前�
 
 [REDACTED_MACHINE]/lab10 的连接信息在 Program.executors；Lab10 容量规则见 `experiments/REMOTE_LAB10_AI4S.md`。自动与手动运输使用相同合同与启动器；授权中包含相应操作即可自动推进，不逐项要求用户报 PASS。真实服务器/GPU 验收状态单列，不以离线测试替代。
 
-Lab10 校内用 `[REDACTED_MACHINE]`，校外用 `[REDACTED_MACHINE]` 经 `[REDACTED_MACHINE]` 跳板。完整 SSH 配置集中在 `experiments/REMOTE_LAB10_AI4S.md`；切换连接链路时继续核对同一 Run，不重新提交实验。
+Lab10 校内用 `[REDACTED_MACHINE]`，校外默认用 `[REDACTED_MACHINE]` 经 `[REDACTED_MACHINE]` 跳板。完整 SSH 配置集中在 `experiments/REMOTE_LAB10_AI4S.md`；切换连接链路时继续核对同一 Run，不重新提交实验。
 
 2026-11-12 用户确定执行地点。各 Program 的新长时实验默认绑定 Lab10，包括完整训练、跨折或跨 seed 批量拟合、长时审计和持续占用本机计算资源的诊断。本机执行短时低负载的源码核对、单批 smoke、小样本 TECH 与精简结果复算。选址以实际耗时和持续资源占用判断。已有 Run 按冻结执行器收尾。需迁移的未完任务先核对已封存资产、继续或复用资格以及目标端成本，并按该 Run 的授权和预算门推进。
 

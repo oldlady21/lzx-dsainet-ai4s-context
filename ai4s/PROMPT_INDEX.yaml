@@ -708,10 +708,10 @@
     },
     "dsainet": {
       "active_chain": {
-        "activated_at": "2026-11-17T08:55:11.175348+00:00",
-        "activation_authority": "User request on 2026-11-17 (Asia/Shanghai): activate the latest DSAINet v4 workflow. Prompt-chain activation for new DSAINet work; no new experiment execution authorization.",
-        "based_on_chain_id": "dsainet-transaction-v3.4",
-        "chain_id": "dsainet-transaction-v4.0",
+        "activated_at": "2026-11-20T16:52:36.231938+00:00",
+        "activation_authority": "User requested DSAINet L3 v4.1 personalization and activation on 2026-11-21 (Asia/Shanghai), for new work only. No experiment execution authorized.",
+        "based_on_chain_id": "dsainet-transaction-v4.0",
+        "chain_id": "dsainet-transaction-v4.1",
         "compatibility": "PASS",
         "continuation_policy_version": "evidence_to_design_v1",
         "evaluation_evidence_version": "1",
@@ -747,9 +747,9 @@
           "version": "4.0"
         },
         "level_3": {
-          "path": "ai4s/programs/dsainet/PROJECT_PROMPT_v4.0.md",
+          "path": "ai4s/programs/dsainet/PROJECT_PROMPT_v4.1.md",
           "prompt_id": "DSAINET_MI_EEG_PROJECT",
-          "version": "4.0"
+          "version": "4.1"
         },
         "required_contract_schema": "mieeg-ai4s-round-contract-v2",
         "required_paths": [
@@ -1055,6 +1055,67 @@
         }
       ],
       "retired_chains": [
+        {
+          "activated_at": "2026-11-17T08:55:11.175348+00:00",
+          "activation_authority": "User request on 2026-11-17 (Asia/Shanghai): activate the latest DSAINet v4 workflow. Prompt-chain activation for new DSAINet work; no new experiment execution authorization.",
+          "based_on_chain_id": "dsainet-transaction-v3.4",
+          "chain_id": "dsainet-transaction-v4.0",
+          "compatibility": "PASS",
+          "continuation_policy_version": "evidence_to_design_v1",
+          "evaluation_evidence_version": "1",
+          "implementation_readiness": {
+            "authorization_transition_guard": {
+              "evidence": "ai4s/_work/prompt_v4_design_20261116/REPORT.md",
+              "status": "PASS"
+            },
+            "frozen_contract_guard": {
+              "evidence": "ai4s/_work/prompt_v4_design_20261116/REPORT.md",
+              "status": "PASS"
+            },
+            "gpu_capacity_acceptance": "NOT_RUN",
+            "prompt_index_guard": {
+              "evidence": "ai4s/_work/prompt_v4_design_20261116/REPORT.md",
+              "status": "PASS"
+            },
+            "seed_cap_guard": {
+              "evidence": "ai4s/_work/prompt_v4_design_20261116/REPORT.md",
+              "status": "PASS"
+            },
+            "v40_regression": "PASS",
+            "v40_regression_evidence": "ai4s/_work/prompt_v4_design_20261116/REPORT.md"
+          },
+          "level_1": {
+            "path": "ai4s/prompts/LEVEL1_RESEARCH_v4.0.md",
+            "prompt_id": "MIEEG_AI4S_RESEARCH",
+            "version": "4.0"
+          },
+          "level_2": {
+            "path": "ai4s/prompts/LEVEL2_EXECUTION_v4.0.md",
+            "prompt_id": "MIEEG_AI4S_EXECUTION",
+            "version": "4.0"
+          },
+          "level_3": {
+            "path": "ai4s/programs/dsainet/PROJECT_PROMPT_v4.0.md",
+            "prompt_id": "DSAINET_MI_EEG_PROJECT",
+            "version": "4.0"
+          },
+          "required_contract_schema": "mieeg-ai4s-round-contract-v2",
+          "required_paths": [
+            "ai4s/programs/dsainet/PROGRAM.yaml",
+            "ai4s/programs/dsainet/research/STATE.yaml",
+            "ai4s/programs/dsainet/research/EVIDENCE_INDEX.yaml",
+            "docs/notes/DSAINET_BASELINE_EVIDENCE_MAP_2026-08-26.md",
+            "docs/notes/SAFSS_CYCLE_HANDOFF_2026-08-26.md",
+            "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+            "ai4s/prompts/MIEEG_AI4S_SKILL_ROUTER.md"
+          ],
+          "retired_at": "2026-11-20T16:52:36.231938+00:00",
+          "runtime_controller": {
+            "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
+            "version": "3.0"
+          },
+          "status": "RETIRED"
+        },
         {
           "activated_at": "2026-09-05T10:31:16.186854+00:00",
           "activation_authority": "user: 继续对DSAINet也进行接入",

@@ -103,7 +103,7 @@
       "scheduler": "scripts/remote/lab10_shared_executor.py",
       "ssh_options": [],
       "transaction_runtime": "scripts/ai4s/transaction.py",
-      "transport_authority": "2026-10-17 user authorized D implementation/launch; host-context SSH via ccmu verified hostname [REDACTED_MACHINE] and all GPUs 0..9; direct alias unavailable. Historical frozen contracts/Bundles unchanged.",
+      "transport_authority": "User directed the off-campus default to use ProxyJump [REDACTED_MACHINE] after a successful BatchMode SSH hostname/account check. Prior route verification: 2026-10-17 user authorized D implementation/launch; host-context SSH via ccmu verified hostname [REDACTED_MACHINE] and all GPUs 0..9; direct alias unavailable. Historical frozen contracts/Bundles unchanged.",
       "workers_per_gpu": 1
     }
   },
@@ -118,7 +118,7 @@
   ],
   "program_id": "dsainet",
   "prompt_governance": {
-    "expected_active_chain_id": "dsainet-transaction-v4.0",
+    "expected_active_chain_id": "dsainet-transaction-v4.1",
     "index": "ai4s/PROMPT_INDEX.yaml",
     "mismatch_policy": "BLOCK"
   },

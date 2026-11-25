@@ -28,6 +28,16 @@ description: 在 MI-EEG 仓库中启动、恢复或审阅已登记的 AI4S Progr
 
 按活动链 L2 的具体构思触发条件与直接推进例外选路，默认使用 `idea-creator` 的构思部分；先完整读取其 SKILL.md，再传精确 Program／实现、总览相关的基模理解、允许用于选型的本地认识、相关反例与旧案、未决问题、来源指针、输出目录及停止点。关键基模事实依 L2 首次核对规则处理，已有适用核对直接复用。原论文的问题列表是启发，允许质疑作者解释和当前拟议主张，不作为候选白名单。
 
+**按需查实验室文献。** v4 新方向构思或对照设计缺直接近邻、强对照或可检验的机制类比时，先复用 `refs/papers` 的解析稿、Paper Card 及 Program 证据。用少量英文机制名、别名或协议词检索 `docs/lab/AI4S文献`，选中论文后只查会影响设计的章节。命中片段用于定位；用对应版本的原文核实所需方法、对照或限制，在原 brief 记录来源定位和它改变的决定。已够作决定时收束，正式查新仍按原入口。
+
+在仓库根运行 [本地文献检索](../references/lab_literature_lookup.py)。首条搜文件名、标题和前两页，次条搜单篇正文并返回从 1 开始的 PDF 页码。
+
+```powershell
+$researchPython = '[REDACTED_MACHINE]'
+& $researchPython -X utf8 ai4s/references/lab_literature_lookup.py 'global local decoupling'
+& $researchPython -X utf8 ai4s/references/lab_literature_lookup.py 'ablation gated memory' --paper '基础/03_2026_CVPR_局部卷积与全局记忆解耦.pdf'
+```
+
 调用方已准备的上下文替代 Phase 0/1 的重复准备，采用 Phase 1.5 多视角、Phase 2 构思及 Phase 3 合并。跳过 standalone 的 wiki rebuild、pilot、完整评审／报告、wiki 写入和自动后续阶段。输出回原 research 目录／brief，记录实际 `adapted` 范围与产物引用；技能不可用时主 Agent 可完成等价构思并如实注明，不假称已调用。
 
 Foundry 继续仅由用户独立调用，使用同一来源入口；用户选择后才交接 Program，不自动创建研究或获得实验权限。同问题、来源及范围已覆盖的构思复用，新证据或问题实质变化时只补变化部分。贡献核对、限定查新及独立科研反驳按 L1／EXTERNAL_REVIEW 的条件触发，不串成每轮必经技能链。
