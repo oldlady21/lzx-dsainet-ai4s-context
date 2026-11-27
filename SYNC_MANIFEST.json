@@ -5,76 +5,76 @@
     "不自动递归补齐引用；未公开引用见每库SYNC_MANIFEST.json。",
     "不上传凭据、SSH配置、数据集、checkpoint、原始预测、机器日志或完整实验目录。"
   ],
-  "exported_at": "2026-11-25T10:57:18.886329+00:00",
+  "exported_at": "2026-11-27T08:08:24.863196+00:00",
   "files": [
     {
-      "bytes": 10818,
+      "bytes": 11783,
       "path": "AGENTS.md",
-      "public_git_blob_sha1": "f8e528091882920f3e4b1c603d6bddfaf5e07155",
-      "public_sha256": "6da9299034e47f77aff6b57fb3faa46caa5a5e7230599aede4b178b76a29a540",
+      "public_git_blob_sha1": "bf4c811adeb7e154c8e7340d16d5d9223a9c4b3e",
+      "public_sha256": "d694e21ea72ba9ad11335248b8483290d0e7c423b36ad7772264bb2913fcf434",
       "redactions": {
         "host_alias": 1,
         "workspace_prefix": 1
       },
-      "source_sha256": "28fb1f1c6752c6868aec887aeb3481d075d09412732077f715f88f1eb716f2d4"
+      "source_sha256": "8915e930f51f445dfe2efac6101a91e0ded9f85ef5f8d7dd45b059764f040635"
     },
     {
-      "bytes": 712258,
+      "bytes": 694897,
       "path": "DECISIONS.md",
-      "public_git_blob_sha1": "fe6f355d78f7f08e6ddc76c9776a32953a6d5919",
-      "public_sha256": "53e2bf0efefab7a760236d4aed82d13215e778c0e3cf7e69a0476d8ae7faa894",
+      "public_git_blob_sha1": "bf3107141e513816748beda5c267fb0ef0316e03",
+      "public_sha256": "8e3c68d2fb9f0b6aa397439699a822a4e4d9f8ea529a7e64a9013a4ecbc56de9",
       "redactions": {
         "host_alias": 16,
         "ipv4": 2,
         "unix_home_path": 5
       },
-      "source_sha256": "bdf0c41398231eaf1f52efd5c5bd9c46ed15979613bc83396332416d6386badd"
+      "source_sha256": "d1a4ed45f26456b47dc01ddcf75a3495f2e1288facd7f22bca5588bf23f44208"
     },
     {
-      "bytes": 312460,
+      "bytes": 309465,
       "path": "PAPER.md",
-      "public_git_blob_sha1": "eff56bc90988824377f215a030888e6248801a07",
-      "public_sha256": "141d79befb88bb80070f6f40372ef5198e3dc00b343eea24399b1616a6f32811",
+      "public_git_blob_sha1": "d548c3a2ebdf15a3fe3d1f0c603f6f85f123d994",
+      "public_sha256": "7e4c4563feed5c6f6a78e6c9a3ac06c9dc951b6b3a48f4dc5de1c1fec67c1d42",
       "redactions": {
         "host_alias": 1
       },
-      "source_sha256": "e840e449793854eba066067c48d93661cdc8838b5e616ce14128311084ce5f31"
+      "source_sha256": "1f2b61088193455a768d7bbf97d36cae9eee384bdfdc7a975bdab781e5164750"
     },
     {
-      "bytes": 10385,
+      "bytes": 7024,
       "path": "README.md",
-      "public_git_blob_sha1": "db2df018d7526eeaf8cf233bdf9f7ca74fe2f1e1",
-      "public_sha256": "8783ba6211cc754ba274f367ccfd036860507297c371788ffeecc2dd373912f7",
+      "public_git_blob_sha1": "c9e1d4d69bbd4e105c2608bb2f2522097b993045",
+      "public_sha256": "e749fbe7af9469bc353e0965c1e61349ce7bb94382c8caefdf6d5271bc5413fa",
       "redactions": {},
-      "source_sha256": "8783ba6211cc754ba274f367ccfd036860507297c371788ffeecc2dd373912f7"
+      "source_sha256": "e749fbe7af9469bc353e0965c1e61349ce7bb94382c8caefdf6d5271bc5413fa"
     },
     {
-      "bytes": 376652,
+      "bytes": 367576,
       "path": "TASKS.md",
-      "public_git_blob_sha1": "f899e158dc309aada0b003a50a6a380380eebbd3",
-      "public_sha256": "91ba76696b66b8f42e61e4d6491c4f35725a02428a37a1c9f211a2673ed318e0",
+      "public_git_blob_sha1": "56c60d38d2037aa9b450f90ea1ae3da3f93dc559",
+      "public_sha256": "d56cda5c8b63b5aef2cc58234922126020781026456e1de36fe522b5e2a9e223",
       "redactions": {
         "host_alias": 9
       },
-      "source_sha256": "54dc6ee06d0e806612853b3e160ef0fb591a70ed86e615dab3057dbfab40c36e"
+      "source_sha256": "d6bc7a2147aa337cb42a27b4d28db76bab68b2d93c38a0055c70f5d12bf08f43"
     },
     {
       "bytes": 168313,
       "path": "ai4s/PROMPT_INDEX.yaml",
-      "public_git_blob_sha1": "ea0630ba289c32b9dd45185f3dd17683cd6a43c0",
-      "public_sha256": "3c216b09922734d0dc09abc9553e1582244e4009ce04329e54cdd8a4194cd7cd",
+      "public_git_blob_sha1": "77f4bf336d3bc7f29c9f72b8428fa3996a9b6245",
+      "public_sha256": "65b06e51103fa446963e7db30b99f19f6cedb24fdc8c8770d771ca07d7c2923f",
       "redactions": {},
-      "source_sha256": "fd6ab526ca4a622a65ebd1afa6e4be8063c48dfd8d8dcfc1919f82e3952655c2"
+      "source_sha256": "ad3b74129b0cb91cf24bbd58ea619de513fdc00a5c3bec51aed1ce4829198717"
     },
     {
-      "bytes": 13974,
+      "bytes": 18925,
       "path": "ai4s/README.md",
-      "public_git_blob_sha1": "ef6afdf4dfabb6dccfb8905e1e0a49262f5f6536",
-      "public_sha256": "255e18c65c3d5b071832b33dc849aafb9fe10e20998026d51692f2e9eb3251f1",
+      "public_git_blob_sha1": "84c2000935fe942f5663141c4741f5ff40a21dd8",
+      "public_sha256": "2ee22f06937439def2d974cf7d6903d877ed9702d9436df68206003941fc848f",
       "redactions": {
         "host_alias": 4
       },
-      "source_sha256": "98e44ae41e8c49b1c200f0465b09618c2d5faed0867be7c27d4ef96eb0effbd4"
+      "source_sha256": "4001ab88c75ce4bb402fe6c89ac2c3142c3e0bc3d04f833959f57db4720bb44d"
     },
     {
       "bytes": 6195,
@@ -113,12 +113,12 @@
       "source_sha256": "c27fa5d05f8f5fccd213a3f8e5b8844b266db4ad47d0247b92d1f2e5c5cf926a"
     },
     {
-      "bytes": 9249,
+      "bytes": 9669,
       "path": "ai4s/programs/dsainet/PROJECT_PROMPT_v4.1.md",
-      "public_git_blob_sha1": "9b8c54b5639a5fe6c64c19b865e97d2d6d81a323",
-      "public_sha256": "192d44bc43fb869f0265a166935a6ff4d7e34b11ad0a5ef94cffeb28b47cd613",
+      "public_git_blob_sha1": "e9ef1e6faf0ea6483e9e9bdea41ffbe8ab91bc47",
+      "public_sha256": "3b5130f146d8a2bd9c7ed3eb6dd0ceaa3609f6e7c32b4a607d5bc5f7be8ff430",
       "redactions": {},
-      "source_sha256": "192d44bc43fb869f0265a166935a6ff4d7e34b11ad0a5ef94cffeb28b47cd613"
+      "source_sha256": "3b5130f146d8a2bd9c7ed3eb6dd0ceaa3609f6e7c32b4a607d5bc5f7be8ff430"
     },
     {
       "bytes": 7521,
@@ -129,24 +129,24 @@
       "source_sha256": "8835b27d84df860eafbe5e51b6f3588d39e5eb1bc36b2f79bd22f4c4f8501b46"
     },
     {
-      "bytes": 128583,
+      "bytes": 132804,
       "path": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
-      "public_git_blob_sha1": "272659ce360fd6e36a86450150251f7461019677",
-      "public_sha256": "e40af3029b2df969fdfa58bfb3873be514d44f6290b3b23114487f962980a1bb",
+      "public_git_blob_sha1": "b7f78f5ec53aaa8e36b01a5ac354e582f37a7bcc",
+      "public_sha256": "e186bae8ed973960ab22affb586e712ff23efa6e10e30a12915e7454c63c6efe",
       "redactions": {},
-      "source_sha256": "e40af3029b2df969fdfa58bfb3873be514d44f6290b3b23114487f962980a1bb"
+      "source_sha256": "e186bae8ed973960ab22affb586e712ff23efa6e10e30a12915e7454c63c6efe"
     },
     {
-      "bytes": 723712,
+      "bytes": 736447,
       "path": "ai4s/programs/dsainet/research/EVIDENCE_INDEX.yaml",
-      "public_git_blob_sha1": "ec57b0a30a93e20b5211b5d6c223b9e72bac2248",
-      "public_sha256": "fe87d7b58cd76adbaef7263dcf30b4dcd0704b8fa24e1d60fc7628e772a48a4b",
+      "public_git_blob_sha1": "5589ed9f6c1f085875278c54ca8cab7b7b40f32f",
+      "public_sha256": "5f0c9f009c56f94b7fcf9b038907834c523f6c6e86f4ef3a8638f1e15bc3e63c",
       "redactions": {
         "machine_field": 19,
         "unix_home_path": 8,
         "workspace_prefix": 7
       },
-      "source_sha256": "06eb47ab49fb7fbe543cf1a12c9dc3aa437c477ba2889085a10c670ed74c4bcf"
+      "source_sha256": "d850e69cbf88919e798e71ed40f70261b3a8b5506135096baf2eca1e09dd7f79"
     },
     {
       "bytes": 1743,
@@ -157,16 +157,17 @@
       "source_sha256": "b5b829a3df10efe0ad7b24921dbd7ebdac89b791891217219c7ee6f0458e66e8"
     },
     {
-      "bytes": 1086722,
+      "bytes": 1117445,
       "path": "ai4s/programs/dsainet/research/STATE.yaml",
-      "public_git_blob_sha1": "9c9912355ad5a9fda6f9dc0c783812a1ca726756",
-      "public_sha256": "5facb7140fb8c0d253b3f264b975d0fec60c9086af9553f6322c9439338ea52b",
+      "public_git_blob_sha1": "3159101eabe9a5d226fadd9f33aff9099e84aece",
+      "public_sha256": "fcded7c1abd1290fb1ba0415842fc5329c4491c61983ad6cf9c264c282954d32",
       "redactions": {
         "host_alias": 7,
-        "machine_field": 188,
-        "unix_home_path": 9
+        "machine_field": 206,
+        "unix_home_path": 9,
+        "workspace_prefix": 7
       },
-      "source_sha256": "a0c881b1eceae38fd5830a035dc77440b454c0ce26def467d4d33987aa5b2291"
+      "source_sha256": "bf4ccb5867739000f96bca07e0120cb12f082c3d7715c64bbc70d316767b2be1"
     },
     {
       "bytes": 81227,
@@ -240,20 +241,22 @@
       "source_sha256": "2bf4c1743e1e093236dddc4aadafa089e4be13963db30d9c361bd84fa9f300a4"
     },
     {
-      "bytes": 14876,
+      "bytes": 14974,
       "path": "ai4s/prompts/EVALUATION_EVIDENCE.md",
-      "public_git_blob_sha1": "beaa675dae690d1356bdf325334f826e6f6c57dd",
-      "public_sha256": "24b87da4db1383c77045dfd045e2ca5f7f92433efba8732b9ddf5644dbee2471",
+      "public_git_blob_sha1": "e854b7617b6319a72818faaf8d2f56a87e595cf5",
+      "public_sha256": "68e78aced5a8afad0a0d19d8c340c189a1543502522eedb8c08499a75d4c71a6",
       "redactions": {},
-      "source_sha256": "24b87da4db1383c77045dfd045e2ca5f7f92433efba8732b9ddf5644dbee2471"
+      "source_sha256": "68e78aced5a8afad0a0d19d8c340c189a1543502522eedb8c08499a75d4c71a6"
     },
     {
-      "bytes": 4668,
+      "bytes": 5993,
       "path": "ai4s/prompts/EXTERNAL_REVIEW.md",
-      "public_git_blob_sha1": "c8d871b0ee7903313569e355763f585b18b9e180",
-      "public_sha256": "81e2085336465175e3c3888142c2cab2b8eecf1fe6afc75fc438a12fd27851ab",
-      "redactions": {},
-      "source_sha256": "81e2085336465175e3c3888142c2cab2b8eecf1fe6afc75fc438a12fd27851ab"
+      "public_git_blob_sha1": "9b1362d41b1669958708701de09680476d62d566",
+      "public_sha256": "3db5f8a7081f15f3db2f2b8ce9a146d93c086a68091de79445f569c96c3173ad",
+      "redactions": {
+        "windows_path": 1
+      },
+      "source_sha256": "f18c7eda125f8e7f0c7e4a90a45dd325e1bee9000c1b55c2d350bc59343a8b60"
     },
     {
       "bytes": 9481,
@@ -304,25 +307,25 @@
       "source_sha256": "15fa1846421cdaee7f9cbe79c57360fee299bfd7e4270ca955e34a48a0f8c715"
     },
     {
-      "bytes": 10349,
+      "bytes": 10873,
       "path": "ai4s/prompts/MIEEG_AI4S_SKILL_ROUTER.md",
-      "public_git_blob_sha1": "4e3a061490ec890d17117abb78290e50b6b0b4bb",
-      "public_sha256": "3ab4002bb79ebd6b6681ab3ef3b48b303fec408277ce0f8d509fc4e997f0b930",
+      "public_git_blob_sha1": "5ef8677b3492b96d584570774accf1ab72d1bb9f",
+      "public_sha256": "d995367afacc99f59f474f8c4868c128c8e686feda1f10277d37dc7ed21fe892",
       "redactions": {
-        "windows_path": 2,
+        "windows_path": 1,
         "workspace_prefix": 1
       },
-      "source_sha256": "a662e9f3ed5739fb52b550afcd0ac251490fb608687013c1549586cf0ffff37e"
+      "source_sha256": "68827b99db110687b49abf862d7feacace3d8eb13d00aa9408d614d74b38c729"
     },
     {
-      "bytes": 39165,
+      "bytes": 39574,
       "path": "ai4s/prompts/TRANSACTION_RUNTIME.md",
-      "public_git_blob_sha1": "045e6e87190471bed04e7c6bba3169c9a947f3d5",
-      "public_sha256": "4a338109b94c52306dffe7277e4ee41e27b3c296ead6e60d77d477d3308cef80",
+      "public_git_blob_sha1": "1b2c7cf1d84e9d47034d37b1ff10b1b605e0b902",
+      "public_sha256": "4409747dbddf15b448d2269ac0eba03b95b82ee276c02b0f3b219d19f6675e85",
       "redactions": {
         "host_alias": 4
       },
-      "source_sha256": "b4b55a3c19971618f28d06f80500bb7f5ba6e2b612542d07868c6034ccce13d1"
+      "source_sha256": "bdb5db992e9cc082b9354038702fa12ffa23c4dcc445510a2310ec0adcb761b5"
     },
     {
       "bytes": 20850,
@@ -379,14 +382,17 @@
   "observed_local_state": {
     "dsainet": {
       "active_operation": null,
-      "active_run": null,
-      "paused": true,
+      "active_run": {
+        "dispatch_status": "REMOTE_ACCEPTED",
+        "round_id": "dsainet-b0-spatial-person-gradient-r1-budget2"
+      },
+      "paused": false,
       "source_in_this_repository": true,
       "source_path": "ai4s/programs/dsainet/research/STATE.yaml",
       "source_public_url": "https://github.com/oldlady21/lzx-dsainet-ai4s-context/blob/main/ai4s/programs/dsainet/research/STATE.yaml",
-      "source_sha256": "a0c881b1eceae38fd5830a035dc77440b454c0ce26def467d4d33987aa5b2291",
-      "source_updated_at": "2026-11-24T17:37:18.425137+00:00",
-      "status": "COMPLETE_MAX_ROUNDS"
+      "source_sha256": "bf4ccb5867739000f96bca07e0120cb12f082c3d7715c64bbc70d316767b2be1",
+      "source_updated_at": "2026-11-27T06:20:16.453828+00:00",
+      "status": "WAITING_REMOTE"
     }
   },
   "policy_version": "public-documents-v1",
@@ -400,11 +406,15 @@
     "ai4s/prompts/LEVEL2_EXECUTION_v3.3.md",
     "ai4s/prompts/LEVEL2_EXECUTION_v3.4.md"
   ],
-  "snapshot_id": "d8c47a5a85756b3f929b5547c8feb568fe10bfff4d4341276a9c0b2ce4a83255",
+  "snapshot_id": "72d17864c7937b49f25925f6c826df0c373444f33bd57c69b91b86cc1c15ea1a",
   "unpublished_references": [
     {
       "from": "AGENTS.md",
       "not_in_snapshot": "ai4s/prompts/PROJECT_ADMISSION.md"
+    },
+    {
+      "from": "AGENTS.md",
+      "not_in_snapshot": "ai4s/references/LITERATURE_INTAKE.md"
     },
     {
       "from": "DECISIONS.md",
@@ -976,7 +986,19 @@
     },
     {
       "from": "DECISIONS.md",
+      "not_in_snapshot": "docs/ASSET_ARCHIVE.md"
+    },
+    {
+      "from": "DECISIONS.md",
+      "not_in_snapshot": "docs/GPT_CONTEXT_SYNC.md"
+    },
+    {
+      "from": "DECISIONS.md",
       "not_in_snapshot": "experiments/BNCI2014002_EVALUATION_PROTOCOL.md"
+    },
+    {
+      "from": "DECISIONS.md",
+      "not_in_snapshot": "experiments/ENVIRONMENT.md"
     },
     {
       "from": "DECISIONS.md",
@@ -1085,6 +1107,10 @@
     {
       "from": "PAPER.md",
       "not_in_snapshot": "ai4s/programs/dbconformer/research/cgb_r1/STARTUP_REPORT.md"
+    },
+    {
+      "from": "PAPER.md",
+      "not_in_snapshot": "ai4s/programs/dbconformer/research/closure_late_validation_20261118/WANG_LATE_FINAL_REPORT.md"
     },
     {
       "from": "PAPER.md",
@@ -1236,6 +1262,10 @@
     },
     {
       "from": "PAPER.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/dsainet-b0-spatial-graph-basis-r1_decision.yaml"
+    },
+    {
+      "from": "PAPER.md",
       "not_in_snapshot": "ai4s/programs/dsainet/research/foundry_if20261029_03_review_20261101/ASSESSMENT.md"
     },
     {
@@ -1376,6 +1406,10 @@
     },
     {
       "from": "PAPER.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/p0_bnci2014002_local/RESULTS_20261118.md"
+    },
+    {
+      "from": "PAPER.md",
       "not_in_snapshot": "ai4s/programs/mvcnet/research/EVIDENCE_INDEX.yaml"
     },
     {
@@ -1384,11 +1418,19 @@
     },
     {
       "from": "PAPER.md",
+      "not_in_snapshot": "ai4s/programs/mvcnet/research/central_row_augmentation_20261126/SCIENCE_CLOSEOUT.md"
+    },
+    {
+      "from": "PAPER.md",
       "not_in_snapshot": "ai4s/programs/mvcnet/research/channel_bilinear/REPORT.md"
     },
     {
       "from": "PAPER.md",
       "not_in_snapshot": "ai4s/programs/mvcnet/research/channel_bilinear/RESEARCH_BRIEF.md"
+    },
+    {
+      "from": "PAPER.md",
+      "not_in_snapshot": "ai4s/programs/mvcnet/research/mvcnet-cvcdropout-001-development-v1_decision.yaml"
     },
     {
       "from": "PAPER.md",
@@ -1449,6 +1491,10 @@
     {
       "from": "PAPER.md",
       "not_in_snapshot": "ai4s/programs/ota/research/STATE.yaml"
+    },
+    {
+      "from": "PAPER.md",
+      "not_in_snapshot": "ai4s/programs/ota/research/ota-sic-r1-repair1_decision.yaml"
     },
     {
       "from": "PAPER.md",
@@ -1548,6 +1594,10 @@
     },
     {
       "from": "PAPER.md",
+      "not_in_snapshot": "ai4s/programs/sstdpn/research/sd02-three-arm-v0.1/closeout_20261105/RESULT_SUMMARY.md"
+    },
+    {
+      "from": "PAPER.md",
       "not_in_snapshot": "ai4s/programs/sstdpn/research/sgr-r01-v0.1/LAUNCH_REPORT.md"
     },
     {
@@ -1616,11 +1666,23 @@
     },
     {
       "from": "PAPER.md",
+      "not_in_snapshot": "experiments/records/smanet/2026-09-22_sinc_gain_comparison/EXPERIMENT_AUDIT.json"
+    },
+    {
+      "from": "PAPER.md",
+      "not_in_snapshot": "experiments/records/smanet/2026-09-22_sinc_gain_comparison/RESULT_REPORT.md"
+    },
+    {
+      "from": "PAPER.md",
       "not_in_snapshot": "experiments/records/smanet/2026-09-22_sinc_gain_comparison/STATUS.md"
     },
     {
       "from": "PAPER.md",
       "not_in_snapshot": "experiments/records/sstdpn/2026-07-16_sstdpn_bnci2014001_co_cv_full.md"
+    },
+    {
+      "from": "PAPER.md",
+      "not_in_snapshot": "refs/papers/_index/README.md"
     },
     {
       "from": "PAPER.md",
@@ -1633,6 +1695,10 @@
     {
       "from": "PAPER.md",
       "not_in_snapshot": "results/archives/mieeg-uep-v1.0/result_registry.csv"
+    },
+    {
+      "from": "PAPER.md",
+      "not_in_snapshot": "results/archives/mieeg-zhou2016-loso-v1/README.md"
     },
     {
       "from": "PAPER.md",
@@ -1700,11 +1766,7 @@
     },
     {
       "from": "README.md",
-      "not_in_snapshot": "docs/DISK_HYGIENE_BATCH3_PLAN_20261016.md"
-    },
-    {
-      "from": "README.md",
-      "not_in_snapshot": "docs/GIT_MAINTENANCE_20261016.md"
+      "not_in_snapshot": "docs/GPT_CONTEXT_SYNC.md"
     },
     {
       "from": "README.md",
@@ -1713,6 +1775,10 @@
     {
       "from": "README.md",
       "not_in_snapshot": "draft/README.md"
+    },
+    {
+      "from": "README.md",
+      "not_in_snapshot": "experiments/BNCI2014002_EVALUATION_PROTOCOL.md"
     },
     {
       "from": "README.md",
@@ -1732,15 +1798,11 @@
     },
     {
       "from": "README.md",
+      "not_in_snapshot": "experiments/REMOTE_LAB10_AI4S.md"
+    },
+    {
+      "from": "README.md",
       "not_in_snapshot": "experiments/REMOTE_WORKFLOW.md"
-    },
-    {
-      "from": "README.md",
-      "not_in_snapshot": "experiments/records/smanet/2026-09-22_reconstruction_followup/RECONSTRUCTION_PLAN.md"
-    },
-    {
-      "from": "README.md",
-      "not_in_snapshot": "experiments/records/smanet/2026-09-22_sinc_gain_comparison/STATUS.md"
     },
     {
       "from": "README.md",
@@ -1752,15 +1814,19 @@
     },
     {
       "from": "README.md",
+      "not_in_snapshot": "results/README.md"
+    },
+    {
+      "from": "README.md",
+      "not_in_snapshot": "results/archives/mieeg-physionet-subject10fold-v1/README.md"
+    },
+    {
+      "from": "README.md",
       "not_in_snapshot": "results/archives/mieeg-uep-v1.0/README.md"
     },
     {
       "from": "README.md",
-      "not_in_snapshot": "results/archives/mieeg-uep-v1.0/integrity_summary.json"
-    },
-    {
-      "from": "README.md",
-      "not_in_snapshot": "results/archives/mieeg-uep-v1.0/result_registry.csv"
+      "not_in_snapshot": "results/archives/mieeg-zhou2016-loso-v1/README.md"
     },
     {
       "from": "README.md",
@@ -2140,6 +2206,14 @@
     },
     {
       "from": "TASKS.md",
+      "not_in_snapshot": "ai4s/programs/mvcnet/research/STATE.yaml"
+    },
+    {
+      "from": "TASKS.md",
+      "not_in_snapshot": "ai4s/programs/mvcnet/research/central_row_augmentation_20261126/SCIENCE_CLOSEOUT.md"
+    },
+    {
+      "from": "TASKS.md",
       "not_in_snapshot": "ai4s/programs/mvcnet/research/channel_bilinear/REPORT.md"
     },
     {
@@ -2316,6 +2390,10 @@
     },
     {
       "from": "TASKS.md",
+      "not_in_snapshot": "experiments/records/smanet/2026-09-22_sinc_gain_comparison/EXPERIMENT_AUDIT.json"
+    },
+    {
+      "from": "TASKS.md",
       "not_in_snapshot": "experiments/records/smanet/2026-09-22_sinc_gain_comparison/STATUS.md"
     },
     {
@@ -2388,7 +2466,35 @@
     },
     {
       "from": "ai4s/README.md",
+      "not_in_snapshot": "ai4s/archive/PATH_MAP.json"
+    },
+    {
+      "from": "ai4s/README.md",
+      "not_in_snapshot": "ai4s/programs/dbconformer/PROGRAM.yaml"
+    },
+    {
+      "from": "ai4s/README.md",
+      "not_in_snapshot": "ai4s/programs/dbconformer/research/EVIDENCE_INDEX.yaml"
+    },
+    {
+      "from": "ai4s/README.md",
+      "not_in_snapshot": "ai4s/programs/dbconformer/research/STATE.yaml"
+    },
+    {
+      "from": "ai4s/README.md",
       "not_in_snapshot": "ai4s/programs/dbconformer/research/reassessment_v33_20261029/research_brief.md"
+    },
+    {
+      "from": "ai4s/README.md",
+      "not_in_snapshot": "ai4s/programs/mvcnet/PROGRAM.yaml"
+    },
+    {
+      "from": "ai4s/README.md",
+      "not_in_snapshot": "ai4s/programs/mvcnet/research/EVIDENCE_INDEX.yaml"
+    },
+    {
+      "from": "ai4s/README.md",
+      "not_in_snapshot": "ai4s/programs/mvcnet/research/STATE.yaml"
     },
     {
       "from": "ai4s/README.md",
@@ -2396,11 +2502,43 @@
     },
     {
       "from": "ai4s/README.md",
+      "not_in_snapshot": "ai4s/programs/ota/PROGRAM.yaml"
+    },
+    {
+      "from": "ai4s/README.md",
+      "not_in_snapshot": "ai4s/programs/ota/research/EVIDENCE_INDEX.yaml"
+    },
+    {
+      "from": "ai4s/README.md",
+      "not_in_snapshot": "ai4s/programs/ota/research/STATE.yaml"
+    },
+    {
+      "from": "ai4s/README.md",
+      "not_in_snapshot": "ai4s/programs/sstdpn/PROGRAM.yaml"
+    },
+    {
+      "from": "ai4s/README.md",
+      "not_in_snapshot": "ai4s/programs/sstdpn/research/EVIDENCE_INDEX.yaml"
+    },
+    {
+      "from": "ai4s/README.md",
+      "not_in_snapshot": "ai4s/programs/sstdpn/research/STATE.yaml"
+    },
+    {
+      "from": "ai4s/README.md",
       "not_in_snapshot": "ai4s/prompts/ALL_PROGRAMS_HISTORICAL_CLEANUP_AGENT_PROMPT.md"
     },
     {
       "from": "ai4s/README.md",
+      "not_in_snapshot": "ai4s/references/LITERATURE_INTAKE.md"
+    },
+    {
+      "from": "ai4s/README.md",
       "not_in_snapshot": "docs/ASSET_ARCHIVE.md"
+    },
+    {
+      "from": "ai4s/README.md",
+      "not_in_snapshot": "refs/papers/_index/README.md"
     },
     {
       "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
@@ -2417,6 +2555,10 @@
     {
       "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
       "not_in_snapshot": "ai4s/programs/dsainet/research/b0_asymmetric_token_grid_20261122_py39fix1/SCREEN_REPORT.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/b0_bandwise_transport_20261126/RESULT_REPORT.md"
     },
     {
       "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
@@ -2496,6 +2638,10 @@
     },
     {
       "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/b0_covariance_transport_20261126/RESULT_REPORT.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
       "not_in_snapshot": "ai4s/programs/dsainet/research/b0_cross_scale_score_alignment_20261124/RESULT.json"
     },
     {
@@ -2504,7 +2650,15 @@
     },
     {
       "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/b0_cross_session_conditional_20261125/RESULT_REPORT.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
       "not_in_snapshot": "ai4s/programs/dsainet/research/b0_cross_source_scale_exchange_20261125/RESULT_REPORT.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/b0_crossfit_confusions_20261125/RESULT_REPORT.md"
     },
     {
       "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
@@ -2644,6 +2798,22 @@
     },
     {
       "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/b0_masked_central_aux_20261126/CONTINUATION_REPORT.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/b0_masked_central_aux_20261126/DISPATCH_REPORT.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/b0_masked_central_aux_20261126/RESULT_REPORT.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/b0_masked_central_aux_20261126/recovery_45m/closeout/REPORT.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
       "not_in_snapshot": "ai4s/programs/dsainet/research/b0_mu_beta_detuned_sidebands_20261125_182842/RESULT_REPORT.md"
     },
     {
@@ -2665,6 +2835,10 @@
     {
       "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
       "not_in_snapshot": "ai4s/programs/dsainet/research/b0_patch_preelu_polyphase_20261124/SCREEN_REPORT.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/b0_phase_envelope_20261125/RESULT_REPORT.md"
     },
     {
       "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
@@ -2757,6 +2931,10 @@
     {
       "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
       "not_in_snapshot": "ai4s/programs/dsainet/research/b0_spatial_graph_basis_20261124/SCREEN_REPORT.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/b0_static_topography_20261126/RESULT_REPORT.md"
     },
     {
       "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
@@ -3184,6 +3362,10 @@
     },
     {
       "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/serial_screen_20261126/CONTINUATION_REPORT.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
       "not_in_snapshot": "ai4s/programs/dsainet/research/shared_frequency_alignment_20261121/QUALIFICATION_REPORT.md"
     },
     {
@@ -3401,6 +3583,10 @@
     {
       "from": "ai4s/prompts/MIEEG_AI4S_SKILL_ROUTER.md",
       "not_in_snapshot": "ai4s/references/lab_literature_lookup.py"
+    },
+    {
+      "from": "ai4s/prompts/MIEEG_AI4S_SKILL_ROUTER.md",
+      "not_in_snapshot": "refs/papers/_index/README.md"
     },
     {
       "from": "ai4s/prompts/TRANSACTION_RUNTIME.md",

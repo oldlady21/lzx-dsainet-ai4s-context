@@ -9,7 +9,7 @@ description: 在 MI-EEG 仓库中启动、恢复或审阅已登记的 AI4S Progr
 
 ## 外部审查后端与材料授权
 
-需要外部 agent 审查时，新任务默认读取 [agy-cli-collab]([REDACTED_MACHINE])，以 `review` 模式调用 Gemini；遵循全局 AGENTS.md 与项目授权，只发送本次必需且允许的材料。既有冻结合同的 reviewer 绑定、用户明确指定的后端及平台审批仍然有效。保持原审查清单、轮次、输出结构、独立性、科学门和执行权限；审查失败或证据未读取时不得标记通过。
+科研构思、对照设计和研究取舍需要第二意见或定向复核时，按[科研交叉思考](EXTERNAL_REVIEW.md#科研交叉思考)经 `agy-cli-collab` 调用 Neon High。其他新外审也统一走该 Skill 的 `review` 路径，依任务选择模型并遵循项目材料授权和平台审批。既有冻结合同保留原 reviewer 绑定；绑定退役后端且尚未完成的审查记 pending，更换审查者须单独批准。
 
 
 只在用户明确调用 `$mieeg-ai4s` 时使用。工作根目录为 `./`。这是入口路由；研究与执行规则由仓库中的活动提示词链、Program 和冻结合同维护。
@@ -28,14 +28,19 @@ description: 在 MI-EEG 仓库中启动、恢复或审阅已登记的 AI4S Progr
 
 按活动链 L2 的具体构思触发条件与直接推进例外选路，默认使用 `idea-creator` 的构思部分；先完整读取其 SKILL.md，再传精确 Program／实现、总览相关的基模理解、允许用于选型的本地认识、相关反例与旧案、未决问题、来源指针、输出目录及停止点。关键基模事实依 L2 首次核对规则处理，已有适用核对直接复用。原论文的问题列表是启发，允许质疑作者解释和当前拟议主张，不作为候选白名单。
 
-**按需查实验室文献。** v4 新方向构思或对照设计缺直接近邻、强对照或可检验的机制类比时，先复用 `refs/papers` 的解析稿、Paper Card 及 Program 证据。用少量英文机制名、别名或协议词检索 `docs/lab/AI4S文献`，选中论文后只查会影响设计的章节。命中片段用于定位；用对应版本的原文核实所需方法、对照或限制，在原 brief 记录来源定位和它改变的决定。已够作决定时收束，正式查新仍按原入口。
+MVCNet 与 DSAINet 的新委托按[选题、验证与串行续接规则](../README.md#mvcnet-与-dsainet-的新研究委托)比较构思结果。
 
-在仓库根运行 [本地文献检索](../references/lab_literature_lookup.py)。首条搜文件名、标题和前两页，次条搜单篇正文并返回从 1 开始的 PDF 页码。
+**正式文献库已启用按需检索。** 构思新方向、寻找机制近邻或选择关键对照时，主 Agent 自主判断外部证据能否改变当前取舍，可直接查询 [refs/papers 正式库](../../refs/papers/_index/README.md)。已有 Program 证据、精读卡或上轮已核实的定位足够时直接推进，无需逐轮检索或记录跳过理由。
+
+围绕一个待决问题，以机制、协议或对照关键词查询已整理总账。优先读少量命中，按返回的版本、PDF 页码和实验协议核实真正影响决定的原文。在已有 brief 记下论文 ID、版本或路径、页码，以及它改变或限定了哪个假设或对照。将论文事实与本项目迁移设想分别表述。
+
+确需扩大召回或定位指定 PDF 时，再用[原文检索](../references/lab_literature_lookup.py)。库内无命中仅说明本地覆盖有限；正式查新沿用既有触发条件。以下命令从仓库根运行。
 
 ```powershell
 $researchPython = '[REDACTED_MACHINE]'
+& $researchPython -X utf8 ai4s/references/paper_library.py search '梯度 多损失' --limit 3
 & $researchPython -X utf8 ai4s/references/lab_literature_lookup.py 'global local decoupling'
-& $researchPython -X utf8 ai4s/references/lab_literature_lookup.py 'ablation gated memory' --paper '基础/03_2026_CVPR_局部卷积与全局记忆解耦.pdf'
+& $researchPython -X utf8 ai4s/references/lab_literature_lookup.py 'ablation gated memory' --paper '06-ai-methods/01-architecture-theory/03_2026_CVPR_局部卷积与全局记忆解耦.pdf'
 ```
 
 调用方已准备的上下文替代 Phase 0/1 的重复准备，采用 Phase 1.5 多视角、Phase 2 构思及 Phase 3 合并。跳过 standalone 的 wiki rebuild、pilot、完整评审／报告、wiki 写入和自动后续阶段。输出回原 research 目录／brief，记录实际 `adapted` 范围与产物引用；技能不可用时主 Agent 可完成等价构思并如实注明，不假称已调用。

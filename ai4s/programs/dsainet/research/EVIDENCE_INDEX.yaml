@@ -4713,6 +4713,191 @@
         "AI4S-DSAINET-dsainet-b0-patch-preelu-polyphase-r1",
         "DSAINET-B0-OBSERVED-TIME-SUPPORT-20261125-173251"
       ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-CROSSFIT-CONFUSIONS-20261125",
+      "qualification_decision": "STOP_COVARIANCE_TEACHER_QUALIFICATION",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_crossfit_confusions_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "9c27e0a3435ebfb7ffb49e0cffbeb50074ed44cf7ed9000087e3bc88089b8bb3",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_crossfit_confusions_20261125/RESULT.json",
+      "qualification_result_sha256": "8fa396fae24b874a6edaa52fbfa6f8c36098d0a1206191560fb90df8974c03e3",
+      "record": "ai4s/programs/dsainet/research/b0_crossfit_confusions_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_crossfit_confusions_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-HALF-SCOUTS-20261125-184427",
+        "AI4S-DSAINET-dsainet-b0-patch-preelu-polyphase-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-CROSS-SESSION-CONDITIONAL-20261125",
+      "qualification_decision": "STOP_CROSS_SESSION_INTERACTION_GEOMETRY",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_cross_session_conditional_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "6af28dfea06974bb829d905797b1e46e73a81840584105bfe8ce3a2a311e694e",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_cross_session_conditional_20261125/RESULT.json",
+      "qualification_result_sha256": "abdf33af31d0c4ad5272d93e44eb8f32029df184f9a53d3cd40f4a2105ed9522",
+      "record": "ai4s/programs/dsainet/research/b0_cross_session_conditional_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_cross_session_conditional_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-CROSSFIT-CONFUSIONS-20261125",
+        "AI4S-DSAINET-dsainet-b0-patch-preelu-polyphase-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-PHASE-ENVELOPE-20261125",
+      "external_review": "pending_authentication",
+      "qualification_decision": "STOP_PHASE_ENVELOPE_QUALIFICATION",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_phase_envelope_20261125/FREEZE.json",
+      "qualification_freeze_sha256": "25f64989c3c6d8d0db885f7e3448941d395c72c829faaef82542b360c079a6fc",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_phase_envelope_20261125/RESULT.json",
+      "qualification_result_sha256": "ef333171c07f38fdd00d414712e29b90b2625ef34ff179ab829c340728f3248f",
+      "record": "ai4s/programs/dsainet/research/b0_phase_envelope_20261125/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_phase_envelope_20261125/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-CROSS-SESSION-CONDITIONAL-20261125",
+        "AI4S-DSAINET-dsainet-b0-patch-preelu-polyphase-r1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-STATIC-TOPOGRAPHY-20261126",
+      "qualification_decision": "STOP_STATIC_TOPOGRAPHY_QUALIFICATION",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_static_topography_20261126/FREEZE.json",
+      "qualification_freeze_sha256": "3120f09ab5bd1aa361ff67695cbdfb0566f6e6501da2e1a78bae6ce482402da7",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_static_topography_20261126/RESULT.json",
+      "qualification_result_sha256": "2ca6fcec201a903ed7c559da4dab2723b31888795ba9d9861860c2bb73e4fc1a",
+      "record": "ai4s/programs/dsainet/research/b0_static_topography_20261126/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_static_topography_20261126/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-PHASE-ENVELOPE-20261125",
+        "DSAINET-B0-CROSSFIT-CONFUSIONS-20261125"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-COVARIANCE-TRANSPORT-20261126",
+      "qualification_decision": "STOP_COVARIANCE_TRANSPORT_QUALIFICATION",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_covariance_transport_20261126/FREEZE.json",
+      "qualification_freeze_sha256": "af64d2e14a87609edb7d6870b07d68f13f926ed2fff5741a66f6f150601534c4",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_covariance_transport_20261126/RESULT.json",
+      "qualification_result_sha256": "d2de7f6f4de79b7c5c85cdfea53a8ccc02deb95622410be3211fa4fa566421b9",
+      "record": "ai4s/programs/dsainet/research/b0_covariance_transport_20261126/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_covariance_transport_20261126/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-STATIC-TOPOGRAPHY-20261126"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-BANDWISE-TRANSPORT-20261126",
+      "qualification_decision": "STOP_BANDWISE_COVARIANCE_TRANSPORT",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_bandwise_transport_20261126/FREEZE.json",
+      "qualification_freeze_sha256": "ff6a0a33e27b7f4e74f883dc8ff6f20a333f4f21f6d1c464c3dfcfceae95f216",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_bandwise_transport_20261126/RESULT.json",
+      "qualification_result_sha256": "02c788616521a788a357d848ae0db4f9e1b7a62541df25c05bc567d061024b8c",
+      "record": "ai4s/programs/dsainet/research/b0_bandwise_transport_20261126/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_bandwise_transport_20261126/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-COVARIANCE-TRANSPORT-20261126",
+        "DSAINET-B0-STATIC-TOPOGRAPHY-20261126"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-B0-MASKED-CENTRAL-AUX-20261126",
+      "qualification_decision": "QUALIFIED_MASKED_CENTRAL_AUX",
+      "qualification_freeze": "ai4s/programs/dsainet/research/b0_masked_central_aux_20261126/FREEZE.json",
+      "qualification_freeze_sha256": "5b142f19d2dd3a34454b137d7576d398a9e44cb4c32234e51ed5706c2d3c2c6c",
+      "qualification_result": "ai4s/programs/dsainet/research/b0_masked_central_aux_20261126/RESULT.json",
+      "qualification_result_sha256": "f4894727ba1f7e70738aac2d5a345531e2ef75766aa8e0d86c7f79e612d35692",
+      "record": "ai4s/programs/dsainet/research/b0_masked_central_aux_20261126/research_brief.md",
+      "report": "ai4s/programs/dsainet/research/b0_masked_central_aux_20261126/RESULT_REPORT.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-BANDWISE-TRANSPORT-20261126",
+        "DSAINET-B0-CROSS-SESSION-CONDITIONAL-20261125"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-V41-SERIAL-SCREEN-20261126-01",
+      "qualification_decision": "STOP_CROSS_SCALE_TIME_CENTERS",
+      "record": "ai4s/programs/dsainet/research/serial_screen_20261126/CANDIDATE_01.md",
+      "report": "ai4s/programs/dsainet/research/serial_screen_20261126/CANDIDATE_01.md",
+      "reused_frozen_qualification": {
+        "FREEZE.json": {
+          "path": "ai4s/programs/dsainet/research/b0_cross_scale_time_centers_20261125_175909/FREEZE.json",
+          "sha256": "e6fd215be1f89c2f652c3da0d485a2315216469d5d24fe15d4a1892e3d0d67c0"
+        },
+        "RESULT.json": {
+          "path": "ai4s/programs/dsainet/research/b0_cross_scale_time_centers_20261125_175909/RESULT.json",
+          "sha256": "7141688152f81a66657ca3faedc736b0163e1d6e735ab4cecb2a57bb070c2ad5"
+        }
+      },
+      "review": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261126/NEON_01.json",
+        "sha256": "7d8e9afcb3c0c7885983ba579f53a65132985bb2d0bb69bc48cf012b53638a80",
+        "status": "PENDING_WRAPPER_TIMEOUT"
+      },
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-CROSS-SCALE-TIME-CENTERS-20261125-175909"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-V41-SERIAL-SCREEN-20261126-02",
+      "qualification_decision": "STOP_REFERENCE_PROJECTION",
+      "qualification_freeze": "ai4s/programs/dsainet/research/serial_screen_20261126/FREEZE_02.json",
+      "qualification_freeze_sha256": "339a95cb372242479cde0d5e189336998298aa5ac34f6aa4dc360cb61286830b",
+      "qualification_result": "ai4s/programs/dsainet/research/serial_screen_20261126/RESULT_02.json",
+      "qualification_result_sha256": "e483506a3f291a987c75b4af543cb23c8d54c9f2d3657a3f4145e195c0a574aa",
+      "record": "ai4s/programs/dsainet/research/serial_screen_20261126/CANDIDATE_02.md",
+      "report": "ai4s/programs/dsainet/research/serial_screen_20261126/DISPOSITION_02.md",
+      "review": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261126/NEON_02.json",
+        "sha256": "0e1275e0d9947735fdd56b917ee7ded89e97330dda1490f38cfadfff5e3c24f7",
+        "status": "PENDING_WRAPPER_TIMEOUT"
+      },
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-STATIC-TOPOGRAPHY-20261126",
+        "AI4S-DSAINET-MASKED-CENTRAL-AUX-R1-RECOVERED-SCREEN"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-V41-SERIAL-SCREEN-20261126-03",
+      "dispatch_status": "PENDING_EXACT_SCOPE_AND_DEPLOYMENT_PREFLIGHT",
+      "qualification_decision": "OPERATIVE_FOR_BOUNDED_SCREEN",
+      "qualification_freeze": "ai4s/programs/dsainet/research/serial_screen_20261126/FREEZE_03.json",
+      "qualification_freeze_sha256": "4d5b11edd30b5012b7b7483b340ce2bce93a8c14cb092112907372696ec72829",
+      "qualification_result": "ai4s/programs/dsainet/research/serial_screen_20261126/RESULT_03.json",
+      "qualification_result_sha256": "f50d08dd4930a062f7242e53270a92a85b5b920216e0c091544588c1fe0f0860",
+      "record": "ai4s/programs/dsainet/research/serial_screen_20261126/CANDIDATE_03.md",
+      "report": "ai4s/programs/dsainet/research/serial_screen_20261126/CONTINUATION_REPORT.md",
+      "review": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261126/NEON_03.json",
+        "sha256": "ec407dc9ec05d5e17b5674898b134bab91e68f3702f66e529621c1e1a4d71ae9",
+        "status": "PENDING_WRAPPER_TIMEOUT"
+      },
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "DSAINET-B0-LATE-SPATIAL-SOURCE-CONTRAST-20261125",
+        "AI4S-DSAINET-MASKED-CENTRAL-AUX-R1-RECOVERED-SCREEN"
+      ],
+      "wiring": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261126/WIRING_03.json",
+        "sha256": "720154e701162cdd178d44bd198744a3d383cdd1511dde790fb5966a929603d7"
+      }
     }
   ],
   "engineering_preparations": [
@@ -9970,6 +10155,32 @@
       "source_run_status": "COMPLETE_PRESERVED",
       "standard_analysis_v1_intake": false,
       "standard_verified_intake": false
+    },
+    {
+      "composite_verification": "ai4s/programs/dsainet/research/b0_masked_central_aux_20261126/recovery_45m/closeout/COMPOSITE_VERIFICATION.json",
+      "composite_verification_sha256": "94063be2629c782a62299aebf65275f6fdd454ab44da37fbeaadec559361b6dc",
+      "decision": "NO_SIGNAL",
+      "decision_record": "ai4s/programs/dsainet/research/b0_masked_central_aux_20261126/recovery_45m/closeout/DECISION.json",
+      "decision_record_sha256": "34d27c403f11f62ef59ab813720c7a86f46c9b1c93b8928ac319994e0ed64db8",
+      "disposition": "STOP_MASKED_CENTRAL_AUX",
+      "evidence_id": "AI4S-DSAINET-MASKED-CENTRAL-AUX-R1-RECOVERED-SCREEN",
+      "follow_up_disposition": "STOP_MASKED_CENTRAL_AUX",
+      "frozen_analysis": "ai4s/programs/dsainet/research/b0_masked_central_aux_20261126/recovery_45m/closeout/FROZEN_ANALYSIS.json",
+      "frozen_analysis_sha256": "22ff8e22255f74e091b75d645b8dc2f5891819f5efb5bdf6131c9f1ef88fbfb4",
+      "original_contract_sha256": "3a607d99d3beb83111e164e9cf6672843ccc097a69461cc91f411d7828523b84",
+      "original_run_id": "2026-11-26_dsainet_b0_masked_central_aux_r1-full-w1",
+      "original_run_status": "FAILED_TIMEOUT_PRESERVED",
+      "recorded_at": "2026-11-26T13:29:38.167694+00:00",
+      "repair_contract_sha256": "c008db6ae84a449e832fd396362d43896cbfc879594a39f8336ecaf2a307af4f",
+      "repair_run_id": "2026-11-26_dsainet_b0_masked_central_aux_r1_repair6-full-w1",
+      "repair_run_status": "COMPLETE_VERIFIED",
+      "repaired_fits": 3,
+      "report": "ai4s/programs/dsainet/research/b0_masked_central_aux_20261126/recovery_45m/closeout/REPORT.md",
+      "report_sha256": "8e783faf9722bce44d75b6aefbf1c62b55630ec4828ab47d1cbd62594b4fe47d",
+      "reused_fits": 15,
+      "role": "exposed_development_recovered_source_screen",
+      "round_id": "dsainet-b0-masked-central-aux-r1",
+      "total_fits": 18
     }
   ],
   "research_preparations": [
@@ -13910,5 +14121,5 @@
       "used_by_round": "dsa-kshape-v0.1-repair2"
     }
   ],
-  "updated_at": "2026-11-25T10:50:55.989482+00:00"
+  "updated_at": "2026-11-26T13:48:17.057889+00:00"
 }

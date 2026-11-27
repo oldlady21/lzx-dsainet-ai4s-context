@@ -1,28 +1,22 @@
 # AI4S 工作入口
 
-当前 Program 的唯一活动链见 `PROMPT_INDEX.yaml`。模型入口：
+AI4S 按基模设置 Program，每个 Program 可以容纳多个 research。母项目维护论文问题、共享评估协议和写作，Program 在各自的活动链与授权范围内推进研究。当前 L1/L2/L3 组合以 [Prompt Index](PROMPT_INDEX.yaml) 为准，具体运行看 State，证据看 Evidence Index，需要正式判断某项 Claim 时再查适用的 Claim Ledger。
 
-历史 staging、Run 或机器载荷若在本地缺失，查 [外盘归档资产指南](../docs/ASSET_ARCHIVE.md) 和精确归档索引；五个 Program 均有历史资产迁移。旧结构路径仍先按 `archive/PATH_MAP.json` 解析。资产恢复不改变 State、Evidence Index、冻结合同或实验授权。
+Foundry 独立生成候选，由用户选择后交接给相应 Program。用户也可以直接提出研究方向。Foundry 的交接不会自动创建 research 或启动实验，历史 proposed 流程只用于追溯原有记录。
 
-| Program | 项目提示词（生效以索引为准） | 当前状态入口 |
-|---|---|---|
-| MVCNet | `programs/mvcnet/PROJECT_PROMPT_v4.1.md` | `programs/mvcnet/research/STATE.yaml` |
-| DSAINet | `programs/dsainet/PROJECT_PROMPT_v4.1.md` | `programs/dsainet/research/STATE.yaml` |
-| OTA | `programs/ota/PROJECT_PROMPT_v3.4.md` | `programs/ota/research/STATE.yaml` |
-| DBConformer | `programs/dbconformer/PROJECT_PROMPT_v4.0.md` | `programs/dbconformer/research/STATE.yaml` |
-| SST-DPN | `programs/sstdpn/PROJECT_PROMPT_v3.4.md` | `programs/sstdpn/research/STATE.yaml` |
-
-2026-09-19：DBConformer、SST-DPN 已按用户选择接入 v2.1。历史基模与研究边界随各自 Evidence Index 引用，初始未创建 campaign 或启动实验。接入验证见 `_work/baseline_program_admission_20260919/REPORT.md`。
-
-外审触发、联合审查与复用按 `ai4s/prompts/EXTERNAL_REVIEW.md`：普通探索不例行外审；高风险设计/实现按需复核；正式 Claim 联合审计一次，保留两份职责报告及真实 trace。已有冻结合同的明确要求保持有效。
-
-AI4S 是新科研流程的唯一编排入口：一个基模一个 Program，内部容纳多个 research。Foundry 由用户独立调用，候选选中后只交接对应 Program；AI4S 也接受用户直接给定的方向，原有自主研究循环不依赖 Foundry。母项目负责论文问题、统一协议与写作；Program 在已授权范围内研究，正式主张以 Program Claim Ledger 为唯一判定源，论文材料引用它，不自动改写 PAPER.md。历史 proposed 只作为来源，不继承其状态机或运行权限。
+| Program | 配置 | 运行状态 | 证据 |
+|---|---|---|---|
+| MVCNet | [PROGRAM](programs/mvcnet/PROGRAM.yaml) | [State](programs/mvcnet/research/STATE.yaml) | [Evidence Index](programs/mvcnet/research/EVIDENCE_INDEX.yaml) |
+| DSAINet | [PROGRAM](programs/dsainet/PROGRAM.yaml) | [State](programs/dsainet/research/STATE.yaml) | [Evidence Index](programs/dsainet/research/EVIDENCE_INDEX.yaml) |
+| OTA | [PROGRAM](programs/ota/PROGRAM.yaml) | [State](programs/ota/research/STATE.yaml) | [Evidence Index](programs/ota/research/EVIDENCE_INDEX.yaml) |
+| DBConformer | [PROGRAM](programs/dbconformer/PROGRAM.yaml) | [State](programs/dbconformer/research/STATE.yaml) | [Evidence Index](programs/dbconformer/research/EVIDENCE_INDEX.yaml) |
+| SST-DPN | [PROGRAM](programs/sstdpn/PROGRAM.yaml) | [State](programs/sstdpn/research/STATE.yaml) | [Evidence Index](programs/sstdpn/research/EVIDENCE_INDEX.yaml) |
 
 ## 每次任务的读取顺序
 
 1. 从 `PROMPT_INDEX.yaml` 找到 Program 条目，结合 State 中所选对象的身份选链：新设计用 active_chain；已有 Run／operation／冻结续接用其精确旧工作绑定。共享 L1/L2 本轮只读适用版本，模型差异查对应 L3。
 2. 查运行时读取 `PROGRAM.yaml` 与 `research/STATE.yaml` 的 active_run、active_operation、campaign/续接身份；查结果时用 `research/EVIDENCE_INDEX.yaml` 的精确 evidence ID。由这些引用定位合同、准备记录、staging 或 intake，不从目录新旧或标题猜当前对象。
-3. 只读取所选对象的文件及核验所需直接引用。旧路径按 `archive/PATH_MAP.json` 解析；仅在缺少明确路径时做该 Program 内的窄文件名检索，避免递归扫描所有 research、staging、intake 与第三方代码。
+3. 只读取所选对象及核验所需的直接引用。先用 [历史路径映射](archive/PATH_MAP.json) 解析旧路径。历史 staging、Run 或其他机器产物在本地缺失时，按[外盘归档资产指南](../docs/ASSET_ARCHIVE.md)查对应索引、清单和批次回执。缺少明确路径时，在该 Program 内按文件名查找。
 4. 部署准备按 `prompts/TRANSACTION_RUNTIME.md` 的“包内资源策略摘要”与“新启动接口的离线验收”；查新包实际资源字段及源码身份先读包内 `RESOURCE_POLICY_SUMMARY.json`，异常再核对冻结合同与所列 runtime。摘要缺失的旧包沿其原合同/源码读取，不现场改包补摘要。
    各 Program 新合同冻结前运行 `python scripts/ai4s/transaction.py validate-new --contract <合同路径>`；缺少精简回传策略会阻断冻结续接、打包和新 Run 登记。按该文档“精简回传”填写实际分析依赖；全 Program 历史实验归档/本地清理使用 [全库执行提示词](prompts/ALL_PROGRAMS_HISTORICAL_CLEANUP_AGENT_PROMPT.md)。覆盖实际目录与索引外实验，不限 checkpoint、大文件或 Lab10 匹配项；盘点清单仅作定位，保留端及消费者仍逐项核验。
    字段、返回结构、遥测补写或来源子清单发生变化时，按 runtime“字段接口与产物闭环”验证实际生产者到消费者，运行原统一入口的 `--suite interfaces`；通用接口通过不替代 Program 专属分析／复用分支覆盖。近期案例与修复见 [_work/retro_field_contract_20261028/REPORT.md](_work/retro_field_contract_20261028/REPORT.md)。
@@ -38,23 +32,46 @@ AI4S 是新科研流程的唯一编排入口：一个基模一个 Program，内�
 
 MVCNet 和 DSAINet 均已接入 Transaction v2。接入不启动实验；当前状态仍以 State 为准。旧 VOGD operation 已按用户授权关闭，未记为 verified intake 或科学负结果。
 
+### MVCNet 与 DSAINet 的新研究委托
+
+本节从下一次新委托起，适用于索引中绑定 L3 v4.1 的 MVCNet 与 DSAINet。按当次任务确定可做的阶段、数据、预算与交回点。仅设计、仅核查、暂停或只上传均按用户指定范围执行。已有委托和冻结工作沿用原约定。
+
+- **选下一项。** 在选案时用现有 brief 说明：哪条论文判断仍未解决，候选与最强简单解释在哪个条件下预测不同，结果将改变什么取舍。MVCNet 对照其 L3 中的跨人类别线索与利用条件；DSAINet 对照其 L3 中的线索保留、共享与尺度分工问题。优先选能解决重要未知的方案，再选足以区分解释的最低成本验证。关键对照和适用边界补证也可优先；仅改善局部近似或少量参数的方案，按它能回答的问题或可实测的效用与成本确定优先级。
+- **选验证方式。** 冻结保真直接检验候选的预测时，才用它决定科学去留，例如检验低成本替换能否保住某条判别信息。效应依赖共同学习时，零训练只核查必要前提，如输入线索可观测、干预生效、对照匹配。数据合格、有可证伪预测和必要对照后，按 [L2 的有限联合训练规则](prompts/LEVEL2_EXECUTION_v4.0.md#2-用现有-brief-完成一页决策)设计最小比较，训练规模随问题确定。零步接线、梯度或恒等回退通过只说明技术可行。
+- **串行续接。** 在获准自主寻找候选时，一次推进一项。候选失败就登记其关闭范围；只要仍有可区分的新预测，实际开始下一项，续接限于已获准的阶段。例如仅授权构思时只推进设计。若只是换算子却仍在检验同一个预测，先结合历史反例换一个解释。允许的证据和资源已无法区分剩余解释时，说明试过什么、缺什么以及重新推进的条件；连续失败次数本身不决定整项委托的去留。
+- **模型分工。** GPT-6.2 Sol High 负责日常构思（提出备选、整理历史反例）、执行已定核查、判读结果并给出去留建议。进入具体 idea 设计、选定关键对照或决定候选去留时，由 GPT-6.2 Astra High 担任主 Agent，依据证据作决定。定案后的日常工作交回 Sol High，出现下一个研究决策时再由 Astra High 主持。
+- **执行方式。** 宿主支持切换主模型时按上述阶段切换。主模型在会话内固定时，可用 Astra High 主会话串行委派 Sol High 完成日常工作并回收证据，沿同一委托推进。若当前是 Sol 主会话且无法切换主模型，到决策点时带着待决问题、关键证据和备选对照交接给 Astra High 主会话；按实际执行者记录。外部第二意见及机制反复或关键证据冲突时的定向复核仍由 Neon High 承担，见[科研交叉思考](prompts/EXTERNAL_REVIEW.md#科研交叉思考)。
+- **按授权交回。** 首个达到有限训练资格的候选，按当次授权推进。若停点是训练前，交回证据、关键对照与最小训练方案。仅授权上传时核实上传回执即交回。授权到派发时，完成冻结、资格与派发；若只有上传回执或远端状态未知，继续核对同一 Run。核验已运行或按合同合法等待资源后，交回 Run ID、实际状态和只读监测入口；核验确实受阻时报告最后已知状态及缺口。若已授权到结果判读，则继续到约定停点。
+
 ## 正式评估与版本激活
+
+当前活动链以 Prompt Index 为准。正式候选的选择审计、benchmark 和 Claim 判断按 `prompts/EVALUATION_EVIDENCE.md` 执行，普通探索不建立正式评估台账。外审何时触发、如何联合审查及复用，见 [`prompts/EXTERNAL_REVIEW.md`](prompts/EXTERNAL_REVIEW.md)。普通探索不例行外审，高风险设计或实现按需复核；正式 Claim 采用一次覆盖完整的联合审查，并保留两份职责报告和真实 trace。冻结合同已有的审查要求继续有效。
+
+2026-11-19（北京时间）：MVCNet 新工作启用 L3 v4.1。2026-11-21（北京时间）：DSAINet 新工作启用 L3 v4.1。两者沿用 L1/L2 v4.0，精确激活依据和历史绑定见 [Prompt Index](PROMPT_INDEX.yaml)。
 
 2026-11-17：DSAINet、MVCNet 与 DBConformer 的新工作默认链先后激活 v4.0。各 Program 的当前版本查 [Prompt Index](PROMPT_INDEX.yaml)，既有 campaign、冻结 Run 和执行授权按精确绑定读取。见 [v4.0 离线验收](_work/prompt_v4_design_20261116/REPORT.md)与 [v3.4 激活验收](_work/prompt_v34_implementation_20261111/ACTIVATION.md)。
 
 2026-10-29：L1/L2 与五 Program L3 v3.3 已交付。MVCNet、DSAINet、SST-DPN 的新工作链已激活；OTA 后经用户明确授权、旧 SPAR 本地完整性复核与历史收尾，亦已激活 v3.3，继续暂停。DBConformer 在 SBN-R1 收尾后，依用户明确指令完成空闲边界检查并激活 v3.3，继续暂停，本轮仅下一方向设计。旧工作、合同及预算保持原绑定，没有新实验授权。当前详情以 Prompt Index 和 State 为准；[初始实施与验收](_work/prompt_v33_implementation_20261029/REPORT.md)、[OTA 后续激活](_work/ota_v33_activation_20261029/REPORT.md)、[DBConformer 接入与研究设计](programs/dbconformer/research/reassessment_v33_20261029/research_brief.md)。
 
-新工作读取索引指定的 L1/L2/L3。已有工作按其精确旧绑定收尾；普通探索不建立正式评估台账，正式候选的选择审计、benchmark 与 Claim 确认按 `prompts/EVALUATION_EVIDENCE.md`。
+新工作读取索引指定的 L1/L2/L3，已有工作按精确旧绑定收尾。
 
-用 `python scripts/ai4s/activate_evaluation_governance.py --program <program> --target-version 4.0` 只读预览。v4.0 要求空闲边界、就绪检查及完整父绑定；已有活动 Run／operation／待续接或未收尾 campaign 时阻断。`--apply` 才切换获准 Program 的新工作默认链，不改 State、历史合同或实验权限。后续切换时重新核对状态与授权。
+2026-09-19：DBConformer、SST-DPN 已按用户选择接入 v2.1。历史基模与研究边界随各自 Evidence Index 引用，初始未创建 campaign 或启动实验。接入验证见 `_work/baseline_program_admission_20260919/REPORT.md`。
+
+### v4.0 激活检查
+
+`python scripts/ai4s/activate_evaluation_governance.py --program <program> --target-version 4.0` 生成只读预览。激活前须满足空闲边界、就绪检查及完整父绑定；存在活动 Run、operation、待续接或未收尾 campaign 时，检查会阻断。获准时使用 `--apply` 切换该 Program 的新工作默认链。激活不改 State、历史合同或实验权限。再次切换前重新核对状态和授权。
 
 基模理解、可用的历史认识、反例与未决问题从各 L3 的唯一研究总览入口读取。新方向构思按活动 L2 和 `prompts/MIEEG_AI4S_SKILL_ROUTER.md`；明确的高价值下一步直接推进，Foundry 仍独立调用。
+
+[正式文献库](../refs/papers/_index/README.md)是各 Program 共享的外部研究依据。Program 的历史记录说明本地已经试过什么、哪些解释仍然成立；文献库补充其他研究提出过的机制、区分这些机制的对照，以及结论成立的实验条件。构思时可以从其他领域借来一个能产生不同预测的解释，也可以用最近邻工作检验候选的创新之处。迁移到当前基模后是否有效，由本地实验判断。具体问题按[共享检索规则](prompts/MIEEG_AI4S_SKILL_ROUTER.md#新方向构思的限定调用)按需查证。
+
+实验室发来新 PDF 时，按[增量入库手册与可复用提示词](references/LITERATURE_INTAKE.md)整理收件箱、更新正式库并验证新增条目的检索结果。
 
 历史版本仅在追溯相应工作时读取：[MVCNet v3.2](_work/mvcnet_v32_activation_20261024/REPORT.md)、[DSAINet v3.2](_work/dsainet_v32_activation_20261023/REPORT.md)、[DBConformer／SST-DPN v3.2](_work/prompt_v32_activation_20261020/REPORT.md)、[v3.1](_work/prompt_v31_activation_20261008/REPORT.md)。历史部署与验收依据继续见 [启动接口](_work/launch_interface_20261014/REPORT.md)、[资源摘要](_work/resource_summary_20261014/REPORT.md)、[调度](_work/deployment_optimization_20261010/REPORT.md)；不把这些记录里的旧状态当作当前状态。
 
 ## 从研究准备到结果回交
 
-新项目先按 `prompts/PROJECT_ADMISSION.md` 将用户需求与已有证据生成独立 L3，并确认接入。已有项目先读取冻结边界，在明确 campaign 目标、预算、执行器与授权后设计候选。v3 新候选使用单份 `research_brief`（问题、文献、实施、对照）和唯一冻结 Transaction v2 科学配置；`SCREEN_NEW` 只核对 research_brief 路径与 SHA-256，旧链继续要求三卡。DISCOVER_NEXT 只设计。
+新项目先按 `prompts/PROJECT_ADMISSION.md` 结合用户需求和已有证据准备独立 L3，再确认接入。已有项目则先核对冻结边界、campaign 目标、预算、执行器和授权。适用 v3 链的新候选用一份 `research_brief` 说明问题、文献、实施和对照，并使用唯一冻结 Transaction v2 科学配置；`SCREEN_NEW` 核对 brief 路径及 SHA-256，旧链仍按绑定要求使用三卡。`DISCOVER_NEXT` 阶段只形成设计。
 
 按时长自主推进时，agent 在授权内持续完成“累计证据综合 → 下一问 → research_brief 与科学配置 → 冻结合同 → 执行 → 决策”。尚缺 research_brief、配置或合同意味着继续准备；一轮 NO_SIGNAL 不自动停止整个 campaign。准备器只从已冻结 contract 生成 Bundle/manifest，不自动把 research_brief 展开为完整科学合同。新合同的 governance_binding 使用 `chain_id`、`continuation_policy_version`、`campaign_id`、`question_id`、`data_scope_id`。完整的停止条件与默认监测节奏见 L2“按时长自主推进”。ccmu 专用 GPU0 的后台短暂占用按共享资源策略等待，不采用其他 PID 一出现就退出的门。
 
@@ -92,5 +109,9 @@ AI4S Transaction 新合同的资源排队不计入实验预算；上传并启动
 
 2026-09-16：用户要求上传实验时默认自动衔接同一冻结Run的启动与probe；明确只上传时用 --upload-only。执行规则见 ai4s/prompts/TRANSACTION_RUNTIME.md。
 
+
+## 历史运行记录
+
+以下为当时的交接记录。MVCNet 的现行状态查 [State](programs/mvcnet/research/STATE.yaml)。
 
 2026-10-24 后续状态（VBR-R1 首次派发与旧Run最终收尾）：旧Run已完成标准intake并以NO_SIGNAL收尾。新VBR-R1首次Run在source-import工程失败，0资格/科学拟合，Program已登记INVALID并暂停；路径修复已过真实CPU18划分验收，一次修复Run仍待授权。见 [派发报告](programs/mvcnet/research/vbr-r1/execution/LAUNCH_REPORT.md)。上文设计/准备记录保留当时状态。

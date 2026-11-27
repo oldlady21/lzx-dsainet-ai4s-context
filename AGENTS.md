@@ -17,6 +17,8 @@
 该论文属于整体 EEG 解码与 BCI 应用主线中的一个核心子项目。  
 当前重点是先把这一篇 MI-EEG 论文推进完整，形成稳定的文献、实验与写作闭环。
 
+正式文献库 `refs/papers` 是本项目持续积累的科研输入。理解一个研究问题时，可把库中已有方法、跨领域机制和实验边界与 Program 的本地证据对照，用来提出新预测、识别替代解释和选择有区分力的对照。引用时区分原论文的发现、向本项目迁移的设想和本地已验证的结果。
+
 ## 默认协作原则
 
 ### 1. 先 baseline，后创新
@@ -88,6 +90,8 @@
 
 ## 按任务读取
 
+- 文献：构思新方向、找机制近邻或选择关键对照时，按[共享检索规则](ai4s/prompts/MIEEG_AI4S_SKILL_ROUTER.md#新方向构思的限定调用)自主查询正式库；收到整理实验室收件箱的委托时，按[增量入库手册](ai4s/references/LITERATURE_INTAKE.md)更新并验证。
+
 - AI4S Program：从 `ai4s/README.md` 进入，读取唯一 Prompt Index、对应 L1/L2/L3、Program、State 与 Evidence Index。各 Program 的活动链以 `ai4s/PROMPT_INDEX.yaml` 为准；同时核对 active_operation 与 active_run。新研究读取唯一 Prompt Index 为该 Program 选定的 L1/L2/L3，按“证据引用 → 判断变化 → 设计变化或停止 → 下一项对照”形成研究记录；旧 campaign、Run、operation 和冻结续接按其绑定的旧链继续收尾，禁止静默切换。Transaction 实施见 `ai4s/_work/migration_20260905/IMPLEMENTATION.md`；2026-09-05 物理归档与验证见 `ai4s/_work/structure_20260905/REPORT.md`。历史内文旧路径按 `ai4s/archive/PATH_MAP.json` 解析。
 
 - 新科研流程：按基模绑定 AI4S Program，同一 Program 容纳多个 research；Foundry 独立生成候选，用户选择后只交接到对应 Program，不自动建研究或启动实验；AI4S 也接受用户直接给定 idea。正式评估按活动链读取 `ai4s/prompts/EVALUATION_EVIDENCE.md`，普通探索无需评估计划或 Claim Ledger。新版规则要求诊断明确服务于设计取舍；筛查、诊断和负结果都必须登记后续处置，跨 Program 只共享证据与设计约束，不自动共享实验授权。
@@ -121,10 +125,9 @@ Codex 应主动按手册引导或执行以下事项：
 
 ## 写作约束
 
-- 论文草稿拆分保存在 `draft/`
-- related work、method、experiments 可分文件维护
-- 不要求一开始搭完整投稿模板，先积累内容
-- 论文写作应与实验同步推进，而不是等所有实验结束后再开始
+- 判断研究与写作优先级时，先查 [PAPER.md 的当前论文定位](PAPER.md#1-当前论文定位)与 [TASKS.md 的工作台](TASKS.md#当前工作台)。
+- 实验期间同步记录协议、证据和设计取舍。获得可信的实验正信号后，再按 [PAPER.md 的写作准备度](PAPER.md#7-写作准备度)推进稿件。
+- 草稿保存在 `draft/`，related work、method 和 experiments 可分文件维护。
 
 ## 默认避免事项
 
@@ -138,7 +141,7 @@ Codex 应主动按手册引导或执行以下事项：
 
 - Foundry 调用 `idea-creator` 时，使用本轮 Host/证据/旧案包及本轮输出目录，只取视角发散、候选生成和机械合并；跳过 wiki rebuild、完整评审/查新链、pilot 设计或执行、独立排名报告、wiki 写入及自动后续阶段，除非本轮明确要求该具体阶段。子任务结果记录实际 `adapted` 范围。详细产物及调用边界沿用 Foundry 的 `references/evidence-and-host-contract.md`、`references/candidate-schemas.md` 和其“科研技能：按问题调用”段。
 - `novelty-check` 的结论是初步查新，不证明首次、科学有效性或实验资格。`research-review`、完整性审计与主张判读的触发、复用及停止规则读取 [`ai4s/prompts/EXTERNAL_REVIEW.md`](ai4s/prompts/EXTERNAL_REVIEW.md)；持续材料授权不增加例行外审门，也不授权训练或协议变更。
-- AI4S 调用 `experiment-audit` / `result-to-claim` 时，必须给出 Program ID、`EVALUATION_PLAN.yaml` 的路径/SHA-256、Claim ID、精确 evidence IDs、限定材料清单及 `output_dir`，并读取 [`ai4s/prompts/EVALUATION_EVIDENCE.md`](ai4s/prompts/EVALUATION_EVIDENCE.md)。只读取所给材料及核验必需的直接引用，保留原完整性/claim 清单与独立外审。新审查默认 agy/Gemini；已冻结合同明确指定 Grok 的仍按原绑定执行。两项职责共用一次覆盖完整的联合外审和真实 trace，分别形成报告；已有有效覆盖直接复用，不再自动调用第二次 reviewer。
+- AI4S 调用 `experiment-audit` / `result-to-claim` 时，必须给出 Program ID、`EVALUATION_PLAN.yaml` 的路径/SHA-256、Claim ID、精确 evidence IDs、限定材料清单及 `output_dir`，并读取 [`ai4s/prompts/EVALUATION_EVIDENCE.md`](ai4s/prompts/EVALUATION_EVIDENCE.md)。只读取所给材料及核验必需的直接引用，保留原完整性/claim 清单与独立外审。新审查默认 agy/Gemini；既有冻结合同原文和历史记录保持不变；尚未完成且绑定退役后端的外审保持 pending，未经单独批准不得换审查者。两项职责共用一次覆盖完整的联合外审和真实 trace，分别形成报告；已有有效覆盖直接复用，不再自动调用第二次 reviewer。
 - 上述报告与完整 trace 只写提供的 `output_dir`，绑定同一 Program、Claim、计划 SHA 和 evidence IDs，并返回 AI4S。不得从审计子任务自动补实验、启动 pipeline、写 wiki/findings/知识库、修改 CLAUDE.md、Program State、Ledger 或论文。外审未完成、材料缺失或 trace 不可用时返回 `pending` 与缺口，不能改写为 `no` 或通过。
 - 解释 AI4S 或历史 proposed 对象时，保持对象、冻结协议、假设和证据状态；解释不激活研究、不改合同、不授予实验权限。Foundry 卡片的解释及 provenance 继续按已有候选规范执行。调用通用 `wait-what` 前，读取 [`ai4s/prompts/MIEEG_AI4S_SKILL_ROUTER.md`](ai4s/prompts/MIEEG_AI4S_SKILL_ROUTER.md) 的“wait-what 项目解释规则”专节；该解释分支不调用 AI4S 运行入口。
 - 本仓库实验、接入、resume、监控和停止仍从 `ai4s/README.md`、唯一 Prompt Index、精确 Program 及其活动链进入；通用 Skill 不启动另一条实验链，也不以 pilot 超时常量覆盖当前 Run 的停止授权。
