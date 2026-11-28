@@ -2,60 +2,8 @@
   "active_local_experiment": null,
   "active_operation": null,
   "active_research": null,
-  "active_round": "dsainet-b0-spatial-person-gradient-r1-budget2",
-  "active_run": {
-    "bundle_id": "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget2_bundle",
-    "dispatch_status": "REMOTE_ACCEPTED",
-    "estimated_training_hours": 3.5,
-    "execution_mode": "user_managed",
-    "executor_id": "lab10",
-    "planned_units": 19,
-    "recorded_at": "2026-11-27T06:19:31.796507+00:00",
-    "recovery_parent_contract_sha256": "d05e713363f6eb31316338a88a7c3c161fc64734955fd4e22fa7f1cd9926170e",
-    "recovery_parent_run_id": "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget1-full-w1",
-    "round_id": "dsainet-b0-spatial-person-gradient-r1-budget2",
-    "run_prefix": "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget2",
-    "transaction_operations": [
-      {
-        "operation": "upload",
-        "recorded_at": "2026-11-27T06:20:07.007074+00:00",
-        "result": {
-          "action": "UPLOADED",
-          "monitor_powershell": "[REDACTED_MACHINE]",
-          "run_id": "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget2-full-w1"
-        }
-      },
-      {
-        "operation": "launch",
-        "recorded_at": "2026-11-27T06:20:10.569560+00:00",
-        "result": {
-          "action": "SUBMISSION_SENT_NOT_VERIFIED",
-          "monitor_powershell": "[REDACTED_MACHINE]",
-          "run_id": "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget2-full-w1"
-        }
-      },
-      {
-        "operation": "probe",
-        "recorded_at": "2026-11-27T06:20:16.453828+00:00",
-        "result": {
-          "action": "RECONCILE_SAME_NODE",
-          "node_id": "smoke",
-          "run_id": "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget2-full-w1",
-          "status": "RUNNING",
-          "timing": {
-            "contract_sha256": "f92b4cedeb2a71499ce73ebdfcaa342bbb1bce7313532777fff89f7f2622704a",
-            "execution_seconds": 3.9031822681427,
-            "queue_seconds": 1.1475164890289307,
-            "queue_time_policy": "exclude_resource_wait",
-            "run_id": "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget2-full-w1",
-            "transaction_id": "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget2-tx",
-            "waiting_for_resources": false,
-            "wall_seconds": 5.050698757171631
-          }
-        }
-      }
-    ]
-  },
+  "active_round": null,
+  "active_run": null,
   "active_run_history": [
     {
       "bundle_id": "2026-11-26_dsainet_b0_masked_central_aux_r1_bundle",
@@ -2924,6 +2872,162 @@
       },
       "closing_status": "COMPLETE_MAX_ROUNDS",
       "closure_reason": "programs/dsainet/research/serial_screen_20261126/AUTHORIZATION.md"
+    },
+    {
+      "campaign_id": "dsainet-b0-spatial-person-gradient-r1-20261126",
+      "closed_at": "2026-11-27T08:39:01.737688+00:00",
+      "closing_decision": {
+        "decision": "NO_SIGNAL",
+        "disposition": "STOP_SPATIAL_PERSON_GRADIENT",
+        "round_id": "dsainet-b0-spatial-person-gradient-r1-budget2"
+      },
+      "closing_round": "dsainet-b0-spatial-person-gradient-r1-budget2",
+      "closing_run": {
+        "analysis_receipt_sha256": "3daa473411ea0daeda132162de9a6f49f455bba8854dc2777ffed236950c5b94",
+        "artifact_manifest_sha256": "ce30046af333e58153f1d59ab986abb498914e1b20e54357eb709b1e65dda36e",
+        "contract_sha256": "f92b4cedeb2a71499ce73ebdfcaa342bbb1bce7313532777fff89f7f2622704a",
+        "full_payload_local": false,
+        "intake_path": "ai4s/programs/dsainet/research/serial_screen_20261126/closeout/budget2_intake",
+        "intake_scope": "analysis_v1",
+        "run_id": "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget2-full-w1",
+        "run_status": "complete",
+        "transaction_id": "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget2-tx",
+        "transfer_bytes": 321966,
+        "verified": true,
+        "verified_at": "2026-11-27T08:16:06.375635+00:00"
+      },
+      "closing_status": "COMPLETE_MAX_ROUNDS",
+      "closure_reason": "programs/dsainet/research/serial_screen_20261127/AUTHORIZATION.md"
+    },
+    {
+      "campaign_id": "dsainet-b0-inter-token-amplitude-r1-20261127",
+      "closed_at": "2026-11-27T14:06:07.860538+00:00",
+      "closing_decision": {
+        "decision": "NO_SIGNAL",
+        "disposition": "STOP_INTER_TOKEN_AMPLITUDE",
+        "round_id": "dsainet-b0-inter-token-amplitude-r1"
+      },
+      "closing_round": "dsainet-b0-inter-token-amplitude-r1",
+      "closing_run": {
+        "analysis_receipt_sha256": "cfb4db8a71be221090f56c42bce26daa6f463fbbce347127475510f8d1b0e4b8",
+        "artifact_manifest_sha256": "6543950aa73adcf9c71575206f569e07f88edd0463cbe7169f65f14256549bc0",
+        "contract_sha256": "e3a5f89ef867670c344f3da40e0fa90f75f4402858209717189e334872ca33fc",
+        "full_payload_local": false,
+        "intake_path": "ai4s/programs/dsainet/research/serial_screen_20261127/closeout/intake",
+        "intake_scope": "analysis_v1",
+        "run_id": "2026-11-27_dsainet_b0_inter_token_amplitude_r1-full-w1",
+        "run_status": "complete",
+        "transaction_id": "2026-11-27_dsainet_b0_inter_token_amplitude_r1-tx",
+        "transfer_bytes": 319599,
+        "verified": true,
+        "verified_at": "2026-11-27T13:06:27.142787+00:00"
+      },
+      "closing_status": "COMPLETE_MAX_ROUNDS",
+      "closure_reason": "用户已授权候选 09 按原额度派发，5400 秒实际执行，6300 秒单轮累计。"
+    },
+    {
+      "campaign_id": "dsainet-b0-central-waveform-completion-r1-20261127",
+      "closed_at": "2026-11-27T17:07:59.642804+00:00",
+      "closing_decision": {
+        "decision": "NO_SIGNAL",
+        "disposition": "STOP_CENTRAL_WAVEFORM_COMPLETION",
+        "round_id": "dsainet-b0-central-waveform-completion-r1"
+      },
+      "closing_round": "dsainet-b0-central-waveform-completion-r1",
+      "closing_run": {
+        "analysis_receipt_sha256": "e778d26f716b994db6def32e73f432fa26e3682c5f85aa03e95edcef4576e3fc",
+        "artifact_manifest_sha256": "f3a3b6a871ab656b7288134703d498f2b7dd1b61426b90d788a5781657b1cc59",
+        "contract_sha256": "f750b909d54bbf5252845f35cfc50c7ee2a5bbcc6ea92cd723a142b57bd741e1",
+        "full_payload_local": false,
+        "intake_path": "ai4s/programs/dsainet/research/serial_screen_20261127b/closeout/intake",
+        "intake_scope": "analysis_v1",
+        "run_id": "2026-11-27_dsainet_b0_central_waveform_completion_r1-full-w1",
+        "run_status": "complete",
+        "transaction_id": "2026-11-27_dsainet_b0_central_waveform_completion_r1-tx",
+        "transfer_bytes": 323650,
+        "verified": true,
+        "verified_at": "2026-11-27T16:17:01.657226+00:00"
+      },
+      "closing_status": "COMPLETE_MAX_ROUNDS",
+      "closure_reason": "First qualified candidate authorized by current request, 90 min execution cap and 105 min campaign."
+    },
+    {
+      "campaign_id": "dsainet-b0-matched-scale-init-r1-20261128",
+      "closed_at": "2026-11-28T03:21:50.261848+00:00",
+      "closing_decision": {
+        "decision": "NO_SIGNAL",
+        "disposition": "STOP_MATCHED_SCALE_INIT",
+        "round_id": "dsainet-b0-matched-scale-init-r1"
+      },
+      "closing_round": "dsainet-b0-matched-scale-init-r1",
+      "closing_run": {
+        "analysis_receipt_sha256": "52b6876ece33d03e17bfd206ce873c60628526cdd97ad0d0eafffed3152a1b83",
+        "artifact_manifest_sha256": "3c2876a1671e95cae5ace8caa17b8ae017e1aee282f8cfc7512ada5e8e317d16",
+        "contract_sha256": "3b787dee63459858360f72d3efb410386f56ee33cd304c468eb9b3d30013d547",
+        "full_payload_local": false,
+        "intake_path": "ai4s/programs/dsainet/research/serial_screen_20261128/closeout/intake",
+        "intake_scope": "analysis_v1",
+        "run_id": "2026-11-28_dsainet_b0_matched_scale_init_r1-full-w1",
+        "run_status": "complete",
+        "transaction_id": "2026-11-28_dsainet_b0_matched_scale_init_r1-tx",
+        "transfer_bytes": 321331,
+        "verified": true,
+        "verified_at": "2026-11-28T03:07:09.062249+00:00"
+      },
+      "closing_status": "COMPLETE_MAX_ROUNDS",
+      "closure_reason": "First qualified candidate from current serial mandate, 90 min execution and 105 min campaign."
+    },
+    {
+      "campaign_id": "dsainet-b0-paired-lag-shape-r1-20261128",
+      "closed_at": "2026-11-28T06:06:55.107968+00:00",
+      "closing_decision": {
+        "decision": "NO_SIGNAL",
+        "disposition": "STOP_PAIRED_LAG_SHAPE",
+        "round_id": "dsainet-b0-paired-lag-shape-r1"
+      },
+      "closing_round": "dsainet-b0-paired-lag-shape-r1",
+      "closing_run": {
+        "analysis_receipt_sha256": "12572115142ac1f81c26192258a01014ef602adb3f5cace43da69d4f2f5952ac",
+        "artifact_manifest_sha256": "4883cfea744802bbbf2e35a896ab7c39c8cc9ca8a395e175347d787cca718b58",
+        "contract_sha256": "5d3e2201ad0ed133394d4102ce24d5121b902194db3484e3fbae5aa9a5da3402",
+        "full_payload_local": false,
+        "intake_path": "ai4s/programs/dsainet/research/serial_screen_20261128b/closeout/intake",
+        "intake_scope": "analysis_v1",
+        "run_id": "2026-11-28_dsainet_b0_paired_lag_shape_r1-full-w1",
+        "run_status": "complete",
+        "transaction_id": "2026-11-28_dsainet_b0_paired_lag_shape_r1-tx",
+        "transfer_bytes": 332946,
+        "verified": true,
+        "verified_at": "2026-11-28T05:53:37.902478+00:00"
+      },
+      "closing_status": "COMPLETE_MAX_ROUNDS",
+      "closure_reason": "First eligible candidate from current user request. Original 90 min execution and 105 min campaign budgets."
+    },
+    {
+      "campaign_id": "dsainet-b0-phase-center-bank-r1-20261128",
+      "closed_at": "2026-11-28T08:38:23.662030+00:00",
+      "closing_decision": {
+        "decision": "NO_SIGNAL",
+        "disposition": "STOP_PHASE_CENTER_BANK",
+        "round_id": "dsainet-b0-phase-center-bank-r1"
+      },
+      "closing_round": "dsainet-b0-phase-center-bank-r1",
+      "closing_run": {
+        "analysis_receipt_sha256": "e93433f314b7f7898d88db1570356648b618d68a30fb0b7c0c6e05cdf086553f",
+        "artifact_manifest_sha256": "d739d626f0d968cb7fd699c7610ee3804759ef4754d6db99576cb216e499cfe8",
+        "contract_sha256": "9fb01090b967a066884286e2cb289373167dfcfad98df5ff2c57c3871c744c19",
+        "full_payload_local": false,
+        "intake_path": "ai4s/programs/dsainet/research/serial_screen_20261128c/closeout/intake",
+        "intake_scope": "analysis_v1",
+        "run_id": "2026-11-28_dsainet_b0_phase_center_bank_r1-full-w1",
+        "run_status": "complete",
+        "transaction_id": "2026-11-28_dsainet_b0_phase_center_bank_r1-tx",
+        "transfer_bytes": 814595,
+        "verified": true,
+        "verified_at": "2026-11-28T08:28:57.095484+00:00"
+      },
+      "closing_status": "COMPLETE_MAX_ROUNDS",
+      "closure_reason": "First v4.1 serial candidate qualified under current user-authorized Lab10 envelope"
     }
   ],
   "automatic_follow_up": false,
@@ -3023,83 +3127,57 @@
     "allowed_transitions": [
       "SCREEN_NEW"
     ],
-    "authorization_reason": "programs/dsainet/research/serial_screen_20261126/AUTHORIZATION.md",
-    "budget_policy": {
-      "exclude_verified_stopped_seconds": true
-    },
-    "campaign_id": "dsainet-b0-spatial-person-gradient-r1-20261126",
+    "authorization_reason": "First v4.1 serial candidate qualified under current user-authorized Lab10 envelope",
+    "campaign_id": "dsainet-b0-lateral-hand-readout-r1-20261128",
     "continuation_policy_version": "evidence_to_design_v1",
     "decision_policy": "stop_at_positive",
     "execution_authorization": {
       "allowed_operations": [
         "upload",
         "launch",
-        "probe",
-        "fetch",
-        "intake"
+        "probe"
       ],
       "allowed_transitions": [
         "SCREEN_NEW"
       ],
-      "authorization_ref": "ai4s/programs/dsainet/research/serial_screen_20261126/AUTHORIZATION.md",
-      "campaign_id": "dsainet-b0-spatial-person-gradient-r1-20261126",
+      "authorization_ref": "ai4s/programs/dsainet/research/serial_screen_20261128d/AUTHORIZATION.md",
+      "campaign_id": "dsainet-b0-lateral-hand-readout-r1-20261128",
       "executor_id": "lab10",
-      "recorded_at": "2026-11-26T13:54:49.622177+00:00",
+      "recorded_at": "2026-11-28T08:38:26.685142+00:00",
       "research_scope": {
         "allow_new_module": false,
         "allowed_module_ids": [
-          "dsainet.spatial-person-gradient.r1"
+          "dsainet.lateral-hand-readout.r1"
         ],
         "allowed_stages": [
-          "B0_SPATIAL_PERSON_GRADIENT_SOURCE_SCREEN"
+          "B0_LATERAL_HAND_READOUT_SOURCE_SCREEN"
         ],
         "data_scope_id": "bnci001-cue4-exposed-A04-A06-no-target",
-        "question_id": "fit-person-shared-spatial-gradient-edit"
+        "question_id": "explicit-lateralized-eeg-evidence-for-hand-decoding"
       },
-      "source_sha256": "55f29b27fcf5cfed7c88afdb0e561d2e60fdc281508c4f4122554de81be50d96"
+      "source_sha256": "45dfa4142022205b9108952debe8161c6c67f4cc6e92e4ce2bc91f1caaa62f13"
     },
     "governance_chain_id": "dsainet-transaction-v4.1",
     "invalid_behavior": "fail_closed_without_advancing",
     "positive_signal_behavior": "pause_for_human_review",
     "purpose": "user-authorized bounded AI4S campaign",
     "queue_accounting": {
-      "2026-11-26_dsainet_b0_spatial_person_gradient_r1-full-w1": {
-        "contract_sha256": "6d07ce79eeafb095c9a6927d4cedcc6e7d6ac659d1e7c8b36a7afded848c1632",
-        "queue_seconds": 1542.8305232524872,
-        "run_id": "2026-11-26_dsainet_b0_spatial_person_gradient_r1-full-w1",
-        "transaction_id": "2026-11-26_dsainet_b0_spatial_person_gradient_r1-tx"
-      },
-      "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget1-full-w1": {
-        "contract_sha256": "d05e713363f6eb31316338a88a7c3c161fc64734955fd4e22fa7f1cd9926170e",
-        "queue_seconds": 9972.426011323929,
-        "run_id": "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget1-full-w1",
-        "transaction_id": "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget1-tx"
-      },
-      "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget2-full-w1": {
-        "contract_sha256": "f92b4cedeb2a71499ce73ebdfcaa342bbb1bce7313532777fff89f7f2622704a",
-        "queue_seconds": 1.1475164890289307,
-        "run_id": "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget2-full-w1",
-        "transaction_id": "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget2-tx"
+      "2026-11-28_dsainet_b0_lateral_hand_readout_r1-full-w1": {
+        "contract_sha256": "e41316d9cbd5e9c994c5c3d26d9909e88182b9674c68f97d883c8ae7e47986e4",
+        "queue_seconds": 12.49248480796814,
+        "run_id": "2026-11-28_dsainet_b0_lateral_hand_readout_r1-full-w1",
+        "transaction_id": "2026-11-28_dsainet_b0_lateral_hand_readout_r1-tx"
       }
     },
-    "round_decisions": [],
-    "started_at": "2026-11-26T13:54:46.480499+00:00",
-    "stopped_accounting": [
+    "round_decisions": [
       {
-        "authorization_ref": "ai4s/programs/dsainet/research/serial_screen_20261126/STOPPED_INTERVAL_AUTHORIZATION.md",
-        "end": "2026-11-26T17:32:41.336029+00:00",
-        "evidence_ref": "ai4s/programs/dsainet/research/serial_screen_20261126/STOPPED_INTERVAL_CONFIRMATION.json",
-        "source_run_id": "2026-11-26_dsainet_b0_spatial_person_gradient_r1-full-w1",
-        "start": 1795702934.4999714
-      },
-      {
-        "authorization_ref": "ai4s/programs/dsainet/research/serial_screen_20261126/BUDGET2_AUTHORIZATION.md",
-        "end": "2026-11-27T06:19:31.796507+00:00",
-        "evidence_ref": "ai4s/programs/dsainet/research/serial_screen_20261126/BUDGET1_TERMINAL_LEDGER.json",
-        "source_run_id": "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget1-full-w1",
-        "start": 1795724426.5241776
+        "decision": "NO_SIGNAL",
+        "decision_record": "ai4s/programs/dsainet/research/serial_screen_20261128d/closeout/DECISION.json",
+        "evidence_id": "AI4S-DSAINET-LATERAL-HAND-READOUT-R1",
+        "round_id": "dsainet-b0-lateral-hand-readout-r1"
       }
-    ]
+    ],
+    "started_at": "2026-11-28T08:38:23.662030+00:00"
   },
   "capacity_calibration_recovery": {
     "added_budget_seconds": 0,
@@ -9835,6 +9913,554 @@
           }
         ]
       }
+    },
+    {
+      "decision": {
+        "decision": "NO_SIGNAL",
+        "disposition": "STOP_SPATIAL_PERSON_GRADIENT",
+        "round_id": "dsainet-b0-spatial-person-gradient-r1-budget2"
+      },
+      "decision_record": "ai4s/programs/dsainet/research/serial_screen_20261126/closeout/DECISION.json",
+      "evidence_id": "AI4S-DSAINET-SPATIAL-PERSON-GRADIENT-R1-BUDGET2",
+      "round_id": "dsainet-b0-spatial-person-gradient-r1-budget2",
+      "run": {
+        "bundle_id": "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget2_bundle",
+        "dispatch_status": "REMOTE_ACCEPTED",
+        "estimated_training_hours": 3.5,
+        "execution_mode": "user_managed",
+        "executor_id": "lab10",
+        "planned_units": 19,
+        "recorded_at": "2026-11-27T06:19:31.796507+00:00",
+        "recovery_parent_contract_sha256": "d05e713363f6eb31316338a88a7c3c161fc64734955fd4e22fa7f1cd9926170e",
+        "recovery_parent_run_id": "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget1-full-w1",
+        "round_id": "dsainet-b0-spatial-person-gradient-r1-budget2",
+        "run_prefix": "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget2",
+        "terminal_status": "COMPLETE_VERIFIED",
+        "transaction_operations": [
+          {
+            "operation": "upload",
+            "recorded_at": "2026-11-27T06:20:07.007074+00:00",
+            "result": {
+              "action": "UPLOADED",
+              "monitor_powershell": "[REDACTED_MACHINE]",
+              "run_id": "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget2-full-w1"
+            }
+          },
+          {
+            "operation": "launch",
+            "recorded_at": "2026-11-27T06:20:10.569560+00:00",
+            "result": {
+              "action": "SUBMISSION_SENT_NOT_VERIFIED",
+              "monitor_powershell": "[REDACTED_MACHINE]",
+              "run_id": "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget2-full-w1"
+            }
+          },
+          {
+            "operation": "probe",
+            "recorded_at": "2026-11-27T06:20:16.453828+00:00",
+            "result": {
+              "action": "RECONCILE_SAME_NODE",
+              "node_id": "smoke",
+              "run_id": "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget2-full-w1",
+              "status": "RUNNING",
+              "timing": {
+                "contract_sha256": "f92b4cedeb2a71499ce73ebdfcaa342bbb1bce7313532777fff89f7f2622704a",
+                "execution_seconds": 3.9031822681427,
+                "queue_seconds": 1.1475164890289307,
+                "queue_time_policy": "exclude_resource_wait",
+                "run_id": "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget2-full-w1",
+                "transaction_id": "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget2-tx",
+                "waiting_for_resources": false,
+                "wall_seconds": 5.050698757171631
+              }
+            }
+          },
+          {
+            "operation": "fetch",
+            "recorded_at": "2026-11-27T08:16:06.375635+00:00",
+            "result": {
+              "analysis_receipt_sha256": "3daa473411ea0daeda132162de9a6f49f455bba8854dc2777ffed236950c5b94",
+              "artifact_manifest_sha256": "ce30046af333e58153f1d59ab986abb498914e1b20e54357eb709b1e65dda36e",
+              "contract_sha256": "f92b4cedeb2a71499ce73ebdfcaa342bbb1bce7313532777fff89f7f2622704a",
+              "full_payload_local": false,
+              "intake_path": "ai4s/programs/dsainet/research/serial_screen_20261126/closeout/budget2_intake",
+              "intake_scope": "analysis_v1",
+              "run_id": "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget2-full-w1",
+              "transaction_id": "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget2-tx",
+              "transfer_bytes": 321966,
+              "verified": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "decision": {
+        "decision": "NO_SIGNAL",
+        "disposition": "STOP_INTER_TOKEN_AMPLITUDE",
+        "round_id": "dsainet-b0-inter-token-amplitude-r1"
+      },
+      "decision_record": "ai4s/programs/dsainet/research/serial_screen_20261127/closeout/DECISION.json",
+      "evidence_id": "AI4S-DSAINET-INTER-TOKEN-AMPLITUDE-R1",
+      "round_id": "dsainet-b0-inter-token-amplitude-r1",
+      "run": {
+        "bundle_id": "2026-11-27_dsainet_b0_inter_token_amplitude_r1_bundle",
+        "dispatch_status": "REMOTE_ACCEPTED",
+        "estimated_training_hours": 1.5,
+        "execution_mode": "user_managed",
+        "executor_id": "lab10",
+        "planned_units": 19,
+        "recorded_at": "2026-11-27T08:39:12.201432+00:00",
+        "round_id": "dsainet-b0-inter-token-amplitude-r1",
+        "run_prefix": "2026-11-27_dsainet_b0_inter_token_amplitude_r1",
+        "terminal_status": "COMPLETE_VERIFIED",
+        "transaction_operations": [
+          {
+            "operation": "upload",
+            "recorded_at": "2026-11-27T08:39:45.572871+00:00",
+            "result": {
+              "action": "UPLOADED",
+              "monitor_powershell": "[REDACTED_MACHINE]",
+              "run_id": "2026-11-27_dsainet_b0_inter_token_amplitude_r1-full-w1"
+            }
+          },
+          {
+            "operation": "launch",
+            "recorded_at": "2026-11-27T08:39:49.324803+00:00",
+            "result": {
+              "action": "SUBMISSION_SENT_NOT_VERIFIED",
+              "monitor_powershell": "[REDACTED_MACHINE]",
+              "run_id": "2026-11-27_dsainet_b0_inter_token_amplitude_r1-full-w1"
+            }
+          },
+          {
+            "operation": "probe",
+            "recorded_at": "2026-11-27T08:39:54.948577+00:00",
+            "result": {
+              "action": "RECONCILE_SAME_NODE",
+              "node_id": "smoke",
+              "run_id": "2026-11-27_dsainet_b0_inter_token_amplitude_r1-full-w1",
+              "status": "RUNNING",
+              "timing": {
+                "contract_sha256": "e3a5f89ef867670c344f3da40e0fa90f75f4402858209717189e334872ca33fc",
+                "execution_seconds": 2.646787405014038,
+                "queue_seconds": 2.0093719959259033,
+                "queue_time_policy": "exclude_resource_wait",
+                "run_id": "2026-11-27_dsainet_b0_inter_token_amplitude_r1-full-w1",
+                "transaction_id": "2026-11-27_dsainet_b0_inter_token_amplitude_r1-tx",
+                "waiting_for_resources": false,
+                "wall_seconds": 4.656159400939941
+              }
+            }
+          },
+          {
+            "operation": "fetch",
+            "recorded_at": "2026-11-27T13:06:27.142787+00:00",
+            "result": {
+              "analysis_receipt_sha256": "cfb4db8a71be221090f56c42bce26daa6f463fbbce347127475510f8d1b0e4b8",
+              "artifact_manifest_sha256": "6543950aa73adcf9c71575206f569e07f88edd0463cbe7169f65f14256549bc0",
+              "contract_sha256": "e3a5f89ef867670c344f3da40e0fa90f75f4402858209717189e334872ca33fc",
+              "full_payload_local": false,
+              "intake_path": "ai4s/programs/dsainet/research/serial_screen_20261127/closeout/intake",
+              "intake_scope": "analysis_v1",
+              "run_id": "2026-11-27_dsainet_b0_inter_token_amplitude_r1-full-w1",
+              "transaction_id": "2026-11-27_dsainet_b0_inter_token_amplitude_r1-tx",
+              "transfer_bytes": 319599,
+              "verified": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "decision": {
+        "decision": "NO_SIGNAL",
+        "disposition": "STOP_CENTRAL_WAVEFORM_COMPLETION",
+        "round_id": "dsainet-b0-central-waveform-completion-r1"
+      },
+      "decision_record": "ai4s/programs/dsainet/research/serial_screen_20261127b/closeout/DECISION.json",
+      "evidence_id": "AI4S-DSAINET-CENTRAL-WAVEFORM-COMPLETION-R1",
+      "round_id": "dsainet-b0-central-waveform-completion-r1",
+      "run": {
+        "bundle_id": "2026-11-27_dsainet_b0_central_waveform_completion_r1_bundle",
+        "dispatch_status": "REMOTE_ACCEPTED",
+        "estimated_training_hours": 1.5,
+        "execution_mode": "user_managed",
+        "executor_id": "lab10",
+        "planned_units": 19,
+        "recorded_at": "2026-11-27T14:06:18.266888+00:00",
+        "round_id": "dsainet-b0-central-waveform-completion-r1",
+        "run_prefix": "2026-11-27_dsainet_b0_central_waveform_completion_r1",
+        "terminal_status": "COMPLETE_VERIFIED",
+        "transaction_operations": [
+          {
+            "operation": "upload",
+            "recorded_at": "2026-11-27T14:07:12.410975+00:00",
+            "result": {
+              "action": "UPLOADED",
+              "monitor_powershell": "[REDACTED_MACHINE]",
+              "run_id": "2026-11-27_dsainet_b0_central_waveform_completion_r1-full-w1"
+            }
+          },
+          {
+            "operation": "launch",
+            "recorded_at": "2026-11-27T14:07:17.148336+00:00",
+            "result": {
+              "action": "SUBMISSION_SENT_NOT_VERIFIED",
+              "monitor_powershell": "[REDACTED_MACHINE]",
+              "run_id": "2026-11-27_dsainet_b0_central_waveform_completion_r1-full-w1"
+            }
+          },
+          {
+            "operation": "probe",
+            "recorded_at": "2026-11-27T14:07:59.755031+00:00",
+            "result": {
+              "action": "RECONCILE_SAME_NODE",
+              "node_id": "smoke",
+              "run_id": "2026-11-27_dsainet_b0_central_waveform_completion_r1-full-w1",
+              "status": "RUNNING",
+              "timing": {
+                "contract_sha256": "f750b909d54bbf5252845f35cfc50c7ee2a5bbcc6ea92cd723a142b57bd741e1",
+                "execution_seconds": 3.049639940261841,
+                "queue_seconds": 38.220099449157715,
+                "queue_time_policy": "exclude_resource_wait",
+                "run_id": "2026-11-27_dsainet_b0_central_waveform_completion_r1-full-w1",
+                "transaction_id": "2026-11-27_dsainet_b0_central_waveform_completion_r1-tx",
+                "waiting_for_resources": false,
+                "wall_seconds": 41.269739389419556
+              }
+            }
+          },
+          {
+            "operation": "fetch",
+            "recorded_at": "2026-11-27T16:17:01.657226+00:00",
+            "result": {
+              "analysis_receipt_sha256": "e778d26f716b994db6def32e73f432fa26e3682c5f85aa03e95edcef4576e3fc",
+              "artifact_manifest_sha256": "f3a3b6a871ab656b7288134703d498f2b7dd1b61426b90d788a5781657b1cc59",
+              "contract_sha256": "f750b909d54bbf5252845f35cfc50c7ee2a5bbcc6ea92cd723a142b57bd741e1",
+              "full_payload_local": false,
+              "intake_path": "ai4s/programs/dsainet/research/serial_screen_20261127b/closeout/intake",
+              "intake_scope": "analysis_v1",
+              "run_id": "2026-11-27_dsainet_b0_central_waveform_completion_r1-full-w1",
+              "transaction_id": "2026-11-27_dsainet_b0_central_waveform_completion_r1-tx",
+              "transfer_bytes": 323650,
+              "verified": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "decision": {
+        "decision": "NO_SIGNAL",
+        "disposition": "STOP_MATCHED_SCALE_INIT",
+        "round_id": "dsainet-b0-matched-scale-init-r1"
+      },
+      "decision_record": "ai4s/programs/dsainet/research/serial_screen_20261128/closeout/DECISION.json",
+      "evidence_id": "AI4S-DSAINET-MATCHED-SCALE-INIT-R1",
+      "round_id": "dsainet-b0-matched-scale-init-r1",
+      "run": {
+        "bundle_id": "2026-11-28_dsainet_b0_matched_scale_init_r1_bundle",
+        "dispatch_status": "REMOTE_ACCEPTED",
+        "estimated_training_hours": 1.5,
+        "execution_mode": "user_managed",
+        "executor_id": "lab10",
+        "planned_units": 19,
+        "recorded_at": "2026-11-27T17:09:17.498115+00:00",
+        "round_id": "dsainet-b0-matched-scale-init-r1",
+        "run_prefix": "2026-11-28_dsainet_b0_matched_scale_init_r1",
+        "terminal_status": "COMPLETE_VERIFIED",
+        "transaction_operations": [
+          {
+            "operation": "upload",
+            "recorded_at": "2026-11-27T17:09:56.752878+00:00",
+            "result": {
+              "action": "UPLOADED",
+              "monitor_powershell": "[REDACTED_MACHINE]",
+              "run_id": "2026-11-28_dsainet_b0_matched_scale_init_r1-full-w1"
+            }
+          },
+          {
+            "operation": "launch",
+            "recorded_at": "2026-11-27T17:10:01.150035+00:00",
+            "result": {
+              "action": "SUBMISSION_SENT_NOT_VERIFIED",
+              "monitor_powershell": "[REDACTED_MACHINE]",
+              "run_id": "2026-11-28_dsainet_b0_matched_scale_init_r1-full-w1"
+            }
+          },
+          {
+            "operation": "probe",
+            "recorded_at": "2026-11-27T17:10:19.029452+00:00",
+            "result": {
+              "action": "RECONCILE_SAME_NODE",
+              "node_id": "screen",
+              "run_id": "2026-11-28_dsainet_b0_matched_scale_init_r1-full-w1",
+              "status": "RUNNING",
+              "timing": {
+                "contract_sha256": "3b787dee63459858360f72d3efb410386f56ee33cd304c468eb9b3d30013d547",
+                "execution_seconds": 15.340334177017212,
+                "queue_seconds": 1.6395483016967773,
+                "queue_time_policy": "exclude_resource_wait",
+                "run_id": "2026-11-28_dsainet_b0_matched_scale_init_r1-full-w1",
+                "transaction_id": "2026-11-28_dsainet_b0_matched_scale_init_r1-tx",
+                "waiting_for_resources": false,
+                "wall_seconds": 16.97988247871399
+              }
+            }
+          },
+          {
+            "operation": "fetch",
+            "recorded_at": "2026-11-28T03:07:09.062249+00:00",
+            "result": {
+              "analysis_receipt_sha256": "52b6876ece33d03e17bfd206ce873c60628526cdd97ad0d0eafffed3152a1b83",
+              "artifact_manifest_sha256": "3c2876a1671e95cae5ace8caa17b8ae017e1aee282f8cfc7512ada5e8e317d16",
+              "contract_sha256": "3b787dee63459858360f72d3efb410386f56ee33cd304c468eb9b3d30013d547",
+              "full_payload_local": false,
+              "intake_path": "ai4s/programs/dsainet/research/serial_screen_20261128/closeout/intake",
+              "intake_scope": "analysis_v1",
+              "run_id": "2026-11-28_dsainet_b0_matched_scale_init_r1-full-w1",
+              "transaction_id": "2026-11-28_dsainet_b0_matched_scale_init_r1-tx",
+              "transfer_bytes": 321331,
+              "verified": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "decision": {
+        "decision": "NO_SIGNAL",
+        "disposition": "STOP_PAIRED_LAG_SHAPE",
+        "round_id": "dsainet-b0-paired-lag-shape-r1"
+      },
+      "decision_record": "ai4s/programs/dsainet/research/serial_screen_20261128b/closeout/DECISION.json",
+      "evidence_id": "AI4S-DSAINET-PAIRED-LAG-SHAPE-R1",
+      "round_id": "dsainet-b0-paired-lag-shape-r1",
+      "run": {
+        "bundle_id": "2026-11-28_dsainet_b0_paired_lag_shape_r1_bundle",
+        "dispatch_status": "REMOTE_ACCEPTED",
+        "estimated_training_hours": 1.5,
+        "execution_mode": "user_managed",
+        "executor_id": "lab10",
+        "planned_units": 19,
+        "recorded_at": "2026-11-28T03:22:02.399065+00:00",
+        "round_id": "dsainet-b0-paired-lag-shape-r1",
+        "run_prefix": "2026-11-28_dsainet_b0_paired_lag_shape_r1",
+        "terminal_status": "COMPLETE_VERIFIED",
+        "transaction_operations": [
+          {
+            "operation": "upload",
+            "recorded_at": "2026-11-28T03:23:51.689365+00:00",
+            "result": {
+              "action": "UPLOADED",
+              "monitor_powershell": "[REDACTED_MACHINE]",
+              "run_id": "2026-11-28_dsainet_b0_paired_lag_shape_r1-full-w1"
+            }
+          },
+          {
+            "operation": "launch",
+            "recorded_at": "2026-11-28T03:23:56.742179+00:00",
+            "result": {
+              "action": "SUBMISSION_SENT_NOT_VERIFIED",
+              "monitor_powershell": "[REDACTED_MACHINE]",
+              "run_id": "2026-11-28_dsainet_b0_paired_lag_shape_r1-full-w1"
+            }
+          },
+          {
+            "operation": "probe",
+            "recorded_at": "2026-11-28T03:24:19.842609+00:00",
+            "result": {
+              "action": "WAIT_FOR_RESOURCES",
+              "node_id": "screen",
+              "run_id": "2026-11-28_dsainet_b0_paired_lag_shape_r1-full-w1",
+              "status": "RUNNING",
+              "timing": {
+                "contract_sha256": "5d3e2201ad0ed133394d4102ce24d5121b902194db3484e3fbae5aa9a5da3402",
+                "execution_seconds": 18.533995866775513,
+                "queue_seconds": 3.1892049312591553,
+                "queue_time_policy": "exclude_resource_wait",
+                "run_id": "2026-11-28_dsainet_b0_paired_lag_shape_r1-full-w1",
+                "transaction_id": "2026-11-28_dsainet_b0_paired_lag_shape_r1-tx",
+                "waiting_for_resources": true,
+                "wall_seconds": 21.723200798034668
+              }
+            }
+          },
+          {
+            "operation": "fetch",
+            "recorded_at": "2026-11-28T05:53:37.902478+00:00",
+            "result": {
+              "analysis_receipt_sha256": "12572115142ac1f81c26192258a01014ef602adb3f5cace43da69d4f2f5952ac",
+              "artifact_manifest_sha256": "4883cfea744802bbbf2e35a896ab7c39c8cc9ca8a395e175347d787cca718b58",
+              "contract_sha256": "5d3e2201ad0ed133394d4102ce24d5121b902194db3484e3fbae5aa9a5da3402",
+              "full_payload_local": false,
+              "intake_path": "ai4s/programs/dsainet/research/serial_screen_20261128b/closeout/intake",
+              "intake_scope": "analysis_v1",
+              "run_id": "2026-11-28_dsainet_b0_paired_lag_shape_r1-full-w1",
+              "transaction_id": "2026-11-28_dsainet_b0_paired_lag_shape_r1-tx",
+              "transfer_bytes": 332946,
+              "verified": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "decision": {
+        "decision": "NO_SIGNAL",
+        "disposition": "STOP_PHASE_CENTER_BANK",
+        "round_id": "dsainet-b0-phase-center-bank-r1"
+      },
+      "decision_record": "ai4s/programs/dsainet/research/serial_screen_20261128c/closeout/DECISION.json",
+      "evidence_id": "AI4S-DSAINET-PHASE-CENTER-BANK-R1",
+      "round_id": "dsainet-b0-phase-center-bank-r1",
+      "run": {
+        "bundle_id": "2026-11-28_dsainet_b0_phase_center_bank_r1_bundle",
+        "dispatch_status": "REMOTE_ACCEPTED",
+        "estimated_training_hours": 1.5,
+        "execution_mode": "user_managed",
+        "executor_id": "lab10",
+        "planned_units": 19,
+        "recorded_at": "2026-11-28T06:07:05.115515+00:00",
+        "round_id": "dsainet-b0-phase-center-bank-r1",
+        "run_prefix": "2026-11-28_dsainet_b0_phase_center_bank_r1",
+        "terminal_status": "COMPLETE_VERIFIED",
+        "transaction_operations": [
+          {
+            "operation": "upload",
+            "recorded_at": "2026-11-28T06:08:04.374989+00:00",
+            "result": {
+              "action": "UPLOADED",
+              "monitor_powershell": "[REDACTED_MACHINE]",
+              "run_id": "2026-11-28_dsainet_b0_phase_center_bank_r1-full-w1"
+            }
+          },
+          {
+            "operation": "launch",
+            "recorded_at": "2026-11-28T06:08:08.396185+00:00",
+            "result": {
+              "action": "SUBMISSION_SENT_NOT_VERIFIED",
+              "monitor_powershell": "[REDACTED_MACHINE]",
+              "run_id": "2026-11-28_dsainet_b0_phase_center_bank_r1-full-w1"
+            }
+          },
+          {
+            "operation": "probe",
+            "recorded_at": "2026-11-28T06:08:25.448067+00:00",
+            "result": {
+              "action": "RECONCILE_SAME_NODE",
+              "node_id": "smoke",
+              "run_id": "2026-11-28_dsainet_b0_phase_center_bank_r1-full-w1",
+              "status": "RUNNING",
+              "timing": {
+                "contract_sha256": "9fb01090b967a066884286e2cb289373167dfcfad98df5ff2c57c3871c744c19",
+                "execution_seconds": 12.391982555389404,
+                "queue_seconds": 3.7437076568603516,
+                "queue_time_policy": "exclude_resource_wait",
+                "run_id": "2026-11-28_dsainet_b0_phase_center_bank_r1-full-w1",
+                "transaction_id": "2026-11-28_dsainet_b0_phase_center_bank_r1-tx",
+                "waiting_for_resources": false,
+                "wall_seconds": 16.135690212249756
+              }
+            }
+          },
+          {
+            "operation": "fetch",
+            "recorded_at": "2026-11-28T08:28:57.095484+00:00",
+            "result": {
+              "analysis_receipt_sha256": "e93433f314b7f7898d88db1570356648b618d68a30fb0b7c0c6e05cdf086553f",
+              "artifact_manifest_sha256": "d739d626f0d968cb7fd699c7610ee3804759ef4754d6db99576cb216e499cfe8",
+              "contract_sha256": "9fb01090b967a066884286e2cb289373167dfcfad98df5ff2c57c3871c744c19",
+              "full_payload_local": false,
+              "intake_path": "ai4s/programs/dsainet/research/serial_screen_20261128c/closeout/intake",
+              "intake_scope": "analysis_v1",
+              "run_id": "2026-11-28_dsainet_b0_phase_center_bank_r1-full-w1",
+              "transaction_id": "2026-11-28_dsainet_b0_phase_center_bank_r1-tx",
+              "transfer_bytes": 814595,
+              "verified": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "decision": {
+        "decision": "NO_SIGNAL",
+        "disposition": "STOP_LATERAL_HAND_READOUT",
+        "round_id": "dsainet-b0-lateral-hand-readout-r1"
+      },
+      "decision_record": "ai4s/programs/dsainet/research/serial_screen_20261128d/closeout/DECISION.json",
+      "evidence_id": "AI4S-DSAINET-LATERAL-HAND-READOUT-R1",
+      "round_id": "dsainet-b0-lateral-hand-readout-r1",
+      "run": {
+        "bundle_id": "2026-11-28_dsainet_b0_lateral_hand_readout_r1_bundle",
+        "dispatch_status": "REMOTE_ACCEPTED",
+        "estimated_training_hours": 1.5,
+        "execution_mode": "user_managed",
+        "executor_id": "lab10",
+        "planned_units": 19,
+        "recorded_at": "2026-11-28T08:38:35.834885+00:00",
+        "round_id": "dsainet-b0-lateral-hand-readout-r1",
+        "run_prefix": "2026-11-28_dsainet_b0_lateral_hand_readout_r1",
+        "terminal_status": "COMPLETE_VERIFIED",
+        "transaction_operations": [
+          {
+            "operation": "upload",
+            "recorded_at": "2026-11-28T08:39:22.147335+00:00",
+            "result": {
+              "action": "UPLOADED",
+              "monitor_powershell": "[REDACTED_MACHINE]",
+              "run_id": "2026-11-28_dsainet_b0_lateral_hand_readout_r1-full-w1"
+            }
+          },
+          {
+            "operation": "launch",
+            "recorded_at": "2026-11-28T08:39:27.301735+00:00",
+            "result": {
+              "action": "SUBMISSION_SENT_NOT_VERIFIED",
+              "monitor_powershell": "[REDACTED_MACHINE]",
+              "run_id": "2026-11-28_dsainet_b0_lateral_hand_readout_r1-full-w1"
+            }
+          },
+          {
+            "operation": "probe",
+            "recorded_at": "2026-11-28T08:40:01.078533+00:00",
+            "result": {
+              "action": "RECONCILE_SAME_NODE",
+              "node_id": "screen",
+              "run_id": "2026-11-28_dsainet_b0_lateral_hand_readout_r1-full-w1",
+              "status": "RUNNING",
+              "timing": {
+                "contract_sha256": "e41316d9cbd5e9c994c5c3d26d9909e88182b9674c68f97d883c8ae7e47986e4",
+                "execution_seconds": 24.218071460723877,
+                "queue_seconds": 7.883708953857422,
+                "queue_time_policy": "exclude_resource_wait",
+                "run_id": "2026-11-28_dsainet_b0_lateral_hand_readout_r1-full-w1",
+                "transaction_id": "2026-11-28_dsainet_b0_lateral_hand_readout_r1-tx",
+                "waiting_for_resources": false,
+                "wall_seconds": 32.1017804145813
+              }
+            }
+          },
+          {
+            "operation": "fetch",
+            "recorded_at": "2026-11-28T11:05:58.563273+00:00",
+            "result": {
+              "analysis_receipt_sha256": "4503cdd61c1f4130e82fdbaa406bccf9b168bd78258e40918783309a0e656425",
+              "artifact_manifest_sha256": "906b206b5070f51531984e71d8b8efce7e8fe48abe80f56e5d68247c94af1efe",
+              "contract_sha256": "e41316d9cbd5e9c994c5c3d26d9909e88182b9674c68f97d883c8ae7e47986e4",
+              "full_payload_local": false,
+              "intake_path": "ai4s/programs/dsainet/research/serial_screen_20261128d/closeout/intake",
+              "intake_scope": "analysis_v1",
+              "run_id": "2026-11-28_dsainet_b0_lateral_hand_readout_r1-full-w1",
+              "transaction_id": "2026-11-28_dsainet_b0_lateral_hand_readout_r1-tx",
+              "transfer_bytes": 322145,
+              "verified": true
+            }
+          }
+        ]
+      }
     }
   ],
   "continuation_history": [
@@ -11920,7 +12546,7 @@
       }
     }
   ],
-  "evidence_status": "campaign_active_with_archived_evidence_only_no_claim_release",
+  "evidence_status": "exposed_development_screen_recorded_no_claim_release",
   "external_interruption_recovery": {
     "failed_run_id": "2026-11-22_dsainet_b0_attention_token_grid_r1-full-w1",
     "reason_class": "USER_AUTHORIZED_REDEPLOYMENT",
@@ -22867,8 +23493,8 @@
   },
   "last_decision": {
     "decision": "NO_SIGNAL",
-    "disposition": "STOP_MASKED_CENTRAL_AUX",
-    "round_id": "dsainet-b0-masked-central-aux-r1"
+    "disposition": "STOP_LATERAL_HAND_READOUT",
+    "round_id": "dsainet-b0-lateral-hand-readout-r1"
   },
   "last_ds07_activation": {
     "authorization_id": "DS07-R1-SCIENCE1-266H-20261102",
@@ -24397,9 +25023,10 @@
     "standard_verified_intake": false
   },
   "last_round_evidence": {
-    "decision_record": "ai4s/programs/dsainet/research/b0_masked_central_aux_20261126/recovery_45m/closeout/DECISION.json",
-    "evidence_id": "AI4S-DSAINET-MASKED-CENTRAL-AUX-R1-RECOVERED-SCREEN",
-    "role": "exposed_development_recovered_source_screen"
+    "decision_record": "ai4s/programs/dsainet/research/serial_screen_20261128d/closeout/DECISION.json",
+    "evidence_id": "AI4S-DSAINET-LATERAL-HAND-READOUT-R1",
+    "role": "exposed_development_source_screen",
+    "round_id": "dsainet-b0-lateral-hand-readout-r1"
   },
   "last_status_check": {
     "automatic_monitor_enabled": false,
@@ -24435,18 +25062,18 @@
     "technical_acceptance": "PASS_OFFLINE_REPLAY"
   },
   "last_verified_intake": {
-    "analysis_receipt_sha256": "6d197ea0e5dd670ced0d1335981769f24e471da6bd6ce1841faba2afdf89ad16",
-    "artifact_manifest_sha256": "3bd658c70ce616407c635aeaf2182cd754f10151de79fb0910fe0f74b7a5db1a",
-    "contract_sha256": "c008db6ae84a449e832fd396362d43896cbfc879594a39f8336ecaf2a307af4f",
+    "analysis_receipt_sha256": "4503cdd61c1f4130e82fdbaa406bccf9b168bd78258e40918783309a0e656425",
+    "artifact_manifest_sha256": "906b206b5070f51531984e71d8b8efce7e8fe48abe80f56e5d68247c94af1efe",
+    "contract_sha256": "e41316d9cbd5e9c994c5c3d26d9909e88182b9674c68f97d883c8ae7e47986e4",
     "full_payload_local": false,
-    "intake_path": "ai4s/programs/dsainet/research/b0_masked_central_aux_20261126/recovery_45m/closeout/repair6_intake",
+    "intake_path": "ai4s/programs/dsainet/research/serial_screen_20261128d/closeout/intake",
     "intake_scope": "analysis_v1",
-    "run_id": "2026-11-26_dsainet_b0_masked_central_aux_r1_repair6-full-w1",
+    "run_id": "2026-11-28_dsainet_b0_lateral_hand_readout_r1-full-w1",
     "run_status": "complete",
-    "transaction_id": "2026-11-26_dsainet_b0_masked_central_aux_r1_repair6-tx",
-    "transfer_bytes": 70085,
+    "transaction_id": "2026-11-28_dsainet_b0_lateral_hand_readout_r1-tx",
+    "transfer_bytes": 322145,
     "verified": true,
-    "verified_at": "2026-11-26T13:29:38.167694+00:00"
+    "verified_at": "2026-11-28T11:05:58.563273+00:00"
   },
   "last_verified_preflight": {
     "bundle_id": "2026-09-24_dsainet_fut_v0_1_profile_repair1-bundle",
@@ -25384,7 +26011,7 @@
       "status": "RESUMED_BY_USER"
     }
   ],
-  "paused": false,
+  "paused": true,
   "pending_continuation": null,
   "performance_candidate_retention_history": [
     {
@@ -25510,10 +26137,10 @@
     "continue_after_positive": false,
     "max_rounds": 1,
     "monitor": "blocking",
-    "night_budget_hours": 3.75,
+    "night_budget_hours": 1.75,
     "queue_time_policy": "exclude_resource_wait",
-    "round_index": 0,
-    "started_at": "2026-11-26T13:54:46.480499+00:00"
+    "round_index": 1,
+    "started_at": "2026-11-28T08:38:23.662030+00:00"
   },
   "schema_version": "mieeg-ai4s-state-v1",
   "scientific_interpretation": {
@@ -25528,7 +26155,7 @@
     "round_id": "dsa-pfc-xds-v0.1-physionet-target-resume16",
     "scope_closed": true
   },
-  "status": "WAITING_REMOTE",
+  "status": "COMPLETE_MAX_ROUNDS",
   "summaryfix1_recovery": {
     "budget_authority_ref": "ai4s/programs/dsainet/research/ds07-r1/science_preparation/summaryfix1/BUDGET_AUTHORITY.json",
     "budget_authority_sha256": "81de064bb3b1abb886f28a8ed8bd441030de829782e514c0ad3a107e59d0cb3b",
@@ -25574,7 +26201,7 @@
     "total_hours": 276,
     "transaction_ceiling_hours": 47
   },
-  "updated_at": "2026-11-27T06:20:16.453828+00:00",
+  "updated_at": "2026-11-28T11:05:59.792927+00:00",
   "user_pause": {
     "archive_reason": "解除 PhysioNet 用户暂停：恢复指令见本轮 AUTHORIZATION.md。",
     "archived": true,

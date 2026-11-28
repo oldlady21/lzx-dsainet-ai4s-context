@@ -5,7 +5,7 @@
     "不自动递归补齐引用；未公开引用见每库SYNC_MANIFEST.json。",
     "不上传凭据、SSH配置、数据集、checkpoint、原始预测、机器日志或完整实验目录。"
   ],
-  "exported_at": "2026-11-27T08:08:24.863196+00:00",
+  "exported_at": "2026-11-28T11:18:04.272257+00:00",
   "files": [
     {
       "bytes": 11783,
@@ -49,14 +49,14 @@
       "source_sha256": "e749fbe7af9469bc353e0965c1e61349ce7bb94382c8caefdf6d5271bc5413fa"
     },
     {
-      "bytes": 367576,
+      "bytes": 367668,
       "path": "TASKS.md",
-      "public_git_blob_sha1": "56c60d38d2037aa9b450f90ea1ae3da3f93dc559",
-      "public_sha256": "d56cda5c8b63b5aef2cc58234922126020781026456e1de36fe522b5e2a9e223",
+      "public_git_blob_sha1": "6895f7450400b9d7713922f83bd24194e2752fd2",
+      "public_sha256": "85696f3d26a05389203b1516733dd218d767ee1e32728044d87280ca6204947a",
       "redactions": {
         "host_alias": 9
       },
-      "source_sha256": "d6bc7a2147aa337cb42a27b4d28db76bab68b2d93c38a0055c70f5d12bf08f43"
+      "source_sha256": "70d1f97614cd6aa0c7ad77eb0dcb5212cd0da77ee258d5f3e937aa5d241e2133"
     },
     {
       "bytes": 168313,
@@ -113,12 +113,12 @@
       "source_sha256": "c27fa5d05f8f5fccd213a3f8e5b8844b266db4ad47d0247b92d1f2e5c5cf926a"
     },
     {
-      "bytes": 9669,
+      "bytes": 10690,
       "path": "ai4s/programs/dsainet/PROJECT_PROMPT_v4.1.md",
-      "public_git_blob_sha1": "e9ef1e6faf0ea6483e9e9bdea41ffbe8ab91bc47",
-      "public_sha256": "3b5130f146d8a2bd9c7ed3eb6dd0ceaa3609f6e7c32b4a607d5bc5f7be8ff430",
+      "public_git_blob_sha1": "20f1a50932d322ec7af97391cab0caf01a974ae4",
+      "public_sha256": "afeb5ac99dd79d45b5221f435271309269d19c09574ac3541534a63fea068a30",
       "redactions": {},
-      "source_sha256": "3b5130f146d8a2bd9c7ed3eb6dd0ceaa3609f6e7c32b4a607d5bc5f7be8ff430"
+      "source_sha256": "afeb5ac99dd79d45b5221f435271309269d19c09574ac3541534a63fea068a30"
     },
     {
       "bytes": 7521,
@@ -129,24 +129,24 @@
       "source_sha256": "8835b27d84df860eafbe5e51b6f3588d39e5eb1bc36b2f79bd22f4c4f8501b46"
     },
     {
-      "bytes": 132804,
+      "bytes": 142391,
       "path": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
-      "public_git_blob_sha1": "b7f78f5ec53aaa8e36b01a5ac354e582f37a7bcc",
-      "public_sha256": "e186bae8ed973960ab22affb586e712ff23efa6e10e30a12915e7454c63c6efe",
+      "public_git_blob_sha1": "cacdfbae9e63c86a059fbf3eb00b16a2fd4510c9",
+      "public_sha256": "16b1c5a5f1451afc290c7c150ee80c77740776fe12764f09ffd5ae6e256dd13e",
       "redactions": {},
-      "source_sha256": "e186bae8ed973960ab22affb586e712ff23efa6e10e30a12915e7454c63c6efe"
+      "source_sha256": "16b1c5a5f1451afc290c7c150ee80c77740776fe12764f09ffd5ae6e256dd13e"
     },
     {
-      "bytes": 736447,
+      "bytes": 772757,
       "path": "ai4s/programs/dsainet/research/EVIDENCE_INDEX.yaml",
-      "public_git_blob_sha1": "5589ed9f6c1f085875278c54ca8cab7b7b40f32f",
-      "public_sha256": "5f0c9f009c56f94b7fcf9b038907834c523f6c6e86f4ef3a8638f1e15bc3e63c",
+      "public_git_blob_sha1": "8e65d5a690c451f3b4de5466a24601aead13348d",
+      "public_sha256": "9c83af044ee5364f1780890c13060728ec97e8fb340a9ec35ef3f55a6cb5a8f9",
       "redactions": {
         "machine_field": 19,
         "unix_home_path": 8,
         "workspace_prefix": 7
       },
-      "source_sha256": "d850e69cbf88919e798e71ed40f70261b3a8b5506135096baf2eca1e09dd7f79"
+      "source_sha256": "f849b8d6fa5b128263d885416e862ba4b658d9739b9f5b86d1c6dff5d934c6e8"
     },
     {
       "bytes": 1743,
@@ -157,17 +157,17 @@
       "source_sha256": "b5b829a3df10efe0ad7b24921dbd7ebdac89b791891217219c7ee6f0458e66e8"
     },
     {
-      "bytes": 1117445,
+      "bytes": 1146765,
       "path": "ai4s/programs/dsainet/research/STATE.yaml",
-      "public_git_blob_sha1": "3159101eabe9a5d226fadd9f33aff9099e84aece",
-      "public_sha256": "fcded7c1abd1290fb1ba0415842fc5329c4491c61983ad6cf9c264c282954d32",
+      "public_git_blob_sha1": "182e7a8b3cacc8b49a8e1fd91f3c2598b446b3ef",
+      "public_sha256": "f82348654ac8c6f7aa650bb18e93964fe7d7ff12011e22926810756e98c7e30f",
       "redactions": {
         "host_alias": 7,
-        "machine_field": 206,
+        "machine_field": 218,
         "unix_home_path": 9,
         "workspace_prefix": 7
       },
-      "source_sha256": "bf4ccb5867739000f96bca07e0120cb12f082c3d7715c64bbc70d316767b2be1"
+      "source_sha256": "164969d5eb490c63ca1490c3c669b1ecbd2a1fa3888476a41b3c5f28ed71d6df"
     },
     {
       "bytes": 81227,
@@ -382,17 +382,14 @@
   "observed_local_state": {
     "dsainet": {
       "active_operation": null,
-      "active_run": {
-        "dispatch_status": "REMOTE_ACCEPTED",
-        "round_id": "dsainet-b0-spatial-person-gradient-r1-budget2"
-      },
-      "paused": false,
+      "active_run": null,
+      "paused": true,
       "source_in_this_repository": true,
       "source_path": "ai4s/programs/dsainet/research/STATE.yaml",
       "source_public_url": "https://github.com/oldlady21/lzx-dsainet-ai4s-context/blob/main/ai4s/programs/dsainet/research/STATE.yaml",
-      "source_sha256": "bf4ccb5867739000f96bca07e0120cb12f082c3d7715c64bbc70d316767b2be1",
-      "source_updated_at": "2026-11-27T06:20:16.453828+00:00",
-      "status": "WAITING_REMOTE"
+      "source_sha256": "164969d5eb490c63ca1490c3c669b1ecbd2a1fa3888476a41b3c5f28ed71d6df",
+      "source_updated_at": "2026-11-28T11:05:59.792927+00:00",
+      "status": "COMPLETE_MAX_ROUNDS"
     }
   },
   "policy_version": "public-documents-v1",
@@ -406,7 +403,7 @@
     "ai4s/prompts/LEVEL2_EXECUTION_v3.3.md",
     "ai4s/prompts/LEVEL2_EXECUTION_v3.4.md"
   ],
-  "snapshot_id": "72d17864c7937b49f25925f6c826df0c373444f33bd57c69b91b86cc1c15ea1a",
+  "snapshot_id": "ee5d57ae4e0ccdbf9d0e448c67d482df7955cdb45c13a82688bddc98eb6735a8",
   "unpublished_references": [
     {
       "from": "AGENTS.md",
@@ -2210,11 +2207,15 @@
     },
     {
       "from": "TASKS.md",
-      "not_in_snapshot": "ai4s/programs/mvcnet/research/central_row_augmentation_20261126/SCIENCE_CLOSEOUT.md"
+      "not_in_snapshot": "ai4s/programs/mvcnet/research/channel_bilinear/REPORT.md"
     },
     {
       "from": "TASKS.md",
-      "not_in_snapshot": "ai4s/programs/mvcnet/research/channel_bilinear/REPORT.md"
+      "not_in_snapshot": "ai4s/programs/mvcnet/research/ifnet_view_ce_balance_20261127/SCIENCE_CLOSEOUT.md"
+    },
+    {
+      "from": "TASKS.md",
+      "not_in_snapshot": "ai4s/programs/mvcnet/research/ifnet_view_ce_balance_xdataset_20261128/SCIENCE_CLOSEOUT.md"
     },
     {
       "from": "TASKS.md",
@@ -2539,6 +2540,10 @@
     {
       "from": "ai4s/README.md",
       "not_in_snapshot": "refs/papers/_index/README.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/PROJECT_PROMPT_v4.1.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/development_protocol_20261128/PROTOCOL.md"
     },
     {
       "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
@@ -3363,6 +3368,90 @@
     {
       "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
       "not_in_snapshot": "ai4s/programs/dsainet/research/serial_screen_20261126/CONTINUATION_REPORT.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/serial_screen_20261126/closeout/REPORT.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/serial_screen_20261127/DISPOSITION_01.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/serial_screen_20261127/DISPOSITION_02.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/serial_screen_20261127/DISPOSITION_03.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/serial_screen_20261127/DISPOSITION_04.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/serial_screen_20261127/closeout/REPORT.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/serial_screen_20261127b/CONTINUATION_REPORT.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/serial_screen_20261127b/DISPATCH_REPORT.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/serial_screen_20261127b/closeout/REPORT.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/serial_screen_20261128/DISPATCH_REPORT.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/serial_screen_20261128/DISPOSITION_01.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/serial_screen_20261128/closeout/REPORT.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/serial_screen_20261128b/DISPATCH_REPORT.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/serial_screen_20261128b/DISPOSITION_01.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/serial_screen_20261128b/closeout/REPORT.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/serial_screen_20261128c/DISPATCH_REPORT.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/serial_screen_20261128c/DISPOSITION_01.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/serial_screen_20261128c/closeout/REPORT.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/serial_screen_20261128d/CANDIDATE_01.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/serial_screen_20261128d/DISPOSITION_01.md"
+    },
+    {
+      "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",
+      "not_in_snapshot": "ai4s/programs/dsainet/research/serial_screen_20261128d/closeout/REPORT.md"
     },
     {
       "from": "ai4s/programs/dsainet/research/CURRENT_UNDERSTANDING.md",

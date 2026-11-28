@@ -4898,6 +4898,472 @@
         "path": "ai4s/programs/dsainet/research/serial_screen_20261126/WIRING_03.json",
         "sha256": "720154e701162cdd178d44bd198744a3d383cdd1511dde790fb5966a929603d7"
       }
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-V41-SERIAL-20261127-01",
+      "external_review": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261127/NEON_01.json",
+        "sha256": "895c040d3b8e58b10be6f047444bdf06aa7a51546e8739489d0af834ee803afe",
+        "status": "PENDING"
+      },
+      "internal_design_role": "Astra High decision delegate; Sol primary executor",
+      "qualification_decision": "STOP_FIXED_LOCAL_CORRELATION",
+      "qualification_freeze": "ai4s/programs/dsainet/research/serial_screen_20261127/FREEZE_01.json",
+      "qualification_freeze_sha256": "ecd9b3709711fecdfc352827edd8448a7b9b16fa8db634dc96b2f1b850e1424c",
+      "qualification_result": "ai4s/programs/dsainet/research/serial_screen_20261127/RESULT_01.json",
+      "qualification_result_sha256": "386eeb681380c5748fd0b5a7a3a47f40e0f1bd8d90a2714571ebcca329439d82",
+      "record": "ai4s/programs/dsainet/research/serial_screen_20261127/CANDIDATE_01.md",
+      "report": "ai4s/programs/dsainet/research/serial_screen_20261127/DISPOSITION_01.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "AI4S-DSAINET-SPATIAL-PERSON-GRADIENT-R1-BUDGET2"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-V41-SERIAL-20261127-02",
+      "external_review": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261127/NEON_02.json",
+        "sha256": "e6b70faa58d87175f86c037de5413174d2e4e8d4289a4ac4b2c95682a1358531",
+        "status": "PENDING"
+      },
+      "internal_design_role": "Astra High decision delegate; Sol primary executor",
+      "qualification_decision": "STOP_FIXED_ADJACENT_TOKEN_ALLOCATION",
+      "qualification_freeze": "ai4s/programs/dsainet/research/serial_screen_20261127/FREEZE_02.json",
+      "qualification_freeze_sha256": "d4f48a6dcceab151b073b4e7cf53cfe3d5e14e9bf2b5deb0df82065ada36c5ee",
+      "qualification_result": "ai4s/programs/dsainet/research/serial_screen_20261127/RESULT_02.json",
+      "qualification_result_sha256": "b36edf295249849de4dca97260372dc833e2b0a27232f0968c378e5c28743a94",
+      "record": "ai4s/programs/dsainet/research/serial_screen_20261127/CANDIDATE_02.md",
+      "report": "ai4s/programs/dsainet/research/serial_screen_20261127/DISPOSITION_02.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "AI4S-DSAINET-SPATIAL-PERSON-GRADIENT-R1-BUDGET2"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-V41-SERIAL-20261127-03",
+      "external_review": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261127/NEON_03.json",
+        "sha256": "9581e731ed4136db9b9681fe100f01a78cf88a6fbf68dc514a5cf0570fa98760",
+        "status": "PENDING"
+      },
+      "internal_design_role": "Astra High decision delegate; Sol primary executor",
+      "qualification_decision": "STOP_FIXED_SEQUENTIAL_INTER",
+      "qualification_freeze": "ai4s/programs/dsainet/research/serial_screen_20261127/FREEZE_03.json",
+      "qualification_freeze_sha256": "c3c4dbc9f6c0b5eeac24ff0c6c752b3dabdf1cc6efd828a75cf21664d4f8191b",
+      "qualification_result": "ai4s/programs/dsainet/research/serial_screen_20261127/RESULT_03.json",
+      "qualification_result_sha256": "09e0990128a5ce07e67c040e8ee130558eca19b2c6b25ae835eb7074c99bddf9",
+      "record": "ai4s/programs/dsainet/research/serial_screen_20261127/CANDIDATE_03.md",
+      "report": "ai4s/programs/dsainet/research/serial_screen_20261127/DISPOSITION_03.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "AI4S-DSAINET-SPATIAL-PERSON-GRADIENT-R1-BUDGET2"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-V41-SERIAL-20261127-04",
+      "dispatch_snapshot": "ai4s/programs/dsainet/research/serial_screen_20261127/REMOTE_DISPATCH_STATUS.json",
+      "dispatch_snapshot_sha256": "d4ca208f3beacc06a244dd022c6f83868cf4fb5114b72ff247abaacf423749e3",
+      "dispatch_status": "REMOTE_SCREEN_RUNNING",
+      "external_review": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261127/NEON_04.json",
+        "sha256": "e0c6c9349fc2ca2163cbcc9768747caa7607073a58050126af459f1740a7e068",
+        "status": "PENDING"
+      },
+      "internal_design_role": "Astra High decision delegate; Sol primary executor",
+      "monitor": "ai4s/programs/dsainet/research/serial_screen_20261127/MONITOR.ps1",
+      "qualification_decision": "RETAIN_TOKEN_AMPLITUDE",
+      "qualification_freeze": "ai4s/programs/dsainet/research/serial_screen_20261127/FREEZE_04.json",
+      "qualification_freeze_sha256": "09952a24d93abb8d64dc6678e385a314a7b42db5be5dbba60cdcf14b56a26139",
+      "qualification_result": "ai4s/programs/dsainet/research/serial_screen_20261127/RESULT_04.json",
+      "qualification_result_sha256": "97e685b148eed05430993d5c9e3eb12e368969fdf1bdfb9c72dad06b30c10a1d",
+      "record": "ai4s/programs/dsainet/research/serial_screen_20261127/CANDIDATE_04.md",
+      "report": "ai4s/programs/dsainet/research/serial_screen_20261127/DISPOSITION_04.md",
+      "run_id": "2026-11-27_dsainet_b0_inter_token_amplitude_r1-full-w1",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "AI4S-DSAINET-SPATIAL-PERSON-GRADIENT-R1-BUDGET2"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-V41-SERIAL-20261127B-01",
+      "external_review": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261127b/NEON_01.json",
+        "sha256": "6de90bf13c390fb6df2b6b0432644bd9232a5259f9e4d5eafffdce58c0ce5fd8",
+        "status": "PENDING"
+      },
+      "internal_design_role": "Astra High decision delegate; Sol primary executor",
+      "qualification_decision": "STOP_FIXED_ROBUST_SHARED_POOL",
+      "qualification_freeze": "ai4s/programs/dsainet/research/serial_screen_20261127b/FREEZE_01.json",
+      "qualification_freeze_sha256": "ceece3e31847150c6bdf5ab650365f8e9c3dd69755e8deecde6700bbfb3bcf4f",
+      "qualification_result": "ai4s/programs/dsainet/research/serial_screen_20261127b/RESULT_01.json",
+      "qualification_result_sha256": "2ee0ffee4ac861b452c5d43a2042bb8e3273a1ca23fa26bc3f977447284e2ffa",
+      "record": "ai4s/programs/dsainet/research/serial_screen_20261127b/CANDIDATE_01.md",
+      "report": "ai4s/programs/dsainet/research/serial_screen_20261127b/DISPOSITION_01.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "AI4S-DSAINET-INTER-TOKEN-AMPLITUDE-R1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-V41-SERIAL-20261127B-02",
+      "external_review": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261127b/NEON_02.json",
+        "sha256": "e726791a06aeaed3edfc704830609b0b9603dfc2061d0b70fb1c325d34464586",
+        "status": "PENDING"
+      },
+      "internal_design_role": "Astra High decision delegate; Sol primary executor",
+      "qualification_decision": "STOP_COARSE_CONVTIME_ORDER",
+      "qualification_freeze": "ai4s/programs/dsainet/research/serial_screen_20261127b/FREEZE_02.json",
+      "qualification_freeze_sha256": "166595d287cf20752e558cfaee25adf610dfc0cddc3244fbf2bb4b96397145fb",
+      "qualification_result": "ai4s/programs/dsainet/research/serial_screen_20261127b/RESULT_02.json",
+      "qualification_result_sha256": "f247019274fffbffadfb3b987c995247ad20f5cdacac98a12960f09440934fbf",
+      "record": "ai4s/programs/dsainet/research/serial_screen_20261127b/CANDIDATE_02.md",
+      "report": "ai4s/programs/dsainet/research/serial_screen_20261127b/DISPOSITION_02.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "AI4S-DSAINET-INTER-TOKEN-AMPLITUDE-R1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-V41-SERIAL-20261127B-03",
+      "external_review": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261127b/NEON_03.json",
+        "sha256": "305114935a64dec91d7e41d1b490537d8fe3bdcc0618bdf890ad44c5c7e5b90d",
+        "status": "PENDING"
+      },
+      "internal_design_role": "Astra High decision delegate; Sol primary executor",
+      "qualification_decision": "STOP_RELATIVE_SENSOR_GAIN",
+      "qualification_freeze": "ai4s/programs/dsainet/research/serial_screen_20261127b/FREEZE_03.json",
+      "qualification_freeze_sha256": "4f3c2847b80d7f4d18c17b364f3f6ff14efd660512938dc2b2413d2e04c7ca3d",
+      "qualification_result": "ai4s/programs/dsainet/research/serial_screen_20261127b/RESULT_03.json",
+      "qualification_result_sha256": "36316a11c53b2950f2175126770fe1fb92611dee7b7ba131b1761278cbc6f858",
+      "record": "ai4s/programs/dsainet/research/serial_screen_20261127b/CANDIDATE_03.md",
+      "report": "ai4s/programs/dsainet/research/serial_screen_20261127b/DISPOSITION_03.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "AI4S-DSAINET-INTER-TOKEN-AMPLITUDE-R1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-V41-SERIAL-20261127B-04",
+      "external_review": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261127b/NEON_04.json",
+        "sha256": "7af94d7a9ed6e55ed81ce1bc6db998972e2cecba90acbb04ee94b92ef70bfdcf",
+        "status": "PENDING"
+      },
+      "internal_design_role": "Astra High decision delegate; Sol primary executor",
+      "qualification_decision": "STOP_SCALE_READOUT_DROPOUT",
+      "qualification_freeze": "ai4s/programs/dsainet/research/serial_screen_20261127b/FREEZE_04.json",
+      "qualification_freeze_sha256": "93d372c5c76eb035ab05e3df7e588c48f40a177170cde239e3846f03d0333663",
+      "qualification_result": "ai4s/programs/dsainet/research/serial_screen_20261127b/RESULT_04.json",
+      "qualification_result_sha256": "5f39401f1a9b693cc6c0f6e554eacd02c05d0db46a6444865e3021d254482dc1",
+      "record": "ai4s/programs/dsainet/research/serial_screen_20261127b/CANDIDATE_04.md",
+      "report": "ai4s/programs/dsainet/research/serial_screen_20261127b/DISPOSITION_04.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "AI4S-DSAINET-INTER-TOKEN-AMPLITUDE-R1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-V41-SERIAL-20261127B-05",
+      "external_review": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261127b/NEON_05.json",
+        "sha256": "63b9e0f9e5cec1fb23e53cfd664fdebb1e0a8673d5e1b9ea4227544640abd714",
+        "status": "PENDING"
+      },
+      "internal_design_role": "Astra High decision delegate; Sol primary executor",
+      "qualification_decision": "STOP_ACQUISITION_RUN_BATCHES",
+      "qualification_freeze": "ai4s/programs/dsainet/research/serial_screen_20261127b/FREEZE_05.json",
+      "qualification_freeze_sha256": "e21f033945b3d411912e18c142f86c5f5fd7d8a9ae92484d7bd624209db6b1c0",
+      "qualification_result": "ai4s/programs/dsainet/research/serial_screen_20261127b/RESULT_05.json",
+      "qualification_result_sha256": "e93ff88af69f9d56e1330730d6be8a55f62bc1991e9ea9d72bd3a583c3c2ea01",
+      "record": "ai4s/programs/dsainet/research/serial_screen_20261127b/CANDIDATE_05.md",
+      "report": "ai4s/programs/dsainet/research/serial_screen_20261127b/DISPOSITION_05.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "AI4S-DSAINET-INTER-TOKEN-AMPLITUDE-R1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-V41-SERIAL-20261127B-06",
+      "external_review": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261127b/NEON_06.json",
+        "sha256": "b7791be4ca6f9f960018b5409c0b532ca574f0d0a44c491d5570c852a9e7bb11",
+        "status": "PENDING"
+      },
+      "internal_design_role": "Astra High decision delegate; Sol primary executor",
+      "qualification_decision": "STOP_TIED_COORDINATE_READOUT",
+      "qualification_freeze": "ai4s/programs/dsainet/research/serial_screen_20261127b/FREEZE_06.json",
+      "qualification_freeze_sha256": "2af9e38d1f7dfaf8a3f0f81542cb06efe72e430531ae52ef3ce29e840bbc6036",
+      "qualification_result": "ai4s/programs/dsainet/research/serial_screen_20261127b/RESULT_06.json",
+      "qualification_result_sha256": "6a51ceff1d020865bf6e1437e90ae821117ffd9f1fe98c6d95c0996a976d69e0",
+      "record": "ai4s/programs/dsainet/research/serial_screen_20261127b/CANDIDATE_06.md",
+      "report": "ai4s/programs/dsainet/research/serial_screen_20261127b/DISPOSITION_06.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "AI4S-DSAINET-INTER-TOKEN-AMPLITUDE-R1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-V41-SERIAL-20261127B-07",
+      "external_review": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261127b/NEON_07.json",
+        "sha256": "50464484ee2a09638ad569e61d121beb91cdbcdddbec750b27718a0fd0dfebea",
+        "status": "PENDING"
+      },
+      "internal_design_role": "Astra High decision delegate; Sol primary executor",
+      "qualification_decision": "STOP_NEAR_SENSOR_MIX",
+      "qualification_freeze": "ai4s/programs/dsainet/research/serial_screen_20261127b/FREEZE_07.json",
+      "qualification_freeze_sha256": "f7cf90e163c017ba1b27a35edc97de68d259d826a783c81929c52da58854674e",
+      "qualification_result": "ai4s/programs/dsainet/research/serial_screen_20261127b/RESULT_07.json",
+      "qualification_result_sha256": "59cd2afd43b34900b84e333ec8b5f932cae0165ad4e045a2c570f80e86657482",
+      "record": "ai4s/programs/dsainet/research/serial_screen_20261127b/CANDIDATE_07.md",
+      "report": "ai4s/programs/dsainet/research/serial_screen_20261127b/DISPOSITION_07.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "AI4S-DSAINET-INTER-TOKEN-AMPLITUDE-R1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-V41-SERIAL-20261127B-08",
+      "external_review": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261127b/NEON_08.json",
+        "sha256": "47202ed5805a3c0019c28c948cc6c7680b79f263f5edf25804af823aa05ca123",
+        "status": "PENDING"
+      },
+      "internal_design_role": "Astra High decision delegate; Sol primary executor",
+      "qualification_decision": "STOP_DROPOUT_RISK_SUPERVISION",
+      "qualification_freeze": "ai4s/programs/dsainet/research/serial_screen_20261127b/FREEZE_08.json",
+      "qualification_freeze_sha256": "8d13b0195a697d30b85ca4d9a0b22e52d6040bd868eb9a966415c144d477c95f",
+      "qualification_result": "ai4s/programs/dsainet/research/serial_screen_20261127b/RESULT_08.json",
+      "qualification_result_sha256": "17ca2c991bf98e359acf62ad18805c98f01757fbd9fc97a24a7456fab25c73e4",
+      "record": "ai4s/programs/dsainet/research/serial_screen_20261127b/CANDIDATE_08.md",
+      "report": "ai4s/programs/dsainet/research/serial_screen_20261127b/DISPOSITION_08.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "AI4S-DSAINET-INTER-TOKEN-AMPLITUDE-R1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-V41-SERIAL-20261127B-09",
+      "dispatch_report": "ai4s/programs/dsainet/research/serial_screen_20261127b/DISPATCH_REPORT.md",
+      "dispatch_run_id": "2026-11-27_dsainet_b0_central_waveform_completion_r1-full-w1",
+      "dispatch_status": "COMPLETE_VERIFIED",
+      "external_review": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261127b/NEON_09.json",
+        "sha256": "053bd16bbb71fee51825a11e8017edabfc7d7f705710ef14ed4dd4f278d99321",
+        "status": "PENDING"
+      },
+      "internal_design_role": "Astra High decision delegate; Sol primary executor",
+      "qualification_decision": "RETAIN_CENTRAL_COMPLETION",
+      "qualification_freeze": "ai4s/programs/dsainet/research/serial_screen_20261127b/FREEZE_09.json",
+      "qualification_freeze_sha256": "12dce0d246086cb7c17965a53d1ebb2bbf63020a24d4448900fddfc30b0d7741",
+      "qualification_result": "ai4s/programs/dsainet/research/serial_screen_20261127b/RESULT_09.json",
+      "qualification_result_sha256": "eaec604f570245bb4a44479365a51c6890f2128f773af509265ed1146bd356ef",
+      "record": "ai4s/programs/dsainet/research/serial_screen_20261127b/CANDIDATE_09.md",
+      "remote_status_record": "ai4s/programs/dsainet/research/serial_screen_20261127b/REMOTE_DISPATCH_STATUS.json",
+      "report": "ai4s/programs/dsainet/research/serial_screen_20261127b/DISPOSITION_09.md",
+      "scientific_disposition": "STOP_CENTRAL_WAVEFORM_COMPLETION",
+      "scientific_fits": 0,
+      "screen_evidence_id": "AI4S-DSAINET-CENTRAL-WAVEFORM-COMPLETION-R1",
+      "screen_report": "ai4s/programs/dsainet/research/serial_screen_20261127b/closeout/REPORT.md",
+      "source_evidence_ids": [
+        "AI4S-DSAINET-INTER-TOKEN-AMPLITUDE-R1"
+      ],
+      "training_contract": "ai4s/programs/dsainet/research/dsainet-b0-central-waveform-completion-r1.yaml",
+      "training_contract_canonical_sha256": "f750b909d54bbf5252845f35cfc50c7ee2a5bbcc6ea92cd723a142b57bd741e1"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "development_protocol": "ai4s/programs/dsainet/research/development_protocol_20261128/PROTOCOL.md",
+      "direction_id": "DSAINET-V41-SERIAL-20261128-01",
+      "dispatch_report": "ai4s/programs/dsainet/research/serial_screen_20261128/DISPATCH_REPORT.md",
+      "dispatch_run_id": "2026-11-28_dsainet_b0_matched_scale_init_r1-full-w1",
+      "dispatch_status": "COMPLETE_VERIFIED",
+      "external_review": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261128/NEON_01.json",
+        "sha256": "a6ef6704caf4d013d6475fc2b31d32f688d80abd225fd9768f0314a265747334",
+        "status": "PENDING"
+      },
+      "internal_design_role": "Astra High decision review, Sol primary executor",
+      "qualification_decision": "RETAIN_MATCHED_SCALE_INIT",
+      "qualification_freeze": "ai4s/programs/dsainet/research/serial_screen_20261128/FREEZE_01.json",
+      "qualification_freeze_sha256": "14d52a44df9ee5077d1a43202c7f722439993dedb87519ccea634bfc56f4354c",
+      "qualification_result": "ai4s/programs/dsainet/research/serial_screen_20261128/RESULT_01.json",
+      "qualification_result_sha256": "bd839e1b0b272f7fa4d9419163c5004997e30ad83828928969b890b0fbd54837",
+      "record": "ai4s/programs/dsainet/research/serial_screen_20261128/CANDIDATE_01.md",
+      "remote_status_record": "ai4s/programs/dsainet/research/serial_screen_20261128/REMOTE_DISPATCH_STATUS.json",
+      "report": "ai4s/programs/dsainet/research/serial_screen_20261128/DISPOSITION_01.md",
+      "scientific_disposition": "STOP_MATCHED_SCALE_INIT",
+      "scientific_fits": 0,
+      "screen_evidence_id": "AI4S-DSAINET-MATCHED-SCALE-INIT-R1",
+      "screen_report": "ai4s/programs/dsainet/research/serial_screen_20261128/closeout/REPORT.md",
+      "source_evidence_ids": [
+        "AI4S-DSAINET-CENTRAL-WAVEFORM-COMPLETION-R1"
+      ],
+      "technical_updates": 18,
+      "training_contract": "ai4s/programs/dsainet/research/dsainet-b0-matched-scale-init-r1.yaml",
+      "training_contract_canonical_sha256": "3b787dee63459858360f72d3efb410386f56ee33cd304c468eb9b3d30013d547"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-V41-SERIAL-20261128B-01",
+      "external_review": {
+        "conversation_id": "f1aa4f86-aac7-4a60-ad18-a65cf82a7c33",
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261128b/NEON_01.json",
+        "requested_model": "gemini-4-neon-high",
+        "sha256": "685db34eda86f1bb25052d8b14dfda2c4abe5e66c298a439ee4d2dbd199d6582",
+        "status": "COMPLETE"
+      },
+      "qualification_decision": "STOP_ANTITHETIC_INTER_MESSAGES",
+      "qualification_freeze": "ai4s/programs/dsainet/research/serial_screen_20261128b/FREEZE_01.json",
+      "qualification_freeze_sha256": "d1307c1af2f25556dd61affe807e1d84523d5b939946cabd73362c39732ac371",
+      "qualification_result": "ai4s/programs/dsainet/research/serial_screen_20261128b/RESULT_01.json",
+      "qualification_result_sha256": "0faa8d23c6e6d2eb1f900a177daff678208f5bdfef289ba354964c8a1051c732",
+      "record": "ai4s/programs/dsainet/research/serial_screen_20261128b/CANDIDATE_01.md",
+      "report": "ai4s/programs/dsainet/research/serial_screen_20261128b/DISPOSITION_01.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "AI4S-DSAINET-MATCHED-SCALE-INIT-R1",
+        "AI4S-DSAINET-dsainet-r02-inter-attention-lesion-v0.1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "development_protocol": "ai4s/programs/dsainet/research/development_protocol_20261128/PROTOCOL.md",
+      "direction_id": "DSAINET-V41-SERIAL-20261128B-02",
+      "dispatch_report": "ai4s/programs/dsainet/research/serial_screen_20261128b/DISPATCH_REPORT.md",
+      "dispatch_run_id": "2026-11-28_dsainet_b0_paired_lag_shape_r1-full-w1",
+      "dispatch_status": "COMPLETE_VERIFIED",
+      "external_review": {
+        "conversation_id": "48744808-c1df-4258-99d9-30232436c85a",
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261128b/NEON_02.json",
+        "requested_model": "gemini-4-neon-high",
+        "sha256": "3885ad6542d4f4fbcf53c2faee93fcb7141001de95edacd430ddd9e211b03e9f",
+        "status": "COMPLETE"
+      },
+      "internal_design_role": "Astra High decision review, Sol primary executor",
+      "qualification_decision": "RETAIN_PAIRED_LAG_SHAPE",
+      "qualification_freeze": "ai4s/programs/dsainet/research/serial_screen_20261128b/FREEZE_02.json",
+      "qualification_freeze_sha256": "82c2d629b0c9284a71e53243b639201919fe66194f7da96656e297f2903627e5",
+      "qualification_result": "ai4s/programs/dsainet/research/serial_screen_20261128b/RESULT_02.json",
+      "qualification_result_sha256": "b2d3ff8e95caa4a11f0121402a7208f8fed4ec129d0337b440ada5275bc12040",
+      "record": "ai4s/programs/dsainet/research/serial_screen_20261128b/CANDIDATE_02.md",
+      "remote_status_record": "ai4s/programs/dsainet/research/serial_screen_20261128b/REMOTE_DISPATCH_STATUS.json",
+      "report": "ai4s/programs/dsainet/research/serial_screen_20261128b/DISPOSITION_02.md",
+      "scientific_disposition": "STOP_PAIRED_LAG_SHAPE",
+      "scientific_fits": 0,
+      "screen_evidence_id": "AI4S-DSAINET-PAIRED-LAG-SHAPE-R1",
+      "screen_report": "ai4s/programs/dsainet/research/serial_screen_20261128b/closeout/REPORT.md",
+      "source_evidence_ids": [
+        "AI4S-DSAINET-MATCHED-SCALE-INIT-R1",
+        "DSAINET-TOKENIZER-LAG-DEPENDENT-MIXING-20261118"
+      ],
+      "training_contract": "ai4s/programs/dsainet/research/dsainet-b0-paired-lag-shape-r1.yaml",
+      "training_contract_canonical_sha256": "5d3e2201ad0ed133394d4102ce24d5121b902194db3484e3fbae5aa9a5da3402",
+      "training_contract_file_sha256": "a6e87a1344c92cb650f6addb777467c08289d52368dc8b52a787390a4dfdba04"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "direction_id": "DSAINET-V41-SERIAL-20261128C-01",
+      "external_review": {
+        "conversation_id": "35e9a0aa-10b7-4e9a-b34a-0be81458975e",
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261128c/NEON_01.json",
+        "requested_model": "gemini-4-neon-high",
+        "sha256": "94b37962901ec31ce7fd60e483806b32a245edf90d94917cb8686164e59c2d23",
+        "status": "COMPLETE"
+      },
+      "qualification_decision": "STOP_COMMON_KEY_BIAS",
+      "qualification_freeze": "ai4s/programs/dsainet/research/serial_screen_20261128c/FREEZE_01.json",
+      "qualification_freeze_sha256": "87ba712461056860ed608e95da443230ba518ab32e93bd9d5104dc1ca4b8ac50",
+      "qualification_result": "ai4s/programs/dsainet/research/serial_screen_20261128c/RESULT_01.json",
+      "qualification_result_sha256": "464e4991d74dd685e7fcde7277902a61dc74e3399b5586733ba4b313d69f9b4b",
+      "record": "ai4s/programs/dsainet/research/serial_screen_20261128c/CANDIDATE_01.md",
+      "report": "ai4s/programs/dsainet/research/serial_screen_20261128c/DISPOSITION_01.md",
+      "scientific_fits": 0,
+      "source_evidence_ids": [
+        "AI4S-DSAINET-PAIRED-LAG-SHAPE-R1"
+      ]
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "development_protocol": "ai4s/programs/dsainet/research/development_protocol_20261128/PROTOCOL.md",
+      "direction_id": "DSAINET-V41-SERIAL-20261128C-02",
+      "dispatch_report": "ai4s/programs/dsainet/research/serial_screen_20261128c/DISPATCH_REPORT.md",
+      "dispatch_run_id": "2026-11-28_dsainet_b0_phase_center_bank_r1-full-w1",
+      "dispatch_status": "COMPLETE_VERIFIED",
+      "external_review": {
+        "conversation_id": "a34391a8-1f7e-4157-932b-c1448fae1c10",
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261128c/NEON_02.json",
+        "requested_model": "gemini-4-neon-high",
+        "sha256": "16e8a4753fffa0991aa8b5c7d38b4a0743f1bc68f415272978072a1f44b1a50d",
+        "status": "COMPLETE"
+      },
+      "qualification_decision": "RETAIN_PHASE_CENTER_BANK",
+      "qualification_freeze": "ai4s/programs/dsainet/research/serial_screen_20261128c/FREEZE_02.json",
+      "qualification_freeze_sha256": "599e03ca05ef6114586e78038c643f2b7656ce31e890ab92a99b4a3ba7b16d00",
+      "qualification_result": "ai4s/programs/dsainet/research/serial_screen_20261128c/RESULT_02.json",
+      "qualification_result_sha256": "99b86901e78fb3cb7713f763250393b1bc83f7bdf6bdf464a9fa7e42e383a817",
+      "record": "ai4s/programs/dsainet/research/serial_screen_20261128c/CANDIDATE_02.md",
+      "remote_status_record": "ai4s/programs/dsainet/research/serial_screen_20261128c/REMOTE_DISPATCH_STATUS.json",
+      "report": "ai4s/programs/dsainet/research/serial_screen_20261128c/DISPOSITION_02.md",
+      "scientific_disposition": "STOP_PHASE_CENTER_BANK",
+      "scientific_fits": 18,
+      "screen_evidence_id": "AI4S-DSAINET-PHASE-CENTER-BANK-R1",
+      "screen_report": "ai4s/programs/dsainet/research/serial_screen_20261128c/closeout/REPORT.md",
+      "source_evidence_ids": [
+        "AI4S-DSAINET-PAIRED-LAG-SHAPE-R1",
+        "AI4S-DSAINET-MATCHED-SCALE-INIT-R1"
+      ],
+      "training_contract": "ai4s/programs/dsainet/research/dsainet-b0-phase-center-bank-r1.yaml",
+      "training_contract_canonical_sha256": "9fb01090b967a066884286e2cb289373167dfcfad98df5ff2c57c3871c744c19",
+      "training_contract_file_sha256": "8dbfcd97dcd5e250a373f54ab731b9433df959238631c9f4503eccde14be0ac0"
+    },
+    {
+      "chain_id": "dsainet-transaction-v4.1",
+      "development_protocol": "ai4s/programs/dsainet/research/development_protocol_20261128/PROTOCOL.md",
+      "direction_id": "DSAINET-V41-SERIAL-20261128D-01",
+      "dispatch_report": "ai4s/programs/dsainet/research/serial_screen_20261128d/DISPATCH_REPORT.md",
+      "dispatch_run_id": "2026-11-28_dsainet_b0_lateral_hand_readout_r1-full-w1",
+      "dispatch_status": "COMPLETE_VERIFIED",
+      "external_review": {
+        "conversation_id": "dc49e46d-05eb-46a1-af9c-5ddad8c871de",
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261128d/NEON_01.json",
+        "requested_model": "gemini-4-neon-high",
+        "sha256": "c21a6c243bcbfd99f9c41a8d22f4a14d380feae9f9b8c8dbb4dfdf9ddeac119e",
+        "status": "COMPLETE"
+      },
+      "qualification_decision": "RETAIN_LATERAL_HAND_READOUT",
+      "qualification_freeze": "ai4s/programs/dsainet/research/serial_screen_20261128d/FREEZE_01.json",
+      "qualification_freeze_sha256": "b8885014d2234186106a5baedff42223344007ade67f05768367b5a88b126cc5",
+      "qualification_result": "ai4s/programs/dsainet/research/serial_screen_20261128d/RESULT_01.json",
+      "qualification_result_sha256": "08b126380dc840b9465de207bd1b3138a1a74b946a7478579366fc1b7aaf3c9e",
+      "record": "ai4s/programs/dsainet/research/serial_screen_20261128d/CANDIDATE_01.md",
+      "remote_status_record": "ai4s/programs/dsainet/research/serial_screen_20261128d/REMOTE_DISPATCH_STATUS.json",
+      "report": "ai4s/programs/dsainet/research/serial_screen_20261128d/DISPOSITION_01.md",
+      "scientific_disposition": "STOP_LATERAL_HAND_READOUT",
+      "scientific_fits": 18,
+      "screen_evidence_id": "AI4S-DSAINET-LATERAL-HAND-READOUT-R1",
+      "screen_report": "ai4s/programs/dsainet/research/serial_screen_20261128d/closeout/REPORT.md",
+      "source_evidence_ids": [
+        "AI4S-DSAINET-PHASE-CENTER-BANK-R1"
+      ],
+      "training_contract": "ai4s/programs/dsainet/research/dsainet-b0-lateral-hand-readout-r1.yaml",
+      "training_contract_canonical_sha256": "e41316d9cbd5e9c994c5c3d26d9909e88182b9674c68f97d883c8ae7e47986e4",
+      "training_contract_file_sha256": "972a6625ee8ac9c662550d1fed30348d083d0c57c77f735805d8db781b0dab15"
     }
   ],
   "engineering_preparations": [
@@ -13975,6 +14441,146 @@
       "round_contract": "ai4s/programs/dsainet/research/dsainet-b0-patch-preelu-polyphase-r1.yaml",
       "round_id": "dsainet-b0-patch-preelu-polyphase-r1",
       "run_id": "2026-11-24_dsainet_b0_patch_preelu_polyphase_r1-full-w1"
+    },
+    {
+      "analysis": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261126/closeout/FROZEN_ANALYSIS.json",
+        "sha256": "118d9f2178c4cd26010fe34f05bd28527b9c1813487480f8d946013494a36d62"
+      },
+      "contract_sha256": "f92b4cedeb2a71499ce73ebdfcaa342bbb1bce7313532777fff89f7f2622704a",
+      "decision": "NO_SIGNAL",
+      "decision_record": "ai4s/programs/dsainet/research/serial_screen_20261126/closeout/DECISION.json",
+      "decision_record_sha256": "347bd58b4e7937f04b7c651f6186fb94183dc1cfe376a5fea64cee37eb2c72d0",
+      "disposition": "STOP_SPATIAL_PERSON_GRADIENT",
+      "evidence_id": "AI4S-DSAINET-SPATIAL-PERSON-GRADIENT-R1-BUDGET2",
+      "intake_status": "verified_ai4s_round",
+      "report": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261126/closeout/REPORT.md",
+        "sha256": "fc0c6c3ba1d32d2da29e172c92cf3bdd660eb159677c2626475a78c4b1b906de"
+      },
+      "role": "exposed_development_source_screen",
+      "round_id": "dsainet-b0-spatial-person-gradient-r1-budget2",
+      "run_id": "2026-11-27_dsainet_b0_spatial_person_gradient_r1_budget2-full-w1"
+    },
+    {
+      "analysis": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261127/closeout/FROZEN_ANALYSIS.json",
+        "sha256": "d198ccde77672619a1a992d59d629fdf17839690add2bcdc2fc88c3cabe21b7c"
+      },
+      "contract_sha256": "e3a5f89ef867670c344f3da40e0fa90f75f4402858209717189e334872ca33fc",
+      "decision": "NO_SIGNAL",
+      "decision_record": "ai4s/programs/dsainet/research/serial_screen_20261127/closeout/DECISION.json",
+      "decision_record_sha256": "fe7a39733f4336c0af3e6cd0b6bc676159a98d058cd162739a79582cb3e416c0",
+      "disposition": "STOP_INTER_TOKEN_AMPLITUDE",
+      "evidence_id": "AI4S-DSAINET-INTER-TOKEN-AMPLITUDE-R1",
+      "intake_status": "verified_ai4s_round",
+      "report": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261127/closeout/REPORT.md",
+        "sha256": "dc91d68a9e4d02c12946856a68aea1927b6565952103f4495bb6ff2b74c26dbe"
+      },
+      "role": "exposed_development_source_screen",
+      "round_id": "dsainet-b0-inter-token-amplitude-r1",
+      "run_id": "2026-11-27_dsainet_b0_inter_token_amplitude_r1-full-w1"
+    },
+    {
+      "analysis": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261127b/closeout/FROZEN_ANALYSIS.json",
+        "sha256": "5b1dd21de7fe8f81b8ea83702e72ade8cfe0c0f7d4fe6ea7acb4f83b76dbd38f"
+      },
+      "contract_sha256": "f750b909d54bbf5252845f35cfc50c7ee2a5bbcc6ea92cd723a142b57bd741e1",
+      "decision": "NO_SIGNAL",
+      "decision_record": "ai4s/programs/dsainet/research/serial_screen_20261127b/closeout/DECISION.json",
+      "decision_record_sha256": "7739f8651bd7923d25be9634827dc43d265104312a3a299f3fafb10a52475cd8",
+      "disposition": "STOP_CENTRAL_WAVEFORM_COMPLETION",
+      "evidence_id": "AI4S-DSAINET-CENTRAL-WAVEFORM-COMPLETION-R1",
+      "intake_status": "verified_ai4s_round",
+      "report": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261127b/closeout/REPORT.md",
+        "sha256": "b36f4ee56050ae5be4726e9a3f7ebf75561860c078cb34ab8de8b6954a2bff3b"
+      },
+      "role": "exposed_development_source_screen",
+      "round_id": "dsainet-b0-central-waveform-completion-r1",
+      "run_id": "2026-11-27_dsainet_b0_central_waveform_completion_r1-full-w1"
+    },
+    {
+      "analysis": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261128/closeout/FROZEN_ANALYSIS.json",
+        "sha256": "7796f66e0054c3f17fa4db2b516ae210e92f56d25df61e7c9714d3bed6e9120b"
+      },
+      "contract_sha256": "3b787dee63459858360f72d3efb410386f56ee33cd304c468eb9b3d30013d547",
+      "decision": "NO_SIGNAL",
+      "decision_record": "ai4s/programs/dsainet/research/serial_screen_20261128/closeout/DECISION.json",
+      "decision_record_sha256": "026ad51a59bbcc00d2fbdf2c167b099b5ea46ca72fb84a376dce03ec5269c477",
+      "disposition": "STOP_MATCHED_SCALE_INIT",
+      "evidence_id": "AI4S-DSAINET-MATCHED-SCALE-INIT-R1",
+      "intake_status": "verified_ai4s_round",
+      "report": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261128/closeout/REPORT.md",
+        "sha256": "088011faafb953e18d1c35ff2e3bc7a002045cc35be6889b973cd9735efb73f6"
+      },
+      "role": "exposed_development_source_screen",
+      "round_id": "dsainet-b0-matched-scale-init-r1",
+      "run_id": "2026-11-28_dsainet_b0_matched_scale_init_r1-full-w1"
+    },
+    {
+      "analysis": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261128b/closeout/FROZEN_ANALYSIS.json",
+        "sha256": "392f9b5f8708f7b7206786271cf7577551d2b89cb5c822df3f21c1d06695f1c5"
+      },
+      "contract_sha256": "5d3e2201ad0ed133394d4102ce24d5121b902194db3484e3fbae5aa9a5da3402",
+      "decision": "NO_SIGNAL",
+      "decision_record": "ai4s/programs/dsainet/research/serial_screen_20261128b/closeout/DECISION.json",
+      "decision_record_sha256": "64a33e37f37b01b6dbbf824dbca978eea9ebfa050eb3efc57c2f1208ace827ef",
+      "disposition": "STOP_PAIRED_LAG_SHAPE",
+      "evidence_id": "AI4S-DSAINET-PAIRED-LAG-SHAPE-R1",
+      "intake_status": "verified_ai4s_round",
+      "report": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261128b/closeout/REPORT.md",
+        "sha256": "ac606e080603864567380dc75dcc94c12171b06fbef137eef60a65507fa175b3"
+      },
+      "role": "exposed_development_source_screen",
+      "round_id": "dsainet-b0-paired-lag-shape-r1",
+      "run_id": "2026-11-28_dsainet_b0_paired_lag_shape_r1-full-w1"
+    },
+    {
+      "analysis": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261128c/closeout/FROZEN_ANALYSIS.json",
+        "sha256": "e84bb443a59852b12efacda3626925431ab72ae8c67fe064a80e89c2deac455d"
+      },
+      "contract_sha256": "9fb01090b967a066884286e2cb289373167dfcfad98df5ff2c57c3871c744c19",
+      "decision": "NO_SIGNAL",
+      "decision_record": "ai4s/programs/dsainet/research/serial_screen_20261128c/closeout/DECISION.json",
+      "decision_record_sha256": "535a243f46d2af2b757cbe4e8a1f0e080efd92e19ad4fe4a48e7443b74998971",
+      "disposition": "STOP_PHASE_CENTER_BANK",
+      "evidence_id": "AI4S-DSAINET-PHASE-CENTER-BANK-R1",
+      "intake_status": "verified_ai4s_round",
+      "report": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261128c/closeout/REPORT.md",
+        "sha256": "f5e5733be7a2f5cd43bae898b9a88782417cc53d26ce86c5cb97c50123d1ddc7"
+      },
+      "role": "exposed_development_source_screen",
+      "round_id": "dsainet-b0-phase-center-bank-r1",
+      "run_id": "2026-11-28_dsainet_b0_phase_center_bank_r1-full-w1"
+    },
+    {
+      "analysis": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261128d/closeout/FROZEN_ANALYSIS.json",
+        "sha256": "58ad0cbd5396ae73a68787674bf8087b8bcaa6a426dd58462b3915a0f2a2d376"
+      },
+      "contract_sha256": "e41316d9cbd5e9c994c5c3d26d9909e88182b9674c68f97d883c8ae7e47986e4",
+      "decision": "NO_SIGNAL",
+      "decision_record": "ai4s/programs/dsainet/research/serial_screen_20261128d/closeout/DECISION.json",
+      "decision_record_sha256": "28485adfa8ce3496999d08c76a6e21b1b6d33629728816e65ae17c4ce7cb43b9",
+      "disposition": "STOP_LATERAL_HAND_READOUT",
+      "evidence_id": "AI4S-DSAINET-LATERAL-HAND-READOUT-R1",
+      "intake_status": "verified_ai4s_round",
+      "report": {
+        "path": "ai4s/programs/dsainet/research/serial_screen_20261128d/closeout/REPORT.md",
+        "sha256": "07ae81209c4c5eaefda72e741cec89afaa3e909efe31fe91d0a24c93d3528f0f"
+      },
+      "role": "exposed_development_source_screen",
+      "round_id": "dsainet-b0-lateral-hand-readout-r1",
+      "run_id": "2026-11-28_dsainet_b0_lateral_hand_readout_r1-full-w1"
     }
   ],
   "schema_version": "mieeg-ai4s-evidence-index-v1",
@@ -14121,5 +14727,5 @@
       "used_by_round": "dsa-kshape-v0.1-repair2"
     }
   ],
-  "updated_at": "2026-11-26T13:48:17.057889+00:00"
+  "updated_at": "2026-11-28T11:05:58.563273+00:00"
 }

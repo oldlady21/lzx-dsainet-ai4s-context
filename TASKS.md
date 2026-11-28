@@ -9,7 +9,7 @@
 | 研究线 | 当前要跟进的工作 |
 | --- | --- |
 | DSAINet | 核对空间梯度个体差异对照已登记的预算续接 Run。完成验收后，按冻结比较判断结果如何影响下一项结构选择。 [DSAINet State](ai4s/programs/dsainet/research/STATE.yaml) |
-| MVCNet | 核对已登记的池化抗混叠开发筛查，按冻结对照判读结果。中央行筛查已以 `NO_SIGNAL` 收尾，保留为精确负结果。 [MVCNet State](ai4s/programs/mvcnet/research/STATE.yaml) · [中央行收尾](ai4s/programs/mvcnet/research/central_row_augmentation_20261126/SCIENCE_CLOSEOUT.md) |
+| MVCNet | raw/flip 四库开发复核已收尾。001 保留原开发正信号，004、002、Zhou 均未过等权增量门，登记 NO_SIGNAL。 [MVCNet State](ai4s/programs/mvcnet/research/STATE.yaml) · [四库科学收尾](ai4s/programs/mvcnet/research/ifnet_view_ce_balance_xdataset_20261128/SCIENCE_CLOSEOUT.md) · [001 收尾](ai4s/programs/mvcnet/research/ifnet_view_ce_balance_20261127/SCIENCE_CLOSEOUT.md) |
 | 其他 Program | 按各自授权并行探索。给已有结果登记去留，取出能帮助 DSAINet 区分解释或选择对照的证据。 [Program 入口](README.md#ai4s-program-与研究入口) |
 
 SMANet Sinc 比较的本地验收已完成，原外审按历史绑定保留待结。 [外审记录](experiments/records/smanet/2026-09-22_sinc_gain_comparison/EXPERIMENT_AUDIT.json)
